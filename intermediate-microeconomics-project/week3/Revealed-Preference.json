@@ -1,0 +1,545 @@
+{
+  "version": 11,
+  "randomSeed": "0b13a1623fea5d7191d28302235b0e06",
+  "graph": {
+    "viewport": {
+      "xmin": -5.918179109188188,
+      "ymin": -16.356525787391853,
+      "xmax": 72.46995341425152,
+      "ymax": 62.031606736045354
+    },
+    "showGrid": false,
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-5.918179109188188",
+      "xmax": "72.46995341425152",
+      "ymin": "-16.356525787391853",
+      "ymax": "62.031606736045354"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "1140",
+        "text": "Creator: Joshua B. Miller, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "1145",
+        "text": "control the roll-out of budget lines with T"
+      },
+      {
+        "type": "text",
+        "id": "1157",
+        "text": "Part A) Plot bundles and budget lines"
+      },
+      {
+        "type": "folder",
+        "id": "1165",
+        "title": "Table",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1163",
+        "folderId": "1165",
+        "color": "#2d70b3",
+        "latex": "a=19.98",
+        "hidden": true,
+        "slider": {
+          "max": "19.98"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1164",
+        "folderId": "1165",
+        "color": "#388c46",
+        "latex": "b=-7.4",
+        "hidden": true
+      },
+      {
+        "type": "image",
+        "id": "1162",
+        "folderId": "1165",
+        "image_url": "data:image/png;base64,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",
+        "name": "Table.PNG",
+        "center": "\\left(a,b\\right)",
+        "width": "38.59",
+        "height": "10.8"
+      },
+      {
+        "type": "expression",
+        "id": "1142",
+        "color": "#2d70b3",
+        "latex": "T=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "5",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "922",
+        "title": "Code: Part A) Plot bundles and budget lines",
+        "collapsed": true
+      },
+      {
+        "id": "888",
+        "type": "table",
+        "folderId": "922",
+        "columns": [
+          {
+            "values": [
+              "5",
+              "35",
+              "10",
+              "5",
+              "10"
+            ],
+            "hidden": true,
+            "id": "886",
+            "color": "#000000",
+            "latex": "x_{1}"
+          },
+          {
+            "values": [
+              "35",
+              "10",
+              "15",
+              "15",
+              "10"
+            ],
+            "hidden": true,
+            "id": "887",
+            "color": "#c74440",
+            "latex": "x_{2}"
+          },
+          {
+            "values": [
+              "1",
+              "1",
+              "1",
+              "3",
+              "1"
+            ],
+            "hidden": true,
+            "id": "889",
+            "color": "#2d70b3",
+            "latex": "p_{1}"
+          },
+          {
+            "values": [
+              "1",
+              "2",
+              "1",
+              "1",
+              "2"
+            ],
+            "hidden": true,
+            "id": "890",
+            "color": "#388c46",
+            "latex": "p_{2}"
+          },
+          {
+            "values": [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "hidden": true,
+            "id": "891",
+            "color": "#6042a6",
+            "latex": "f\\left(x_{1},x_{2},p_{1},p_{2}\\right)"
+          }
+        ]
+      },
+      {
+        "type": "expression",
+        "id": "878",
+        "folderId": "922",
+        "color": "#2d70b3",
+        "latex": "f\\left(X_{1},X_{2},P_{1},P_{2}\\right)=P_{1}X_{1}\\ +P_{2}X_{2}"
+      },
+      {
+        "type": "expression",
+        "id": "893",
+        "folderId": "922",
+        "color": "#c74440",
+        "latex": "I=f\\left(x_{1},x_{2},p_{1},p_{2}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "894",
+        "folderId": "922",
+        "color": "#2d70b3",
+        "latex": "p_{1}\\left[1\\right]x+p_{2}\\left[1\\right]y=I\\left[1\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "875",
+        "folderId": "922",
+        "color": "#2d70b3",
+        "latex": "A=\\left(x_{1}\\left[1\\right],x_{2}\\left[1\\right]\\right)\\left\\{T>0\\right\\}",
+        "showLabel": true,
+        "label": "A"
+      },
+      {
+        "type": "expression",
+        "id": "885",
+        "folderId": "922",
+        "color": "#6042a6",
+        "latex": "B=\\left(x_{1}\\left[2\\right],x_{2}\\left[2\\right]\\right)\\left\\{T>1\\right\\}",
+        "showLabel": true,
+        "label": "B"
+      },
+      {
+        "type": "expression",
+        "id": "895",
+        "folderId": "922",
+        "color": "#6042a6",
+        "latex": "p_{1}\\left[2\\right]x+p_{2}\\left[2\\right]y=I\\left[2\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "896",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "p_{1}\\left[3\\right]x+p_{2}\\left[3\\right]y=I\\left[3\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T>2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "876",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "C=\\left(x_{1}\\left[3\\right],x_{2}\\left[3\\right]\\right)\\left\\{T>2\\right\\}",
+        "showLabel": true,
+        "label": "C"
+      },
+      {
+        "type": "expression",
+        "id": "897",
+        "folderId": "922",
+        "color": "#fa7e19",
+        "latex": "p_{1}\\left[4\\right]x+p_{2}\\left[4\\right]y=I\\left[4\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T>3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "899",
+        "folderId": "922",
+        "color": "#fa7e19",
+        "latex": "D=\\left(x_{1}\\left[4\\right],x_{2}\\left[4\\right]\\right)\\left\\{T>3\\right\\}",
+        "showLabel": true,
+        "label": "D"
+      },
+      {
+        "type": "expression",
+        "id": "898",
+        "folderId": "922",
+        "color": "#c74440",
+        "latex": "p_{1}\\left[5\\right]x+p_{2}\\left[5\\right]y=I\\left[5\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T>4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "900",
+        "folderId": "922",
+        "color": "#c74440",
+        "latex": "E=\\left(x_{1}\\left[5\\right],x_{2}\\left[5\\right]\\right)\\left\\{T>4\\right\\}",
+        "showLabel": true,
+        "label": "E"
+      },
+      {
+        "type": "text",
+        "id": "1155",
+        "text": "Part B) Shade bundles are that revealed not preferred "
+      },
+      {
+        "type": "expression",
+        "id": "1149",
+        "color": "#c74440",
+        "latex": "T_{2}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "5",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "924",
+        "title": "Code Part B) Shade bundles are that revealed not preferred ",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "925",
+        "folderId": "924",
+        "color": "#2d70b3",
+        "latex": "p_{1}\\left[1\\right]x+p_{2}\\left[1\\right]y<I\\left[1\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{2}=1\\right\\}",
+        "fillOpacity": "0.3",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "926",
+        "folderId": "924",
+        "color": "#6042a6",
+        "latex": "p_{1}\\left[2\\right]x+p_{2}\\left[2\\right]y<I\\left[2\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{2}=2\\right\\}",
+        "fillOpacity": "0.3",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "927",
+        "folderId": "924",
+        "color": "#000000",
+        "latex": "p_{1}\\left[3\\right]x+p_{2}\\left[3\\right]y<I\\left[3\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{2}=3\\right\\}",
+        "fillOpacity": "0.3",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "928",
+        "folderId": "924",
+        "color": "#fa7e19",
+        "latex": "p_{1}\\left[4\\right]x+p_{2}\\left[4\\right]y<I\\left[4\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{2}=4\\right\\}",
+        "fillOpacity": "0.3",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "929",
+        "folderId": "924",
+        "color": "#c74440",
+        "latex": "p_{1}\\left[5\\right]x+p_{2}\\left[5\\right]y<I\\left[5\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{2}=5\\right\\}",
+        "fillOpacity": "0.2",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "1153",
+        "text": "Part C) Revealed worse than C"
+      },
+      {
+        "type": "expression",
+        "id": "1151",
+        "color": "#c74440",
+        "latex": "T_{3}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "3",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "902",
+        "title": "Code: Part C) Revealed worse than C",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "903",
+        "folderId": "902",
+        "color": "#388c46",
+        "latex": "p_{1}\\left[3\\right]x+p_{2}\\left[3\\right]y<I\\left[3\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{3}>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "904",
+        "folderId": "902",
+        "color": "#388c46",
+        "latex": "p_{1}\\left[5\\right]x+p_{2}\\left[5\\right]y<I\\left[5\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{3}>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "905",
+        "folderId": "902",
+        "color": "#388c46",
+        "latex": "p_{1}\\left[4\\right]x+p_{2}\\left[4\\right]y<I\\left[4\\right]\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{T_{3}>2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1159",
+        "color": "#2d70b3",
+        "latex": "T_{4}=4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "6",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "907",
+        "title": "Part D) Reveled better than C"
+      },
+      {
+        "type": "text",
+        "id": "917",
+        "folderId": "907",
+        "text": "more is better"
+      },
+      {
+        "type": "expression",
+        "id": "915",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "x>x_{1}\\left[3\\right]\\left\\{y>x_{2}\\left[3\\right]\\right\\}\\left\\{T_{4}>0\\right\\}",
+        "lines": false,
+        "fillOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "1168",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(15,18\\right)\\ \\left\\{T_{4}=1\\right\\}",
+        "showLabel": true,
+        "label": "C' note that `C'>C`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1175",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(40,-5\\right)\\left\\{5\\ge T_{4}\\ge1\\right\\}",
+        "showLabel": true,
+        "label": "Why area is shaded:",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1174",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(50,-5\\right)\\left\\{3\\ge T_{4}\\ge1\\right\\}",
+        "showLabel": true,
+        "label": "More is better + Transitivity",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "908",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "x>x_{1}\\left[2\\right]\\left\\{y>x_{2}\\left[2\\right]\\right\\}\\left\\{T_{4}>1\\right\\}",
+        "lines": false,
+        "fillOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "1169",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(50,12.5\\right)\\left\\{T_{4}=2\\right\\}",
+        "showLabel": true,
+        "label": "B' note that `B'>B>C`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "910",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "x>x_{1}\\left[1\\right]\\left\\{y>x_{2}\\left[1\\right]\\right\\}\\left\\{T_{4}>2\\right\\}",
+        "lines": false,
+        "fillOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "1170",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(8,40\\right)\\left\\{T_{4}=3\\right\\}",
+        "showLabel": true,
+        "label": "A' note that `A'>A>C`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "919",
+        "folderId": "907",
+        "text": "convexity"
+      },
+      {
+        "type": "expression",
+        "id": "914",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "y>x_{2}\\left[3\\right]+\\frac{x_{2}\\left[3\\right]-x_{2}\\left[2\\right]}{x_{1}\\left[3\\right]-x_{1}\\left[2\\right]}\\cdot\\left(x-x_{1}\\left[3\\right]\\right)\\left\\{x_{1}\\left[3\\right]<x<x_{1}\\left[2\\right]\\right\\}\\left\\{T_{4}>3\\right\\}",
+        "lines": false,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "1171",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(22,13\\right)\\left\\{T_{4}=4\\right\\}",
+        "showLabel": true,
+        "label": "C' note that `C'>C`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1178",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(50,-5\\right)\\left\\{T_{4}=4,T_{4}=5\\right\\}",
+        "showLabel": true,
+        "label": "convexity",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "920",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "y>x_{2}\\left[1\\right]+\\frac{x_{2}\\left[1\\right]-x_{2}\\left[3\\right]}{x_{1}\\left[1\\right]-x_{1}\\left[3\\right]}\\cdot\\left(x-x_{1}\\left[1\\right]\\right)\\left\\{x_{1}\\left[1\\right]<x<x_{1}\\left[3\\right]\\right\\}\\left\\{T_{4}>4\\right\\}",
+        "lines": false
+      },
+      {
+        "type": "expression",
+        "id": "1172",
+        "folderId": "907",
+        "color": "#c74440",
+        "latex": "\\left(7,28\\right)\\left\\{T_{4}=5\\right\\}",
+        "showLabel": true,
+        "label": "C' note that `C'>C`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "921",
+        "title": "Part E) Indifferent from C"
+      },
+      {
+        "type": "text",
+        "id": "933",
+        "folderId": "921",
+        "text": "It must be in the white region"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

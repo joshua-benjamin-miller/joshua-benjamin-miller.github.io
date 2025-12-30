@@ -1,0 +1,529 @@
+{
+  "version": 11,
+  "randomSeed": "6bf8193d4e612e74d2984101f47d196d",
+  "graph": {
+    "viewport": {
+      "xmin": -1.2888940133346845,
+      "ymin": -0.8715594238725419,
+      "xmax": 7.805081746981778,
+      "ymax": 3.021146040640188
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-1.2888940133346845",
+      "xmax": "7.805081746981778",
+      "ymin": "-0.8715594238725419",
+      "ymax": "3.021146040640188"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "76",
+        "text": "Demand with Inferior Goods"
+      },
+      {
+        "type": "text",
+        "id": "108",
+        "text": "Inspired by \"New Thoughts About Inferior Goods\" H. H. Liebhafsky's paper from The American Economic Review:https://www.jstor.org/stable/1810692"
+      },
+      {
+        "type": "folder",
+        "id": "77",
+        "title": "Credits",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "79",
+        "folderId": "77",
+        "text": "By: Joshua B. Miller"
+      },
+      {
+        "type": "text",
+        "id": "83",
+        "folderId": "77",
+        "text": "https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "87",
+        "folderId": "77",
+        "text": " From: Liebhafsky, H. H. (1969). New thoughts about inferior goods. The American Economic Review, 59(5), 931-934."
+      },
+      {
+        "type": "text",
+        "id": "82",
+        "folderId": "77",
+        "text": " https://www.jstor.org/stable/pdf/1810692.pdf"
+      },
+      {
+        "type": "text",
+        "id": "91",
+        "text": "Budget set"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#388c46",
+        "latex": "p_{1}x+p_{2}y<=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "p_{1}=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "p_{2}=0.9",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "I=2.2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "text",
+        "id": "93",
+        "text": "Preferences"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "u\\left(x,y\\right)=a\\ln\\left(x\\right)+\\frac{y^{2}}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#c74440",
+        "latex": "a=1.3",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "104",
+        "title": "Highest Indifference curve (optimal consumption",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "100",
+        "folderId": "104",
+        "text": "Demand"
+      },
+      {
+        "type": "text",
+        "id": "102",
+        "folderId": "104",
+        "text": "discriminating factor"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "104",
+        "color": "#000000",
+        "latex": "D=\\left(\\frac{I}{p_{2}}\\right)^{2}-4a"
+      },
+      {
+        "type": "text",
+        "id": "14",
+        "folderId": "104",
+        "text": "corner solution"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "104",
+        "color": "#2d70b3",
+        "latex": "d_{x}=\\frac{I}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "104",
+        "color": "#388c46",
+        "latex": "d_{y}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "0"
+        }
+      },
+      {
+        "type": "text",
+        "id": "16",
+        "folderId": "104",
+        "text": "Interior solution"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "104",
+        "color": "#000000",
+        "latex": "d_{yi}=\\frac{\\left(\\frac{I}{p_{2}}+D^{0.5}\\right)}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "104",
+        "color": "#c74440",
+        "latex": "d_{xi}=\\frac{\\left(I-p_{2}d_{yi}\\right)}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "104",
+        "color": "#2d70b3",
+        "latex": "u\\left(d_{x},d_{y}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)\\left\\{U_{C}>U_{I},D<0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "104",
+        "color": "#fa7e19",
+        "latex": "u\\left(d_{xi},d_{yi}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)\\left\\{U_{C}<U_{I}\\right\\}\\left\\{D>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "104",
+        "color": "#6042a6",
+        "latex": "U_{C}=u\\left(d_{x},d_{y}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "104",
+        "color": "#000000",
+        "latex": "U_{I}=u\\left(d_{xi},d_{yi}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "97",
+        "title": "Moveable Indifference curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "95",
+        "folderId": "97",
+        "text": "Moveable Indifference curve"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "97",
+        "color": "#c74440",
+        "latex": "u_{1}\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "97",
+        "color": "#2d70b3",
+        "latex": "u_{1}=2.36",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "67",
+        "title": "Income expansion curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "44",
+        "folderId": "67",
+        "text": "Demand "
+      },
+      {
+        "type": "text",
+        "id": "59",
+        "folderId": "67",
+        "text": " (for corner it is  U_C>U_I or D<0 )"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "67",
+        "color": "#c74440",
+        "latex": "C_{orner}\\left(p_{x},p_{y},M\\right)=\\left\\{u\\left(\\frac{M}{p_{x}},0\\right)>u\\left(\\frac{\\left(M-p_{y}\\left(\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2}\\right)\\right)}{p_{x}},\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2}\\right),\\left(\\frac{M}{p_{y}}\\right)^{2}-4a<0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "\\left\\{U_{C}>U_{I},D<0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "54",
+        "folderId": "67",
+        "color": "#000000",
+        "latex": "C_{orner}\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "folderId": "67",
+        "color": "#c74440",
+        "latex": "I_{nterior}\\left(p_{x},p_{y},M\\right)=\\left\\{u\\left(\\frac{M}{p_{x}},0\\right)<u\\left(\\frac{\\left(M-p_{y}\\left(\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2}\\right)\\right)}{p_{x}},\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2}\\right)\\right\\}\\cdot\\left\\{\\left(\\frac{M}{p_{y}}\\right)^{2}-4a>0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "61",
+        "folderId": "67",
+        "text": "for interior it is U_C<U_I AND D>0 )"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "67",
+        "color": "#000000",
+        "latex": "\\left\\{U_{C}<U_{I}\\right\\}\\left\\{D>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "67",
+        "color": "#2d70b3",
+        "latex": "I_{nterior}\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "folderId": "67",
+        "color": "#c74440",
+        "latex": "X\\left(p_{x},p_{y},M\\right)=\\left\\{C_{orner}\\left(p_{x},p_{y},M\\right)=1:\\frac{M}{p_{x}},I_{nterior}\\left(p_{x},p_{y},M\\right)=1:\\frac{\\left(M-p_{y}\\left(\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2}\\right)\\right)}{p_{x}},0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "folderId": "67",
+        "color": "#2d70b3",
+        "latex": "Y\\left(p_{x},p_{y},M\\right)=\\left\\{C_{orner}\\left(p_{x},p_{y},M\\right)=1:0,I_{nterior}\\left(p_{x},p_{y},M\\right)=1:\\frac{\\left(\\frac{M}{p_{y}}+\\left(\\left(\\frac{M}{p_{y}}\\right)^{2}-4a\\right)^{0.5}\\right)}{2},0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "67",
+        "color": "#2d70b3",
+        "latex": "\\left(X\\left(p_{1},p_{2},t\\right),Y\\left(p_{1},p_{2},t\\right)\\right)\\left\\{C_{orner}\\left(p_{1},p_{2},t\\right)>0\\right\\}",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "67",
+        "color": "#fa7e19",
+        "latex": "\\left(X\\left(p_{1},p_{2},t\\right),Y\\left(p_{1},p_{2},t\\right)\\right)\\left\\{I_{nterior}\\left(p_{1},p_{2},t\\right)>0\\right\\}",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "67",
+        "color": "#c74440",
+        "latex": "\\left(X\\left(p_{1},p_{2},I\\right),Y\\left(p_{1},p_{2},I\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "67",
+        "color": "#6042a6",
+        "latex": "Y\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "27",
+        "title": "Indifference curves",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "27",
+        "color": "#6042a6",
+        "latex": "N=4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "27",
+        "color": "#000000",
+        "latex": "u_{0}=0"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "27",
+        "color": "#c74440",
+        "latex": "\\Delta_{u}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "27",
+        "color": "#2d70b3",
+        "latex": "U=\\left[u_{0}+0\\Delta_{u},u_{0}+1\\Delta_{u}...u_{0}+N\\Delta_{u}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "27",
+        "color": "#388c46",
+        "latex": "U\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u(x,y)",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "text",
+        "id": "29",
+        "folderId": "27",
+        "text": "The number of colors in the palette"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "27",
+        "color": "#388c46",
+        "latex": "C=\\left[1...N+1\\right]"
+      },
+      {
+        "type": "text",
+        "id": "33",
+        "folderId": "27",
+        "text": "\"The intensity of each RGB value as we move through the palette"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "27",
+        "color": "#c74440",
+        "latex": "R=255\\frac{\\left(C-1\\right)}{N}"
+      },
+      {
+        "type": "expression",
+        "id": "35",
+        "folderId": "27",
+        "color": "#2d70b3",
+        "latex": "G=0C"
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "27",
+        "color": "#388c46",
+        "latex": "B=255\\left(1-\\frac{\\left(C-1\\right)}{N}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "27",
+        "color": "#6042a6",
+        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+      },
+      {
+        "type": "folder",
+        "id": "140",
+        "title": "button",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "132",
+        "folderId": "140",
+        "color": "#6042a6",
+        "latex": "x_{button}=2.4",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "folderId": "140",
+        "color": "#c74440",
+        "latex": "y_{button}=1.4",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "140",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{button},y_{button}\\right)\\left\\{U_{C}<U_{I}\\right\\}\\left\\{D>0\\right\\}",
+        "showLabel": true,
+        "label": "Good y is treated as inferior"
+      },
+      {
+        "type": "expression",
+        "id": "136",
+        "folderId": "140",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{button},y_{button}\\right)\\left\\{U_{C}>U_{I},D<0\\right\\}",
+        "showLabel": true,
+        "label": "Good x is treated as normal"
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "color": "#6042a6"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

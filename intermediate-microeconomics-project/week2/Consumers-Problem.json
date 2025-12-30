@@ -1,0 +1,1907 @@
+{
+  "version": 11,
+  "randomSeed": "0c56e08aaf514bb515c6574e72b0092f",
+  "graph": {
+    "viewport": {
+      "xmin": -15.313510959887807,
+      "ymin": -9.799495371580017,
+      "xmax": 26.084288875702576,
+      "ymax": 19.97762700682361
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-15.313510959887807",
+      "xmax": "26.084288875702576",
+      "ymin": "-9.799495371580017",
+      "ymax": "19.97762700682361"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "396",
+        "text": "Basic visual depiction of consumer's problem. Illustrates Budget *set*, movable bundle with upper contour sets (3), toggle ICs (4), toggle on MRS for tangency (5), toggle on optimal consumption with IC (6).   Note: adjust utility, demand, MRS in (2)"
+      },
+      {
+        "type": "folder",
+        "id": "934",
+        "title": "credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "371",
+        "folderId": "934",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "1024",
+        "folderId": "934",
+        "text": "*careful with displayed quantities, they are rounded for display purposes, check folders for precision"
+      },
+      {
+        "type": "text",
+        "id": "739",
+        "text": "Type of utility:  See Folder #2 below: 1 for Cobb-Douglas production function, 2 for Quasilinear utility, 3 for Power Utility (x^r+y^r), 4 for CES, 5 for Perfect Complements"
+      },
+      {
+        "type": "folder",
+        "id": "372",
+        "title": "1. Budget Set",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "761",
+        "folderId": "372",
+        "text": "Define prices of both goods and budget"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "372",
+        "color": "#c74440",
+        "latex": "p_{1}=7",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "372",
+        "color": "#2d70b3",
+        "latex": "p_{2}=8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "372",
+        "color": "#388c46",
+        "latex": "I=100",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "763",
+        "folderId": "372",
+        "text": "Budget set is defined as area below the curve:"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "372",
+        "color": "#388c46",
+        "latex": "p_{1}x+p_{2}y\\le I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "765",
+        "folderId": "372",
+        "text": "Ratio of the two prices:"
+      },
+      {
+        "type": "expression",
+        "id": "417",
+        "folderId": "372",
+        "color": "#000000",
+        "latex": "r_{1}=\\frac{p_{1}}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "749",
+        "folderId": "372",
+        "color": "#000000",
+        "latex": "r_{1r}=R_{ound2}\\left(r_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "416",
+        "folderId": "372",
+        "color": "#000000",
+        "latex": "\\left(\\frac{I}{4p_{1}},\\frac{I}{4p_{2}}\\right)",
+        "showLabel": true,
+        "label": "`\\frac{p_1}{p_2}=${r_1r}`",
+        "hidden": true,
+        "labelSize": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "767",
+        "folderId": "372",
+        "text": "Show maximal quantities allowed by budget set"
+      },
+      {
+        "type": "expression",
+        "id": "419",
+        "folderId": "372",
+        "color": "#2d70b3",
+        "latex": "x_{max}=R_{ound2}\\left(\\frac{I}{p_{1}}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "418",
+        "folderId": "372",
+        "color": "#000000",
+        "latex": "\\left(\\frac{I}{p_{1}},0\\right)",
+        "showLabel": true,
+        "label": "`\\frac{I}{p_1}=\\frac{${I}}{${p_1}}=${x_max}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "labelSize": "1.3"
+      },
+      {
+        "type": "expression",
+        "id": "420",
+        "folderId": "372",
+        "color": "#2d70b3",
+        "latex": "y_{max}=R_{ound2}\\left(\\frac{I}{p_{2}}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "422",
+        "folderId": "372",
+        "color": "#000000",
+        "latex": "\\left(0,\\frac{I}{p_{2}}\\right)",
+        "showLabel": true,
+        "label": "`\\frac{I}{p_2}=\\frac{${I}}{${p_2}}=${y_max}`",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "labelSize": "1.3"
+      },
+      {
+        "type": "expression",
+        "id": "1026",
+        "color": "#2d70b3",
+        "latex": "T_{ype}=2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "6",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "374",
+        "title": "2.1 Cobb Douglas Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "398",
+        "folderId": "374",
+        "text": "Utility, either 1 for Cobb-Douglas production function or 2 for Quasilinear utility. Is flexible to function definition - need to change f-n itself and optimal solution below"
+      },
+      {
+        "type": "text",
+        "id": "769",
+        "folderId": "374",
+        "text": "Utility function - separate definition for each type of utility, combined together using Choice function:"
+      },
+      {
+        "type": "text",
+        "id": "794",
+        "folderId": "374",
+        "text": "Cobb Douglas utility:"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "374",
+        "color": "#388c46",
+        "latex": "\\alpha=0.38",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": "3",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1019",
+        "folderId": "374",
+        "color": "#c74440",
+        "latex": "\\beta_{2}=0.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": "3"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "373",
+        "folderId": "374",
+        "color": "#c74440",
+        "latex": "u_{CobbDouglas}\\left(x,y\\right)=x^{\\alpha}y^{\\beta_{2}}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "801",
+        "folderId": "374",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "Cobb Douglas utility `u\\left(x,y\\right)=x^${\\alpha}y^{${\\beta_2}}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "982",
+        "folderId": "374",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+2\\alpha\\left\\{U_{type}=1\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`\\alpha=${\\alpha}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "983",
+        "folderId": "374",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title}+2\\cdot.01,y_{title}-.5\\ \\right),\\left(x_{title}+2\\cdot.99,y_{title}-.5\\ \\right)\\left\\{U_{type}=1\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1020",
+        "folderId": "374",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+2\\beta_{2}\\left\\{U_{type}=1\\right\\},y_{title}-1.5\\right)",
+        "showLabel": true,
+        "label": "`\\beta=${\\beta_2}`"
+      },
+      {
+        "type": "expression",
+        "id": "1021",
+        "folderId": "374",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title}+2\\cdot.01,y_{title}-1.5\\ \\right),\\left(x_{title}+2\\cdot.99,y_{title}-1.5\\right)\\left\\{U_{type}=1\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "375",
+        "folderId": "374",
+        "color": "#2d70b3",
+        "latex": "X_{CobbDouglas}\\left(P_{1},P_{2},M\\right)=\\frac{\\alpha M}{\\left(\\alpha+\\beta_{2}\\right)P_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "376",
+        "folderId": "374",
+        "color": "#388c46",
+        "latex": "Y_{CobbDouglas}\\left(P_{1},P_{2},M\\right)=\\frac{\\beta_{2}M}{\\left(\\alpha+\\beta_{2}\\right)P_{2}}"
+      },
+      {
+        "type": "folder",
+        "id": "824",
+        "title": "2.2 Quasilinear Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "780",
+        "folderId": "824",
+        "text": "Use buttons below to adjust QuasiLinear parameters to be illustrative:"
+      },
+      {
+        "type": "expression",
+        "id": "807",
+        "folderId": "824",
+        "color": "#2d70b3",
+        "latex": "S_{etConvexCornerSolution}"
+      },
+      {
+        "type": "expression",
+        "id": "778",
+        "folderId": "824",
+        "color": "#388c46",
+        "latex": "S_{etQuasiLinear}"
+      },
+      {
+        "type": "expression",
+        "id": "777",
+        "folderId": "824",
+        "color": "#2d70b3",
+        "latex": "S_{etConcaveCornerSolution}"
+      },
+      {
+        "type": "text",
+        "id": "953",
+        "folderId": "824",
+        "text": "Convex corner solutions"
+      },
+      {
+        "type": "text",
+        "id": "961",
+        "folderId": "824",
+        "text": "MRS is increasing in good 2, doesn't depend on good 1"
+      },
+      {
+        "type": "text",
+        "id": "957",
+        "folderId": "824",
+        "text": "MRS at bottom right (all good 1) is less that the price so buy more good 1"
+      },
+      {
+        "type": "expression",
+        "id": "954",
+        "folderId": "824",
+        "color": "#6042a6",
+        "latex": "M_{RS}\\left(\\frac{I}{p_{1}},0\\right)"
+      },
+      {
+        "type": "text",
+        "id": "959",
+        "folderId": "824",
+        "text": "MRS at top left (all good 2) is still less than the price"
+      },
+      {
+        "type": "expression",
+        "id": "955",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "M_{RS}\\left(0,\\frac{I}{p_{2}}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "832",
+        "folderId": "824",
+        "color": "#388c46",
+        "latex": "a=1.6",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "833",
+        "folderId": "824",
+        "color": "#6042a6",
+        "latex": "b=0.8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "834",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\beta=0.4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "5",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "835",
+        "folderId": "824",
+        "color": "#388c46",
+        "latex": "u_{QuasiLinear}\\left(x,y\\right)=ax+by^{\\beta}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "836",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=2\\right\\}",
+        "showLabel": true,
+        "label": "Quasilinear utility `u\\left(x,y\\right)=${a}x+${b}y^${\\beta}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "984",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25a\\left\\{U_{type}=2\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`a=${a}`",
+        "hidden": true,
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "985",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title}+2\\cdot.01,y_{title}-.5\\ \\right),\\left(x_{title}+10\\cdot.25,y_{title}-.5\\ \\right)\\left\\{U_{type}=2\\right\\}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "986",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+2.5b\\left\\{U_{type}=2\\right\\},y_{title}-1.25\\right)",
+        "showLabel": true,
+        "label": "`b=${b}`",
+        "hidden": true,
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "987",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-1.25\\ \\right),\\left(x_{title}+2.5,y_{title}-1.25\\ \\right)\\left\\{U_{type}=2\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "988",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.5\\beta\\left\\{U_{type}=2\\right\\},y_{title}-2\\right)",
+        "showLabel": true,
+        "label": "`\\beta=${\\beta}`",
+        "hidden": true,
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "989",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-2\\ \\right),\\left(x_{title}+2.5,y_{title}-2\\ \\right)\\left\\{U_{type}=2\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "837",
+        "folderId": "824",
+        "color": "#2d70b3",
+        "latex": "S_{etConcaveCornerSolution}=U_{type}\\to2,\\beta\\to2,a\\to5,b\\to0.5,\\Delta_{u}\\to30"
+      },
+      {
+        "type": "expression",
+        "id": "838",
+        "folderId": "824",
+        "color": "#c74440",
+        "latex": "S_{etQuasiLinear}=U_{type}\\to2,\\beta\\to0.5,a\\to0.2,b\\to0.5,\\Delta_{u}\\to1"
+      },
+      {
+        "type": "expression",
+        "id": "839",
+        "folderId": "824",
+        "color": "#c74440",
+        "latex": "S_{etConvexCornerSolution}=U_{type}\\to2,\\beta\\to0.9,a\\to0.2,b\\to0.6,\\Delta_{u}\\to1"
+      },
+      {
+        "type": "text",
+        "id": "849",
+        "folderId": "824",
+        "text": "For quasi linear utility, there may exist a corner solution. It happens when numerically calculated inner X or Y fall below 0. Below we implement functions for inner solution and then compare it to zero and utility at corners."
+      },
+      {
+        "type": "expression",
+        "id": "850",
+        "folderId": "824",
+        "color": "#388c46",
+        "latex": "X_{NumQuasiLinear}\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}}-\\frac{P_{2}}{P_{1}}Y_{NumQuasiLinear}\\left(P_{1},P_{2},M\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "851",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "Y_{NumQuasiLinear}\\left(P_{1},P_{2},M\\right)=\\left(\\frac{b\\beta P_{1}}{aP_{2}}\\right)^{\\frac{1}{1-\\beta}}"
+      },
+      {
+        "type": "expression",
+        "id": "852",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "X_{CornerSolution}\\left(P_{1},P_{2},M\\right)=\\left\\{u_{QuasiLinear}\\left(x_{max},0\\right)>u_{QuasiLinear}\\left(0,y_{max}\\right):\\frac{I}{p_{1}},0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "853",
+        "folderId": "824",
+        "color": "#c74440",
+        "latex": "Y_{CornerSolution}\\left(P_{1},P_{2},M\\right)=\\left\\{u_{QuasiLinear}\\left(x_{max},0\\right)>u_{QuasiLinear}\\left(0,y_{max}\\right):0,\\frac{I}{p_{2}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "854",
+        "folderId": "824",
+        "color": "#c74440",
+        "latex": "X_{QuasiLinear}\\left(P_{1},P_{2},M\\right)=\\left\\{\\beta\\ge1:X_{CornerSolution}\\left(P_{1},P_{2},M\\right),\\min\\left(X_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right),Y_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right)\\right)<0:\\ X_{CornerSolution}\\left(P_{1},P_{2},M\\right),X_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "855",
+        "folderId": "824",
+        "color": "#6042a6",
+        "latex": "Y_{QuasiLinear}\\left(P_{1},P_{2},M\\right)=\\left\\{\\beta\\ge1:Y_{CornerSolution}\\left(P_{1},P_{2},M\\right),\\min\\left(X_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right),Y_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right)\\right)<0:\\ Y_{CornerSolution}\\left(P_{1},P_{2},M\\right),Y_{NumQuasiLinear}\\left(p_{1},p_{2},I\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "856",
+        "folderId": "824",
+        "color": "#6042a6",
+        "latex": "!X_{QuasiLinear}\\left(P_{1},P_{2},M\\right)=\\left\\{\\beta<1:X_{NumQuasiLinear}\\left(P_{1},P_{2},M\\right),\\ \\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "857",
+        "folderId": "824",
+        "color": "#000000",
+        "latex": "!Y_{QuasiLinear}\\left(P_{1},P_{2},M\\right)=\\left\\{\\beta<1:Y_{NumQuasiLinear}\\left(P_{1},P_{2},M\\right),\\ u_{XmaxQuasiLinear}>u_{YmaxQuasiLinear}:0,\\frac{I}{p_{2}}\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "864",
+        "title": "2.3 Power Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "873",
+        "folderId": "864",
+        "text": "\"Power\" utility (nearly CES)"
+      },
+      {
+        "type": "expression",
+        "id": "874",
+        "folderId": "864",
+        "color": "#388c46",
+        "latex": "r=0.91",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": ".99",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "875",
+        "folderId": "864",
+        "color": "#2d70b3",
+        "latex": "u_{Power}\\left(x,y\\right)=x^{r}+y^{r}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "877",
+        "folderId": "864",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=3\\right\\}",
+        "showLabel": true,
+        "label": "Power Utility `u\\left(x,y\\right)=x^${r}+y^${r}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "990",
+        "folderId": "864",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+2r\\left\\{U_{type}=3\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`r=${r}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "991",
+        "folderId": "864",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title}+2\\cdot.01,y_{title}-.5\\ \\right),\\left(x_{title}+2\\cdot.99,y_{title}-.5\\ \\right)\\left\\{U_{type}=3\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "893",
+        "folderId": "864",
+        "color": "#6042a6",
+        "latex": "X_{Power}\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}+P_{2}\\left(\\frac{P_{1}}{P_{2}}\\right)^{\\frac{1}{1-r}}}"
+      },
+      {
+        "type": "expression",
+        "id": "894",
+        "folderId": "864",
+        "color": "#000000",
+        "latex": "Y_{Power}\\left(P_{1},P_{2},M\\right)=\\frac{M}{\\left(\\frac{P_{2}}{P_{1}}\\right)^{\\frac{1}{1-r}}P_{1}+P_{2}}"
+      },
+      {
+        "type": "folder",
+        "id": "922",
+        "title": "2.4 CES Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "929",
+        "folderId": "922",
+        "color": "#388c46",
+        "latex": "a_{4}=3.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "930",
+        "folderId": "922",
+        "color": "#6042a6",
+        "latex": "b_{4}=4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "924",
+        "folderId": "922",
+        "color": "#388c46",
+        "latex": "r_{4}=-4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-30",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "text",
+        "id": "1012",
+        "folderId": "922",
+        "text": "using this result for the limit as r-> 0: https://math.stackexchange.com/questions/115428/limit-of-lp-norm-when-p-to0"
+      },
+      {
+        "type": "expression",
+        "id": "925",
+        "folderId": "922",
+        "color": "#2d70b3",
+        "latex": "u_{CES}\\left(x,y\\right)=\\left\\{\\left|r_{4}\\right|>0:\\left(\\left(a_{4}x\\right)^{r_{4}}+\\left(b_{4}y\\right)^{r_{4}}\\right)^{\\frac{1}{r_{4}}}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\},r_{4}=0:\\exp\\left(\\ln\\left(a_{4}x\\right)+\\ln\\left(b_{4}y\\right)\\right)\\right\\}\\left\\{T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "926",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=4\\right\\}",
+        "showLabel": true,
+        "label": "CES Utility `u\\left(x,y\\right)=((${a_4}x)^${r_4}+(${b_4}y)^${r_4})^\\frac{1}{${r_4}}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "992",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(a_{4}-.5\\right)\\left\\{U_{type}=4\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`a=${a_4}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "993",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(b_{4}-.5\\right)\\left\\{U_{type}=4\\right\\},y_{title}-1.25\\right)",
+        "showLabel": true,
+        "label": "`b=${b_4}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "994",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.063\\left(r_{4}+30\\right)\\left\\{U_{type}=4\\right\\},y_{title}-2\\right)",
+        "showLabel": true,
+        "label": "`r=${r_4}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "1000",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-.5\\ \\right),\\left(x_{title}+2.5,y_{title}-.5\\ \\right)\\left\\{U_{type}=4\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1001",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-1.25\\ \\right),\\left(x_{title}+2.5,y_{title}-1.25\\ \\right)\\left\\{U_{type}=4\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "996",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-2\\ \\right),\\left(x_{title}+2.5,y_{title}-2\\ \\right)\\left\\{U_{type}=4\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "931",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "A=\\left(\\frac{a_{4}}{b_{4}}\\right)^{\\frac{r_{4}}{r_{4}-1}}\\left(\\frac{p_{2}}{p_{1}}\\right)^{\\frac{1}{r_{4}-1}}"
+      },
+      {
+        "type": "expression",
+        "id": "927",
+        "folderId": "922",
+        "color": "#6042a6",
+        "latex": "X_{CES}\\left(P_{1},P_{2},M\\right)=\\left\\{r_{4}<1:\\frac{M}{P_{1}+AP_{2}},u_{CES}\\left(\\frac{I}{P_{1}},0\\right)>u_{CES}\\left(0,\\frac{I}{P_{2}}\\right):\\frac{I}{P_{1}},u_{CES}\\left(\\frac{I}{P_{1}},0\\right)<u_{CES}\\left(0,\\frac{I}{P_{2}}\\right):0,\\frac{I}{P_{1}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "928",
+        "folderId": "922",
+        "color": "#000000",
+        "latex": "Y_{CES}\\left(P_{1},P_{2},M\\right)=\\left\\{r_{4}<1:AX_{CES}\\left(P_{1},P_{2},M\\right),u_{CES}\\left(\\frac{I}{P_{1}},0\\right)>u_{CES}\\left(0,\\frac{I}{P_{2}}\\right):0,u_{CES}\\left(\\frac{I}{P_{1}},0\\right)<u_{CES}\\left(0,\\frac{I}{P_{2}}\\right):\\frac{I}{P_{2}},0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "935",
+        "title": "2.5 Perfect Complements Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "951",
+        "folderId": "935",
+        "text": "Parameters from 2.4"
+      },
+      {
+        "type": "expression",
+        "id": "948",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "a_{4}"
+      },
+      {
+        "type": "expression",
+        "id": "949",
+        "folderId": "935",
+        "color": "#c74440",
+        "latex": "b_{4}"
+      },
+      {
+        "type": "expression",
+        "id": "939",
+        "folderId": "935",
+        "color": "#2d70b3",
+        "latex": "u_{PerfectComplements}\\left(x,y\\right)=\\min\\left(a_{4}x,b_{4}y\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=5\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "940",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=5\\right\\}",
+        "showLabel": true,
+        "label": "Perfect Complements Utility `u\\left(x,y\\right)=\\min``(${a_4}x,${b_4}y)`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "998",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(a_{4}-.5\\right)\\left\\{U_{type}=5\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`a=${a_4}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "999",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(b_{4}-.5\\right)\\left\\{U_{type}=5\\right\\},y_{title}-1.25\\right)",
+        "showLabel": true,
+        "label": "`b=${b_4}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "1004",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-1.25\\ \\right),\\left(x_{title}+2.5,y_{title}-1.25\\ \\right)\\left\\{U_{type}=5\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "995",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-.5\\ \\right),\\left(x_{title}+2.5,y_{title}-.5\\ \\right)\\left\\{U_{type}=5\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "942",
+        "folderId": "935",
+        "color": "#6042a6",
+        "latex": "X_{PerfectComplement}\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}+\\frac{a_{4}}{b_{4}}P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "943",
+        "folderId": "935",
+        "color": "#000000",
+        "latex": "Y_{PerfectComplement}\\left(P_{1},P_{2},M\\right)=\\frac{a_{4}}{b_{4}}X_{PerfectComplement}\\left(P_{1},P_{2},M\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "962",
+        "title": "2.6 Perfect Substitutes Utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "963",
+        "folderId": "962",
+        "text": "Parameters from 2.4"
+      },
+      {
+        "type": "expression",
+        "id": "964",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "a_{6}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "965",
+        "folderId": "962",
+        "color": "#c74440",
+        "latex": "b_{6}=2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "966",
+        "folderId": "962",
+        "color": "#2d70b3",
+        "latex": "u_{PerfectSubstitutes}\\left(x,y\\right)=a_{6}x+b_{6}y\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=6\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "967",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{U_{type}=6\\right\\}",
+        "showLabel": true,
+        "label": "Perfect Substitutes Utility `u\\left(x,y\\right)=${a_6}x+${b_6}y`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "968",
+        "folderId": "962",
+        "color": "#6042a6",
+        "latex": "X_{PerfectSubstitutes}\\left(P_{1},P_{2},M\\right)=\\left\\{M_{RS}\\left(\\frac{I}{p_{1}},0\\right)>\\frac{p_{1}}{p_{2}}:\\frac{I}{p_{1}},M_{RS}\\left(\\frac{I}{p_{1}},0\\right)<\\frac{p_{1}}{p_{2}}:0,\\frac{I}{2p_{1}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "969",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "Y_{PerfectSubstitutes}\\left(P_{1},P_{2},M\\right)=\\left\\{M_{RS}\\left(\\frac{I}{p_{1}},0\\right)>\\frac{p_{1}}{p_{2}}:0,M_{RS}\\left(\\frac{I}{p_{1}},0\\right)<\\frac{p_{1}}{p_{2}}:\\frac{I}{p_{2}},\\frac{I}{2p_{2}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1003",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(a_{6}-.5\\right)\\left\\{U_{type}=6\\right\\},y_{title}-.5\\right)",
+        "showLabel": true,
+        "label": "`a=${a_6}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "1002",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "\\left(x_{title}+.25\\left(b_{6}-.5\\right)\\left\\{U_{type}=6\\right\\},y_{title}-1.25\\right)",
+        "showLabel": true,
+        "label": "`b=${b_6}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "997",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-1.25\\ \\right),\\left(x_{title}+2.5,y_{title}-1.25\\ \\right)\\left\\{U_{type}=6\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1005",
+        "folderId": "962",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}-.5\\ \\right),\\left(x_{title}+2.5,y_{title}-.5\\ \\right)\\left\\{U_{type}=6\\right\\}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "897",
+        "title": "3. Utility function and Demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1083",
+        "folderId": "897",
+        "color": "#388c46",
+        "latex": "u\\left(x,y\\right)=\\left[u_{CobbDouglas}\\left(x,y\\right),u_{QuasiLinear}\\left(x,y\\right),u_{Power}\\left(x,y\\right),u_{CES}\\left(x,y\\right),u_{PerfectComplements}\\left(x,y\\right),u_{PerfectSubstitutes}\\left(x,y\\right)\\right]"
+      },
+      {
+        "type": "text",
+        "id": "905",
+        "folderId": "897",
+        "text": "Marginal rate of subsitution - numerical:"
+      },
+      {
+        "type": "expression",
+        "id": "907",
+        "folderId": "897",
+        "color": "#c74440",
+        "latex": "M_{RS}\\left(x,y\\right)=\\frac{\\frac{d}{dx}u\\left(x,y\\right)}{\\frac{d}{dy}u\\left(x,y\\right)}"
+      },
+      {
+        "type": "text",
+        "id": "908",
+        "folderId": "897",
+        "text": "Demand - separate definition for each type of utility, combined together using Choice function:"
+      },
+      {
+        "type": "expression",
+        "id": "920",
+        "folderId": "897",
+        "color": "#2d70b3",
+        "latex": "X\\left(P_{1},P_{2},M\\right)=C_{hoice}\\left(X_{CobbDouglas}\\left(P_{1},P_{2},M\\right),X_{QuasiLinear}\\left(P_{1},P_{2},M\\right),X_{Power}\\left(P_{1},P_{2},M\\right),X_{CES}\\left(P_{1},P_{2},M\\right),X_{PerfectComplement}\\left(P_{1},P_{2},M\\right),X_{PerfectSubstitutes}\\left(P_{1},P_{2},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "921",
+        "folderId": "897",
+        "color": "#388c46",
+        "latex": "Y\\left(P_{1},P_{2},M\\right)=C_{hoice}\\left(Y_{CobbDouglas}\\left(P_{1},P_{2},M\\right),Y_{QuasiLinear}\\left(P_{1},P_{2},M\\right),Y_{Power}\\left(P_{1},P_{2},M\\right),Y_{CES}\\left(P_{1},P_{2},M\\right),Y_{PerfectComplement}\\left(P_{1},P_{2},M\\right),Y_{PerfectSubstitutes}\\left(P_{1},P_{2},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "979",
+        "folderId": "897",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{title},y_{title}+.5\\right),\\left(x_{title}+.5\\left(n_{utilities}-1\\right),y_{title}+.5\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "978",
+        "folderId": "897",
+        "color": "#c74440",
+        "latex": "\\left(x_{title}+.5\\left(U_{type}-1\\right),y_{title}+.5\\right)",
+        "dragMode": "X"
+      },
+      {
+        "type": "expression",
+        "id": "980",
+        "folderId": "897",
+        "color": "#388c46",
+        "latex": "n_{utilities}=6"
+      },
+      {
+        "type": "expression",
+        "id": "740",
+        "folderId": "897",
+        "color": "#2d70b3",
+        "latex": "U_{type}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "n_{utilities}",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "380",
+        "title": "4.1 Dragable bundle with movable indifference curve & upper contour set",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "381",
+        "folderId": "380",
+        "color": "#2d70b3",
+        "latex": "x_{0}=9.1",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "max": "11.47"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "385",
+        "folderId": "380",
+        "color": "#000000",
+        "latex": "y_{0}=7.2",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "max": "16.57"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "818",
+        "folderId": "380",
+        "color": "#c74440",
+        "latex": "x_{0r}=R_{ound2}\\left(x_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "819",
+        "folderId": "380",
+        "color": "#c74440",
+        "latex": "y_{0r}=R_{ound2}\\left(y_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "386",
+        "folderId": "380",
+        "color": "#000000",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "showLabel": true,
+        "label": "`(x,y)=(${x_0r},${y_0r})`",
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "387",
+        "folderId": "380",
+        "color": "#2d70b3",
+        "latex": "u_{CobbDouglas}\\left(x_{0},y_{0}\\right)\\le u_{CobbDouglas}\\left(x,y\\right)\\left\\{T_{ype}=1\\right\\}",
+        "fillOpacity": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "1027",
+        "folderId": "380",
+        "color": "#388c46",
+        "latex": "u_{QuasiLinear}\\left(x_{0},y_{0}\\right)\\le u_{QuasiLinear}\\left(x,y\\right)\\left\\{T_{ype}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1028",
+        "folderId": "380",
+        "color": "#6042a6",
+        "latex": "u_{Power}\\left(x_{0},y_{0}\\right)\\le u_{Power}\\left(x,y\\right)\\left\\{T_{ype}=3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1029",
+        "folderId": "380",
+        "color": "#000000",
+        "latex": "u_{CES}\\left(x_{0},y_{0}\\right)\\le u_{CES}\\left(x,y\\right)\\left\\{T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1030",
+        "folderId": "380",
+        "color": "#c74440",
+        "latex": "u_{PerfectComplements}\\left(x_{0},y_{0}\\right)\\le u_{PerfectComplements}\\left(x,y\\right)\\left\\{T_{ype}=5\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1031",
+        "folderId": "380",
+        "color": "#2d70b3",
+        "latex": "u_{PerfectSubstitutes}\\left(x_{0},y_{0}\\right)\\le u_{PerfectSubstitutes}\\left(x,y\\right)\\left\\{T_{ype}=6\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "1081",
+        "title": "Change Utility Types",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1032",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,11\\right)",
+        "showLabel": true,
+        "label": "Cobb Douglas",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1033",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,9\\right)",
+        "showLabel": true,
+        "label": "Quasilinear",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1034",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,7\\right)",
+        "showLabel": true,
+        "label": "Power",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to3"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1035",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,5\\right)",
+        "showLabel": true,
+        "label": "CES",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to4"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1036",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,3\\right)",
+        "showLabel": true,
+        "label": "Perfect Complements",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1037",
+        "folderId": "1081",
+        "color": "#000000",
+        "latex": "\\left(-12,1\\right)",
+        "showLabel": true,
+        "label": "Perfect Substitutes",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to6"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "389",
+        "title": "4.2 Many ICs above (rendering slow when moving)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "390",
+        "folderId": "389",
+        "color": "#6042a6",
+        "latex": "u_{0}=u\\left(x_{0},y_{0}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "773",
+        "folderId": "389",
+        "text": "Different delta depending on type of utility function:"
+      },
+      {
+        "type": "expression",
+        "id": "395",
+        "folderId": "389",
+        "color": "#6042a6",
+        "latex": "N=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "805",
+        "folderId": "389",
+        "text": "Define spread between ICs:"
+      },
+      {
+        "type": "expression",
+        "id": "415",
+        "folderId": "389",
+        "color": "#388c46",
+        "latex": "\\Delta_{u}=2",
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "391",
+        "folderId": "389",
+        "color": "#000000",
+        "latex": "U=\\left[u_{0}+0\\Delta_{u},u_{0}+1\\Delta_{u}...u_{0}+N\\Delta_{u}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "393",
+        "folderId": "389",
+        "color": "#2d70b3",
+        "latex": "U\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "410",
+        "title": "4.3 MRS",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "404",
+        "folderId": "410",
+        "color": "#6042a6",
+        "latex": "m=-M_{RS}\\left(x_{0},y_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "408",
+        "folderId": "410",
+        "color": "#388c46",
+        "latex": "l=3.5",
+        "slider": {
+          "hardMin": true,
+          "min": ".25",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "405",
+        "folderId": "410",
+        "color": "#000000",
+        "latex": "y-y_{0}=m\\cdot\\left(x-x_{0}\\right)\\left\\{\\left(1-l\\right)x_{0}<x<\\left(1+l\\right)x_{0}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "406",
+        "folderId": "410",
+        "color": "#c74440",
+        "latex": "m_{r}=-\\frac{\\operatorname{round}\\left(100m\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "407",
+        "folderId": "410",
+        "color": "#2d70b3",
+        "latex": "\\left(\\left(1+l\\right)x_{0},y_{0}+m\\cdot\\left(lx_{0}\\right)\\right)",
+        "showLabel": true,
+        "label": "`MRS=${m_r}`",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "382",
+        "title": "5. Optimal (exact)",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "1050",
+        "folderId": "382",
+        "text": "Rounding, D represents the number of decimal places"
+      },
+      {
+        "type": "expression",
+        "id": "1048",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "D=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "1039",
+        "folderId": "382",
+        "text": "CobbDouglas"
+      },
+      {
+        "type": "expression",
+        "id": "1040",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "x_{1opt}=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I}{p_{1}}\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1047",
+        "folderId": "382",
+        "color": "#388c46",
+        "latex": "x_{1round}=\\operatorname{round}\\left(x_{1opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1052",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{CobbDouglas}\\left(x_{1opt},y_{1opt}\\right)\\le u_{CobbDouglas}\\left(x,y\\right)\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1041",
+        "folderId": "382",
+        "color": "#388c46",
+        "latex": "y_{1opt}=\\frac{\\beta}{\\alpha+\\beta}\\cdot\\frac{I}{p_{2}}\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1051",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "y_{1round}=\\operatorname{round}\\left(y_{1opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1046",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt1}=\\left(x_{1opt},y_{1opt}\\right)\\left\\{T_{ype}=1\\right\\}",
+        "showLabel": true,
+        "label": "CobbDouglas Optimal (${x_1round},${y_1round})"
+      },
+      {
+        "type": "text",
+        "id": "1043",
+        "folderId": "382",
+        "text": "Quasilinear"
+      },
+      {
+        "type": "expression",
+        "id": "1044",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "y_{2opt}=\\left(a\\cdot\\frac{p_{2}}{b\\cdot\\beta\\cdot p_{1}}\\right)^{\\left(\\frac{1}{\\beta-1}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1053",
+        "folderId": "382",
+        "color": "#388c46",
+        "latex": "y_{2round}=\\operatorname{round}\\left(y_{2opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1045",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "x_{2opt}=\\frac{\\left(I-p_{2}\\cdot y_{2opt}\\right)}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1054",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "x_{2round}=\\operatorname{round}\\left(x_{2opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1055",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt2}=\\left(x_{2opt},y_{2opt}\\right)\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "QuasiLinear Optimal (${x_2round},${y_2round})"
+      },
+      {
+        "type": "expression",
+        "id": "1056",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{QuasiLinear}\\left(x_{2opt},y_{2opt}\\right)\\le u_{QuasiLinear}\\left(x,y\\right)\\left\\{T_{ype}=2\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1058",
+        "folderId": "382",
+        "text": "Power Utility"
+      },
+      {
+        "type": "expression",
+        "id": "1059",
+        "folderId": "382",
+        "color": "#388c46",
+        "latex": "k_{3}=\\left(\\frac{p_{1}}{p_{2}}\\right)^{\\left(\\frac{1}{r-1}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1060",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "y_{3opt}=\\frac{I}{p_{1}\\cdot k_{3}+p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1061",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "y_{3round}=\\operatorname{round}\\left(y_{3opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1062",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "x_{3opt}=k_{3}\\cdot\\frac{I}{p_{1}\\cdot k_{3}+p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1063",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "x_{3round}=\\operatorname{round}\\left(x_{3opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1064",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt3}=\\left(x_{3opt},y_{3opt}\\right)\\left\\{T_{ype}=3\\right\\}",
+        "showLabel": true,
+        "label": "Power Optimal (${x_3round},${y_3round})"
+      },
+      {
+        "type": "expression",
+        "id": "1065",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{Power}\\left(x_{3opt},y_{3opt}\\right)\\le u_{Power}\\left(x,y\\right)\\left\\{T_{ype}=3\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1067",
+        "folderId": "382",
+        "text": "CES utility, r!=0"
+      },
+      {
+        "type": "expression",
+        "id": "1068",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "k_{4}=\\left(\\frac{p_{1}}{p_{2}}\\cdot\\left(\\frac{b_{4}}{a_{4}}\\right)^{r_{4}}\\right)^{\\left(\\frac{1}{r_{4}-1}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1069",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "y_{4opt}=\\frac{I}{p_{1}\\cdot k_{4}+p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1071",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "y_{4round}=\\operatorname{round}\\left(y_{4opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1070",
+        "folderId": "382",
+        "color": "#388c46",
+        "latex": "x_{4opt}=k_{4}\\cdot\\frac{I}{p_{1}\\cdot k_{4}+p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1072",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "x_{4round}=\\operatorname{round}\\left(x_{4opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1073",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt4}=\\left(x_{4opt},y_{4opt}\\right)\\left\\{T_{ype}=4\\right\\}",
+        "showLabel": true,
+        "label": "CES(${x_4round},${y_4round})"
+      },
+      {
+        "type": "expression",
+        "id": "1074",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{CES}\\left(x_{4opt},y_{4opt}\\right)\\le u_{CES}\\left(x,y\\right)\\left\\{T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1076",
+        "folderId": "382",
+        "text": "Perfect Complements"
+      },
+      {
+        "type": "expression",
+        "id": "1077",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "k_{5}=\\frac{a_{4}}{b_{4}}"
+      },
+      {
+        "type": "expression",
+        "id": "1078",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "x_{5opt}=\\frac{I}{p_{1}+p_{2}\\cdot k_{5}}"
+      },
+      {
+        "type": "expression",
+        "id": "1085",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "x_{5round}=\\operatorname{round}\\left(x_{5opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1084",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "y_{5opt}=k_{5}\\cdot\\frac{I}{p_{1}+p_{2}\\cdot k_{5}}"
+      },
+      {
+        "type": "expression",
+        "id": "1095",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "y_{5round}=\\operatorname{round}\\left(y_{5opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1086",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt5}=\\left(x_{5opt},y_{5opt}\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": "Perfect Complements(${x_5round},${y_5round})"
+      },
+      {
+        "type": "expression",
+        "id": "1087",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{PerfectComplements}\\left(x_{5opt},y_{5opt}\\right)\\le u_{PerfectComplements}\\left(x,y\\right)\\left\\{T_{ype}=5\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1089",
+        "folderId": "382",
+        "text": "Perfect Substitutes"
+      },
+      {
+        "type": "expression",
+        "id": "1090",
+        "folderId": "382",
+        "color": "#6042a6",
+        "latex": "x_{6opt}=\\left\\{\\frac{a_{6}}{b_{6}}>\\frac{p_{1}}{p_{2}}:\\frac{I}{p_{1}},\\frac{a_{6}}{b_{6}}<\\frac{p_{1}}{p_{2}}:0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1092",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "x_{6round}=\\operatorname{round}\\left(x_{6opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1091",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "y_{6opt}=\\left\\{\\frac{a_{6}}{b_{6}}>\\frac{p_{1}}{p_{2}}:0,\\frac{a_{6}}{b_{6}}<\\frac{p_{1}}{p_{2}}:\\frac{I}{p_{2}}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1101",
+        "folderId": "382",
+        "text": "When MRS=p1/p2"
+      },
+      {
+        "type": "expression",
+        "id": "1103",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "P_{Sequal}=\\left(x_{eq},y_{eq}\\right)\\left\\{\\frac{a_{6}}{b_{6}}=\\frac{p_{1}}{p_{2}}\\right\\}\\left\\{T_{ype}=6\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1097",
+        "folderId": "382",
+        "color": "#c74440",
+        "latex": "t=\\left[0,\\frac{1}{6},\\frac{1}{3},\\frac{1}{2},\\frac{2}{3},\\frac{5}{6},1\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1098",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "x_{eq}=t\\cdot\\frac{I}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1102",
+        "folderId": "382",
+        "color": "#000000",
+        "latex": "y_{eq}=\\frac{\\left(1-t\\right)I}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1093",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "y_{6round}=\\operatorname{round}\\left(y_{6opt},D\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1094",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "O_{pt6}=\\left(x_{6opt},y_{6opt}\\right)\\left\\{T_{ype}=6\\right\\}",
+        "showLabel": true,
+        "label": "Perfect Substitutes(${x_6round},${y_6round})"
+      },
+      {
+        "type": "expression",
+        "id": "1096",
+        "folderId": "382",
+        "color": "#2d70b3",
+        "latex": "u_{PerfectSubstitutes}\\left(x_{6opt},y_{6opt}\\right)\\le u_{PerfectSubstitutes}\\left(x,y\\right)\\left\\{T_{ype}=6\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "412",
+        "title": "Dragable labels",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "413",
+        "folderId": "412",
+        "color": "#000000",
+        "latex": "\\left(3.66,-1.23\\right)",
+        "showLabel": true,
+        "label": "Pizza",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "414",
+        "folderId": "412",
+        "color": "#000000",
+        "latex": "\\left(-1.92,2.57\\right)",
+        "showLabel": true,
+        "label": "Soda",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "folder",
+        "id": "745",
+        "title": "Misc",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "746",
+        "folderId": "745",
+        "color": "#2d70b3",
+        "latex": "!C_{hoice}\\left(f_{1},f_{2}\\right)=\\left\\{U_{type}=1:f_{1},\\ U_{type}=2:f_{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "782",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "C_{hoice}\\left(f_{1},f_{2},f_{3},f_{4},f_{5},f_{6}\\right)=\\left\\{U_{type}=1:f_{1},\\ U_{type}=2:f_{2},U_{type}=3:f_{3},U_{type}=4:f_{4},U_{type}=5:f_{5},U_{type}=6:f_{6}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "750",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "787",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "\\left(x_{title},y_{title}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "799",
+        "folderId": "745",
+        "color": "#388c46",
+        "latex": "x_{title}=1.04",
+        "hidden": true,
+        "slider": {
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "800",
+        "folderId": "745",
+        "color": "#6042a6",
+        "latex": "y_{title}=-2",
+        "hidden": true,
+        "slider": {
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "774",
+        "color": "#c74440"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

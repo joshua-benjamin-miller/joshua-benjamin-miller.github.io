@@ -1,0 +1,158 @@
+{
+  "version": 11,
+  "randomSeed": "eef2cfeff47965eef54314244c0b6376",
+  "graph": {
+    "viewport": {
+      "xmin": -5.077570196864368,
+      "ymin": -1.62121779757764,
+      "xmax": 8.823760131802992,
+      "ymax": 5.8833564158417575
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-5.077570196864368",
+      "xmax": "8.823760131802992",
+      "ymin": "-1.62121779757764",
+      "ymax": "5.8833564158417575"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "9",
+        "text": "Inspired by \"EXPLAINING THE CHARACTERISTICS OF THE POWER (CRRA) UTILITY FAMILY\"  Peter Wakker's CRRA paper: https://personal.eur.nl/wakker/pdfspubld/08.6powerut.pdf"
+      },
+      {
+        "type": "text",
+        "id": "26",
+        "text": "Although the raw utility functions appear different, applying an affine transformation shows that they generate nearly identical preference rankings. What matters is not the exact shape of the indifference curves, but how different bundles are ranked under each utility representation."
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "r=-1.5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "u_{1}\\left(x\\right)=x^{r}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "u_{2}\\left(x\\right)=\\ln\\left(x\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "7",
+        "text": "Affine transformations make clear they are in the same family"
+      },
+      {
+        "type": "text",
+        "id": "24",
+        "text": "Affine transformations of utility do not change preferences, because preferences depend only on the ranking (ordering) of bundles, not on utility levels."
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "color": "#6042a6",
+        "latex": "u_{1}\\left(x\\right)\\left\\{A=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "color": "#000000",
+        "latex": "u_{2}\\left(x\\right)\\left\\{A=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#6042a6",
+        "latex": "\\frac{u_{1}\\left(x\\right)-u_{1}\\left(1\\right)}{u_{1}\\left(2\\right)-u_{1}\\left(1\\right)}\\left\\{x>0\\right\\}\\left\\{A=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#000000",
+        "latex": "\\frac{u_{2}\\left(x\\right)-u_{2}\\left(1\\right)}{u_{2}\\left(2\\right)-u_{2}\\left(1\\right)}\\left\\{x>0\\right\\}\\left\\{A=1\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "12",
+        "text": "labels"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "color": "#000000",
+        "latex": "\\left(1.5,\\frac{u_{1}\\left(1.5\\right)-u_{1}\\left(1\\right)}{u_{1}\\left(2\\right)-u_{1}\\left(1\\right)}\\right)",
+        "showLabel": true,
+        "label": "`r=${r}`",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "folder",
+        "id": "22",
+        "title": "Control",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "22",
+        "color": "#388c46",
+        "latex": "A=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "22",
+        "color": "#000000",
+        "latex": "\\left(-1,1\\right)",
+        "showLabel": true,
+        "label": "Affine transformation",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "A\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "22",
+        "color": "#000000",
+        "latex": "\\left(-1,0.5\\right)",
+        "showLabel": true,
+        "label": "Reset",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "A\\to0"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

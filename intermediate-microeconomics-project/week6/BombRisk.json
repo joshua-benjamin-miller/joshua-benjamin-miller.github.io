@@ -1,0 +1,491 @@
+{
+  "version": 11,
+  "randomSeed": "ce569f5b47a93a41774423e36648b2b2",
+  "graph": {
+    "viewport": {
+      "xmin": -8.526520566136355,
+      "ymin": -12.051202355918093,
+      "xmax": 223.63682000797905,
+      "ymax": 38.02324365026368
+    },
+    "showGrid": false,
+    "xAxisLabel": "Number of Boxes",
+    "yAxisLabel": "Expected Utility",
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-8.526520566136355",
+      "xmax": "223.63682000797905",
+      "ymin": "-12.051202355918093",
+      "ymax": "38.02324365026368"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "784",
+        "text": "There are 100 boxes, one of which contains a bomb. Opening more boxes increases the payoff if safe, but also increases the probability of explosion (0 utility)"
+      },
+      {
+        "type": "folder",
+        "id": "25",
+        "title": "Expected Utility",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "25",
+        "color": "#000000",
+        "latex": "\\alpha=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "n=32",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "25",
+        "color": "#6042a6",
+        "latex": "u\\left(x\\right)=\\frac{x^{\\alpha}}{\\alpha}\\left\\{x>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "E_{U}\\left(N\\right)=\\left(\\frac{100-N}{100}\\right)u\\left(N\\right)\\left\\{0\\le N\\le100\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "25",
+        "color": "#2d70b3",
+        "latex": "E_{utility}=E_{U}\\left(n\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "29",
+        "folderId": "25",
+        "color": "#388c46",
+        "latex": "E_{utilityr}=.01\\cdot\\operatorname{round}\\left(100\\cdot E_{utility}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(n,E_{U}\\left(n\\right)\\right)",
+        "showLabel": true,
+        "label": " `EU(${n})=${E_utilityr}`"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(70,E_{U}\\left(70\\right)\\right)",
+        "showLabel": true,
+        "label": "`EU(n)=\\frac{100-n}{n}\\times u(n) = \\frac{100-n}{n}\\times n^${\\alpha}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "779",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(90,E_{U}\\left(90\\right)\\right)\\left\\{\\alpha=1\\right\\}",
+        "showLabel": true,
+        "label": "Risk Neutral `\\alpha=1`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "781",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(85,E_{U}\\left(80\\right)\\right)\\left\\{\\alpha<1\\right\\}",
+        "showLabel": true,
+        "label": "Risk averse `\\alpha<1`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "769",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "n_{star}=\\frac{100\\alpha}{1+\\alpha}"
+      },
+      {
+        "type": "expression",
+        "id": "798",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(10,-3\\right),\\left(20,-3\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "799",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(10\\alpha+10,-3\\right)",
+        "showLabel": true,
+        "label": "`\\alpha=${\\alpha}`"
+      },
+      {
+        "type": "folder",
+        "id": "16",
+        "title": "Choice",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "16",
+        "color": "#000000",
+        "latex": "n_{c}=65",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(n_{c},0\\right)",
+        "showLabel": true,
+        "label": "`n_c=${n_c}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(n_{c},0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "O_{n}=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(70,E_{Uc}\\left(70\\right)\\right)",
+        "showLabel": true,
+        "label": "`EU(n)=\\frac{100-n}{n}\\times \\frac{n^${\\alpha_c}}{${\\alpha_c}}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "16",
+        "color": "#2d70b3",
+        "latex": "E_{utilityc}=E_{Uc}\\left(n_{c}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "E_{utilitycr}=.01\\cdot\\operatorname{round}\\left(100\\cdot E_{utilityc}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(n_{c},E_{Uc}\\left(n_{c}\\right)\\right)",
+        "showLabel": true,
+        "label": "`EU(${n_c})=${E_utilitycr}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "16",
+        "color": "#c74440",
+        "latex": "\\alpha_{c}=0.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "2"
+        }
+      },
+      {
+        "type": "text",
+        "id": "771",
+        "folderId": "16",
+        "text": "compare to calc result"
+      },
+      {
+        "type": "expression",
+        "id": "772",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\alpha_{calc}=\\frac{n_{c}}{100-n_{c}}"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "16",
+        "color": "#6042a6",
+        "latex": "u_{c}\\left(x\\right)=\\frac{x^{\\alpha_{c}}}{\\alpha_{c}}\\left\\{x>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "E_{Uc}\\left(N\\right)=\\left(\\frac{100-N}{100}\\right)u_{c}\\left(N\\right)\\left\\{0\\le N\\le100\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "16",
+        "color": "#6042a6",
+        "latex": "\\alpha_{LowerBound}=\\frac{\\ln\\left(\\frac{\\left(100-\\left(n_{c}-1\\right)\\right)}{100-n_{c}}\\right)}{\\ln\\left(\\frac{n_{c}}{n_{c}-1}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "16",
+        "color": "#000000",
+        "latex": "\\alpha_{UpperBound}=\\frac{\\ln\\left(\\frac{\\left(100-\\left(n_{c}+1\\right)\\right)}{100-n_{c}}\\right)}{\\ln\\left(\\frac{n_{c}}{n_{c}+1}\\right)}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "782",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(90,E_{Uc}\\left(90\\right)\\right)\\left\\{\\alpha_{c}<1\\right\\}",
+        "showLabel": true,
+        "label": "Risk averse `\\alpha<1`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "16",
+        "color": "#2d70b3",
+        "latex": "\\alpha_{Approximate}=\\alpha_{c}\\to\\frac{\\alpha_{LowerBound}+\\alpha_{UpperBound}}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(70,-3\\right)",
+        "showLabel": true,
+        "label": "👉Approximate `\\alpha`",
+        "hidden": true,
+        "labelSize": "1.5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "\\alpha_{Approximate}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "800",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(10,-5\\right),\\left(30,-5\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "801",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "\\left(10\\alpha_{c}+10,-5\\right)",
+        "showLabel": true,
+        "label": "`\\alpha_c=${\\alpha_c}`"
+      },
+      {
+        "type": "folder",
+        "id": "788",
+        "title": "optimal",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "791",
+        "folderId": "788",
+        "color": "#6042a6",
+        "latex": "N_{opt}=\\frac{100\\alpha}{1+\\alpha}"
+      },
+      {
+        "type": "expression",
+        "id": "802",
+        "folderId": "788",
+        "color": "#6042a6",
+        "latex": "N_{optr}=\\operatorname{round}\\left(N_{opt},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "792",
+        "folderId": "788",
+        "color": "#c74440",
+        "latex": "\\left(N_{opt},E_{U}\\left(N_{opt}\\right)\\right)",
+        "showLabel": true,
+        "label": "Optimal `N^*`=`${N_{optr}}`",
+        "pointStyle": "CROSS",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "793",
+        "folderId": "788",
+        "color": "#c74440",
+        "latex": "N_{optc}=\\frac{100\\alpha_{c}}{1+\\alpha_{c}}"
+      },
+      {
+        "type": "expression",
+        "id": "803",
+        "folderId": "788",
+        "color": "#000000",
+        "latex": "N_{optcr}=\\operatorname{round}\\left(N_{optc},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "794",
+        "folderId": "788",
+        "color": "#388c46",
+        "latex": "\\left(N_{optc},E_{Uc}\\left(N_{optc}\\right)\\right)",
+        "showLabel": true,
+        "label": "Optimal `N^*`=`${N_{optcr}}`",
+        "pointStyle": "CROSS",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "text",
+        "id": "797",
+        "text": "The more risk averse, the less box play will open to reach utility maximization"
+      },
+      {
+        "type": "folder",
+        "id": "805",
+        "title": "Answer",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "774",
+        "folderId": "805",
+        "text": "Expected Utility"
+      },
+      {
+        "type": "expression",
+        "id": "775",
+        "folderId": "805",
+        "color": "#2d70b3",
+        "latex": "p_{survival}=\\frac{\\left(100-n\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "809",
+        "folderId": "805",
+        "color": "#000000",
+        "latex": "p_{explode}=\\frac{n}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "811",
+        "folderId": "805",
+        "color": "#c74440",
+        "latex": "N_{opt}"
+      },
+      {
+        "type": "expression",
+        "id": "812",
+        "folderId": "805",
+        "color": "#2d70b3",
+        "latex": "E_{U}\\left(N_{opt}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "810",
+        "folderId": "805",
+        "text": "Choice"
+      },
+      {
+        "type": "expression",
+        "id": "806",
+        "folderId": "805",
+        "color": "#2d70b3",
+        "latex": "p_{survivalc}=\\frac{\\left(100-n_{c}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "807",
+        "folderId": "805",
+        "color": "#388c46",
+        "latex": "p_{explodec}=\\frac{n_{c}}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "808",
+        "folderId": "805",
+        "color": "#6042a6",
+        "latex": "N_{optc}"
+      },
+      {
+        "type": "expression",
+        "id": "813",
+        "folderId": "805",
+        "color": "#388c46",
+        "latex": "E_{Uc}\\left(N_{opt}\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

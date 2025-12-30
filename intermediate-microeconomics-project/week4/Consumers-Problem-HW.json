@@ -1,0 +1,479 @@
+{
+  "version": 11,
+  "randomSeed": "0c56e08aaf514bb515c6574e72b0092f",
+  "graph": {
+    "viewport": {
+      "xmin": -18.580926378662106,
+      "ymin": -17.71840031130384,
+      "xmax": 89.69483690854614,
+      "ymax": 175.3730439267101
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-18.580926378662106",
+      "xmax": "89.69483690854614",
+      "ymin": "-17.71840031130384",
+      "ymax": "175.3730439267101"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "86",
+        "title": "Cobb-Douglas, no tax",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "86",
+        "color": "#c74440",
+        "latex": "p_{1}=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "86",
+        "color": "#2d70b3",
+        "latex": "p_{2}=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "86",
+        "color": "#388c46",
+        "latex": "I=702",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1000",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "86",
+        "color": "#388c46",
+        "latex": "\\alpha=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": "5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "86",
+        "color": "#2d70b3",
+        "latex": "\\beta=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "86",
+        "color": "#c74440",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "86",
+        "color": "#c74440",
+        "latex": "\\alpha\\ln x\\ +\\beta\\ln y=u\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "86",
+        "color": "#c74440",
+        "latex": "u=\\alpha\\ln d_{x}\\ +\\beta\\ln d_{y}"
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "86",
+        "color": "#000000",
+        "latex": "d_{x}=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "86",
+        "color": "#2d70b3",
+        "latex": "d_{y}=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "86",
+        "color": "#c74440",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "no tax"
+      },
+      {
+        "type": "folder",
+        "id": "85",
+        "title": "Sales Tax on Good 2",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "47",
+        "folderId": "85",
+        "color": "#000000",
+        "latex": "r=0.52",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "folderId": "85",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}\\left(1+r\\right)y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "85",
+        "color": "#2d70b3",
+        "latex": "\\alpha\\ln x\\ +\\beta\\ln y=u_{r}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "85",
+        "color": "#c74440",
+        "latex": "u_{r}=\\alpha\\ln d_{xr}\\ +\\beta\\ln d_{yr}"
+      },
+      {
+        "type": "expression",
+        "id": "58",
+        "folderId": "85",
+        "color": "#000000",
+        "latex": "d_{xr}=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "85",
+        "color": "#2d70b3",
+        "latex": "d_{yr}=\\frac{\\beta}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I}{p_{2}\\left(1+r\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "85",
+        "color": "#2d70b3",
+        "latex": "\\left(d_{xr},d_{yr}\\right)",
+        "showLabel": true,
+        "label": "sales tax"
+      },
+      {
+        "type": "folder",
+        "id": "84",
+        "title": "Income Tax, same revenue (can adjust independently)"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "t=\\frac{p_{2}rd_{yr}}{I}",
+        "hidden": true,
+        "slider": {
+          "hardMax": true,
+          "max": ".99"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "48",
+        "folderId": "84",
+        "color": "#fa7e19",
+        "latex": "p_{1}x+p_{2}y=\\left(1-t\\right)I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "84",
+        "color": "#fa7e19",
+        "latex": "\\alpha\\ln x\\ +\\beta\\ln y=u_{t}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "84",
+        "color": "#c74440",
+        "latex": "u_{t}=\\alpha\\ln d_{xt}\\ +\\beta\\ln d_{yt}"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "d_{xt}=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I\\left(1-t\\right)}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "84",
+        "color": "#2d70b3",
+        "latex": "d_{yt}=\\frac{\\beta}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I\\left(1-t\\right)}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "84",
+        "color": "#fa7e19",
+        "latex": "\\left(d_{xt},d_{yt}\\right)",
+        "showLabel": true,
+        "label": "income tax"
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "\\left(d_{x},0\\right)",
+        "showLabel": true,
+        "label": "`C_1^*=C_1^r`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "\\left(d_{xt},0\\right)",
+        "showLabel": true,
+        "label": "`C_1^t`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "\\left(0,d_{yr}\\right)",
+        "showLabel": true,
+        "label": "`C_2^r`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "\\left(0,d_{yt}\\right)",
+        "showLabel": true,
+        "label": "`C_2^t`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "\\left(0,d_{y}\\right)",
+        "showLabel": true,
+        "label": "`C_2^*`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "folder",
+        "id": "88",
+        "title": "Labels",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "88",
+        "color": "#2d70b3",
+        "latex": "\\left(0,\\frac{I}{\\left(1+r\\right)p_{2}}\\right)",
+        "showLabel": true,
+        "label": "`I/\\left(1+r\\right)p_{2}`",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "88",
+        "color": "#fa7e19",
+        "latex": "\\left(0,\\frac{\\left(1-t\\right)I}{p_{2}}\\right)",
+        "showLabel": true,
+        "label": "`(1-t)I/p_{2}`",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "88",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{\\left(1-t\\right)I}{p_{1}},0\\right)",
+        "showLabel": true,
+        "label": "`(1-t)I/p_{1}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "88",
+        "color": "#c74440",
+        "latex": "\\left(0,\\frac{I}{p_{2}}\\right)",
+        "showLabel": true,
+        "label": "`I/p_{2}`",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "folderId": "88",
+        "color": "#c74440",
+        "latex": "\\left(\\frac{I}{p_{1}},0\\right)",
+        "showLabel": true,
+        "label": "`I/p_{1}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "81",
+        "title": "Results"
+      },
+      {
+        "type": "text",
+        "id": "93",
+        "folderId": "81",
+        "text": "No tax"
+      },
+      {
+        "type": "expression",
+        "id": "96",
+        "folderId": "81",
+        "color": "#388c46",
+        "latex": "d_{x}"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "folderId": "81",
+        "color": "#6042a6",
+        "latex": "d_{y}"
+      },
+      {
+        "type": "text",
+        "id": "91",
+        "folderId": "81",
+        "text": "Sales Tax on Good 2"
+      },
+      {
+        "type": "expression",
+        "id": "98",
+        "folderId": "81",
+        "color": "#000000",
+        "latex": "d_{xr}"
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "folderId": "81",
+        "color": "#c74440",
+        "latex": "d_{yr}"
+      },
+      {
+        "type": "text",
+        "id": "95",
+        "folderId": "81",
+        "text": "Income Tax"
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "folderId": "81",
+        "color": "#2d70b3",
+        "latex": "d_{xt}"
+      },
+      {
+        "type": "expression",
+        "id": "101",
+        "folderId": "81",
+        "color": "#388c46",
+        "latex": "d_{yt}"
+      },
+      {
+        "type": "text",
+        "id": "103",
+        "folderId": "81",
+        "text": "Tax Rev"
+      },
+      {
+        "type": "expression",
+        "id": "104",
+        "folderId": "81",
+        "color": "#000000",
+        "latex": "p_{2}rd_{yr}"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

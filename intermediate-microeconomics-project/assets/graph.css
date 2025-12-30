@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 32px;
+  font-size: 1.8rem;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 1.3rem;
+}
+
+.section {
+  background: #fff;
+  padding: 20px 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 28px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.graph-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+#calculator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#calculator-3d {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0;
+  max-width: none;
+
+  background: #111827;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 0 24px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro",
+    "Segoe UI", Roboto, sans-serif;
+}
+
+.nav-left {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-right: 0; 
+}
+
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.dropdown-btn {
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 12px 4px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:#111827;
+  color:#fff;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover { background: rgba(255,255,255,0.08);color:#fff }
+
+.textbox {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  position: relative;
+  margin-top: 12px;
+}
+
+.policy-box {
+  padding-bottom: 60px; 
+}
+
+.policy-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 6px 10px 10px; 
+  background: #fff;
+  border-top: 1px solid #eee; 
+}
+
+.policy-buttons button {
+  flex: 1;
+  font-size: 0.8rem;
+  padding: 4px 6px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.section-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-header h2{
+  margin: 0;
+}
+
+.desmos-btn{
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.desmos-btn:hover{
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+.graph-wrapper::before,
+.graph-wrapper::after {
+  pointer-events: none;
+}
+
+.section::before,
+.section::after {
+  pointer-events: none;
+}
+
+#calculator,
+#calculator * {
+  pointer-events: auto;
+}
+
+.fold-target { display: none; }
+.fold-target.show { display: block; }
+
+.export-btn {
+  height: 34px;              
+  padding: 0 14px;
+  margin-top:7px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  background: #ffffff;
+  color: #111827;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;       
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.05s ease;
+}
+
+.export-btn:hover {
+  background: #f3f4f6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.export-btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+

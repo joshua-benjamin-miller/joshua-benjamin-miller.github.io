@@ -1,0 +1,667 @@
+{
+  "version": 11,
+  "randomSeed": "18f6a9c9843e5ab87ac8302aa165b450",
+  "graph": {
+    "viewport": {
+      "xmin": -29.42692402169743,
+      "ymin": -58.0520080813146,
+      "xmax": 123.4592862587252,
+      "ymax": 214.95908170513647
+    },
+    "showGrid": false,
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-29.42692402169743",
+      "xmax": "123.4592862587252",
+      "ymin": "-58.0520080813146",
+      "ymax": "214.95908170513647"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "58",
+        "text": "see stata code that converts order books into the tables below"
+      },
+      {
+        "type": "text",
+        "id": "1553",
+        "text": "Unit Tax"
+      },
+      {
+        "type": "expression",
+        "id": "1547",
+        "color": "#000000",
+        "latex": "t_{D}=20",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "max": "20"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1550",
+        "color": "#2d70b3",
+        "latex": "t_{S}=20",
+        "slider": {
+          "max": "20"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "1108",
+        "title": "Demand",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1523",
+        "folderId": "1108",
+        "color": "#6042a6",
+        "latex": "Q_{Dhigh}=39",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "50",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1524",
+        "folderId": "1108",
+        "color": "#000000",
+        "latex": "V_{high}=100",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1525",
+        "folderId": "1108",
+        "color": "#c74440",
+        "latex": "Q_{Dmid}=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1526",
+        "folderId": "1108",
+        "color": "#2d70b3",
+        "latex": "V_{mid}=58",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1527",
+        "folderId": "1108",
+        "color": "#388c46",
+        "latex": "Q_{Dlow}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1528",
+        "folderId": "1108",
+        "color": "#6042a6",
+        "latex": "V_{low}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "id": "1531",
+        "type": "table",
+        "folderId": "1108",
+        "columns": [
+          {
+            "values": [
+              "0",
+              "0",
+              "Q_{Dhigh}",
+              "Q_{Dhigh}",
+              "Q_{Dhigh}+Q_{Dmid}",
+              "Q_{Dhigh}+Q_{Dmid}",
+              "Q_{Dhigh}+Q_{Dmid}+Q_{Dlow}",
+              "Q_{Dhigh}+Q_{Dmid}+Q_{Dlow}"
+            ],
+            "hidden": true,
+            "id": "1529",
+            "color": "#000000",
+            "latex": "x_{1}"
+          },
+          {
+            "values": [
+              "1.5V_{high}",
+              "V_{high}",
+              "V_{high}",
+              "V_{mid}",
+              "V_{mid}",
+              "V_{low}",
+              "V_{low}",
+              "0"
+            ],
+            "id": "1530",
+            "color": "#2d70b3",
+            "points": false,
+            "lines": true,
+            "latex": "y_{1}"
+          }
+        ]
+      },
+      {
+        "type": "expression",
+        "id": "1533",
+        "folderId": "1108",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{Dhigh}+Q_{Dmid}+Q_{Dlow},.2V_{high}\\right)",
+        "showLabel": true,
+        "label": "Demand",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "1546",
+        "title": "Demand Shift",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1548",
+        "folderId": "1546",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{1},y_{1}+t_{D}\\right)",
+        "points": false,
+        "lines": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "1101",
+        "title": "Supply",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1534",
+        "folderId": "1101",
+        "color": "#6042a6",
+        "latex": "Q_{Slow}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1535",
+        "folderId": "1101",
+        "color": "#000000",
+        "latex": "C_{low}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1536",
+        "folderId": "1101",
+        "color": "#c74440",
+        "latex": "Q_{Shigh}=50",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1537",
+        "folderId": "1101",
+        "color": "#2d70b3",
+        "latex": "C_{high}=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1538",
+        "folderId": "1101",
+        "color": "#388c46",
+        "latex": "Q_{Shigh}+Q_{Slow}"
+      },
+      {
+        "type": "expression",
+        "id": "1539",
+        "folderId": "1101",
+        "color": "#fa7e19",
+        "latex": "\\left(Q_{Shigh}+Q_{Slow},\\max\\left(C_{high},V_{high}\\right)\\right)",
+        "showLabel": true,
+        "label": "Supply",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "id": "1543",
+        "type": "table",
+        "folderId": "1101",
+        "columns": [
+          {
+            "values": [
+              "0",
+              "0",
+              "Q_{Slow}",
+              "Q_{Slow}",
+              "Q_{Slow}+Q_{Shigh}",
+              "Q_{Slow}+Q_{Shigh}"
+            ],
+            "hidden": true,
+            "id": "1541",
+            "color": "#c74440",
+            "latex": "x_{2}"
+          },
+          {
+            "values": [
+              "0",
+              "C_{low}",
+              "C_{low}",
+              "C_{high}",
+              "C_{high}",
+              "1.5\\cdot\\max\\left(C_{high},V_{high}\\right)"
+            ],
+            "id": "1542",
+            "color": "#fa7e19",
+            "points": false,
+            "lines": true,
+            "latex": "y_{2}"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "id": "1549",
+        "title": "Supply Shift",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1551",
+        "folderId": "1549",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{2},y_{2}+t_{S}\\right)",
+        "points": false,
+        "lines": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "1335",
+        "text": "Illustration of how n (number of bids and asks) affects the demand and supply curves"
+      },
+      {
+        "type": "expression",
+        "id": "1346",
+        "color": "#388c46",
+        "latex": "n=75",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "75",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "1337",
+        "title": "Bids and Ask for variable sample size",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1347",
+        "folderId": "1337",
+        "color": "#6042a6",
+        "latex": "Q_{maxDemand}=100",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "200"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1366",
+        "folderId": "1337",
+        "color": "#6042a6",
+        "latex": "Q_{maxSupply}=100",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "200"
+        }
+      },
+      {
+        "type": "text",
+        "id": "1341",
+        "folderId": "1337",
+        "text": "Random lists of bids and ask"
+      },
+      {
+        "type": "expression",
+        "id": "1342",
+        "folderId": "1337",
+        "color": "#6042a6",
+        "latex": "P_{ask}=\\left[20.00,20.58,21.16,21.78,22.40,24.26,24.92,25.58,25.58,25.58,25.58,25.58,25.58,26.23,26.89,31.00,31.68,32.36,33.05,33.73,34.42,35.10,35.80,40.66,41.36,42.07,42.07,42.07,42.07,42.07,42.07,42.77,43.48,46.32,47.04,47.75,48.47,49.18,49.90,50.62,51.35,51.35,51.35,51.35,51.35,51.35,51.35,51.35,51.35,51.35,51.35,52.06,54.22,60.74,61.48,62.21,62.95,65.14,65.88,66.61,67.35,68.83,69.56,70.30,73.23,73.97,74.70,75.43,76.17,76.89,77.63,85.72,86.45,87.19,87.93,88.67,89.41,90.14,90.88,91.62,92.36,93.09,93.83,94.57,95.30,96.04,96.78,97.54,99.00\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1343",
+        "folderId": "1337",
+        "color": "#000000",
+        "latex": "P_{bid}=\\left[90.00,89.41,88.74,84.73,84.01,81.33,81.33,81.33,81.33,81.33,81.33,81.33,81.33,81.33,81.33,81.33,81.33,75.21,74.53,73.86,73.12,72.47,71.81,67.16,66.52,65.87,63.95,63.29,62.64,62.02,62.02,62.02,62.02,62.02,62.02,62.02,61.39,60.76,60.13,59.52,58.91,58.28,57.66,55.17,55.17,55.17,55.17,55.17,55.17,54.56,53.93,50.29,48.56,46.87,46.30,45.75,45.20,44.65,42.49,41.96,41.42,37.80,37.30,36.79,36.29,35.80,35.31,34.83,34.34,33.87,33.39,32.92,32.45,31.98,31.52,31.06,30.6,30.14,29.69,29.25,28.79,28.35,21\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1344",
+        "folderId": "1337",
+        "color": "#c74440",
+        "latex": "P_{bid}\\left[1...n\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1345",
+        "folderId": "1337",
+        "color": "#2d70b3",
+        "latex": "D\\left(x\\right)=P_{bid}\\left[\\operatorname{ceil}\\left(x\\cdot\\frac{n}{Q_{maxDemand}}\\right)\\right]\\left\\{0\\le x\\le Q_{maxDemand}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1348",
+        "folderId": "1337",
+        "color": "#000000",
+        "latex": "I=\\left[1...n-1\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1349",
+        "folderId": "1337",
+        "color": "#c74440",
+        "latex": "x_{v}=Q_{maxDemand}\\cdot\\frac{I}{n}"
+      },
+      {
+        "type": "expression",
+        "id": "1350",
+        "folderId": "1337",
+        "color": "#2d70b3",
+        "latex": "v_{erticals}=\\operatorname{polygon}\\left(\\left(x_{v},P_{bid}\\left[I\\right]\\right),\\left(x_{v},P_{bid}\\left[I+1\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1351",
+        "folderId": "1337",
+        "color": "#388c46",
+        "latex": "K\\left(x\\right)=P_{ask}\\left[\\operatorname{ceil}\\left(x\\cdot\\frac{n}{Q_{maxSupply}}\\right)\\right]\\left\\{0\\le x\\le Q_{maxSupply}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1367",
+        "folderId": "1337",
+        "color": "#000000",
+        "latex": "x_{k}=Q_{maxSupply}\\cdot\\frac{I}{n}"
+      },
+      {
+        "type": "expression",
+        "id": "1352",
+        "folderId": "1337",
+        "color": "#388c46",
+        "latex": "v_{erticalS}=\\operatorname{polygon}\\left(\\left(x_{k},P_{ask}\\left[I\\right]\\right),\\left(x_{k},P_{ask}\\left[I+1\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1356",
+        "folderId": "1337",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,P_{bid}\\left[1\\right]\\right),\\left(0,5000\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1357",
+        "folderId": "1337",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,P_{ask}\\left[1\\right]\\right),\\left(0,0\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1358",
+        "folderId": "1337",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{maxSupply},P_{ask}\\left[n\\right]\\right),\\left(Q_{maxSupply},5000\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1359",
+        "folderId": "1337",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{maxDemand},P_{bid}\\left[n\\right]\\right),\\left(Q_{maxDemand},0\\right)\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "1376",
+        "title": "Bids and ask for variable sample size (with randomizer)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1377",
+        "folderId": "1376",
+        "color": "#6042a6",
+        "latex": "i_{s}=87",
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "max": "87",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1519",
+        "folderId": "1376",
+        "color": "#000000",
+        "latex": "i_{d}=83",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "83",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1671",
+        "folderId": "1376",
+        "color": "#6042a6",
+        "latex": "r_{s}=5",
+        "hidden": true,
+        "slider": {
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1683",
+        "folderId": "1376",
+        "color": "#c74440",
+        "latex": "r_{d}=178",
+        "hidden": true,
+        "slider": {
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1378",
+        "folderId": "1376",
+        "color": "#000000",
+        "latex": "P_{askNotSorted}=100\\cdot\\operatorname{random}\\left(89,r_{s}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1379",
+        "folderId": "1376",
+        "color": "#c74440",
+        "latex": "P_{askSorted}=\\operatorname{sort}\\left(P_{askNotSorted}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1380",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "P_{askR}=P_{askSorted}\\left[1...i_{s}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1381",
+        "folderId": "1376",
+        "color": "#fa7e19",
+        "latex": "K\\left(x\\right)=P_{askR}\\left[\\operatorname{ceil}\\left(x\\cdot\\frac{n}{Q_{maxSupply}}\\right)\\right]\\left\\{0\\le x\\le Q_{maxSupply}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1383",
+        "folderId": "1376",
+        "color": "#fa7e19",
+        "latex": "v_{erticalS}=\\operatorname{polygon}\\left(\\left(x_{k},P_{askR}\\left[I\\right]\\right),\\left(x_{k},P_{askR}\\left[I+1\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1382",
+        "folderId": "1376",
+        "color": "#6042a6",
+        "latex": "P_{bidNotSorted}=100\\cdot\\operatorname{random}\\left(83,r_{d}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1384",
+        "folderId": "1376",
+        "color": "#c74440",
+        "latex": "P_{bidSortedAcending}=\\operatorname{sort}\\left(P_{bidNotSorted}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "1667",
+        "folderId": "1376",
+        "text": "length of bid can be changed"
+      },
+      {
+        "type": "expression",
+        "id": "1665",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "n_{bid}=83"
+      },
+      {
+        "type": "expression",
+        "id": "1390",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "P_{bidR}=P_{bidSortedAcending}\\left[n_{bid}...\\left(n_{bid}-i_{d}+1\\right)\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1388",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "L\\left(x\\right)=P_{bidR}\\left[\\operatorname{ceil}\\left(x\\cdot\\frac{n}{Q_{maxDemand}}\\right)\\right]\\left\\{0\\le x\\le Q_{maxDemand}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1391",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "v_{erticals}=\\operatorname{polygon}\\left(\\left(x_{v},P_{bidR}\\left[I\\right]\\right),\\left(x_{v},P_{bidR}\\left[I+1\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1400",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,P_{bidR}\\left[1\\right]\\right),\\left(0,5000\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1401",
+        "folderId": "1376",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,P_{askR}\\left[1\\right]\\right),\\left(0,0\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1402",
+        "folderId": "1376",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{maxSupply},P_{askR}\\left[n\\right]\\right),\\left(Q_{maxSupply},5000\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1403",
+        "folderId": "1376",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{maxDemand},P_{bidR}\\left[n\\right]\\right),\\left(Q_{maxDemand},0\\right)\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

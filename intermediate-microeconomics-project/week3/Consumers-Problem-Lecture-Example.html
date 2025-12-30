@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini EconGraphs Demo</title>
+  
+ <!-- Import Desmos API -->
+  <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
+   <!-- ================= NAVIGATION BAR ================= -->
+  <link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/graph.css?v=1">
+
+</head>
+<body>
+  
+  <div id="navbar-container"></div>
+  <script src="../assets/navbarG-loader.js"></script>
+<!-- =================================================== -->
+
+  <div class="container">
+    <!-- Page title -->
+    <h1>Consumer's Problem: Lecture Example</h1>
+
+      <!-- 1. Textbox section -->
+  <div class="container">
+    <section class="section">
+      <h2>📘 Consumer's Problem: Lecture Example</h2>
+     <div class="textbox" data-explain-id="Consumers-Problem-Lecture-Example"></div>
+
+        <!--hide all answers-->
+    <button id="toggle-all-btn" class="toggle-section-btn" onclick="toggleAll()">
+    Answers
+  </button>
+    </section>
+  </div>
+
+  <div class="fold-target" id="graph-section">
+    <!-- 2. Desmos section -->
+    <section class="section">
+  <div class="section-header">
+    <h2>📈 Interactive Graph</h2>
+
+    <a
+      class="desmos-btn"
+      href=" <section class="section">
+  <div class="section-header">
+    <h2>📈 Interactive Graph</h2>
+
+    <a
+      class="desmos-btn"
+      href="https://www.desmos.com/calculator/gaqik8ya09"
+      target="_blank"
+      rel="noopener"
+    >
+      Open in Desmos <!--Change desmos link above-->
+    </a>
+  </div>"
+      target="_blank"
+      rel="noopener"
+    >
+      Open in Desmos <!--Change desmos link above-->
+    </a>
+  </div>
+       <div class="graph-wrapper">
+    <div id="calculator"></div>
+  </div>
+   </section>
+
+
+    <div class="fold-target" id="answer-section">
+    <!-- 3. Textbox section -->
+   <section class="section">
+  <h2>Suggested Answer</h2>
+    <div class="textbox" data-explain-id="Consumers-Problem-Lecture-Exampleans"></div>
+  </div>
+</section>
+
+    <div class="fold-target" id="video-section">
+    <!-- 4. Video section -->
+    <section class="section">
+      <h2>🎥 Video</h2>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+<!--Desmos-->
+<script src="../assets/desmos-loader.js"></script>
+    <!--Export Desmos-->
+<script src="../assets/export-desmos.js?v=1"></script>
+    <!-- Import text-->
+<script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
+
+<!-- Automatically fill in texts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll("[data-explain-id]");
+
+    boxes.forEach(function (box) {
+      const id = box.dataset.explainId;
+      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
+    box.innerHTML = EXPLANATIONS[id];
+  } else {
+    console.warn("Missing explanation for id:", id);
+  }
+    });
+  });
+</script>
+
+      <!--Import Answer btton-->
+      <script src="../assets/answer.js"></script>
+
+</body>
+</html>

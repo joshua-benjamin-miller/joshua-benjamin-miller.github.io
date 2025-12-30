@@ -1,0 +1,378 @@
+{
+  "version": 11,
+  "randomSeed": "e2b36fa1fca4cc62bcc4f04d7a07a644",
+  "graph": {
+    "viewport": {
+      "xmin": -17.041225903284225,
+      "ymin": -14.335751107440402,
+      "xmax": 39.0147546657561,
+      "ymax": 25.984889121625656
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-17.041225903284225",
+      "xmax": "39.0147546657561",
+      "ymin": "-14.335751107440402",
+      "ymax": "25.984889121625656"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "732",
+        "text": "Demand and elasticity: Staircase (with three steps)"
+      },
+      {
+        "type": "text",
+        "id": "738",
+        "text": "note: we skip the horizontal segments because there are jumps really"
+      },
+      {
+        "type": "text",
+        "id": "734",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "708",
+        "title": "Demand Function",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "736",
+        "folderId": "708",
+        "text": "place downward sloping demand defined on p>=0 here. This is constant elasticity"
+      },
+      {
+        "type": "expression",
+        "id": "689",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "P\\left(n\\right)=3+n^{2}",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "741",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "f\\left(p\\right)=A-Bp",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "742",
+        "folderId": "708",
+        "color": "#388c46",
+        "latex": "A=41",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "743",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "B=2.66",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "744",
+        "folderId": "708",
+        "color": "#000000",
+        "latex": "p_{max}=\\frac{A}{B}"
+      },
+      {
+        "type": "text",
+        "id": "747",
+        "folderId": "708",
+        "text": "define piece-wise, but only for non-negative prices"
+      },
+      {
+        "type": "expression",
+        "id": "745",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "Q\\left(p\\right)=\\left\\{0\\le p\\le p_{max}:f\\left(p\\right),p>p_{max}:0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "Q_{D}\\left(p\\right)=\\left\\{p>P\\left(3\\right):0,\\ P\\left(2\\right)<p\\le P\\left(3\\right):Q\\left(P\\left(3\\right)\\right),\\ P\\left(1\\right)<p\\le P\\left(2\\right):Q\\left(P\\left(2\\right)\\right),0\\le p\\le P\\left(1\\right):\\ Q\\left(P\\left(1\\right)\\right)\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "748",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{D}\\left(P\\left(1\\right)\\right),P\\left(1\\right)\\right)",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "749",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{D}\\left(P\\left(2\\right)\\right),P\\left(1\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "750",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{D}\\left(P\\left(2\\right)\\right),P\\left(2\\right)\\right)",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "751",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{D}\\left(P\\left(3\\right)\\right),P\\left(2\\right)\\right)",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "752",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{D}\\left(P\\left(3\\right)\\right),P\\left(3\\right)\\right)",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "753",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(0,P\\left(3\\right)\\right)",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "folder",
+        "id": "710",
+        "title": "Graph Demand curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "701",
+        "folderId": "710",
+        "text": "Graph the inverse demand"
+      },
+      {
+        "type": "expression",
+        "id": "698",
+        "folderId": "710",
+        "color": "#2d70b3",
+        "latex": "x=Q_{D}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "724",
+        "title": "Display quantity demand and price"
+      },
+      {
+        "type": "expression",
+        "id": "692",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "p_{0}=16",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5",
+          "max": "100",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "693",
+        "folderId": "724",
+        "color": "#c74440",
+        "latex": "q_{0}=Q_{D}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "726",
+        "folderId": "724",
+        "color": "#388c46",
+        "latex": "p_{0r}=\\frac{\\operatorname{round}\\left(100p_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "727",
+        "folderId": "724",
+        "color": "#6042a6",
+        "latex": "q_{0r}=\\frac{\\operatorname{round}\\left(100q_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "725",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "label": "`(q,p)=(${q_0r},${p_0r})`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "728",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{0},0\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "729",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,p_{0}\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "730",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},0\\right)",
+        "showLabel": true,
+        "label": "`q=${q_0r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "731",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(0,p_{0}\\right)",
+        "showLabel": true,
+        "label": "`p=${p_0r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "folder",
+        "id": "723",
+        "title": "Display elasticity",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "716",
+        "folderId": "723",
+        "text": "define elasticity function (function of price)"
+      },
+      {
+        "type": "text",
+        "id": "761",
+        "folderId": "723",
+        "text": "note: last term assures that it is undefined at the 3 jumps"
+      },
+      {
+        "type": "expression",
+        "id": "695",
+        "folderId": "723",
+        "color": "#388c46",
+        "latex": "E_{d}\\left(p\\right)=Q_{D}'\\left(p\\right)\\cdot\\frac{p}{Q_{D}\\left(p\\right)}\\sum_{n=1}^{3}\\frac{1}{p-P\\left(n\\right)}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "696",
+        "folderId": "723",
+        "color": "#6042a6",
+        "latex": "e_{d}=E_{d}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "e_{dr}=\\frac{\\operatorname{round}\\left(100e_{d}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "694",
+        "folderId": "723",
+        "color": "#c74440",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "showLabel": true,
+        "label": "`E^d=\\frac{dQ}{dP}\\frac{P}{Q}=${e_dr}`",
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "706",
+        "title": "Dragable Labels",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "702",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(-4.56,9.48\\right)",
+        "showLabel": true,
+        "label": "Price",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "703",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(13.5,-4\\right)",
+        "showLabel": true,
+        "label": "Quantity",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "757",
+        "color": "#2d70b3"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

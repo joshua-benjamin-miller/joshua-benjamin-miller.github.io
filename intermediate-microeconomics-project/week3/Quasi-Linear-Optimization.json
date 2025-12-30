@@ -1,0 +1,119 @@
+{
+  "version": 11,
+  "randomSeed": "4921e6d62fba047e08ac5bc5884c7953",
+  "graph": {
+    "viewport": {
+      "xmin": 28.150805277985814,
+      "ymin": -0.16536755521003732,
+      "xmax": 32.04258857818461,
+      "ymax": 2.6377049755147
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "28.150805277985814",
+      "xmax": "32.04258857818461",
+      "ymin": "-0.16536755521003732",
+      "ymax": "2.6377049755147"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "p_{x}x+p_{y}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "color": "#2d70b3",
+        "latex": "p_{x}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "color": "#388c46",
+        "latex": "p_{y}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "color": "#6042a6",
+        "latex": "I=30",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "200",
+          "step": "5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "46",
+        "color": "#000000",
+        "latex": "u_{tility}\\left(x,y\\right)=x+\\sqrt{y}"
+      },
+      {
+        "type": "expression",
+        "id": "47",
+        "color": "#2d70b3",
+        "latex": "x+\\sqrt{y}=u"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "color": "#6042a6",
+        "latex": "u=30.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "color": "#000000",
+        "latex": "x_{optimal}=\\frac{I}{p_{x}}-\\frac{p_{x}}{4p_{y}}"
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "color": "#c74440",
+        "latex": "y_{optimal}=\\left(\\frac{p_{x}}{2p_{y}}\\right)^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{optimal},y_{optimal}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "54",
+        "color": "#388c46",
+        "latex": "x+\\sqrt{y}=u_{tility}\\left(x_{optimal},y_{optimal}\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

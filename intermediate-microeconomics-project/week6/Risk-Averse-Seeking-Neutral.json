@@ -1,0 +1,1049 @@
+{
+  "version": 11,
+  "randomSeed": "400591aa591815d3d8cbe40c827ed350",
+  "graph": {
+    "viewport": {
+      "xmin": -2.7312309341802745,
+      "ymin": 2.6260654751191,
+      "xmax": 18.7607451400385,
+      "ymax": 11.62606547511923
+    },
+    "showGrid": false,
+    "xAxisLabel": "Consumption",
+    "yAxisLabel": "Utility",
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-2.7312309341802745",
+      "xmax": "18.7607451400385",
+      "ymin": "2.6260654751191",
+      "ymax": "11.62606547511923"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "83",
+        "text": "Expected Utility"
+      },
+      {
+        "type": "text",
+        "id": "138",
+        "text": "Note utility is normalized so u(L)=0, u(H)=5"
+      },
+      {
+        "type": "folder",
+        "id": "121",
+        "title": "Credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "82",
+        "folderId": "121",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "97",
+        "text": "Set convex utility (risk-seeking consumer)"
+      },
+      {
+        "type": "expression",
+        "id": "92",
+        "color": "#c74440",
+        "latex": "R_{seeking}"
+      },
+      {
+        "type": "text",
+        "id": "99",
+        "text": "Set concave utility (risk-averse consumer)"
+      },
+      {
+        "type": "expression",
+        "id": "93",
+        "color": "#2d70b3",
+        "latex": "R_{averse}"
+      },
+      {
+        "type": "text",
+        "id": "101",
+        "text": "Set linear utility (risk-neutral consumer)"
+      },
+      {
+        "type": "expression",
+        "id": "94",
+        "color": "#388c46",
+        "latex": "R_{neutral}"
+      },
+      {
+        "type": "folder",
+        "id": "48",
+        "title": "Parameters",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "p_{h}=0.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 5333.333333333333,
+          "playDirection": -1,
+          "min": "0",
+          "max": "1",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "136",
+        "folderId": "48",
+        "color": "#000000",
+        "latex": "p_{l}=1-p_{h}"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "x_{h}=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "x_{l}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "48",
+        "color": "#6042a6",
+        "latex": "x_{l}=1",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "91",
+        "folderId": "48",
+        "color": "#c74440",
+        "latex": "\\alpha=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-2",
+          "max": "4"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "102",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "R_{seeking}=\\alpha\\to3"
+      },
+      {
+        "type": "expression",
+        "id": "103",
+        "folderId": "48",
+        "color": "#6042a6",
+        "latex": "R_{averse}=\\alpha\\to-.5"
+      },
+      {
+        "type": "expression",
+        "id": "104",
+        "folderId": "48",
+        "color": "#000000",
+        "latex": "R_{neutral}=\\alpha\\to1"
+      },
+      {
+        "type": "folder",
+        "id": "36",
+        "title": "Function definitions and values",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "69",
+        "folderId": "36",
+        "text": "Define utility function, and the inverse"
+      },
+      {
+        "type": "text",
+        "id": "71",
+        "folderId": "36",
+        "text": "You may replace with alternative utility functions, but you will need to use the wrench icon to adjust the y-scaling so it displays well, in particular pay attention to u_h and u_l defined below. "
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "u\\left(x\\right)=\\left\\{\\alpha=0:\\ x^{0.01},\\ x^{\\alpha}\\right\\}\\left\\{x>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "109",
+        "folderId": "36",
+        "text": "Normalizing utility to be zero at low payoff and 5 at high payoff. At alpha=0 the function is constant, so normalized utility does not exist - substituting alpha=0.01"
+      },
+      {
+        "type": "expression",
+        "id": "110",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "u_{tility}\\left(x\\right)=\\frac{u\\left(x\\right)-u\\left(x_{l}\\right)}{u\\left(x_{h}\\right)-u\\left(x_{l}\\right)}\\cdot5",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "i_{nverseUtility}\\left(y\\right)=\\left\\{\\alpha=0:\\ \\left(y\\cdot\\frac{u\\left(x_{h}\\right)-u\\left(x_{l}\\right)}{5}+u\\left(x_{l}\\right)\\right)^{\\frac{1}{0.01}},\\ \\left(y\\cdot\\frac{u\\left(x_{h}\\right)-u\\left(x_{l}\\right)}{5}+u\\left(x_{l}\\right)\\right)^{\\frac{1}{\\alpha}}\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "75",
+        "folderId": "36",
+        "text": "Calculate utility, expected value, expected utility, certainty equivalent, and their differences for the parameters defined above"
+      },
+      {
+        "type": "expression",
+        "id": "85",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "u_{h}=u_{tility}\\left(x_{h}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "86",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "u_{l}=u_{tility}\\left(x_{l}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "87",
+        "folderId": "36",
+        "color": "#388c46",
+        "latex": "E_{V}=p_{h}x_{h}+\\left(1-p_{h}\\right)x_{l}"
+      },
+      {
+        "type": "expression",
+        "id": "88",
+        "folderId": "36",
+        "color": "#6042a6",
+        "latex": "E_{U}=p_{h}u_{h}+\\left(1-p_{h}\\right)u_{l}"
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "folderId": "36",
+        "color": "#6042a6",
+        "latex": "C_{E}=i_{nverseUtility}\\left(E_{U}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "d_{iffValue}=E_{V}-C_{E}"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "36",
+        "color": "#388c46",
+        "latex": "d_{iffUtility}=u_{tility}\\left(E_{V}\\right)-u_{tility}\\left(C_{E}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "55",
+        "folderId": "36",
+        "text": "Rounded values for display commands below"
+      },
+      {
+        "type": "expression",
+        "id": "47",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "C_{Er}=\\frac{\\operatorname{round}\\left(100\\cdot C_{E}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "36",
+        "color": "#000000",
+        "latex": "E_{Vr}=\\frac{\\operatorname{round}\\left(100\\cdot E_{V}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "58",
+        "folderId": "36",
+        "color": "#6042a6",
+        "latex": "d_{iffValuer}=\\frac{\\operatorname{round}\\left(100\\cdot d_{iffValue}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "36",
+        "color": "#000000",
+        "latex": "d_{iffUtilityr}=\\frac{\\operatorname{round}\\left(100\\cdot d_{iffUtility}\\right)}{100}"
+      },
+      {
+        "type": "folder",
+        "id": "37",
+        "title": "1. Utility",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "77",
+        "folderId": "37",
+        "text": "Graphs the utility function"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "y=u_{tility}\\left(x\\right)"
+      },
+      {
+        "type": "text",
+        "id": "80",
+        "folderId": "37",
+        "text": "Graph points (Ev,Eu) for various p, i.e. the set of points (px_l+(1-p)x_h, pu(x_l)+(1-p)u(x_h)) for various p.  This happens to be the set of points connecting (x_l,u(x_l)) to (x_h,u(x_h))"
+      },
+      {
+        "type": "expression",
+        "id": "111",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "\\left(.5\\left(x_{l}+x_{h}\\right),u_{h}+2\\right)",
+        "showLabel": true,
+        "label": "Note: Utility normalized so that `u(x_l)=${u_l}` and `u(x_h)=${u_h}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "144",
+        "folderId": "37",
+        "color": "#6042a6",
+        "latex": "c_{enter}=x_{l}"
+      },
+      {
+        "type": "expression",
+        "id": "143",
+        "folderId": "37",
+        "color": "#388c46",
+        "latex": "o_{ffset}=3.4",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "145",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "g_{ray}=\\operatorname{rgb}\\left(200,200,200\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "146",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "b_{lack}=\\operatorname{rgb}\\left(0,0,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "147",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "c_{olorRA}=\\left\\{\\alpha<1:b_{lack},\\alpha\\ge1:g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "150",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "c_{olorRN}=\\left\\{\\alpha=1:b_{lack},\\alpha<1:g_{ray},\\alpha>1:g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "149",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "c_{olorRS}=\\left\\{\\alpha>1:b_{lack},\\alpha\\le1:g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "140",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "\\left(c_{enter},u_{h}+1.5\\right)",
+        "showLabel": true,
+        "label": "Risk-Averse",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorRA}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{averse}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "142",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "\\left(c_{enter},u_{h}+1.5\\right)+\\left(o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "Risk-Neutral",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorRN}",
+        "description": "R_{neutral}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{neutral}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "141",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "\\left(c_{enter},u_{h}+1.5\\right)+\\left(2o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "Risk-Seeking",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorRS}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{seeking}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "153",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)",
+        "showLabel": true,
+        "label": "Labels:",
+        "hidden": true,
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "latex": "R_{Folder23}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "170",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "c_{olorF2}=\\left\\{F_{older2}=1:b_{lack},g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "171",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "c_{olorF3}=\\left\\{F_{older3}=1:b_{lack},g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "173",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "c_{olorF4}=\\left\\{F_{older4}=1:b_{lack},g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "172",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "c_{olorF5}=\\left\\{F_{older5}=1:b_{lack},g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "174",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "c_{olorF6}=\\left\\{F_{older6}=1:b_{lack},g_{ray}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "162",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)+.5\\left(o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "utility,",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorF2}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{Folder2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "166",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)+\\left(o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "Eutility,",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorF3}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{Folder3}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "157",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R_{Folder2}=F_{older2}\\to\\left\\{F_{older2}=1:0,F_{older2}=0:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "164",
+        "folderId": "37",
+        "color": "#388c46",
+        "latex": "F_{older2}=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "165",
+        "folderId": "37",
+        "color": "#6042a6",
+        "latex": "F_{older3}=1"
+      },
+      {
+        "type": "expression",
+        "id": "163",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R_{Folder3}=F_{older3}\\to\\left\\{F_{older3}=1:0,F_{older3}=0:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "158",
+        "folderId": "37",
+        "color": "#fa7e19",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)+1.6\\left(o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "legend,",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorF4}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{Folder4}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "160",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R_{Folder4}=F_{older4}\\to\\left\\{F_{older4}=1:0,F_{older4}=0:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "155",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "F_{older4}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "159",
+        "folderId": "37",
+        "color": "#388c46",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)+\\left(2.2o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "CE,",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorF5}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{Folder5}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "161",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R_{Folder5}=F_{older5}\\to\\left\\{F_{older5}=1:0,F_{older5}=0:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "156",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "F_{older5}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "167",
+        "folderId": "37",
+        "color": "#388c46",
+        "latex": "\\left(c_{enter},u_{h}+.75\\right)+\\left(2.5o_{ffset},0\\right)",
+        "showLabel": true,
+        "label": "compare",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "c_{olorF6}",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{Folder6}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "168",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R_{Folder6}=F_{older6}\\to\\left\\{F_{older6}=1:0,F_{older6}=0:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "169",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "F_{older6}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "112",
+        "title": "2. Potential Payoffs (Low and High)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(0,u_{tility}\\left(x_{l}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(x_l)`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(x_{l},0\\right)\\left\\{F_{older2}=1\\right\\}",
+        "showLabel": true,
+        "label": "`x_l`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(x_{h},0\\right)\\left\\{F_{older2}=1\\right\\}",
+        "showLabel": true,
+        "label": "`x_h`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(0,u_{tility}\\left(x_{h}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(x_h)`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(x_{l},u_{tility}\\left(x_{l}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "hidden": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\left(x_{h},u_{tility}\\left(x_{h}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "hidden": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "124",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{h},0\\right),\\left(x_{h},u_{h}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "128",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{l},0\\right),\\left(x_{l},u_{l}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "126",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,u_{l}\\right),\\left(x_{l},u_{l}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "125",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,u_{h}\\right),\\left(x_{h},u_{h}\\right)\\right)\\left\\{F_{older2}=1\\right\\}",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "33",
+        "title": "3. Probability, Expected Utility",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\left(E_{V},p_{h}u_{h}\\left\\{F_{older3}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_h=${p_h}`"
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "33",
+        "color": "#000000",
+        "latex": "\\left(E_{V},u_{tility}\\left(E_{V}\\right)\\right)\\left\\{F_{older3}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "33",
+        "color": "#2d70b3",
+        "latex": "\\left(E_{V},0\\right)\\left\\{\\alpha>1,\\alpha<1\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "showLabel": true,
+        "label": "`E[X]`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "107",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\left(E_{V},0\\right)\\left\\{\\alpha=1\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "showLabel": true,
+        "label": "`E[X]=CE`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\left(0,E_{U}\\right)\\left\\{\\alpha>1,\\alpha<1\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(C_E)=E[u(X)]`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "105",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\left(0,E_{U}\\right)\\left\\{\\alpha=1\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(C_E)=E[u(X)]=u(E[X])`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "folderId": "33",
+        "color": "#000000",
+        "latex": "\\left(0,u_{tility}\\left(E_{V}\\right)\\right)\\left\\{\\alpha>1,\\alpha<1\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(E[X])`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "33",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,u_{tility}\\left(E_{V}\\right)\\right),\\left(E_{V},u_{tility}\\left(E_{V}\\right)\\right)\\right)\\left\\{F_{older3}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,E_{U}\\right),\\left(E_{V},E_{U}\\right)\\right)\\left\\{F_{older3}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(E_{V},0\\right),\\left(E_{V},E_{U}\\right)\\right)\\left\\{F_{older3}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "33",
+        "color": "#c74440",
+        "latex": "y=u_{tility}\\left(x_{l}\\right)+\\frac{u_{tility}\\left(x_{h}\\right)-u_{tility}\\left(x_{l}\\right)}{x_{h}-x_{l}}\\left(x-x_{l}\\right)\\left\\{x>x_{l}\\right\\}\\left\\{x<x_{h}\\right\\}\\left\\{F_{older3}=1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "135",
+        "title": "4. Legend EU, EV",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "129",
+        "folderId": "135",
+        "color": "#c74440",
+        "latex": "\\left(1.2x_{h},.5u_{h}\\right)\\left\\{F_{older4}=1\\right\\}",
+        "showLabel": true,
+        "label": "Expected Utility: `E[u(X)]=${p_h}u(x_h)+(1-${p_h})u(x_l)=${p_h}\\times${u_h}+${p_l}\\times${u_l}=${E_U}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "133",
+        "folderId": "135",
+        "color": "#2d70b3",
+        "latex": "\\left(.5x_{h},-.3u_{h}\\right)\\left\\{F_{older4}=1\\right\\}",
+        "showLabel": true,
+        "label": "Expected Value: `E[X]=${p_h}x_h+(1-${p_h})x_l=${p_h}\\times${x_h}+${p_l}\\times${x_l}=${E_V}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "114",
+        "title": "5. Certainty Equivalent",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(C_{E},\\ 0\\right)\\left\\{\\alpha>1,\\alpha<1\\right\\}\\left\\{F_{older5}=1\\right\\}",
+        "showLabel": true,
+        "label": "`C_E`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "90",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(C_{E},\\ u_{tility}\\left(C_{E}\\right)\\right)\\left\\{F_{older5}=1\\right\\}",
+        "showLabel": true,
+        "label": "`(C_E, u(C_E))`",
+        "pointSize": "6"
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(E_{V},E_{U}\\right),\\left(C_{E},E_{U}\\right)\\right)\\left\\{F_{older5}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "139",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(.5x_{h},-.2u_{h}-1\\right)\\left\\{F_{older5}=1\\right\\}",
+        "showLabel": true,
+        "label": "Certainty Equivalent: `C_E=u^{-1}(u(C_E))=u^{-1}(E[U(X)])=u^{-1}(${E_U})\\approx${C_Er}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "119",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(C_{E},0\\right),\\left(C_{E},E_{U}\\right)\\right)\\left\\{F_{older5}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "116",
+        "title": "6. Comparisons",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "116",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{C_{E}+E_{V}}{2},-.2\\cdot u_{h}\\right)\\left\\{F_{older6}=1\\right\\}",
+        "showLabel": true,
+        "label": "`E[value]-CE=${d_{iffValuer}}`",
+        "hidden": true,
+        "dragMode": "XY"
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "116",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(\\frac{C_{E}+E_{V}}{2},0\\right),\\left(\\frac{C_{E}+E_{V}}{2},-.15\\cdot u_{h}\\right)\\right)\\left\\{F_{older6}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "116",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(C_{E},0\\right),\\left(E_{V},0\\right)\\right)\\left\\{F_{older6}=1\\right\\}",
+        "lineOpacity": "1",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "116",
+        "color": "#2d70b3",
+        "latex": "\\left(E_{V}+1,\\frac{u_{tility}\\left(C_{E}\\right)+u_{tility}\\left(E_{V}\\right)}{2}\\right)\\left\\{F_{older6}=1\\right\\}",
+        "showLabel": true,
+        "label": "`u(E[value])-u(CE)=${d_{iffUtilityr}}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "116",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(E_{V},\\frac{u_{tility}\\left(C_{E}\\right)+u_{tility}\\left(E_{V}\\right)}{2}\\right),\\left(E_{V}+1,\\frac{u_{tility}\\left(C_{E}\\right)+u_{tility}\\left(E_{V}\\right)}{2}\\right)\\right)\\left\\{F_{older6}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "116",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(E_{V},E_{U}\\right),\\left(E_{V},u_{tility}\\left(E_{V}\\right)\\right)\\right)\\left\\{F_{older6}=1\\right\\}",
+        "lineWidth": "1.5"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

@@ -1,0 +1,355 @@
+{
+  "version": 11,
+  "randomSeed": "95e48fe6ca9f7253ca45b4618bf402c3",
+  "graph": {
+    "viewport": {
+      "xmin": -10.954183243830034,
+      "ymin": 14.905440159977504,
+      "xmax": 48.60529611077533,
+      "ymax": 44.1285491891063
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-10.954183243830034",
+      "xmax": "48.60529611077533",
+      "ymin": "14.905440159977504",
+      "ymax": "44.1285491891063"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "35",
+        "title": "Prices and income",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "35",
+        "color": "#c74440",
+        "latex": "p_{x}\\left(x\\right)=\\left\\{x<C:p_{1x},x\\ge C:p_{2x}\\right\\}\\left\\{x>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "35",
+        "color": "#2d70b3",
+        "latex": "p_{1x}=2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "35",
+        "color": "#388c46",
+        "latex": "p_{2x}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "35",
+        "color": "#000000",
+        "latex": "C=20",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "35",
+        "color": "#6042a6",
+        "latex": "p_{y}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "35",
+        "color": "#388c46",
+        "latex": "I=51.3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "36",
+        "title": "Budget line for piece-wise price, two approaches",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "\\left\\{x<C:p_{1x}x+p_{y}y,x\\ge C:p_{1x}C+p_{2x}\\left(x-C\\right)+p_{y}y\\right\\}=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "p_{1x}\\cdot\\min\\left(C,x\\right)+p_{2x}\\cdot\\max\\left(x-C,0\\right)+p_{y}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "37",
+        "title": "Two general approaches to the budget line, works for any price function",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "37",
+        "color": "#fa7e19",
+        "latex": "\\int_{0}^{x}p_{x}\\left(t\\right)dt+p_{y}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "folderId": "37",
+        "color": "#388c46",
+        "latex": "p_{average}\\left(x\\right)\\cdot x+p_{y}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "p_{average}\\left(t\\right)=\\frac{\\left(\\int_{0}^{t}p_{x}\\left(x\\right)dx\\right)}{t}",
+        "hidden": true,
+        "lineStyle": "DASHED",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "33",
+        "folderId": "37",
+        "text": "Average price for a piece-wise function"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "37",
+        "color": "#6042a6",
+        "latex": "p_{averageAlt}\\left(x\\right)=\\left\\{x<C:p_{1x},x\\ge C:\\frac{\\left(p_{1x}\\cdot C+p_{2x}\\cdot\\left(x-C\\right)\\right)}{x}\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "color": "#6042a6",
+        "latex": "y=a-\\sqrt{x}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "color": "#000000",
+        "latex": "a=13",
+        "hidden": true,
+        "slider": {
+          "hardMax": true,
+          "max": "60",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "82",
+        "title": "optimal"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "82",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)=x^{r}y^{\\beta}"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "82",
+        "color": "#388c46",
+        "latex": "\\beta=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "82",
+        "color": "#c74440",
+        "latex": "r=1.2",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "82",
+        "color": "#6042a6",
+        "latex": "a_{1opt}=\\frac{r}{r+\\beta}\\cdot\\frac{I}{p_{1x}}"
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "82",
+        "color": "#000000",
+        "latex": "a_{1round}=\\operatorname{round}\\left(a_{1opt},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "82",
+        "color": "#000000",
+        "latex": "I_{2}=I-\\left(p_{1x}-p_{2x}\\right)C"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "82",
+        "color": "#c74440",
+        "latex": "a_{2opt}=\\frac{r}{r+\\beta}\\cdot\\frac{I_{2}}{p_{2x}}"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "82",
+        "color": "#c74440",
+        "latex": "a_{2round}=\\operatorname{round}\\left(a_{2opt},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "82",
+        "color": "#2d70b3",
+        "latex": "b_{1opt}=\\frac{\\beta}{r+\\beta}\\cdot\\frac{I}{p_{y}}"
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "folderId": "82",
+        "color": "#2d70b3",
+        "latex": "b_{1round}=\\operatorname{round}\\left(b_{1opt},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "82",
+        "color": "#2d70b3",
+        "latex": "b_{2opt}=\\frac{\\beta}{r+\\beta}\\cdot\\frac{I_{2}}{p_{y}}"
+      },
+      {
+        "type": "expression",
+        "id": "80",
+        "folderId": "82",
+        "color": "#388c46",
+        "latex": "b_{2round}=\\operatorname{round}\\left(b_{2opt},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "84",
+        "folderId": "82",
+        "color": "#c74440",
+        "latex": "U_{left}=u\\left(a_{1opt},b_{1opt}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "85",
+        "folderId": "82",
+        "color": "#2d70b3",
+        "latex": "U_{right}=u\\left(a_{2opt},b_{2opt}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "82",
+        "color": "#fa7e19",
+        "latex": "u\\left(a_{1opt},b_{1opt}\\right)\\le u\\left(x,y\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{a_{1opt}<C\\right\\}\\left\\{U_{left}>U_{right}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "82",
+        "color": "#fa7e19",
+        "latex": "\\left(a_{1opt},b_{1opt}\\right)\\left\\{a_{1opt}<C\\right\\}\\left\\{U_{left}>U_{right}\\right\\}",
+        "showLabel": true,
+        "label": "optimal bundle (${a_1round},${b_1round})",
+        "pointStyle": "CROSS"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "82",
+        "color": "#6042a6",
+        "latex": "u\\left(a_{2opt},b_{2opt}\\right)\\le u\\left(x,y\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}\\left\\{a_{1opt}\\ge C,U_{right}>U_{left}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "82",
+        "color": "#fa7e19",
+        "latex": "\\left(a_{2opt},b_{2opt}\\right)\\left\\{a_{1opt}\\ge C,U_{right}>U_{left}\\right\\}",
+        "showLabel": true,
+        "label": "optimal bundle (${a_2round},${b_2round})",
+        "pointStyle": "CROSS"
+      },
+      {
+        "type": "folder",
+        "id": "87",
+        "title": "Answer",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "88",
+        "folderId": "87",
+        "color": "#2d70b3",
+        "latex": "\\left(a_{1opt},b_{1opt}\\right)\\left\\{a_{1opt}<C\\right\\}\\left\\{U_{left}>U_{right}\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "folderId": "87",
+        "color": "#388c46",
+        "latex": "\\left(a_{2opt},b_{2opt}\\right)\\left\\{a_{1opt}\\ge C,U_{right}>U_{left}\\right\\}",
+        "hidden": true
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

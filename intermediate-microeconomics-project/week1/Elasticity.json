@@ -1,0 +1,739 @@
+{
+  "version": 11,
+  "randomSeed": "e2b36fa1fca4cc62bcc4f04d7a07a644",
+  "graph": {
+    "viewport": {
+      "xmin": -110.66956688509894,
+      "ymin": -10.45798834869543,
+      "xmax": 289.79091237528706,
+      "ymax": 29.588059577343174
+    },
+    "showGrid": false,
+    "xAxisLabel": "Quantity",
+    "yAxisLabel": "Price",
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-110.66956688509894",
+      "xmax": "289.79091237528706",
+      "ymin": "-10.45798834869543",
+      "ymax": "29.588059577343174"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "732",
+        "text": "Demand and elasticity, Linear case"
+      },
+      {
+        "type": "text",
+        "id": "734",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "768",
+        "text": "Demand"
+      },
+      {
+        "type": "folder",
+        "id": "708",
+        "title": "Demand Function",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "689",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "A=80",
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "max": "80",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "691",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "B=7",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "699",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "Q_{D1}\\left(p\\right)=A-Bp",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "721",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "p_{max}=\\frac{A}{B}"
+      },
+      {
+        "type": "text",
+        "id": "714",
+        "folderId": "708",
+        "text": "define piece-wise, but only for non-negative prices"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "Q_{D}\\left(p\\right)=\\left\\{0\\le p\\le p_{max}:Q_{D1}\\left(p\\right),p>p_{max}:0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "762",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "\\left(44,-4.37\\right)",
+        "label": "Demand Function: `Q_D(p)=${A}-${B}p`, Inverse Demand Function:  `P_D(Q)=${p_max}-${B_inv}p`",
+        "hidden": true,
+        "dragMode": "XY"
+      },
+      {
+        "type": "expression",
+        "id": "764",
+        "folderId": "708",
+        "color": "#000000",
+        "latex": "B_{inv}=\\frac{1}{B}"
+      },
+      {
+        "type": "folder",
+        "id": "710",
+        "title": "Graph Demand curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "701",
+        "folderId": "710",
+        "text": "Graph the inverse demand"
+      },
+      {
+        "type": "expression",
+        "id": "698",
+        "folderId": "710",
+        "color": "#2d70b3",
+        "latex": "x=Q_{D}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "724",
+        "title": "Quantity demanded and price (off for midpoint method)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "692",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "p_{0}=6.33",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "693",
+        "folderId": "724",
+        "color": "#c74440",
+        "latex": "q_{0}=Q_{D}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "726",
+        "folderId": "724",
+        "color": "#388c46",
+        "latex": "p_{0r}=\\frac{\\operatorname{round}\\left(100p_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "727",
+        "folderId": "724",
+        "color": "#6042a6",
+        "latex": "q_{0r}=\\frac{\\operatorname{round}\\left(100q_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "725",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "label": "`(q,p)=(${q_0r},${p_0r})`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "728",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{0},0\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "729",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,p_{0}\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "730",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},0\\right)",
+        "showLabel": true,
+        "label": "`Q_D(p)=${q_0r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "labelSize": "f_{ont1}"
+      },
+      {
+        "type": "expression",
+        "id": "731",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(0,p_{0}\\right)",
+        "showLabel": true,
+        "label": "`p=${p_0r}`",
+        "dragMode": "Y",
+        "labelOrientation": "left",
+        "labelSize": "f_{ont1}"
+      },
+      {
+        "type": "folder",
+        "id": "723",
+        "title": "Demand elasticity (off for midpoint method)",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "716",
+        "folderId": "723",
+        "text": "define elasticity function (function of price)"
+      },
+      {
+        "type": "expression",
+        "id": "695",
+        "folderId": "723",
+        "color": "#388c46",
+        "latex": "E_{d}\\left(p\\right)=Q_{D}'\\left(p\\right)\\cdot\\frac{p}{Q_{D}\\left(p\\right)}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "696",
+        "folderId": "723",
+        "color": "#6042a6",
+        "latex": "e_{d}=E_{d}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "e_{dr}=\\frac{\\operatorname{round}\\left(100e_{d}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "694",
+        "folderId": "723",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "showLabel": true,
+        "label": "`E^d=\\frac{dQ_D}{dP}\\frac{P}{Q_D}=${e_dr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "above_left",
+        "labelSize": "f_{ont2}"
+      },
+      {
+        "type": "text",
+        "id": "961",
+        "text": "Extra Practice"
+      },
+      {
+        "type": "folder",
+        "id": "963",
+        "title": "Demand elasticity Midpoint Method",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "965",
+        "folderId": "963",
+        "color": "#2d70b3",
+        "latex": "P_{1}=4.1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "967",
+        "folderId": "963",
+        "color": "#388c46",
+        "latex": "P_{2}=2.14",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "969",
+        "folderId": "963",
+        "color": "#c74440",
+        "latex": "Q_{1}=Q_{D}\\left(P_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "970",
+        "folderId": "963",
+        "color": "#c74440",
+        "latex": "Q_{2}=Q_{D}\\left(P_{2}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "971",
+        "folderId": "963",
+        "color": "#2d70b3",
+        "latex": "Q_{mid}=\\frac{\\left(Q_{1}+Q_{2}\\right)}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "972",
+        "folderId": "963",
+        "color": "#388c46",
+        "latex": "P_{mid}=\\frac{\\left(P_{1}+P_{2}\\right)}{2}"
+      },
+      {
+        "type": "text",
+        "id": "975",
+        "folderId": "963",
+        "text": "Delta P and Q are calculated in percentage form"
+      },
+      {
+        "type": "expression",
+        "id": "976",
+        "folderId": "963",
+        "color": "#c74440",
+        "latex": "D_{eltaP}=\\frac{\\operatorname{abs}\\left(P_{1}-P_{2}\\right)}{P_{mid}}"
+      },
+      {
+        "type": "expression",
+        "id": "977",
+        "folderId": "963",
+        "color": "#2d70b3",
+        "latex": "D_{eltaQ}=\\frac{\\operatorname{abs}\\left(Q_{1}-Q_{2}\\right)}{Q_{mid}}"
+      },
+      {
+        "type": "expression",
+        "id": "978",
+        "folderId": "963",
+        "color": "#388c46",
+        "latex": "E=\\frac{D_{eltaQ}}{D_{eltaP}}"
+      },
+      {
+        "type": "expression",
+        "id": "979",
+        "folderId": "963",
+        "color": "#6042a6",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1},P_{1}\\right),\\left(Q_{1},0\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "980",
+        "folderId": "963",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{2},P_{2}\\right),\\left(Q_{2},0\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "981",
+        "folderId": "963",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1},P_{1}\\right),\\left(0,P_{1}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "982",
+        "folderId": "963",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{2},P_{2}\\right),\\left(0,P_{2}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "983",
+        "folderId": "963",
+        "color": "#388c46",
+        "latex": "\\left(Q_{2},0\\right)",
+        "showLabel": true,
+        "label": "`Q=${Q_2}`"
+      },
+      {
+        "type": "expression",
+        "id": "984",
+        "folderId": "963",
+        "color": "#6042a6",
+        "latex": "\\left(Q_{1},0\\right)",
+        "showLabel": true,
+        "label": "`Q=${Q_1}`"
+      },
+      {
+        "type": "expression",
+        "id": "985",
+        "folderId": "963",
+        "color": "#000000",
+        "latex": "\\left(0,P_{1}\\right)",
+        "showLabel": true,
+        "label": "`P=${P_1}`"
+      },
+      {
+        "type": "expression",
+        "id": "986",
+        "folderId": "963",
+        "color": "#c74440",
+        "latex": "\\left(0,P_{2}\\right)",
+        "showLabel": true,
+        "label": "`P=${P_2}`"
+      },
+      {
+        "type": "expression",
+        "id": "987",
+        "folderId": "963",
+        "color": "#2d70b3",
+        "latex": "\\left(\\frac{\\left(Q_{1}+Q_{2}\\right)}{2},\\frac{\\left(P_{1}+P_{2}\\right)}{2}\\right)",
+        "showLabel": true,
+        "label": "Midpoint(${Q_mid},${P_mid})"
+      },
+      {
+        "type": "text",
+        "id": "790",
+        "text": "Supply:"
+      },
+      {
+        "type": "folder",
+        "id": "735",
+        "title": "Supply Function",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "736",
+        "folderId": "735",
+        "color": "#2d70b3",
+        "latex": "a=-36",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-100",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "737",
+        "folderId": "735",
+        "color": "#6042a6",
+        "latex": "b=14",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "738",
+        "folderId": "735",
+        "color": "#2d70b3",
+        "latex": "Q_{S1}\\left(p\\right)=a+bp",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "739",
+        "folderId": "735",
+        "color": "#c74440",
+        "latex": "p_{minS}=\\max\\left(-\\frac{a}{b},0\\right)"
+      },
+      {
+        "type": "text",
+        "id": "740",
+        "folderId": "735",
+        "text": "define piece-wise, but only for non-negative prices"
+      },
+      {
+        "type": "expression",
+        "id": "741",
+        "folderId": "735",
+        "color": "#c74440",
+        "latex": "Q_{S}\\left(p\\right)=\\left\\{0\\le p<p_{minS}:0,p\\ge p_{minS}:Q_{S1}\\left(p\\right)\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "742",
+        "title": "Graph Supply curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "743",
+        "folderId": "742",
+        "text": "Graph the inverse supply"
+      },
+      {
+        "type": "expression",
+        "id": "744",
+        "folderId": "742",
+        "color": "#c74440",
+        "latex": "x=Q_{S}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "745",
+        "title": "Quantity supplied and price",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "746",
+        "folderId": "745",
+        "color": "#000000",
+        "latex": "p_{1}=p_{0}",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "747",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "q_{1}=Q_{S}\\left(p_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "748",
+        "folderId": "745",
+        "color": "#388c46",
+        "latex": "p_{1r}=\\frac{\\operatorname{round}\\left(100p_{1}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "749",
+        "folderId": "745",
+        "color": "#6042a6",
+        "latex": "q_{1r}=\\frac{\\operatorname{round}\\left(100q_{1}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "750",
+        "folderId": "745",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{1},p_{1}\\right)",
+        "label": "`(q,p)=(${q_0r},${p_0r})`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "751",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{1},0\\right),\\left(q_{1},p_{1}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "752",
+        "folderId": "745",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,p_{1}\\right),\\left(q_{1},p_{1}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "753",
+        "folderId": "745",
+        "color": "#c74440",
+        "latex": "\\left(q_{1},0\\right)",
+        "showLabel": true,
+        "label": "`Q_S(p)=${q_1r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "labelSize": "f_{ont1}"
+      },
+      {
+        "type": "expression",
+        "id": "754",
+        "folderId": "745",
+        "color": "#2d70b3",
+        "latex": "\\left(0,p_{1}\\right)",
+        "label": "`p=${p_1r}`",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "folder",
+        "id": "779",
+        "title": "Supply elasticity",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "780",
+        "folderId": "779",
+        "text": "define elasticity function (function of price)"
+      },
+      {
+        "type": "expression",
+        "id": "782",
+        "folderId": "779",
+        "color": "#c74440",
+        "latex": "E_{s}\\left(p\\right)=Q_{S}'\\left(p\\right)\\cdot\\frac{p}{Q_{S}\\left(p\\right)}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "784",
+        "folderId": "779",
+        "color": "#6042a6",
+        "latex": "e_{s}=E_{s}\\left(p_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "786",
+        "folderId": "779",
+        "color": "#000000",
+        "latex": "e_{sr}=\\frac{\\operatorname{round}\\left(100e_{s}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "788",
+        "folderId": "779",
+        "color": "#c74440",
+        "latex": "\\left(q_{1},p_{1}\\right)",
+        "showLabel": true,
+        "label": "`E^s=\\frac{dQ_S}{dP}\\frac{P}{Q_S}=${e_sr}`",
+        "labelOrientation": "below_right",
+        "labelSize": "f_{ont2}"
+      },
+      {
+        "type": "folder",
+        "id": "959",
+        "title": "Display Properties",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "765",
+        "folderId": "959",
+        "color": "#c74440",
+        "latex": "f_{ont1}=1.25",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "5",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "766",
+        "folderId": "959",
+        "color": "#c74440",
+        "latex": "f_{ont2}=1.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "5",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "706",
+        "title": "Dragable Labels",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "702",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(-14.8,20.95\\right)",
+        "showLabel": true,
+        "label": "Price",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "703",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(124,-2.2\\right)",
+        "showLabel": true,
+        "label": "Quantity",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

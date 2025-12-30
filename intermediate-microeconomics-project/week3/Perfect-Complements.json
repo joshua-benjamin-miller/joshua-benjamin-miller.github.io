@@ -1,0 +1,120 @@
+{
+  "version": 11,
+  "randomSeed": "9f93853d3211636199183392cea2c2bd",
+  "graph": {
+    "viewport": {
+      "xmin": -7.0479216174647945,
+      "ymin": -13.782313286184177,
+      "xmax": 132.12541352691153,
+      "ymax": 86.45783953337832
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-7.0479216174647945",
+      "xmax": "132.12541352691153",
+      "ymin": "-13.782313286184177",
+      "ymax": "86.45783953337832"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "\\min\\left(ax,by\\right)=u",
+        "lineStyle": "DOTTED",
+        "lineOpacity": "1",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "color": "#6042a6",
+        "latex": "a=3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".1",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "color": "#000000",
+        "latex": "b=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".1",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "color": "#c74440",
+        "latex": "u=55",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "color": "#c74440",
+        "latex": "y=\\frac{a}{b}x\\ \\left\\{x>0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "13",
+        "text": "Alternative approach, based on reasoning and not relying on desmos:"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "y=\\frac{u}{b}\\left\\{x\\ge\\frac{u}{a}\\right\\}",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#388c46",
+        "latex": "x=\\frac{u}{a}\\left\\{y\\ge\\frac{u}{b}\\right\\}",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#c74440"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#2d70b3"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#388c46"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

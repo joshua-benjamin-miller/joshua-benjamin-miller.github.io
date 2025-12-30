@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intermediate Microeconomics – Interactive Graphs</title> <!--Change title here-->
+
+ <link rel="stylesheet" href="assets/site.css">
+<style>
+/* === Drop down menu === */
+
+/* Shell:：Concepts / Exercises */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+}
+
+/* Button */
+.dropdown-btn {
+    cursor: pointer;
+    padding: 12px 4px;
+    display: inline-block;
+}
+
+/* Display when hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 10px; 
+}
+  .view-toggle {
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;          
+}
+
+.view-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.view-link {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.view-link:hover {
+  border-color: #d1d5db;
+  background-color: #f3f4f6;
+}
+
+.view-link.active {
+  background-color: #111827;  
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.view-separator {
+  color: #9ca3af;
+}
+ 
+.week-title {
+  min-height: 3rem;   
+  display: flex;
+  align-items: flex-start; 
+}
+
+  .graph-thumb {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.graph-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+ 
+.week-card {
+  overflow: hidden;             
+}
+
+.week-thumb {
+  width: 100%;
+  height: 160px;                 
+  display: block;               
+  object-fit: cover;           
+  object-position: center;     
+}
+
+</style>
+
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+  <script src="assets/navbarH-loader.js"></script>
+
+  <!-- main body -->
+  <main class="page">
+    <h1 class="page-title">
+      Intermediate Microeconomics – Interactive Graphs <!--Change Page title-->
+    </h1>
+    <p class="page-subtitle">
+      Teaching demos and practice graphs for each week of the course. <!--Change Page Sub title-->
+    </p>
+ 
+<div class="view-toggle">
+  <span class="view-label">View:</span>
+  <a href="index.html" class="view-link active">Student page</a>
+  <span class="view-separator">/</span>
+  <a href="instructor.html" class="view-link">Instructor page</a>
+</div>
+
+    <!-- 12 week section -->
+    <section class="weeks-grid">
+      <!-- Week 1 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">1</div>
+          </div>
+          <div class="week-title">
+           Week1: Supply and Demand <!--Section name-->
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week1/concepts.html">Concepts</a> <!--Change title-->
+          <a class="btn btn-solid" href="week1/exercise.html">Exercise</a> <!--Change title-->
+        </div>
+      </article>
+
+      <!-- Week 2 -->
+     <article class="week-card">
+  <!-- Week image -->
+  <img class="week-thumb" src="assets/week2.png" alt="Week 2 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+    <div>
+      <div class="week-header">
+        <div class="week-label">Week</div>
+        <div class="week-number">2</div>
+      </div>
+      <div class="week-title">
+        Week2: Preference, Utility, Budget Constaints
+      </div>
+    </div>
+
+    <div class="week-actions">
+       <a class="btn btn-outline" href="week2/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week2/exercise.html">Exercise</a>
+    </div>
+  </div>
+</article>
+
+
+      <!-- Week 3–12 都先占位，你之后改标题 & 链接 -->
+      <!-- Week 3 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week3.png" alt="Week 3 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">3</div>
+          </div>
+          <div class="week-title">
+            Week3: Consumer Choice
+          </div>
+        </div>
+        <div class="week-actions">
+         <a class="btn btn-outline" href="week3/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week3/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 4 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week4.png" alt="Week 4 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">4</div>
+          </div>
+          <div class="week-title">
+            Week4: Individual Demand & Two Period Model
+          </div>
+        </div>
+        <div class="week-actions">
+         <a class="btn btn-outline" href="week4/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week4/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 5 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week5.png" alt="Week 5 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">5</div>
+          </div>
+          <div class="week-title">
+           Week5:General Equilibrium & Efficiency in Exchange
+          </div>
+        </div>
+        <div class="week-actions">
+        <a class="btn btn-outline" href="week5/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week5/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 6 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week6.png" alt="Week 6 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">6</div>
+          </div>
+          <div class="week-title">
+            Week6: Uncertainty and Risk
+          </div>
+        </div>
+        <div class="week-actions">
+         <a class="btn btn-outline" href="week6/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week6/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 7 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week7.png" alt="Week 7 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">7</div>
+          </div>
+          <div class="week-title">
+           Week7: Production, Return to Scale
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week7/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week7/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 8 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week8.png" alt="Week 8 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">8</div>
+          </div>
+          <div class="week-title">
+            Week8: Short & Long run cost
+          </div>
+        </div>
+        <div class="week-actions">
+         <a class="btn btn-outline" href="week8/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week8/exercise.html">Exercise</a>
+        </div>
+      </article>
+
+      <!-- Week 9 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week9.png" alt="Week 9 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">9</div>
+          </div>
+          <div class="week-title">
+            Week9: Profit maximization
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week9/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week9/exercises.html">Exercises</a>
+        </div>
+      </article>
+
+      <!-- Week 10 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week10.png" alt="Week 10 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">10</div>
+          </div>
+          <div class="week-title">
+            Week10: Monopoly
+          </div>
+        </div>
+        <div class="week-actions">
+           <a class="btn btn-outline" href="week10/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week10/exercises.html">Exercises</a>
+        </div>
+      </article>
+
+      <!-- Week 11 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week11.png" alt="Week 11 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">11</div>
+          </div>
+          <div class="week-title">
+            Week11: Oligopoly
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week11/concepts.html">Concepts</a>
+          <a class="btn btn-solid" href="week11/exercises.html">Exercises</a>
+        </div>
+      </article>
+
+      <!-- Week 12 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week12.png" alt="Week 12 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">12</div>
+          </div>
+          <div class="week-title">
+          Week12: Revision
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week12/concepts.html">Concepts</a>
+             <a class="btn btn-solid" href="week12/exercises.html">Exercises</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- About / Credits -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>About this project</h3> <!--change section name-->
+        <p>
+          Interactive Desmos-based visualisations for an Intermediate
+          Microeconomics course. The goal is to turn standard diagrams into
+          manipulable objects that students can explore directly in their browser.
+        </p> <!--Change section description-->
+      </div>
+      <div class="footer-section">
+        <h3>Credits</h3><!--change section name-->
+        <p>
+          Joshua.B.Miller, Artem Tashevtev, Houcheng (Troye) Liu.<br /> 
+        </p><!--Change section description-->
+      </div>
+       <div class="footer-section">
+        <h3>Contact Info</h3><!--change section name-->
+        <p>
+         Joshua.B.Miller.......
+        </p><!--Change section description-->
+      </div>
+    </footer>
+    
+  </main>
+</body>
+</html>

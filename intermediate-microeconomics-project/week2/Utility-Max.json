@@ -1,0 +1,838 @@
+{
+  "version": 11,
+  "randomSeed": "5e9f8e3b8cffb7966146a7b8c995b94e",
+  "graph": {
+    "viewport": {
+      "xmin": -28.959080679859323,
+      "ymin": -28.959080679859323,
+      "zmin": -31.234083252793024,
+      "xmax": 28.959080679859323,
+      "ymax": 28.959080679859323,
+      "zmax": 31.234083252793024
+    },
+    "threeDMode": true,
+    "worldRotation3D": [
+      -0.5808381056140565,
+      0.7405960278812943,
+      -0.33785295404033533,
+      -0.6401756833321106,
+      -0.6719505364884432,
+      -0.37236752138686513,
+      -0.5027943809724816,
+      3.993919723058441e-12,
+      0.8644060449019574
+    ],
+    "axis3D": [
+      0,
+      0,
+      -0.9999999999997095
+    ],
+    "speed3D": 1.90717417124948,
+    "squareAxes": false,
+    "product": "graphing-3d",
+    "__v12ViewportLatexStash": {
+      "xmin": "-28.959080679859323",
+      "xmax": "28.959080679859323",
+      "ymin": "-28.959080679859323",
+      "ymax": "28.959080679859323",
+      "zmin": "-31.234083252793024",
+      "zmax": "31.234083252793024"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "140",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "41",
+        "title": "Def. Utility Function",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "44",
+        "folderId": "41",
+        "text": "Utility function"
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "41",
+        "color": "#2d70b3",
+        "latex": "a=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "41",
+        "color": "#388c46",
+        "latex": "b=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "41",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)=x^{a}y^{b}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "46",
+        "folderId": "41",
+        "text": "Y as a function of both good x and utility level z"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "41",
+        "color": "#c74440",
+        "latex": "Y_{2}\\left(x,z\\right)=\\left(\\frac{z}{x^{a}}\\right)^{\\frac{1}{b}}"
+      },
+      {
+        "type": "text",
+        "id": "147",
+        "folderId": "41",
+        "text": "--------------------------------------"
+      },
+      {
+        "type": "text",
+        "id": "142",
+        "folderId": "41",
+        "text": "Old Definitions for utility"
+      },
+      {
+        "type": "expression",
+        "id": "35",
+        "folderId": "41",
+        "color": "#388c46",
+        "latex": "!u\\left(x,y\\right)=\\ln\\left(x^{a}y^{b}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "41",
+        "color": "#6042a6",
+        "latex": "!Y_{2}\\left(x,z\\right)=\\left(\\frac{e^{z}}{x^{a}}\\right)^{\\frac{1}{b}}"
+      },
+      {
+        "type": "folder",
+        "id": "125",
+        "title": "Def. Points",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "id": "129",
+        "type": "table",
+        "folderId": "125",
+        "columns": [
+          {
+            "values": [
+              "1",
+              "1",
+              "2",
+              "1",
+              "3",
+              "2",
+              "1",
+              "4",
+              "2",
+              "3",
+              "2",
+              "4",
+              "3"
+            ],
+            "hidden": true,
+            "id": "127",
+            "color": "#388c46",
+            "latex": "X"
+          },
+          {
+            "values": [
+              "1",
+              "2",
+              "1",
+              "3",
+              "1",
+              "2",
+              "4",
+              "1",
+              "3",
+              "2",
+              "4",
+              "2",
+              "3"
+            ],
+            "id": "128",
+            "color": "#6042a6",
+            "latex": "Y"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "152",
+        "folderId": "125",
+        "text": "Plot X/Y points"
+      },
+      {
+        "type": "expression",
+        "id": "131",
+        "folderId": "125",
+        "color": "#c74440",
+        "latex": "\\left(X,Y\\right)",
+        "colorLatex": "B_{lack}",
+        "pointSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "125",
+        "color": "#aaaaaa",
+        "latex": "U_{tilities}=u\\left(X,Y\\right)"
+      },
+      {
+        "type": "text",
+        "id": "154",
+        "folderId": "125",
+        "text": "Plot X/Y/Z points"
+      },
+      {
+        "type": "expression",
+        "id": "136",
+        "folderId": "125",
+        "color": "#c74440",
+        "latex": "\\left(X,Y,U_{tilities}\\right)",
+        "colorLatex": "A",
+        "pointSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "150",
+        "folderId": "125",
+        "color": "#c74440",
+        "latex": "L_{u}=\\left(X,Y,U_{tilities}\\right)",
+        "hidden": true,
+        "colorLatex": "A",
+        "pointSize": "2"
+      },
+      {
+        "type": "text",
+        "id": "145",
+        "folderId": "125",
+        "text": "-------------------------------------------------------------"
+      },
+      {
+        "type": "text",
+        "id": "138",
+        "folderId": "125",
+        "text": "Old Definitions:"
+      },
+      {
+        "type": "expression",
+        "id": "121",
+        "folderId": "125",
+        "color": "#6042a6",
+        "latex": "!L_{u}=\\left(L.x,L.y,U_{tilities}\\right)",
+        "colorLatex": "A",
+        "pointSize": "1"
+      },
+      {
+        "type": "expression",
+        "id": "119",
+        "folderId": "125",
+        "color": "#aaaaaa",
+        "latex": "!L=\\left[\\left(1,1\\right),\\left(2,1\\right),\\left(1,2\\right),\\left(2,2\\right),\\left(1,3\\right),\\left(3,1\\right),\\left(2,3\\right),\\left(3,2\\right),\\left(3,3\\right),\\left(1,4\\right),\\left(4,1\\right),\\left(2,4\\right),\\left(4,2\\right)\\right]",
+        "colorLatex": "B_{lack}",
+        "pointSize": "1"
+      },
+      {
+        "type": "expression",
+        "id": "120",
+        "folderId": "125",
+        "color": "#2d70b3",
+        "latex": "!U_{tilities}=u\\left(L.x,L.y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "118",
+        "folderId": "125",
+        "color": "#aaaaaa",
+        "latex": "!L=\\left[\\left(2,1,u\\left(2,1\\right)\\right),\\left(1,2,u\\left(1,2\\right)\\right)\\right]"
+      },
+      {
+        "type": "folder",
+        "id": "59",
+        "title": "1. Utility Curve",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "59",
+        "color": "#6042a6",
+        "latex": "z=u\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "61",
+        "title": "2a. Plotting (x,y,u(x,y))",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "61",
+        "color": "#6042a6",
+        "latex": "x_{2}=1.17",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "54",
+        "folderId": "61",
+        "color": "#aaaaaa",
+        "latex": "y_{2}=2.3",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "folderId": "61",
+        "color": "#6042a6",
+        "latex": "\\left(x_{2},y_{2}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "61",
+        "color": "#6042a6",
+        "latex": "\\left(x_{2},y_{2},u\\left(x_{2},y_{2}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "61",
+        "color": "#6042a6",
+        "latex": "\\operatorname{segment}\\left(\\left(x_{2},y_{2},0\\right),\\left(x_{2},y_{2},u\\left(x_{2},y_{2}\\right)\\right)\\right)",
+        "lineWidth": ".3"
+      },
+      {
+        "type": "folder",
+        "id": "63",
+        "title": "2b. Indifference Curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "64",
+        "folderId": "63",
+        "color": "#2d70b3",
+        "latex": "u\\left(x_{2},y_{2}\\right)-u\\left(x,y\\right)=0",
+        "colorLatex": "A",
+        "lineWidth": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "63",
+        "color": "#388c46",
+        "latex": "\\left(t,Y_{2}\\left(t,u\\left(x_{2},y_{2}\\right)\\right),u\\left(x_{2},y_{2}\\right)\\right)",
+        "parametricDomain": {
+          "min": "",
+          "max": "10"
+        },
+        "colorLatex": "A",
+        "lineWidth": ".3",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "67",
+        "title": "3a. Moving along indifference curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "111",
+        "folderId": "67",
+        "color": "#6042a6",
+        "latex": "T_{urnOnLevel}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "85",
+        "folderId": "67",
+        "color": "#c74440",
+        "latex": "x_{3}=1.8",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "6"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "67",
+        "color": "#aaaaaa",
+        "latex": "u_{level}=3.6",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "86",
+        "folderId": "67",
+        "color": "#2d70b3",
+        "latex": "y_{3}=Y_{2}\\left(x_{3},u_{level}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "87",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "\\left(x_{3},y_{3}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "u\\left(x,y\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u_{level}",
+        "lineWidth": ".4"
+      },
+      {
+        "type": "expression",
+        "id": "108",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "\\left(t,Y_{2}\\left(t,u\\left(x_{3},y_{3}\\right)\\right),u\\left(x_{3},y_{3}\\right)\\right)\\left\\{T_{urnOnLevel}=1\\right\\}",
+        "parametricDomain": {
+          "min": "",
+          "max": "10"
+        },
+        "lineWidth": ".4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "109",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "\\left(x_{3},y_{3},u\\left(x_{3},y_{3}\\right)\\right)\\left\\{T_{urnOnLevel}=1\\right\\}",
+        "pointSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "110",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "\\operatorname{segment}\\left(\\left(x_{3},y_{3},0\\right),\\left(x_{3},y_{3},u\\left(x_{3},y_{3}\\right)\\right)\\right)\\left\\{T_{urnOnLevel}=1\\right\\}",
+        "lineWidth": ".2"
+      },
+      {
+        "type": "folder",
+        "id": "89",
+        "title": "3b. Multiple indifference curves",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "107",
+        "folderId": "89",
+        "color": "#aaaaaa",
+        "latex": "T_{urnOnLevels}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "92",
+        "folderId": "89",
+        "text": "number of ICs"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "89",
+        "color": "#c74440",
+        "latex": "N=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "2",
+          "max": "10",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "95",
+        "folderId": "89",
+        "text": "base level"
+      },
+      {
+        "type": "expression",
+        "id": "80",
+        "folderId": "89",
+        "color": "#c74440",
+        "latex": "u_{1}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "text",
+        "id": "98",
+        "folderId": "89",
+        "text": "utility increments"
+      },
+      {
+        "type": "expression",
+        "id": "81",
+        "folderId": "89",
+        "color": "#2d70b3",
+        "latex": "\\Delta_{u}=0.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".25",
+          "max": "10",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "text",
+        "id": "100",
+        "folderId": "89",
+        "text": "list of utilities"
+      },
+      {
+        "type": "expression",
+        "id": "82",
+        "folderId": "89",
+        "color": "#388c46",
+        "latex": "U=\\left[u_{1}+0\\Delta_{u},u_{1}+1\\Delta_{u}...u_{1}+N\\Delta_{u}\\right]"
+      },
+      {
+        "type": "text",
+        "id": "102",
+        "folderId": "89",
+        "text": "Indifference curves on the x,y"
+      },
+      {
+        "type": "expression",
+        "id": "83",
+        "folderId": "89",
+        "color": "#6042a6",
+        "latex": "U\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u(x,y)",
+        "colorLatex": "C_{olorPalette}",
+        "lineWidth": ".3"
+      },
+      {
+        "type": "text",
+        "id": "104",
+        "folderId": "89",
+        "text": "indifference curves on the surface"
+      },
+      {
+        "type": "expression",
+        "id": "88",
+        "folderId": "89",
+        "color": "#6042a6",
+        "latex": "\\left(t,Y_{2}\\left(t,U\\right),U\\right)\\left\\{T_{urnOnLevels}=1\\right\\}",
+        "parametricDomain": {
+          "min": "",
+          "max": "10"
+        },
+        "colorLatex": "C_{olorPalette}",
+        "lineWidth": ".3",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "48",
+        "title": "4. Budget Line"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "48",
+        "color": "#c74440",
+        "latex": "p_{x}=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "48",
+        "color": "#2d70b3",
+        "latex": "p_{y}=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "I=15",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "p_{x}x+p_{y}y<=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "50",
+        "folderId": "48",
+        "text": "Y as a function of x along the budget line"
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "48",
+        "color": "#6042a6",
+        "latex": "Y_{1}\\left(x\\right)=\\frac{I}{p_{y}}-\\frac{p_{x}}{p_{y}}x",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "39",
+        "title": "5. Along the Budget Line: Level",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "39",
+        "color": "#6042a6",
+        "latex": "x_{1}=1.08",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\frac{I}{p_{x}}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "39",
+        "color": "#aaaaaa",
+        "latex": "y_{1}=Y_{1}\\left(x_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "39",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{1},y_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "39",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{1},y_{1},u\\left(x_{1},y_{1}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "folderId": "39",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{segment}\\left(\\left(x_{1},y_{1},0\\right),\\left(x_{1},y_{1},u\\left(x_{1},y_{1}\\right)\\right)\\right)",
+        "lineWidth": ".2"
+      },
+      {
+        "type": "expression",
+        "id": "29",
+        "folderId": "39",
+        "color": "#fa7e19",
+        "latex": "\\left(t,Y_{1}\\left(t\\right),u\\left(t,Y_{1}\\left(t\\right)\\right)\\right)",
+        "parametricDomain": {
+          "min": "0",
+          "max": "\\frac{I}{p_{x}}"
+        },
+        "lineWidth": ".4",
+        "domain": {
+          "min": "0",
+          "max": "\\frac{I}{p_{x}}"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "51",
+        "title": "6. Along the Budget Line: IC",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "51",
+        "color": "#6042a6",
+        "latex": "u\\left(x_{1},y_{1}\\right)-u\\left(x,y\\right)=0",
+        "colorLatex": "A",
+        "lineWidth": ".4"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "51",
+        "color": "#6042a6",
+        "latex": "\\left(t,Y_{2}\\left(t,u\\left(x_{1},y_{1}\\right)\\right),u\\left(x_{1},y_{1}\\right)\\right)",
+        "parametricDomain": {
+          "min": "",
+          "max": "10"
+        },
+        "colorLatex": "A",
+        "lineWidth": ".3",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "51",
+        "color": "#388c46"
+      },
+      {
+        "type": "folder",
+        "id": "72",
+        "title": "Color Palatte",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "72",
+        "color": "#c74440",
+        "latex": "A=\\operatorname{rgb}(162,25,255)"
+      },
+      {
+        "type": "expression",
+        "id": "123",
+        "folderId": "72",
+        "color": "#aaaaaa",
+        "latex": "B_{lack}=\\operatorname{rgb}\\left(0,0,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "72",
+        "color": "#aaaaaa",
+        "latex": "I_{C}=\\left[1...N+1\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "72",
+        "color": "#2d70b3",
+        "latex": "R=255\\frac{\\left(I_{C}-1\\right)}{N}"
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "72",
+        "color": "#388c46",
+        "latex": "G=0I_{C}"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "72",
+        "color": "#6042a6",
+        "latex": "B=255\\left(1-\\frac{\\left(I_{C}-1\\right)}{N}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "folderId": "72",
+        "color": "#aaaaaa",
+        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrate3dLineWidthZero": true,
+  "doNotMigrateMovablePointStyle": true
+}

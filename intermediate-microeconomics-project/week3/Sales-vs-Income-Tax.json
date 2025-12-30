@@ -1,0 +1,608 @@
+{
+  "version": 11,
+  "randomSeed": "0c56e08aaf514bb515c6574e72b0092f",
+  "graph": {
+    "viewport": {
+      "xmin": -13.236661643441337,
+      "ymin": 18.27695489908198,
+      "xmax": 95.08983066612934,
+      "ymax": 96.29954544959162
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-13.236661643441337",
+      "xmax": "95.08983066612934",
+      "ymin": "18.27695489908198",
+      "ymax": "96.29954544959162"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "79",
+        "title": "1. Utility function",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "64",
+        "folderId": "79",
+        "text": "Cobb-Douglas"
+      },
+      {
+        "type": "expression",
+        "id": "80",
+        "folderId": "79",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)=\\alpha\\ln\\left(x\\right)+\\beta\\ln\\left(y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "79",
+        "color": "#388c46",
+        "latex": "\\alpha=1.2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": "5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "79",
+        "color": "#2d70b3",
+        "latex": "\\beta=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "5",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "84",
+        "title": "2. Demand Function",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "88",
+        "folderId": "84",
+        "color": "#c74440",
+        "latex": "X\\left(p_{x},p_{y},I_{ncome}\\right)=\\frac{\\alpha}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I_{ncome}}{p_{x}}"
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "folderId": "84",
+        "color": "#2d70b3",
+        "latex": "Y\\left(p_{x},p_{y},I_{ncome}\\right)=\\frac{\\beta}{\\left(\\alpha+\\beta\\right)}\\cdot\\frac{I_{ncome}}{p_{y}}"
+      },
+      {
+        "type": "folder",
+        "id": "81",
+        "title": "3a. Budget, no taxes",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "81",
+        "color": "#c74440",
+        "latex": "p_{1}=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "81",
+        "color": "#2d70b3",
+        "latex": "p_{2}=6",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "81",
+        "color": "#388c46",
+        "latex": "I=700",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1000",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "81",
+        "color": "#c74440",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "91",
+        "title": "3b. Optimal choice with no taxes",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "92",
+        "folderId": "91",
+        "color": "#6042a6",
+        "latex": "x_{n}=X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "93",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "y_{n}=Y\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "94",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)\\cdot1=u\\left(x_{n},y_{n}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "\\left(x_{n},y_{n}\\right)",
+        "showLabel": true,
+        "label": "no tax"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "x=x_{n}\\left\\{y>0\\right\\}\\left\\{y<y_{n}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "y=y_{n}\\left\\{x>0\\right\\}\\left\\{x<x_{n}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "98",
+        "title": "4a. Budget, sales tax on good 2",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "50",
+        "folderId": "98",
+        "text": "Sales Tax on Good 2"
+      },
+      {
+        "type": "expression",
+        "id": "47",
+        "folderId": "98",
+        "color": "#000000",
+        "latex": "r=2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "50",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "folderId": "98",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}\\left(1+r\\right)y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "97",
+        "title": "4b. Optimal choice, sales tax on good 2",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "folderId": "97",
+        "color": "#6042a6",
+        "latex": "x_{r}=X\\left(p_{1},p_{2}\\left(1+r\\right),I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "folderId": "97",
+        "color": "#000000",
+        "latex": "y_{r}=Y\\left(p_{1},p_{2}\\left(1+r\\right),I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "101",
+        "folderId": "97",
+        "color": "#2d70b3",
+        "latex": "u\\left(x,y\\right)\\cdot1=u\\left(x_{r},y_{r}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "97",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{r},y_{r}\\right)\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "sales tax"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "97",
+        "color": "#2d70b3",
+        "latex": "x=x_{r}\\left\\{y>0\\right\\}\\left\\{y<y_{r}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "97",
+        "color": "#2d70b3",
+        "latex": "y=y_{r}\\left\\{x>0\\right\\}\\left\\{x<x_{r}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "1178",
+        "color": "#6042a6",
+        "latex": "T_{ype}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "103",
+        "title": "5a. Budget, income tax",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "54",
+        "folderId": "103",
+        "text": "Income Tax, same revenue (can adjust independently)"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "103",
+        "color": "#000000",
+        "latex": "t=\\frac{p_{2}ry_{r}}{I}",
+        "hidden": true,
+        "slider": {
+          "hardMax": true,
+          "max": ".99"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "48",
+        "folderId": "103",
+        "color": "#fa7e19",
+        "latex": "p_{1}x+p_{2}y=\\left(1-t\\right)I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "105",
+        "title": "5b. Optimal choice, income tax",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "105",
+        "color": "#000000",
+        "latex": "x_{t}=X\\left(p_{1},p_{2},\\left(1-t\\right)I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "106",
+        "folderId": "105",
+        "color": "#6042a6",
+        "latex": "y_{t}=Y\\left(p_{1},p_{2},\\left(1-t\\right)I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "105",
+        "color": "#fa7e19",
+        "latex": "u\\left(x,y\\right)\\cdot1=u\\left(x_{t},y_{t}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "105",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{t},y_{t}\\right)\\left\\{T_{ype}=1\\right\\}",
+        "showLabel": true,
+        "label": "income tax"
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "105",
+        "color": "#fa7e19",
+        "latex": "x=x_{t}\\left\\{y>0\\right\\}\\left\\{y<y_{t}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "105",
+        "color": "#fa7e19",
+        "latex": "y=y_{t}\\left\\{x>0\\right\\}\\left\\{x<x_{t}\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".4",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "112",
+        "title": "6. How much would you have to compensate the consumer to get them to vote for the tax? (\"Hickesian\" Compensation, to restore \"real\" income, in terms of maintaining satisfaction)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "t_{ransfer}=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-500",
+          "max": "1000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "136",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}\\left(1+r\\right)y=\\left(I+t_{ransfer}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "text",
+        "id": "139",
+        "folderId": "112",
+        "text": "Solving for the transfer"
+      },
+      {
+        "type": "text",
+        "id": "115",
+        "folderId": "112",
+        "text": "MRS=p1/(p2+r)  & u(x,y)=u(x_n,y_n) imply"
+      },
+      {
+        "type": "expression",
+        "id": "108",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "x_{c}=\\exp\\left(\\frac{\\left(u\\left(x_{n},y_{n}\\right)-\\beta\\ln\\left(\\frac{\\beta}{\\alpha}\\frac{p_{1}}{p_{2}\\left(1+r\\right)}\\right)\\right)}{\\alpha+\\beta}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "126",
+        "folderId": "112",
+        "text": "plug x_c back into the MRS=p1/(p2+r) condition"
+      },
+      {
+        "type": "expression",
+        "id": "109",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "y_{c}=\\frac{\\beta}{\\alpha}\\cdot\\frac{p_{1}}{p_{2}\\left(1+r\\right)}\\cdot x_{c}"
+      },
+      {
+        "type": "expression",
+        "id": "110",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{c},y_{c}\\right)\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "Compensation: ${C_ompensationReal}",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "text",
+        "id": "120",
+        "folderId": "112",
+        "text": "Income needed to match expenditure to reach original IC with sales tax"
+      },
+      {
+        "type": "expression",
+        "id": "113",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "I_{c}=p_{1}x_{c}+p_{2}\\left(1+r\\right)y_{c}"
+      },
+      {
+        "type": "text",
+        "id": "122",
+        "folderId": "112",
+        "text": "Amount needed to compensate the consumer for the tax"
+      },
+      {
+        "type": "expression",
+        "id": "118",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "C_{ompensationReal}=I_{c}-I"
+      },
+      {
+        "type": "text",
+        "id": "124",
+        "folderId": "112",
+        "text": "Budget line with income after compensation"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}\\left(1+r\\right)y=I_{c}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "folder",
+        "id": "132",
+        "title": "7. How much would you have to compensate the consumer so that they could afford to purchase their original bundle? (\"Slutsky\" Compensation, to restore \"real\" income, in terms maintaining purchasing power based on historical consumption)"
+      },
+      {
+        "type": "text",
+        "id": "134",
+        "folderId": "132",
+        "text": "Note: for marginal changes in prices, there is no difference between Slutsky & Hicks"
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "132",
+        "color": "#2d70b3",
+        "latex": "I_{pp}=p_{1}x_{n}+p_{2}\\left(1+r\\right)y_{n}"
+      },
+      {
+        "type": "expression",
+        "id": "1183",
+        "folderId": "132",
+        "color": "#c74440",
+        "latex": "\\left(x_{n},y_{n}\\right)\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "Compensation: ${C_ompensationPP}"
+      },
+      {
+        "type": "expression",
+        "id": "140",
+        "folderId": "132",
+        "color": "#c74440",
+        "latex": "C_{ompensationPP}=I_{pp}-I"
+      },
+      {
+        "type": "expression",
+        "id": "141",
+        "folderId": "132",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}\\left(1+r\\right)y=I_{pp}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}\\left\\{T_{ype}=2\\right\\}",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "folder",
+        "id": "1181",
+        "title": "8.Controls",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1175",
+        "folderId": "1181",
+        "color": "#c74440",
+        "latex": "\\left(25,-10\\right),\\left(45,-10\\right)",
+        "lines": true
+      },
+      {
+        "type": "expression",
+        "id": "1176",
+        "folderId": "1181",
+        "color": "#c74440",
+        "latex": "\\left(25,-10\\right)",
+        "showLabel": true,
+        "label": "Income Tax",
+        "pointStyle": "OPEN",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1179",
+        "folderId": "1181",
+        "color": "#c74440",
+        "latex": "\\left(45,-10\\right)",
+        "showLabel": true,
+        "label": "Sales Tax",
+        "pointStyle": "OPEN",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to2"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

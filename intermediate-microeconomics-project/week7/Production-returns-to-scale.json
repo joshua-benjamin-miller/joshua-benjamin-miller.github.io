@@ -1,0 +1,1178 @@
+{
+  "version": 11,
+  "randomSeed": "0b02b8e1ffde5d5f48215fb96a0ebbd8",
+  "graph": {
+    "viewport": {
+      "xmin": -6.878500581299207,
+      "ymin": -10.359248975624887,
+      "xmax": 34.51929925429138,
+      "ymax": 10.445848656300889
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-6.878500581299207",
+      "xmax": "34.51929925429138",
+      "ymin": "-10.359248975624887",
+      "ymax": "10.445848656300889"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "40",
+        "text": "Production function indicates the highest output that a firm can produced for any specified combination of inputs. We focus on two inputs: labor L and capital K:"
+      },
+      {
+        "type": "text",
+        "id": "49",
+        "text": "Type of production function: 1 for Cobb-Douglas production function, 2 for perfect substitutes and 3 for fixed-proportions"
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "color": "#388c46",
+        "latex": "P_{type}=3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "3",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "56",
+        "title": "Production function definition",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "157",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=1\\right\\}\\left\\{\\beta=0\\right\\}",
+        "showLabel": true,
+        "label": "Cobb Douglas production function `q(K,L)=x^\\alpha y^{1-\\alpha}` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "158",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=2\\right\\}",
+        "showLabel": true,
+        "label": "Perfect substitutes production function `q(K,L)=\\alpha x + (1-\\alpha)y` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "159",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=3\\right\\}",
+        "showLabel": true,
+        "label": "Fixed proportions production function `q(K,L)=2min\\left(\\alpha x, (1-\\alpha)y\\right)` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "56",
+        "color": "#388c46",
+        "latex": "\\ C_{obbDouglas}\\left(x,y\\right)=x^{\\beta+\\alpha}y^{\\beta+1-\\alpha}\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "folderId": "56",
+        "color": "#6042a6",
+        "latex": "P_{erfectSubs}\\left(x,y\\right)=\\alpha x+\\left(1-\\alpha\\right)y"
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "F_{ixedProportions}\\left(x,y\\right)\\ =\\ 2\\min\\left(\\alpha x,\\ \\left(1-\\alpha\\right)y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "56",
+        "color": "#c74440",
+        "latex": "\\alpha=0.3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "56",
+        "color": "#fa7e19",
+        "latex": "f\\left(x,y\\right)=\\frac{\\left(P_{type}-2\\right)\\left(P_{type}-3\\right)}{2}C_{obbDouglas}\\left(x,y\\right)+\\frac{\\left(P_{type}-1\\right)\\left(P_{type}-3\\right)}{-1}P_{erfectSubs}\\left(x,y\\right)+\\frac{\\left(P_{type}-1\\right)\\left(P_{type}-2\\right)}{2}F_{ixedProportions}\\left(x,y\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "2",
+        "title": "3D Graph of production function",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "3",
+        "folderId": "2",
+        "text": "This is an example of pushing the limits of the calculator. f(x,y) is any 3-d function. Try changing it!"
+      },
+      {
+        "type": "text",
+        "id": "5",
+        "folderId": "2",
+        "text": "Slide a, b, and c to see what they do: (default -0.3, 0.5, 0)"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "a=-0.3",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "b=0.5",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "c=0",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "2",
+        "color": "#c74440",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "10",
+        "folderId": "2",
+        "text": "here we do some transformations to find out where to plot a 3-dimensional point on this 2-dimensional screen. Note that these depend a lot on a, b, and c"
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "2",
+        "color": "#2d70b3",
+        "latex": "x_x=\\cos\\left(c\\right)\\cos\\left(a\\right)-\\sin\\left(c\\right)\\sin\\left(a\\right)\\sin\\left(b\\right)",
+        "hidden": true,
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "2",
+        "color": "#388c46",
+        "latex": "x_y=\\cos\\left(c\\right)\\sin\\left(a\\right)\\sin\\left(b\\right)+\\sin\\left(c\\right)\\cos\\left(a\\right)",
+        "hidden": true,
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "folderId": "2",
+        "color": "#fa7e19",
+        "latex": "y_x=-\\cos\\left(c\\right)\\sin\\left(a\\right)-\\sin\\left(c\\right)\\cos\\left(a\\right)\\sin\\left(b\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "y_y=\\cos\\left(c\\right)\\cos\\left(a\\right)\\sin\\left(b\\right)-\\sin\\left(c\\right)\\sin\\left(a\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "2",
+        "color": "#c74440",
+        "latex": "z_x=-\\sin\\left(c\\right)\\cos\\left(b\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "2",
+        "color": "#6042a6",
+        "latex": "z_y=\\cos\\left(c\\right)\\cos\\left(b\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "text",
+        "id": "17",
+        "folderId": "2",
+        "text": "What do you think \"n\" and \"s\" do?"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "2",
+        "color": "#c74440",
+        "latex": "n=16",
+        "labelSize": "1",
+        "slider": {
+          "max": "40",
+          "step": "2"
+        },
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "2",
+        "color": "#6042a6",
+        "latex": "s=5.5",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "text",
+        "id": "20",
+        "folderId": "2",
+        "text": "These two variables help draw the arrow-heads. Can you tell what they do?"
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "2",
+        "color": "#388c46",
+        "latex": "l=0.9",
+        "hidden": true,
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "2",
+        "color": "#fa7e19",
+        "latex": "a_l=10.7",
+        "labelSize": "1",
+        "slider": {
+          "max": "20"
+        },
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "text",
+        "id": "23",
+        "folderId": "2",
+        "text": "Now we draw the axes. x_arr and y_arr are helper functions that'll we'll use in equations 23, 24, and 25"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "2",
+        "color": "#c74440",
+        "latex": "x_{arr}\\left(t,x_s,y_s\\right)=\\left\\{0<t<l:x_st,\\ l<t<\\frac{l+1}{2}:lx_s+\\cos\\left(\\frac{5\\pi}{6}\\right)x_s\\left(t-l\\right)-\\sin\\left(\\frac{5\\pi}{6}\\right)y_s\\left(t-l\\right),\\ \\frac{l+1}{2}<t<1:lx_s+\\sin\\left(\\frac{5\\pi}{6}\\right)y_s\\left(t-\\frac{l+1}{2}\\right)+\\cos\\left(\\frac{5\\pi}{6}\\right)x_s\\left(t-\\frac{l+1}{2}\\right)\\right\\}",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "y_{arr}\\left(t,x_{s},y_{s}\\right)=\\left\\{0<t<l:y_{s}t,\\ l<t<\\frac{l+1}{2}:ly_{s}+\\cos\\left(\\frac{5\\pi}{6}\\right)y_{s}\\left(t-l\\right)+\\sin\\left(\\frac{5\\pi}{6}\\right)x_{s}\\left(t-l\\right),\\ \\frac{l+1}{2}<t<1:ly_{s}-\\sin\\left(\\frac{5\\pi}{6}\\right)x_{s}\\left(t-\\frac{l+1}{2}\\right)+\\cos\\left(\\frac{5\\pi}{6}\\right)y_{s}\\left(t-\\frac{l+1}{2}\\right)\\right\\}",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(a_{l}x_{x},a_{l}x_{y}\\right)",
+        "showLabel": true,
+        "label": "L (Labor)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(x_{arr}\\left(t,a_{l}x_{x},a_{l}x_{y}\\right),y_{arr}\\left(t,a_{l}x_{x},a_{l}x_{y}\\right)\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(a_{l}y_{x},a_{l}y_{y}\\right)",
+        "showLabel": true,
+        "label": "K (Capital)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(x_{arr}\\left(t,a_{l}y_{x},a_{l}y_{y}\\right),y_{arr}\\left(t,a_{l}y_{x},a_{l}y_{y}\\right)\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(a_{l}z_{x},a_{l}z_{y}\\right)",
+        "showLabel": true,
+        "label": "Q (Quantity)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "\\left(x_{arr}\\left(t,a_{l}z_{x},a_{l}z_{y}\\right),y_{arr}\\left(t,a_{l}z_{x},a_{l}z_{y}\\right)\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "29",
+        "folderId": "2",
+        "text": "And, finally, we draw the graph in blue and green. Can you figure out what g(t) and h(t) do?"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "2",
+        "color": "#fa7e19",
+        "latex": "g\\left(x\\right)=2s\\left(\\frac{\\operatorname{floor}\\left(x\\cdot\\left(n+1\\right)\\right)}{n}-.5\\right)",
+        "hidden": true,
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "2",
+        "color": "#000000",
+        "latex": "h\\left(x\\right)=2s\\left(\\operatorname{mod}\\left(x\\cdot\\left(n+1\\right),1\\right)-.5\\right)",
+        "hidden": true,
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "2",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{x}g\\left(t\\right)+y_{x}h\\left(t\\right)+z_{x}f\\left(g\\left(t\\right),h\\left(t\\right)\\right),x_{y}g\\left(t\\right)+y_{y}h\\left(t\\right)+z_{y}f\\left(g\\left(t\\right),h\\left(t\\right)\\right)\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "2",
+        "color": "#388c46",
+        "latex": "\\left(x_{x}h\\left(t\\right)+y_{x}g\\left(t\\right)+z_{x}f\\left(h\\left(t\\right),g\\left(t\\right)\\right),x_{y}h\\left(t\\right)+y_{y}g\\left(t\\right)+z_{y}f\\left(h\\left(t\\right),g\\left(t\\right)\\right)\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "68",
+        "title": "Isoquant curves",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "68",
+        "color": "#6042a6",
+        "latex": "q_{1}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "68",
+        "color": "#000000",
+        "latex": "\\Delta_{q}=1",
+        "slider": {
+          "hardMax": true,
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "68",
+        "color": "#c74440",
+        "latex": "N=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "68",
+        "color": "#2d70b3",
+        "latex": "F=\\left[q_{1}+0\\Delta_{q},q_{1}+1\\Delta_{q}...q_{1}+N\\Delta_{q}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "68",
+        "color": "#2d70b3",
+        "latex": "F\\left\\{x_{0}<x<x_{0}+l_{en}\\right\\}\\left\\{y_{0}<y<y_{0}+l_{en}\\right\\}=f(\\left(x-x_{0}\\right),\\left(y-y_{0}\\right))",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "folder",
+        "id": "142",
+        "title": "Marginal product of labor",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "141",
+        "folderId": "142",
+        "color": "#000000",
+        "latex": "K_{0}=2.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "6",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "150",
+        "folderId": "142",
+        "color": "#000000",
+        "latex": "\\left(x_{L}+L_{len},y_{L}+L_{len}\\right)",
+        "showLabel": true,
+        "label": "Fixed capital `K_0=${K_0}`",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "139",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(x_{x}h\\left(t\\right)+y_{x}K_{0}+z_{x}f\\left(h\\left(t\\right),K_{0}\\right),x_{y}h\\left(t\\right)+y_{y}K_{0}+z_{y}f\\left(h\\left(t\\right),K_{0}\\right)\\right)",
+        "fill": false,
+        "parametricDomain": {
+          "min": "0",
+          "max": "1"
+        },
+        "lineWidth": "4",
+        "domain": {
+          "min": "0",
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "146",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(y-y_{L}\\right)=f\\left(\\left(x-x_{L}\\right),K_{0}\\right)\\left\\{x_{L}<x<x_{L}+L_{len}\\right\\}\\left\\{y_{L}<y<y_{L}+L_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "144",
+        "folderId": "142",
+        "text": "Marginal product of labor is additional output produced as labor is increased by 1 unit:"
+      },
+      {
+        "type": "expression",
+        "id": "145",
+        "folderId": "142",
+        "color": "#6042a6",
+        "latex": "\\left(y-y_{L}\\right)=\\frac{d}{dx}f\\left(x-x_{L},K_{0}\\right)\\left\\{x_{L}<x<x_{L}+L_{len}\\right\\}\\left\\{y_{L}<y<y_{L}+L_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "148",
+        "folderId": "142",
+        "text": "Average product of labor is output per unit of labor:"
+      },
+      {
+        "type": "expression",
+        "id": "149",
+        "folderId": "142",
+        "color": "#fa7e19",
+        "latex": "\\left(y-y_{L}\\right)=\\frac{f\\left(\\left(x-x_{L}\\right),K_{0}\\right)}{x-x_{L}}\\left\\{x_{L}<x<x_{L}+L_{len}\\right\\}\\left\\{y_{L}<y<y_{L}+L_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "153",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(x_{L}+L_{len},\\ f\\left(\\left(L_{len}\\right),K_{0}\\right)\\right)",
+        "showLabel": true,
+        "label": "Q(L)",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "154",
+        "folderId": "142",
+        "color": "#6042a6",
+        "latex": "\\left(x_{L}+L_{len},0\\right)",
+        "showLabel": true,
+        "label": "`MP_L`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "155",
+        "folderId": "142",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{L}+L_{len},\\frac{f\\left(\\left(L_{len}\\right),K_{0}\\right)}{L_{len}}\\right)",
+        "showLabel": true,
+        "label": "`AP_L`",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "160",
+        "folderId": "142",
+        "color": "#c74440"
+      },
+      {
+        "type": "folder",
+        "id": "162",
+        "title": "Marginal Rate of Technical Substitution",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "163",
+        "folderId": "162",
+        "color": "#000000",
+        "latex": "\\left(L_{temp},K_{temp}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "169",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "L_{temp}=5.47",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "170",
+        "folderId": "162",
+        "color": "#000000",
+        "latex": "K_{temp}=-7.1",
+        "hidden": true,
+        "slider": {
+          "min": "-12.04"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "164",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{M}=f\\left(L_{M},K_{M}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "167",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "L_{M}=L_{temp}-x_{0}"
+      },
+      {
+        "type": "expression",
+        "id": "168",
+        "folderId": "162",
+        "color": "#388c46",
+        "latex": "K_{M}=K_{temp}-y_{0}"
+      },
+      {
+        "type": "expression",
+        "id": "172",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{M}\\left\\{x_{0}<x<x_{0}+l_{en}\\right\\}\\left\\{y_{0}<y<y_{0}+l_{en}\\right\\}=f(\\left(x-x_{0}\\right),\\left(y-y_{0}\\right))"
+      },
+      {
+        "type": "expression",
+        "id": "186",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "q_{M}\\left\\{x_{0}<x<x_{0}+l_{en}\\right\\}\\left\\{y_{0}<y<y_{0}+l_{en}\\right\\}\\le f(\\left(x-x_{0}\\right),\\left(y-y_{0}\\right))",
+        "lines": false,
+        "fillOpacity": ".1",
+        "lineOpacity": ".2"
+      },
+      {
+        "type": "expression",
+        "id": "174",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{L}\\left(L\\right)=f\\left(L,\\ K_{M}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "176",
+        "folderId": "162",
+        "color": "#c74440",
+        "latex": "q_{K}\\left(K\\right)=f\\left(L_{M},\\ K\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "175",
+        "folderId": "162",
+        "color": "#000000",
+        "latex": "M_{rts}=\\operatorname{round}\\left(\\frac{q_{L}'\\left(L_{M}\\right)}{q'_{K}\\left(K_{M}\\right)}\\cdot100\\right)\\cdot0.01"
+      },
+      {
+        "type": "expression",
+        "id": "177",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "\\left(y-y_{0}-K_{M}\\right)=-M_{rts}\\left(x-x_{0}-L_{M}\\right)\\left\\{L_{M}-1<x<L_{M}+1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "178",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "\\left(L_{temp},K_{temp}\\right)",
+        "showLabel": true,
+        "label": "MRTS at `(${L_M}, ${K_M})` equals `${M_rts}`"
+      },
+      {
+        "type": "folder",
+        "id": "112",
+        "title": "Color Palette",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "113",
+        "folderId": "112",
+        "text": "The number of colors in the palette"
+      },
+      {
+        "type": "expression",
+        "id": "114",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "I=\\left[1...N+1\\right]"
+      },
+      {
+        "type": "text",
+        "id": "115",
+        "folderId": "112",
+        "text": "The intensity of each RGB value as we move through the palette"
+      },
+      {
+        "type": "expression",
+        "id": "116",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "R=255\\frac{\\left(I-1\\right)}{N}"
+      },
+      {
+        "type": "expression",
+        "id": "117",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "G=0I"
+      },
+      {
+        "type": "expression",
+        "id": "118",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "B=255\\left(1-\\frac{\\left(I-1\\right)}{N}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "119",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+      },
+      {
+        "type": "folder",
+        "id": "127",
+        "title": "Capital-Labor axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "121",
+        "folderId": "127",
+        "color": "#2d70b3",
+        "latex": "x_{0}=0"
+      },
+      {
+        "type": "expression",
+        "id": "122",
+        "folderId": "127",
+        "color": "#388c46",
+        "latex": "y_{0}=-11.8",
+        "slider": {
+          "min": "-12"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "120",
+        "folderId": "127",
+        "color": "#c74440",
+        "latex": "l_{en}=7.4"
+      },
+      {
+        "type": "expression",
+        "id": "125",
+        "folderId": "127",
+        "color": "#c74440",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "58",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "x=x_{0}\\left\\{y_{0}\\le y\\le y_{0}+l_{en}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "y=y_{0}\\left\\{x_{0}\\le x\\le x_{0}+l_{en}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "123",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "\\left(x_{0},\\ y_{0}+l_{en}\\right)",
+        "showLabel": true,
+        "label": "K (Capital)",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "124",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "\\left(x_{0}+l_{en},\\ y_{0}\\right)",
+        "showLabel": true,
+        "label": "L (Labor)",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "folder",
+        "id": "129",
+        "title": "Labor-Quantity axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "130",
+        "folderId": "129",
+        "color": "#6042a6",
+        "latex": "x_{L}=12",
+        "slider": {
+          "max": "12"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "131",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "y_{L}=0.3"
+      },
+      {
+        "type": "expression",
+        "id": "133",
+        "folderId": "129",
+        "color": "#2d70b3",
+        "latex": "L_{len}=8"
+      },
+      {
+        "type": "expression",
+        "id": "132",
+        "folderId": "129",
+        "color": "#c74440",
+        "latex": "\\left(x_{L},y_{L}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "x=x_{L}\\left\\{y_{L}\\le y\\le y_{L}+L_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "138",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "y=y_{L}\\left\\{x_{L}\\le x\\le x_{L}+L_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "\\left(x_{L},y_{L}+L_{len}\\right)",
+        "showLabel": true,
+        "label": "Q (Quantity)",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "\\left(x_{L}+L_{len},y_{L}\\right)",
+        "showLabel": true,
+        "label": "L (Labor)",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "folder",
+        "id": "181",
+        "title": "Returns to scale",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "179",
+        "folderId": "181",
+        "color": "#6042a6",
+        "latex": "\\beta=0.1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-0.2",
+          "max": "0.2",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "180",
+        "folderId": "181",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=1\\right\\}\\left\\{\\beta<0,\\ \\beta>0\\right\\}",
+        "showLabel": true,
+        "label": "Cobb Douglas production function `q(K,L)=x^{\\beta+\\alpha} y^{\\beta+1-\\alpha}` (`\\alpha=${\\alpha};\\beta=${\\beta}`)",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "184",
+        "folderId": "181",
+        "color": "#388c46",
+        "latex": "\\left(x_{0},y_{0}-1\\right)\\left\\{P_{type}=1\\right\\}\\left\\{\\beta<0\\right\\}",
+        "showLabel": true,
+        "label": "Isoquants illustrate DECREASING returns to scale",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "183",
+        "folderId": "181",
+        "color": "#388c46",
+        "latex": "\\left(x_{0},y_{0}-1\\right)\\left\\{P_{type}=1\\right\\}\\left\\{\\beta>0\\right\\}",
+        "showLabel": true,
+        "label": "Isoquants illustrate INCREASING returns to scale",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "182",
+        "color": "#c74440"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

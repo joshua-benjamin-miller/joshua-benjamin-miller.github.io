@@ -1,0 +1,123 @@
+{
+  "version": 11,
+  "randomSeed": "b161c01a78d37ed431db2065e1b7bf26",
+  "graph": {
+    "viewport": {
+      "xmin": -35.88604373565377,
+      "ymin": -524.5297163010091,
+      "xmax": 24.393698503732764,
+      "ymax": 3103.221116695747
+    },
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-35.88604373565377",
+      "xmax": "24.393698503732764",
+      "ymin": "-524.5297163010091",
+      "ymax": "3103.221116695747"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "22",
+        "text": "Define functions from problem"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "color": "#388c46",
+        "latex": "B\\left(H\\right)=654H-40H^{2}"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "color": "#6042a6",
+        "latex": "C\\left(H\\right)=110H+40H^{2}"
+      },
+      {
+        "type": "text",
+        "id": "26",
+        "text": "Define Net Benefit"
+      },
+      {
+        "type": "expression",
+        "id": "27",
+        "color": "#c74440",
+        "latex": "N_{B}\\left(H\\right)=B\\left(H\\right)-C\\left(H\\right)"
+      },
+      {
+        "type": "text",
+        "id": "29",
+        "text": "Extra: Define MB, MC and check condition"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "color": "#388c46",
+        "latex": "M_{B}\\left(H\\right)=B'\\left(H\\right)",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "color": "#6042a6",
+        "latex": "M_{C}\\left(H\\right)=C'\\left(H\\right)",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "color": "#2d70b3",
+        "latex": "H_{opt}=3.4",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "53",
+        "text": "The red cross will only appear when H is at optimal level"
+      },
+      {
+        "type": "text",
+        "id": "58",
+        "text": "Check the MB=MC condition"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "color": "#6042a6",
+        "latex": "M_{B}\\left(H_{opt}\\right)-M_{C}\\left(H_{opt}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "806",
+        "text": "The tolerance margin lets students enter decimal approximations instead of the exact value. It’s adjustable: the smaller the tolerance, the more accurate their answer has to be."
+      },
+      {
+        "type": "expression",
+        "id": "804",
+        "color": "#6042a6",
+        "latex": "t_{ol}=0.001",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "54",
+        "title": "optimal"
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "folderId": "54",
+        "color": "#c74440",
+        "latex": "O=\\left(H_{opt}\\ ,\\ N_{B}\\left(H_{opt}\\right)\\right)\\left\\{\\operatorname{abs}\\left(M_{B}\\left(H_{opt}\\right)-M_{C}\\left(H_{opt}\\right)\\right)<t_{ol}\\right\\}",
+        "pointStyle": "CROSS",
+        "pointOpacity": "20"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

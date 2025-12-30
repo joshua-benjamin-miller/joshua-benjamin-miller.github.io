@@ -1,0 +1,234 @@
+{
+  "version": 11,
+  "randomSeed": "17733c4baf852389dab7bfdc17641a47",
+  "graph": {
+    "viewport": {
+      "xmin": -9.578214986214327,
+      "ymin": -15.164873055894347,
+      "xmax": 53.70373182805377,
+      "ymax": 38.545211240978915
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-9.578214986214327",
+      "xmax": "53.70373182805377",
+      "ymin": "-15.164873055894347",
+      "ymax": "38.545211240978915"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "1398",
+        "title": "Identical demand functions, for each i",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "1398",
+        "color": "#c74440",
+        "latex": "q_{D}\\left(p,i\\right)=10-p\\left\\{0<p<10\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "654",
+        "folderId": "1398",
+        "text": "Aggregate demand"
+      },
+      {
+        "type": "text",
+        "id": "658",
+        "folderId": "1398",
+        "text": "Number of consumers"
+      },
+      {
+        "type": "expression",
+        "id": "659",
+        "folderId": "1398",
+        "color": "#c74440",
+        "latex": "N=3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "645",
+        "folderId": "1398",
+        "color": "#c74440",
+        "latex": "Q_{D}\\left(p\\right)=\\sum_{n=1}^{N}q_{D}\\left(p,n\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "650",
+        "folderId": "1398",
+        "text": "To define the inverse treat \"y\" as the output and apply the function"
+      },
+      {
+        "type": "text",
+        "id": "663",
+        "folderId": "1398",
+        "text": "graph aggregate demand"
+      },
+      {
+        "type": "expression",
+        "id": "655",
+        "folderId": "1398",
+        "color": "#388c46",
+        "latex": "x=Q_{D}\\left(y\\right)"
+      },
+      {
+        "type": "text",
+        "id": "661",
+        "folderId": "1398",
+        "text": "individual demand"
+      },
+      {
+        "type": "expression",
+        "id": "648",
+        "folderId": "1398",
+        "color": "#6042a6",
+        "latex": "x=q_{D}\\left(y,1\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "1394",
+        "title": "Two Different Individual Demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1400",
+        "folderId": "1394",
+        "color": "#6042a6",
+        "latex": "y=10-x\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "664",
+        "folderId": "1394",
+        "color": "#c74440",
+        "latex": "q_{2}\\left(y\\right)=40-2y\\ \\left\\{20>y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "665",
+        "folderId": "1394",
+        "color": "#2d70b3",
+        "latex": "Q_{2}=q_{D}\\left(y,1\\right)+q_{2}\\left(y\\right)\\ \\left\\{y<10\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "667",
+        "folderId": "1394",
+        "color": "#2d70b3",
+        "latex": "Q_{2}=q_{2}\\left(y\\right)\\ \\left\\{y>10\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "668",
+        "folderId": "1394",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,A\\right),\\left(q_{2}\\left(A\\right)+q_{D}\\left(A,1\\right),A\\right)\\right)",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "1395",
+        "folderId": "1394",
+        "color": "#000000",
+        "latex": "\\left(0,A\\right)",
+        "showLabel": true,
+        "label": "P=`${A}`"
+      },
+      {
+        "type": "expression",
+        "id": "672",
+        "folderId": "1394",
+        "color": "#6042a6",
+        "latex": "A=4.9",
+        "hidden": true,
+        "slider": {
+          "hardMax": true,
+          "max": "20"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "670",
+        "folderId": "1394",
+        "color": "#2d70b3",
+        "latex": "q_{DatA}=q_{D}\\left(A,1\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "669",
+        "folderId": "1394",
+        "color": "#6042a6",
+        "latex": "\\left(q_{D}\\left(A,1\\right),A\\right)\\left\\{A<10\\right\\}",
+        "showLabel": true,
+        "label": "`q_1`=`${q_DatA}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "674",
+        "folderId": "1394",
+        "color": "#c74440",
+        "latex": "q_{2atA}=q_{2}\\left(A\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "673",
+        "folderId": "1394",
+        "color": "#c74440",
+        "latex": "\\left(q_{2}\\left(A\\right),A\\right)\\left\\{A<10\\right\\}",
+        "showLabel": true,
+        "label": "`q_2`=`${q_2atA}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "675",
+        "folderId": "1394",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{2atA},A\\right)\\left\\{A<10\\right\\}",
+        "showLabel": true,
+        "label": "`Q_{total}`=`q_1+q_2`=`${Q_2atA}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "676",
+        "folderId": "1394",
+        "color": "#388c46",
+        "latex": "Q_{2atA}=q_{2}\\left(A\\right)+q_{D}\\left(A,1\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "678",
+        "folderId": "1394",
+        "color": "#000000",
+        "latex": "\\left(q_{2}\\left(A\\right),A\\right)\\left\\{A\\ge10\\right\\}",
+        "showLabel": true,
+        "label": "`Q_{total}`=`q_2`=`${q_2atA}`"
+      },
+      {
+        "type": "expression",
+        "id": "1396",
+        "folderId": "1394",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,A\\right),\\left(q_{2}\\left(A\\right),A\\right)\\right)\\left\\{A>10\\right\\}",
+        "lineStyle": "DASHED"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
