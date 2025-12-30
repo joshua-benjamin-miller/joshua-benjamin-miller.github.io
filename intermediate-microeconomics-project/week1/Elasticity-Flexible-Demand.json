@@ -1,0 +1,265 @@
+{
+  "version": 11,
+  "randomSeed": "e2b36fa1fca4cc62bcc4f04d7a07a644",
+  "graph": {
+    "viewport": {
+      "xmin": -6.5037151850303125,
+      "ymin": -8.168279835355088,
+      "xmax": 32.4589199543488,
+      "ymax": 19.857247109024748
+    },
+    "showGrid": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-6.5037151850303125",
+      "xmax": "32.4589199543488",
+      "ymin": "-8.168279835355088",
+      "ymax": "19.857247109024748"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "732",
+        "text": "Demand and elasticity"
+      },
+      {
+        "type": "text",
+        "id": "734",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "708",
+        "title": "Demand Function"
+      },
+      {
+        "type": "text",
+        "id": "736",
+        "folderId": "708",
+        "text": "place downward sloping demand defined on p>=0 here. This is constant elasticity"
+      },
+      {
+        "type": "expression",
+        "id": "689",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "A=15",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "691",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "B=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "Q_{D}\\left(p\\right)=Ap^{-B}\\left\\{p\\ge0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "710",
+        "title": "Graph Demand curve"
+      },
+      {
+        "type": "text",
+        "id": "701",
+        "folderId": "710",
+        "text": "Graph the inverse demand"
+      },
+      {
+        "type": "expression",
+        "id": "698",
+        "folderId": "710",
+        "color": "#2d70b3",
+        "latex": "x=Q_{D}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "724",
+        "title": "Display quantity demand and price"
+      },
+      {
+        "type": "expression",
+        "id": "692",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "p_{0}=2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".05",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "693",
+        "folderId": "724",
+        "color": "#c74440",
+        "latex": "q_{0}=Q_{D}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "726",
+        "folderId": "724",
+        "color": "#388c46",
+        "latex": "p_{0r}=\\frac{\\operatorname{round}\\left(100p_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "727",
+        "folderId": "724",
+        "color": "#6042a6",
+        "latex": "q_{0r}=\\frac{\\operatorname{round}\\left(100q_{0}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "725",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "label": "`(q,p)=(${q_0r},${p_0r})`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "728",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{0},0\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "729",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,p_{0}\\right),\\left(q_{0},p_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "730",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{0},0\\right)",
+        "showLabel": true,
+        "label": "`q=${q_0r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "731",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "\\left(0,p_{0}\\right)",
+        "showLabel": true,
+        "label": "`p=${p_0r}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "folder",
+        "id": "723",
+        "title": "Display elasticity"
+      },
+      {
+        "type": "text",
+        "id": "716",
+        "folderId": "723",
+        "text": "define elasticity function (function of price)"
+      },
+      {
+        "type": "expression",
+        "id": "695",
+        "folderId": "723",
+        "color": "#388c46",
+        "latex": "E_{d}\\left(p\\right)=Q_{D}'\\left(p\\right)\\cdot\\frac{p}{Q_{D}\\left(p\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "696",
+        "folderId": "723",
+        "color": "#6042a6",
+        "latex": "e_{d}=E_{d}\\left(p_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "e_{dr}=\\frac{\\operatorname{round}\\left(100e_{d}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "694",
+        "folderId": "723",
+        "color": "#c74440",
+        "latex": "\\left(q_{0},p_{0}\\right)",
+        "showLabel": true,
+        "label": "`E^d=\\frac{dQ}{dP}\\frac{P}{Q}=${e_dr}`",
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "706",
+        "title": "Dragable Labels",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "702",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(-4.56,9.48\\right)",
+        "showLabel": true,
+        "label": "Price",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "703",
+        "folderId": "706",
+        "color": "#000000",
+        "latex": "\\left(13.5,-4\\right)",
+        "showLabel": true,
+        "label": "Quantity",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

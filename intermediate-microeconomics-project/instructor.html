@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intermediate Microeconomics – Interactive Graphs</title>
+
+ <link rel="stylesheet" href="assets/site.css">
+<style>
+
+/* Concepts / Exercises */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+}
+
+/* button */
+.dropdown-btn {
+    cursor: pointer;
+    padding: 12px 4px;
+    display: inline-block;
+}
+
+/* display when hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 10px; 
+}
+  .view-toggle {
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;           
+}
+
+.view-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.view-link {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.view-link:hover {
+  border-color: #d1d5db;
+  background-color: #f3f4f6;
+}
+
+.view-link.active {
+  background-color: #111827;   
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.view-separator {
+  color: #9ca3af;
+}
+
+  .graph-thumb {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.graph-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.week-card {
+  overflow: hidden;            
+}
+
+.week-thumb {
+  width: 100%;
+  height: 160px;                
+  display: block;              
+  object-fit: cover;             
+  object-position: center;      
+}
+
+</style>
+
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+  <script src="assets/navbarH-loader.js"></script>
+
+  <!-- Main page-->
+  <main class="page">
+    <h1 class="page-title">
+      Intermediate Microeconomics – Interactive Graphs
+    </h1>
+    <p class="page-subtitle">
+      Teaching demos and practice graphs for each week of the course.
+    </p>
+<div class="view-toggle">
+  <span class="view-label">View:</span>
+  <a href="index.html" class="view-link">Student page</a>
+  <span class="view-separator">/</span>
+  <a href="instructor.html" class="view-link active">Instructor page</a>
+</div>
+
+    <!-- concepts cards -->
+    <section class="weeks-grid">
+      <!-- 1 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">1</div>
+          </div>
+          <div class="week-title">
+            Foundations of Consumer Behavior
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Foundations-of-Consumer-Behavior.html">Graphs</a>
+        </div>
+      </article>
+
+        <!-- 2 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">2</div>
+          </div>
+          <div class="week-title">
+           Market Equilibrium Welfare Supply & Demand
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Market-Equilibrium-Welfare-Supply-Demand.html">Graphs</a>
+        </div>
+      </article>
+
+           <!-- 3 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">3</div>
+          </div>
+          <div class="week-title">
+           Consumer Choice Extensions
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Consumer-Choice-Extensions.html">Graphs</a>
+        </div>
+      </article>
+
+         <!-- 4 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">4</div>
+          </div>
+          <div class="week-title">
+           Production, Cost, Decision Making
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Production-Cost-Decision-Making.html">Graphs</a>
+        </div>
+      </article>
+
+       <!-- 5 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">5</div>
+          </div>
+          <div class="week-title">
+           Monopoly
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Monopoly.html">Graphs</a>
+        </div>
+      </article>
+
+       <!-- 6 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week1.png" alt="Week 1 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Concept</div>
+            <div class="week-number">6</div>
+          </div>
+          <div class="week-title">
+           Oligopoly
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="Instructor-Page/Oligopoly.html">Graphs</a>
+        </div>
+      </article>
+      
+    </section>
+
+    <!-- About / Credits -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>About this project</h3>
+        <p>
+          Interactive Desmos-based visualisations for an Intermediate
+          Microeconomics course. The goal is to turn standard diagrams into
+          manipulable objects that students can explore directly in their browser.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Credits</h3>
+        <p>
+          Graph design and implementation: Graph design and implementation:Joshua.B.Miller, Artem Tashevtev, Houcheng (Troye) Liu.<br />
+          Built with Desmos, GitHub Pages, and a suspicious amount of patience.
+        </p>
+      </div>
+       <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>
+         Joshua.B.Miller.......
+        </p>
+      </div>
+    </footer>
+    
+  </main>
+</body>
+</html>

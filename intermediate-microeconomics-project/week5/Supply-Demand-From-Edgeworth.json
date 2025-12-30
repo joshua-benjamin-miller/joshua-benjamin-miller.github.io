@@ -1,0 +1,433 @@
+{
+  "version": 11,
+  "randomSeed": "2200d11c1dcf08d645aa515155d2fa7c",
+  "graph": {
+    "viewport": {
+      "xmin": -5.915874958847315,
+      "ymin": -0.6724656163225649,
+      "xmax": 13.565442610842357,
+      "ymax": 5.503676729140647
+    },
+    "xAxisMinorSubdivisions": 1,
+    "yAxisMinorSubdivisions": 1,
+    "xAxisLabel": "Quantity",
+    "yAxisLabel": "Price",
+    "__v12ViewportLatexStash": {
+      "xmin": "-5.915874958847315",
+      "xmax": "13.565442610842357",
+      "ymin": "-0.6724656163225649",
+      "ymax": "5.503676729140647"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "17",
+        "text": "Person 1 is alpha=1/2 with (10,4), Person 2 is alpha= 3/4 (15,20)"
+      },
+      {
+        "type": "text",
+        "id": "19",
+        "text": "Use Cobb-Douglas demand to get excess demand>0 as demand, and excess demand < 0 as supply"
+      },
+      {
+        "type": "text",
+        "id": "82",
+        "text": "credit: Prof. Joshua B. Miller"
+      },
+      {
+        "type": "folder",
+        "id": "69",
+        "title": "Set-up",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "71",
+        "folderId": "69",
+        "text": "Endowments For James"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "69",
+        "color": "#000000",
+        "latex": "F_{J}=10"
+      },
+      {
+        "type": "expression",
+        "id": "58",
+        "folderId": "69",
+        "color": "#c74440",
+        "latex": "C_{J}=4"
+      },
+      {
+        "type": "text",
+        "id": "73",
+        "folderId": "69",
+        "text": "Endowments for Karen"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "69",
+        "color": "#2d70b3",
+        "latex": "F_{K}=16",
+        "slider": {
+          "max": "15"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "69",
+        "color": "#388c46",
+        "latex": "C_{K}=20"
+      },
+      {
+        "type": "text",
+        "id": "75",
+        "folderId": "69",
+        "text": "Preferences for each (Cobb-Douglas)"
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "69",
+        "color": "#000000",
+        "latex": "\\alpha_{J}=.5"
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "69",
+        "color": "#c74440",
+        "latex": "\\alpha_{K}=.75"
+      },
+      {
+        "type": "text",
+        "id": "76",
+        "folderId": "69",
+        "text": "Cobb-Douglas Demand as a function of the price ratio for each"
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "69",
+        "color": "#c74440",
+        "latex": "d_{FoodJ}\\left(p\\right)=\\frac{\\alpha_{J}\\left(pF_{J}+C_{J}\\right)}{p}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "69",
+        "color": "#6042a6",
+        "latex": "d_{FoodK}\\left(p\\right)=\\frac{\\alpha_{K}\\left(pF_{K}+C_{K}\\right)}{p}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "28",
+        "title": "Consumer 1: James",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "86",
+        "folderId": "28",
+        "text": "Graphs"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "28",
+        "color": "#2d70b3",
+        "latex": "x=E_{xcessDemandJ}\\left(y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "28",
+        "color": "#2d70b3",
+        "latex": "x=S_{J}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "28",
+        "color": "#2d70b3",
+        "latex": "x=D_{J}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "text",
+        "id": "92",
+        "folderId": "28",
+        "text": "Don't graph what is below as a function of price, these are just for definition"
+      },
+      {
+        "type": "text",
+        "id": "84",
+        "folderId": "28",
+        "text": "Definitions"
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "28",
+        "color": "#6042a6",
+        "latex": "E_{xcessDemandJ}\\left(p\\right)=d_{FoodJ}\\left(p\\right)-F_{J}\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "42",
+        "folderId": "28",
+        "text": "Price above which consumer 1 begins to sell part of his/her endowment"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "28",
+        "color": "#c74440",
+        "latex": "p_{switchJ}=\\frac{\\alpha_{J}}{1-\\alpha_{J}}\\cdot\\frac{C_{J}}{F_{J}}"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "28",
+        "color": "#2d70b3",
+        "latex": "D_{J}\\left(p\\right)=\\left\\{p\\le p_{switchJ}:E_{xcessDemandJ}\\left(p\\right),p>p_{switchJ}:0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "28",
+        "color": "#2d70b3",
+        "latex": "S_{J}\\left(p\\right)=\\left\\{p<p_{switchJ}:0,p\\ge p_{switchJ}:-E_{xcessDemandJ}\\left(p\\right)\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "36",
+        "title": "Consumer 2: Karen",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "88",
+        "folderId": "36",
+        "text": "Graphs"
+      },
+      {
+        "type": "expression",
+        "id": "48",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "x=E_{xcessDemandK}\\left(y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "46",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "x=S_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "47",
+        "folderId": "36",
+        "color": "#c74440",
+        "latex": "x=D_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "text",
+        "id": "93",
+        "folderId": "36",
+        "text": "Don't graph what is below as a function of price, these are just for definition"
+      },
+      {
+        "type": "text",
+        "id": "90",
+        "folderId": "36",
+        "text": "Definitions"
+      },
+      {
+        "type": "expression",
+        "id": "64",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "E_{xcessDemandK}\\left(p\\right)=d_{FoodK}\\left(p\\right)-F_{K}\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "40",
+        "folderId": "36",
+        "text": "Price above which consumer 2 begins to sell part of his/her endowment"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "36",
+        "color": "#388c46",
+        "latex": "p_{switchK}=\\frac{\\alpha_{K}}{1-\\alpha_{K}}\\cdot\\frac{C_{K}}{F_{K}}"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "36",
+        "color": "#2d70b3",
+        "latex": "D_{K}\\left(p\\right)=\\left\\{p\\le p_{switchK}:E_{xcessDemandK}\\left(p\\right),p>p_{switchK}:0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "36",
+        "color": "#388c46",
+        "latex": "S_{K}\\left(p\\right)=\\left\\{p<p_{switchK}:0,p\\ge p_{switchK}:-E_{xcessDemandK}\\left(p\\right)\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "21",
+        "title": "Supply",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "21",
+        "color": "#c74440",
+        "latex": "x=S_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "folderId": "21",
+        "color": "#2d70b3",
+        "latex": "x=S_{J}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "21",
+        "color": "#6042a6",
+        "latex": "x=S_{J}\\left(y\\right)+S_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "25",
+        "title": "Demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "x=D_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "25",
+        "color": "#2d70b3",
+        "latex": "x=D_{J}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "folderId": "25",
+        "color": "#fa7e19",
+        "latex": "x=D_{J}\\left(y\\right)+D_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "50",
+        "title": "Supply and Demand and adjustment",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "50",
+        "color": "#2d70b3",
+        "latex": "x=D_{J}\\left(y\\right)+D_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "folderId": "50",
+        "color": "#6042a6",
+        "latex": "x=S_{J}\\left(y\\right)+S_{K}\\left(y\\right)\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "50",
+        "color": "#2d70b3",
+        "latex": "p_{rice}=1.97",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "54",
+        "folderId": "50",
+        "color": "#388c46",
+        "latex": "y=p_{rice}",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "text",
+        "id": "56",
+        "folderId": "50",
+        "text": "Equilibrium say excess demand = 0, i.e."
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "50",
+        "color": "#000000",
+        "latex": "p_{eq}=\\frac{\\alpha_{K}C_{K}+\\alpha_{J}C_{J}}{\\left(1-\\alpha_{K}\\right)F_{K}+\\left(1-\\alpha_{J}\\right)F_{J}}"
+      },
+      {
+        "type": "expression",
+        "id": "80",
+        "folderId": "50",
+        "color": "#2d70b3",
+        "latex": "\\frac{17}{9}"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

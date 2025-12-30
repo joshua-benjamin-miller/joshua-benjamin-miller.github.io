@@ -1,0 +1,181 @@
+{
+  "version": 11,
+  "randomSeed": "5949f4a6cff51dac709a8940621309cf",
+  "graph": {
+    "viewport": {
+      "xmin": -6.837796843459621,
+      "ymin": 9.584032408375382,
+      "xmax": 42.817327812852206,
+      "ymax": 21.837353416395924
+    },
+    "showGrid": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-6.837796843459621",
+      "xmax": "42.817327812852206",
+      "ymin": "9.584032408375382",
+      "ymax": "21.837353416395924"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "934",
+        "text": "Harm"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "H\\left(x\\right)=\\frac{a}{x+1}\\left\\{x\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "949",
+        "color": "#c74440",
+        "latex": "a=32",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "936",
+        "text": "The benefit of inspection is the amount of harm reduced compare with when there is no inspection"
+      },
+      {
+        "type": "expression",
+        "id": "925",
+        "color": "#6042a6",
+        "latex": "B\\left(x\\right)=H\\left(0\\right)-H\\left(x\\right)"
+      },
+      {
+        "type": "text",
+        "id": "938",
+        "text": "Marginal Benefit will be positive, of course, because we are reducing the harm.  Alternatively, we could have defined MB is the negative of marginal harm"
+      },
+      {
+        "type": "expression",
+        "id": "922",
+        "color": "#6042a6",
+        "latex": "M_{B}\\left(x\\right)=\\frac{d}{dx}B\\left(x\\right)"
+      },
+      {
+        "type": "text",
+        "id": "940",
+        "text": "Cost"
+      },
+      {
+        "type": "expression",
+        "id": "920",
+        "color": "#2d70b3",
+        "latex": "C\\left(x\\right)=b\\cdot x\\left\\{x\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "950",
+        "color": "#2d70b3",
+        "latex": "b=2",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "942",
+        "text": "Marginal cost"
+      },
+      {
+        "type": "expression",
+        "id": "923",
+        "color": "#fa7e19",
+        "latex": "M_{C}\\left(x\\right)=\\frac{d}{dx}C\\left(x\\right)\\left\\{x\\ge0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "944",
+        "text": "Total Loss, we want to minimize this"
+      },
+      {
+        "type": "expression",
+        "id": "921",
+        "color": "#388c46",
+        "latex": "L_{oss}\\left(x\\right)=H\\left(x\\right)+C\\left(x\\right)"
+      },
+      {
+        "type": "text",
+        "id": "946",
+        "text": "Net Benefit, we want to maximize this"
+      },
+      {
+        "type": "expression",
+        "id": "926",
+        "color": "#000000",
+        "latex": "N_{etBenefit}\\left(x\\right)=B\\left(x\\right)-C\\left(x\\right)"
+      },
+      {
+        "type": "text",
+        "id": "948",
+        "text": "The optimal amount of inspections, after setting MB(I)=MC(I) and solving for I"
+      },
+      {
+        "type": "folder",
+        "id": "951",
+        "title": "Answer",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "929",
+        "folderId": "951",
+        "color": "#388c46",
+        "latex": "I_{opt}=\\sqrt{\\frac{a}{b}}-1"
+      },
+      {
+        "type": "expression",
+        "id": "924",
+        "folderId": "951",
+        "color": "#388c46",
+        "latex": "\\left(I_{opt},L_{oss}\\left(I_{opt}\\right)\\right)",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "927",
+        "folderId": "951",
+        "color": "#000000",
+        "latex": "\\left(I_{opt},N_{etBenefit}\\left(I_{opt}\\right)\\right)",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "928",
+        "folderId": "951",
+        "color": "#2d70b3",
+        "latex": "\\left(I_{opt},M_{B}\\left(I_{opt}\\right)\\right)",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "930",
+        "folderId": "951",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(I_{opt},N_{etBenefit}\\left(I_{opt}\\right)\\right),\\left(I_{opt},L_{oss}\\left(I_{opt}\\right)\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "931",
+        "color": "#000000"
+      },
+      {
+        "type": "expression",
+        "id": "932",
+        "color": "#c74440"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

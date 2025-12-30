@@ -1,0 +1,1956 @@
+{
+  "version": 11,
+  "randomSeed": "e06407ea8a350c1b9334e2c604c0cc0b",
+  "graph": {
+    "viewport": {
+      "xmin": -131.48877374912428,
+      "ymin": -119.51600074434603,
+      "xmax": 454.29721798174745,
+      "ymax": 377.6655270006062
+    },
+    "showGrid": false,
+    "xAxisLabel": "Consumption Today",
+    "yAxisLabel": "Consumption Tomorrow",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-131.48877374912428",
+      "xmax": "454.29721798174745",
+      "ymin": "-119.51600074434603",
+      "ymax": "377.6655270006062"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "465",
+        "title": "credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "467",
+        "folderId": "465",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "114",
+        "title": "1. Intertemporal Budget Set",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "115",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(1+i\\right)p_{1}x+p_{2}y\\le\\left(1+i\\right)M_{1}+M_{2}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "fillOpacity": ".15",
+        "lineOpacity": "1"
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "folderId": "114",
+        "color": "#2d70b3",
+        "latex": "x_{all}=\\frac{\\left(1+i\\right)M_{1}+M_{2}}{\\left(1+i\\right)p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "98",
+        "folderId": "114",
+        "color": "#c74440",
+        "latex": "y_{all}=\\frac{\\left(1+i\\right)M_{1}+M_{2}}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "125",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "x_{allr}=R_{ound2}\\left(x_{all}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "126",
+        "folderId": "114",
+        "color": "#6042a6",
+        "latex": "y_{allr}=R_{ound2}\\left(y_{all}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(0,y_{all}\\right)\\left\\{S_{witch}=1\\right\\}",
+        "showLabel": true,
+        "label": "`C_2^{max}=\\frac{(1+ i)M_1+M_2}{p_2}`",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "492",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(0,y_{all}\\right)\\left\\{S_{witch}=0\\right\\}",
+        "showLabel": true,
+        "label": "`C_2^{max}=${y_allr}`",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(x_{all},0\\right)\\left\\{S_{witch}=0\\right\\}",
+        "showLabel": true,
+        "label": "`C_1^{max}=${x_allr}`",
+        "labelOrientation": "below_right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "493",
+        "folderId": "114",
+        "color": "#388c46",
+        "latex": "\\left(x_{all},0\\right)\\left\\{S_{witch}=1\\right\\}",
+        "showLabel": true,
+        "label": "`C_1^{max}=\\frac{M_1+\\frac{M_2}{(1+ i)}}{p_1}`",
+        "labelOrientation": "below_right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "447",
+        "folderId": "114",
+        "color": "#2d70b3",
+        "latex": "M_{cost}=\\frac{\\left(1+i\\right)p_{1}}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "486",
+        "folderId": "114",
+        "color": "#2d70b3",
+        "latex": "M_{costr}=R_{ound2}\\left(M_{cost}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "446",
+        "folderId": "114",
+        "color": "#000000",
+        "latex": ".25\\left(x_{all},y_{all}\\right)",
+        "showLabel": true,
+        "label": "`(1+i)\\frac{p_1}{p_2}=${M_costr}`",
+        "hidden": true,
+        "labelSize": "1.5"
+      },
+      {
+        "type": "folder",
+        "id": "121",
+        "title": "2. Zero savings point",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "105",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "x_{zero}=\\frac{M_{1}}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "106",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "y_{zero}=\\frac{M_{2}}{p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "117",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "x_{zeror}=R_{ound2}\\left(x_{zero}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "122",
+        "folderId": "121",
+        "color": "#c74440",
+        "latex": "y_{zeror}=R_{ound2}\\left(y_{zero}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "\\left(x_{zero},y_{zero}\\right)",
+        "showLabel": true,
+        "label": "Zero Savings",
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "102",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "\\left(0,y_{zero}\\right)\\left\\{S_{witch}=0\\right\\}",
+        "showLabel": true,
+        "label": "`C_2^{save0}=${y_zeror}`",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "491",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "\\left(0,y_{zero}\\right)\\left\\{S_{witch}=1\\right\\}",
+        "showLabel": true,
+        "label": "`C_2^{save0}=\\frac{M_2}{p_2}`",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "101",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "\\left(x_{zero},0\\right)\\left\\{S_{witch}=0\\right\\}",
+        "showLabel": true,
+        "label": "`C_1^{save0}=${x_zeror}`",
+        "labelOrientation": "below",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "488",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "S_{witch}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "489",
+        "folderId": "121",
+        "color": "#6042a6",
+        "latex": "F_{lip}=S_{witch}\\to\\operatorname{mod}\\left(S_{witch}+1,2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "487",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "\\left(x_{zero},0\\right)\\left\\{S_{witch}=1\\right\\}",
+        "showLabel": true,
+        "label": "`C_1^{save0}=\\frac{M_1}{p_1}`",
+        "labelOrientation": "below",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{lip}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "80",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "x=x_{zero}\\left\\{y\\ge0\\right\\}\\left\\{y\\le y_{zero}\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "81",
+        "folderId": "121",
+        "color": "#388c46",
+        "latex": "y=y_{zero}\\left\\{x\\ge0\\right\\}\\left\\{x\\le x_{zero}\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "472",
+        "title": "3. Dragable Bundle with IC",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "473",
+        "folderId": "472",
+        "color": "#c74440",
+        "latex": "c=\\left(133,153\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "474",
+        "folderId": "472",
+        "color": "#c74440",
+        "latex": "u\\left(c.x,c.y\\right)\\le u\\left(x,y\\right)",
+        "fillOpacity": ".2",
+        "lineOpacity": "1"
+      },
+      {
+        "type": "folder",
+        "id": "95",
+        "title": "4. Demand (utility function defined inside)",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "132",
+        "folderId": "95",
+        "text": "Cobb Douglas utility"
+      },
+      {
+        "type": "expression",
+        "id": "90",
+        "folderId": "95",
+        "color": "#c74440",
+        "latex": "a=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "91",
+        "folderId": "95",
+        "color": "#2d70b3",
+        "latex": "b=\\frac{2}{3}",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "u_{CobbDouglas}\\left(x,y\\right)=x^{a}y^{b}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "448",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "u_{Power}\\left(x,y\\right)=x^{\\alpha}+\\beta y^{\\alpha}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "502",
+        "folderId": "95",
+        "color": "#6042a6",
+        "latex": "u\\left(x,y\\right)=C_{hoice}\\left(u_{CobbDouglas}\\left(x,y\\right),u_{Power}\\left(x,y\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "453",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "\\alpha=0.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": ".99",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "452",
+        "folderId": "95",
+        "color": "#6042a6",
+        "latex": "\\beta=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "1",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "134",
+        "folderId": "95",
+        "text": "Solution for intertemporal problem"
+      },
+      {
+        "type": "text",
+        "id": "506",
+        "folderId": "95",
+        "text": "Cobb-Douglas"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "95",
+        "color": "#388c46",
+        "latex": "d_{xCobbDouglas}=\\frac{a}{\\left(a+b\\right)}\\frac{1}{p_{1}}\\left(M_{1}+\\frac{M_{2}}{1+i}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "450",
+        "folderId": "95",
+        "color": "#6042a6",
+        "latex": "d_{yCobbDouglas}=\\frac{\\left(1+i\\right)p_{1}}{p_{2}}\\cdot\\frac{b}{a}\\cdot d_{x}"
+      },
+      {
+        "type": "text",
+        "id": "508",
+        "folderId": "95",
+        "text": "Power Utility"
+      },
+      {
+        "type": "expression",
+        "id": "449",
+        "folderId": "95",
+        "color": "#388c46",
+        "latex": "d_{xPower}=Ad_{yPower}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "451",
+        "folderId": "95",
+        "color": "#388c46",
+        "latex": "A=\\left(\\beta\\frac{p_{1}\\left(1+i\\right)}{p_{2}}\\right)^{\\frac{1}{\\alpha-1}}"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "95",
+        "color": "#6042a6",
+        "latex": "d_{yPower}=\\frac{\\left(1+i\\right)M_{1}+M_{2}}{p_{1}\\left(1+i\\right)A+p_{2}}"
+      },
+      {
+        "type": "text",
+        "id": "510",
+        "folderId": "95",
+        "text": "Version we are using"
+      },
+      {
+        "type": "expression",
+        "id": "503",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "d_{x}=C_{hoice}\\left(d_{xCobbDouglas},d_{xPower}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "504",
+        "folderId": "95",
+        "color": "#c74440",
+        "latex": "d_{y}=C_{hoice}\\left(d_{yCobbDouglas},d_{yPower}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "129",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "1\\cdot u\\left(x,y\\right)=u\\left(d_{x},d_{y}\\right)",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "Optimal Consumption  `(c_1^*,c_2^*)=(${d_xr}, ${d_yr})`",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "127",
+        "folderId": "95",
+        "color": "#000000",
+        "latex": "d_{xr}=R_{ound2}\\left(d_{x}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "128",
+        "folderId": "95",
+        "color": "#c74440",
+        "latex": "d_{yr}=R_{ound2}\\left(d_{y}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "476",
+        "title": "5. Borrowing,Debt",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "477",
+        "folderId": "476",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{x},0\\right),\\left(x_{zero},0\\right)\\left\\{d_{x}>x_{zero}\\right\\}\\right)",
+        "lineOpacity": ".7",
+        "lineWidth": "12"
+      },
+      {
+        "type": "expression",
+        "id": "482",
+        "folderId": "476",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{x},0\\right),\\left(x_{zero},0\\right)\\left\\{d_{x}\\le x_{zero}\\right\\}\\right)",
+        "lineOpacity": ".7",
+        "lineWidth": "12"
+      },
+      {
+        "type": "expression",
+        "id": "483",
+        "folderId": "476",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{y}\\right),\\left(0,y_{zero}\\right)\\left\\{d_{x}>x_{zero}\\right\\}\\right)",
+        "lineOpacity": ".7",
+        "lineWidth": "12"
+      },
+      {
+        "type": "expression",
+        "id": "485",
+        "folderId": "476",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{y}\\right),\\left(0,y_{zero}\\right)\\left\\{d_{x}\\le x_{zero}\\right\\}\\right)",
+        "lineOpacity": ".7",
+        "lineWidth": "12"
+      },
+      {
+        "type": "expression",
+        "id": "481",
+        "folderId": "476",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{x},0\\right),\\left(d_{x},d_{y}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "478",
+        "folderId": "476",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{y}\\right),\\left(d_{x},d_{y}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "479",
+        "folderId": "476",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{y}\\right),\\left(d_{x},d_{y}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "342",
+        "title": "6. Slider Panel",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "308",
+        "folderId": "342",
+        "text": "Define helper functions & sliders"
+      },
+      {
+        "type": "expression",
+        "id": "344",
+        "folderId": "342",
+        "color": "#c74440",
+        "latex": "l_{en}=201",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "500"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "358",
+        "folderId": "342",
+        "color": "#6042a6",
+        "latex": "l=l_{en}"
+      },
+      {
+        "type": "expression",
+        "id": "345",
+        "folderId": "342",
+        "color": "#2d70b3",
+        "latex": "r_{ow}=80",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "346",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1}-20,y_{1}+20\\right)",
+        "pointOpacity": ".2"
+      },
+      {
+        "type": "expression",
+        "id": "347",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "x_{1}=155",
+        "hidden": true,
+        "slider": {
+          "min": "-29.4",
+          "max": "390"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "348",
+        "folderId": "342",
+        "color": "#6042a6",
+        "latex": "y_{1}=-130",
+        "hidden": true,
+        "slider": {
+          "min": "-127",
+          "max": "636"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "349",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "a_{1}=x_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "350",
+        "folderId": "342",
+        "color": "#c74440",
+        "latex": "b_{1}=y_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "357",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "M_{maxc}=M_{max}\\cdot1"
+      },
+      {
+        "type": "text",
+        "id": "456",
+        "folderId": "342",
+        "text": "utility parameters"
+      },
+      {
+        "type": "expression",
+        "id": "460",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "s_{h}=1.6"
+      },
+      {
+        "type": "expression",
+        "id": "462",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "s_{c}=\\frac{s_{h}}{2}"
+      },
+      {
+        "type": "expression",
+        "id": "514",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "C_{hangeUtility}=U_{type}\\to\\left\\{U_{type}=1:2,U_{type}=2:1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "515",
+        "folderId": "342",
+        "color": "#c74440",
+        "latex": "\\left(a_{1}+2s_{h}l,b_{1}-1r_{ow}\\right)",
+        "showLabel": true,
+        "label": "Change Utility",
+        "hidden": true,
+        "dragMode": "NONE",
+        "description": "Change Utility",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "C_{hangeUtility}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "454",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l\\left\\{U_{type}=1\\right\\},b_{1}\\right)",
+        "showLabel": true,
+        "label": " `u(c_1,c_2)=${a}*\\ln(c_1)+${b}*\\ln(c_2)` ",
+        "hidden": true,
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "latex": "C_{hangeUtility}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "511",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l\\left\\{U_{type}=2\\right\\},b_{1}\\right)",
+        "showLabel": true,
+        "label": "`u(c_1,c_2)=c_1^${\\alpha}+${\\beta}c_2^${\\alpha}`",
+        "hidden": true,
+        "labelOrientation": "right",
+        "description": "Change Utility\n",
+        "clickableInfo": {
+          "latex": "C_{hangeUtility}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "469",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1}+s_{h}l,y_{1}-1r_{ow}\\right),\\left(x_{1}+\\left(s_{h}+s_{c}\\right)l_{en},y_{1}-1r_{ow}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "464",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l+\\frac{a}{.99}s_{c}l\\left\\{U_{type}=1\\right\\},b_{1}-r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `a=${a}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "512",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l+\\frac{\\alpha}{.99}s_{c}l\\left\\{U_{type}=2\\right\\},b_{1}-r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `\\alpha=${\\alpha}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "351",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1}+s_{h}l,y_{1}-2r_{ow}\\right),\\left(x_{1}+\\left(s_{h}+s_{c}\\right)l_{en},y_{1}-2r_{ow}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "470",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l+bs_{c}l\\left\\{U_{type}=1\\right\\},b_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `b=${b}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "513",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+s_{h}l+\\beta s_{c}l\\left\\{U_{type}=2\\right\\},b_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `\\beta=${\\beta}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "text",
+        "id": "392",
+        "folderId": "342",
+        "text": "Income today M1"
+      },
+      {
+        "type": "expression",
+        "id": "352",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}+0r_{ow}\\right)",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "459",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}+0r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}+0r_{ow}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "353",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}+0r_{ow}\\right)",
+        "showLabel": true,
+        "label": "${M_max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "354",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{M_{1}}{M_{max}}l,b_{1}+0r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `M_1=${M1}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "382",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}+0r_{ow}\\right)",
+        "showLabel": true,
+        "label": "Income Today",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "394",
+        "folderId": "342",
+        "text": "income tomorrow M2"
+      },
+      {
+        "type": "expression",
+        "id": "360",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-1r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-1r_{ow}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "361",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}-1r_{ow}\\right)",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "362",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-1r_{ow}\\right)",
+        "showLabel": true,
+        "label": "${M_max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "363",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{M_{2}}{M_{max}}l,b_{1}-1r_{ow}\\right)",
+        "showLabel": true,
+        "label": "`M_2=${M2}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "383",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}-1r_{ow}\\right)",
+        "showLabel": true,
+        "label": "Income Tomorrow",
+        "dragMode": "X",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "390",
+        "folderId": "342",
+        "text": "Interest rate i"
+      },
+      {
+        "type": "expression",
+        "id": "365",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-2r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-2r_{ow}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "366",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "367",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": "2",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "368",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{i}{2}l,b_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": " `i=${i}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "384",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": "Interest rate",
+        "dragMode": "X",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "388",
+        "folderId": "342",
+        "text": "Inflation pi"
+      },
+      {
+        "type": "expression",
+        "id": "374",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-3r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-3r_{ow}\\right)\\left\\{P_{rice}=0\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "425",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-3r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-3r_{ow}\\right)\\left\\{P_{rice}\\ge1\\right\\}\\right)",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "375",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}-3r_{ow}\\left\\{P_{rice}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "-1",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "424",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1},y_{1}-3r_{ow}\\left\\{P_{rice}\\ge1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "-1",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "376",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-3r_{ow}\\left\\{P_{rice}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "${i_{infMax}}",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "422",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-3r_{ow}\\left\\{P_{rice}\\ge1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "${i_{infMax}}",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "377",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}-3r_{ow}\\left\\{P_{rice}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "inflation",
+        "dragMode": "X",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true
+        }
+      },
+      {
+        "type": "expression",
+        "id": "423",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+0l,b_{1}-3r_{ow}\\left\\{P_{rice}\\ge1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "Inflation",
+        "dragMode": "X",
+        "labelOrientation": "left",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{Inflation}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "386",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{i_{nflationc}+1}{i_{infMaxc}+1}l,b_{1}-3r_{ow}\\left\\{P_{rice}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`\\pi =${i_nflation}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "421",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+\\frac{i_{nflation}+1}{i_{infMax}+1}l,b_{1}-3r_{ow}\\left\\{P_{rice}\\ge1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`\\pi =${i_nflationr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "above",
+        "labelSize": "1",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{Inflation}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "402",
+        "folderId": "342",
+        "text": "price period 1"
+      },
+      {
+        "type": "expression",
+        "id": "395",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-4r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-4r_{ow}\\right)\\left\\{P_{rice}=1\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "436",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-4r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-4r_{ow}\\right)\\left\\{\\left|P_{rice}-1\\right|>0\\right\\}\\right)",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "396",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}-4r_{ow}\\right)\\left\\{P_{rice}=1\\right\\}",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "437",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1},y_{1}-4r_{ow}\\right)\\left\\{\\left|P_{rice}-1\\right|>0\\right\\}",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "407",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-4r_{ow}\\right)\\left\\{P_{rice}=1\\right\\}",
+        "showLabel": true,
+        "label": "${p_1max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "438",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-4r_{ow}\\right)\\left\\{\\left|P_{rice}-1\\right|>0\\right\\}",
+        "showLabel": true,
+        "label": "${p_1max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "398",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}-4r_{ow}\\right)\\left\\{P_{rice}=1\\right\\}",
+        "showLabel": true,
+        "label": "Price period 1",
+        "dragMode": "X",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "439",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+0l,b_{1}-4r_{ow}\\right)\\left\\{\\left|P_{rice}-1\\right|>0\\right\\}",
+        "showLabel": true,
+        "label": "Price period 1",
+        "dragMode": "X",
+        "labelOrientation": "left",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{p1}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "403",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{p_{1}}{p_{1max}}l,b_{1}-4r_{ow}\\left\\{P_{rice}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_1 =${p_1}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "440",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+\\frac{p_{1}}{p_{1max}}l,b_{1}-4r_{ow}\\right)\\left\\{\\left|P_{rice}-1\\right|>0\\right\\}",
+        "showLabel": true,
+        "label": "`p_1 =${p_1}`",
+        "dragMode": "X",
+        "labelOrientation": "above",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{p1}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "404",
+        "folderId": "342",
+        "text": "price period 2"
+      },
+      {
+        "type": "expression",
+        "id": "405",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-5r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}=2\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "427",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}-5r_{ow}\\right),\\left(x_{1}+l_{en},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}\\le1\\right\\}\\right)",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "411",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}=2\\right\\}",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "428",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}\\le1\\right\\}",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "397",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}=2\\right\\}",
+        "showLabel": true,
+        "label": "${p_2max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "416",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+l_{en},y_{1}-5r_{ow}\\right)\\left\\{P_{rice}\\le1\\right\\}",
+        "showLabel": true,
+        "label": "${p_2max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "410",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+0l,b_{1}-5r_{ow}\\right)\\left\\{P_{rice}=2\\right\\}",
+        "showLabel": true,
+        "label": "Price period 2",
+        "dragMode": "X",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "426",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+0l,b_{1}-5r_{ow}\\right)\\left\\{P_{rice}\\le1\\right\\}",
+        "showLabel": true,
+        "label": "Price period 2",
+        "dragMode": "X",
+        "labelOrientation": "left",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{p2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "399",
+        "folderId": "342",
+        "color": "#388c46",
+        "latex": "\\left(a_{1}+\\frac{p_{2c}}{p_{2cmax}}l,b_{1}-5r_{ow}\\left\\{P_{rice}=2\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2 =${p_2}`",
+        "dragMode": "X",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "417",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+\\frac{p_{2c}}{p_{2cmax}}l,b_{1}-5r_{ow}\\left\\{P_{rice}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2 =${p_2}`",
+        "dragMode": "NONE",
+        "labelOrientation": "above",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{p2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "441",
+        "folderId": "342",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+\\frac{i_{nflation}+1}{1+i_{infMax}}l,b_{1}-5r_{ow}\\left\\{P_{rice}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2 =${p_2}`",
+        "dragMode": "NONE",
+        "labelOrientation": "above",
+        "pointOpacity": ".5",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "F_{p2}"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "112",
+        "title": "Parameters - income and prices",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "M_{1}=100",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "M_{max}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "M_{2}=100",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "M_{max}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "356",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "M_{max}=200",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "500"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "p_{1}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "p_{1min}",
+          "max": "p_{1max}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "418",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "p_{1min}=0.5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".1",
+          "max": "1",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "400",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "p_{1max}=3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "p_{1min}",
+          "max": "4",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "412",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "p_{2max}=\\left\\{P_{rice}=0:p_{1}\\cdot\\left(1+i_{infMaxc}\\right),P_{rice}\\ge1:p_{2cmax}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "p_{2c}=1.45",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5",
+          "max": "p_{2cmax}",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "429",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "p_{2cmax}=3",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "415",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "P_{rice}=2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "378",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "p_{2}=\\left\\{P_{rice}=0:p_{1}\\cdot\\left(1+i_{nflation}\\right),P_{rice}=1:p_{2c},P_{rice}=2:p_{2c}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "431",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "i_{nflation}=\\left\\{P_{rice}=0:i_{nflationc},P_{rice}\\ge1:\\frac{p_{2c}}{p_{1}}-1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "434",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "i_{nflationr}=R_{ound2}\\left(i_{nflation}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "433",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "i_{infMax}=\\left\\{P_{rice}=0:i_{infMaxc},P_{rice}\\ge1:\\frac{p_{2cmax}}{p_{1min}}-1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "419",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "F_{Inflation}=P_{rice}\\to0,i_{infMaxc}\\to5,p_{1}\\to1,p_{2c}\\to1,\\ i_{nflationc}\\to0"
+      },
+      {
+        "type": "expression",
+        "id": "430",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "F_{p1}=P_{rice}\\to1,p_{1}\\to1"
+      },
+      {
+        "type": "expression",
+        "id": "435",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "F_{p2}=P_{rice}\\to2,p_{2c}\\to1"
+      },
+      {
+        "type": "folder",
+        "id": "496",
+        "title": "more parameters",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "371",
+        "folderId": "496",
+        "text": "Interest rate"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "496",
+        "color": "#2d70b3",
+        "latex": "i=0.55",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "playDirection": -1,
+          "min": "0",
+          "max": "i_{max}",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "414",
+        "folderId": "496",
+        "color": "#c74440",
+        "latex": "i_{max}=7.76",
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "max": "18.6"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "372",
+        "folderId": "496",
+        "color": "#388c46",
+        "latex": "i_{nflationc}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-1",
+          "max": "i_{infMaxc}",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "420",
+        "folderId": "496",
+        "color": "#000000",
+        "latex": "i_{infMaxc}=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "5",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "110",
+        "folderId": "496",
+        "text": "Inflation"
+      },
+      {
+        "type": "folder",
+        "id": "380",
+        "title": "Misc",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "355",
+        "folderId": "380",
+        "color": "#c74440",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "499",
+        "folderId": "380",
+        "color": "#c74440",
+        "latex": "C_{hoice}\\left(f_{1},f_{2}\\right)=\\left\\{U_{type}=1:f_{1},\\ U_{type}=2:f_{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "500",
+        "folderId": "380",
+        "color": "#2d70b3",
+        "latex": "U_{type}=2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "n_{utilities}",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "501",
+        "folderId": "380",
+        "color": "#388c46",
+        "latex": "n_{utilities}=2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "6"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "1274",
+        "title": "legend",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1275",
+        "folderId": "1274",
+        "color": "#000000",
+        "latex": "K=\\left(x_{A},y_{A}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1276",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "x_{A}=126",
+        "hidden": true,
+        "slider": {
+          "max": "184"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1277",
+        "folderId": "1274",
+        "color": "#6042a6",
+        "latex": "y_{A}=203",
+        "hidden": true,
+        "slider": {
+          "max": "165"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1278",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "\\left(x_{A}+10,y_{A}\\right)\\left\\{M_{2borrowed}>0\\right\\}",
+        "showLabel": true,
+        "label": "`P_1*Q_1-M_1>0` --> Borrow from future",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1294",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "\\left(x_{A}+10,y_{A}\\right)\\left\\{M_{2borrowed}<0\\right\\}",
+        "showLabel": true,
+        "label": "`P_1*Q_1-M_1<0` --> Save in present",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1280",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "\\left(x_{A}+10,y_{A}-15\\right)\\left\\{M_{2borrowed}>0\\right\\}",
+        "showLabel": true,
+        "label": "`M_2` borrowed (in future unit): `${M_2borrowedr}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1296",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "\\left(x_{A}+10,y_{A}-15\\right)\\left\\{M_{2borrowed}<0\\right\\}",
+        "showLabel": true,
+        "label": "`M_1` saved (in present unit): `${M_1savedr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1283",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "\\left(x_{A}+10,y_{A}-25\\right)\\left\\{M_{2borrowed}>0\\right\\}",
+        "showLabel": true,
+        "label": "Additional Budget available now: `${M_2borrowedPr}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1299",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "\\left(x_{A}+10,y_{A}-25\\right)\\left\\{M_{2borrowed}<0\\right\\}",
+        "showLabel": true,
+        "label": "Additional Budget available in future: `${M_1savedFr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1288",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "\\left(x_{A}+10,y_{A}-35\\right)\\left\\{M_{2borrowed}>0\\right\\}",
+        "showLabel": true,
+        "label": "Additional goods bought at present: `${X_1addr}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1301",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "\\left(x_{A}+10,y_{A}-35\\right)\\left\\{M_{2borrowed}<0\\right\\}",
+        "showLabel": true,
+        "label": "Additional goods bought in future: `${X_2addr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1293",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "\\left(x_{A}+10,y_{A}-45\\right)\\left\\{M_{2borrowed}>0\\right\\}",
+        "showLabel": true,
+        "label": "Amount of future goods gave up: `${X_2giveupr}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1305",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "\\left(x_{A}+10,y_{A}-45\\right)\\left\\{M_{2borrowed}<0\\right\\}",
+        "showLabel": true,
+        "label": "Amount of present goods gave up: `${X_{1giveupr}}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "1297",
+        "folderId": "1274",
+        "color": "#6042a6",
+        "latex": "M_{1saved}=M_{1}-d_{x}\\cdot p_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "1302",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "M_{1savedF}=M_{1saved}\\cdot\\left(1+i\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1303",
+        "folderId": "1274",
+        "color": "#6042a6",
+        "latex": "X_{2add}=\\frac{M_{1savedF}}{p_{1}\\left(1+i\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1306",
+        "folderId": "1274",
+        "color": "#2d70b3",
+        "latex": "X_{1giveup}=\\frac{M_{1saved}}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1281",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "M_{2borrowed}=M_{2}-d_{y}\\cdot p_{1}\\left(1+i\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1284",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "M_{2borrowedP}=\\frac{M_{2borrowed}}{\\left(1+i\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1291",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "X_{2giveup}=\\frac{M_{2borrowedP}}{p_{1}\\left(1+i\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1289",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "X_{1add}=\\frac{M_{2borrowedP}}{p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1282",
+        "folderId": "1274",
+        "color": "#6042a6",
+        "latex": "M_{2borrowedr}=\\operatorname{round}\\left(M_{2borrowed},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1300",
+        "folderId": "1274",
+        "color": "#c74440",
+        "latex": "M_{1savedFr}=\\operatorname{round}\\left(M_{1savedF},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1298",
+        "folderId": "1274",
+        "color": "#000000",
+        "latex": "M_{1savedr}=\\operatorname{round}\\left(M_{1saved},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1285",
+        "folderId": "1274",
+        "color": "#2d70b3",
+        "latex": "M_{2borrowedPr}=\\operatorname{round}\\left(M_{2borrowedP},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1290",
+        "folderId": "1274",
+        "color": "#2d70b3",
+        "latex": "X_{1addr}=\\operatorname{round}\\left(X_{1add},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1292",
+        "folderId": "1274",
+        "color": "#6042a6",
+        "latex": "X_{2giveupr}=\\operatorname{round}\\left(X_{2giveup},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1304",
+        "folderId": "1274",
+        "color": "#000000",
+        "latex": "X_{2addr}=\\operatorname{round}\\left(X_{2add},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1307",
+        "folderId": "1274",
+        "color": "#388c46",
+        "latex": "X_{1giveupr}=\\operatorname{round}\\left(X_{1giveup},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1286",
+        "color": "#388c46"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

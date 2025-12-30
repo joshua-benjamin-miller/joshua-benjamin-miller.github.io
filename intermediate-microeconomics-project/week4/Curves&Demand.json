@@ -1,0 +1,2293 @@
+{
+  "version": 11,
+  "randomSeed": "7116af98740c004dbc03a4b8122bdfdf",
+  "graph": {
+    "viewport": {
+      "xmin": -89.29291162815096,
+      "ymin": -22.48501057100941,
+      "xmax": 71.20915850137035,
+      "ymax": 34.790929777630254
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisLabel": "Firm 1 Quantity",
+    "yAxisLabel": "Firm 2 Quantity",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-89.29291162815096",
+      "xmax": "71.20915850137035",
+      "ymin": "-22.48501057100941",
+      "ymax": "34.790929777630254"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "1116",
+        "title": "Credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "1118",
+        "folderId": "1116",
+        "text": "Miller & Tashevtev \"Desmos Graphs for Micro\""
+      },
+      {
+        "type": "text",
+        "id": "1120",
+        "folderId": "1116",
+        "text": "Designed by: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "1122",
+        "folderId": "1116",
+        "text": "Desmos commands by Artem Tashevtev & Joshua Miller"
+      },
+      {
+        "type": "text",
+        "id": "1177",
+        "text": "1- Cobb-Douglas (independent goods), 2-power (gross substitutes, default parameters), 3-CES (gross complements, default parameters)"
+      },
+      {
+        "type": "expression",
+        "id": "1075",
+        "color": "#c74440",
+        "latex": "U_{type}=2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "3",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "1073",
+        "title": "Common: types of utility function",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "1130",
+        "folderId": "1073",
+        "text": "-----------------------------------"
+      },
+      {
+        "type": "text",
+        "id": "1089",
+        "folderId": "1073",
+        "text": "1. Cobb Douglas utility:"
+      },
+      {
+        "type": "expression",
+        "id": "1091",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "\\alpha=0.9",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.1",
+          "max": "1.5",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1095",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "\\beta=0.4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".1",
+          "max": ".90",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1090",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "u_{CobbDouglas}\\left(x,y\\right)=x^{\\alpha}y^{\\beta}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1092",
+        "folderId": "1073",
+        "color": "#6042a6",
+        "latex": "X_{CobbDouglas}\\left(P_{1},P_{2},M\\right)=\\frac{\\alpha M}{\\left(\\alpha+\\beta\\right)P_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1093",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "Y_{CobbDouglas}\\left(P_{1},P_{2},M\\right)=\\frac{\\beta M}{\\left(\\alpha+\\beta\\right)P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1094",
+        "folderId": "1073",
+        "color": "#c74440",
+        "latex": "!X_{CCobbDouglas}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=\\left(\\left(\\frac{\\beta}{\\alpha}\\frac{P_{1new}}{P_{2new}}\\right)^{-\\beta}\\cdot u_{star}\\left(P_{1},P_{2},M\\right)\\right)^{\\frac{1}{\\alpha+\\beta}}"
+      },
+      {
+        "type": "expression",
+        "id": "1096",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "!Y_{CCobbDouglas}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=\\left(\\left(\\frac{\\alpha}{\\beta}\\frac{P_{2new}}{P_{1new}}\\right)^{-\\alpha}\\cdot u_{star}\\left(P_{1},P_{2},M\\right)\\right)^{\\frac{1}{\\alpha+\\beta}}"
+      },
+      {
+        "type": "expression",
+        "id": "1144",
+        "folderId": "1073",
+        "color": "#c74440",
+        "latex": "X_{CCobbDouglas}\\left(P_{1},P_{2},U_{star}\\right)=\\left(\\left(\\frac{\\beta}{\\alpha}\\frac{P_{1}}{P_{2}}\\right)^{-\\beta}\\cdot U_{star}\\right)^{\\frac{1}{\\alpha+\\beta}}"
+      },
+      {
+        "type": "expression",
+        "id": "1145",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "Y_{CCobbDouglas}\\left(P_{1},P_{2},U_{star}\\right)=\\left(\\left(\\frac{\\alpha}{\\beta}\\frac{P_{2}}{P_{1}}\\right)^{-\\alpha}\\cdot U_{star}\\right)^{\\frac{1}{\\alpha+\\beta}}"
+      },
+      {
+        "type": "text",
+        "id": "1134",
+        "folderId": "1073",
+        "text": "---------------------------------"
+      },
+      {
+        "type": "text",
+        "id": "1087",
+        "folderId": "1073",
+        "text": "2. \"Power\" utility:"
+      },
+      {
+        "type": "expression",
+        "id": "1070",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "A=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1071",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "B=10",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "773",
+        "folderId": "1073",
+        "color": "#c74440",
+        "latex": "r=0.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.05",
+          "max": "1",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "772",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "u_{Power}\\left(x,y\\right)=Ax^{r}+By^{r}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1074",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "X_{Power}\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}+P_{2}\\left(\\frac{P_{1}B}{P_{2}A}\\right)^{\\frac{1}{1-r}}}"
+      },
+      {
+        "type": "expression",
+        "id": "1081",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "Y_{Power}\\left(P_{1},P_{2},M\\right)=\\frac{M}{\\left(\\frac{P_{2}A}{P_{1}B}\\right)^{\\frac{1}{1-r}}P_{1}+P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1181",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "X_{CPower}\\left(P_{1},P_{2},U_{star}\\right)=\\left(\\frac{U_{star}}{A+B\\left(\\frac{P_{1}B}{P_{2}A}\\right)^{\\frac{r}{1-r}}}\\right)^{\\frac{1}{r}}"
+      },
+      {
+        "type": "expression",
+        "id": "1182",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "Y_{CPower}\\left(P_{1},P_{2},U_{star}\\right)=\\left(\\frac{P_{1}B}{P_{2}A}\\right)^{\\frac{1}{1-r}}X_{CPower}\\left(P_{1},P_{2},U_{star}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "1132",
+        "folderId": "1073",
+        "text": "--------------------------------------------"
+      },
+      {
+        "type": "text",
+        "id": "1098",
+        "folderId": "1073",
+        "text": "3. CES Utility"
+      },
+      {
+        "type": "text",
+        "id": "1124",
+        "folderId": "1073",
+        "text": "note: we restrict the range of r because we did not include a function for optimal demand with these values, see https://www.desmos.com/calculator/iskpp6xzt9 for a full definition"
+      },
+      {
+        "type": "expression",
+        "id": "1099",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "u_{CES}\\left(x,y\\right)=\\left\\{\\left|r_{4}\\right|>0:\\left(\\left(a_{4}x\\right)^{r_{4}}+\\left(b_{4}y\\right)^{r_{4}}\\right)^{\\frac{1}{r_{4}}}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\},r_{4}=0:\\exp\\left(\\ln\\left(a_{4}x\\right)+\\ln\\left(b_{4}y\\right)\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1109",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "a_{4}=3.77",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1107",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "b_{4}=3.88",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1108",
+        "folderId": "1073",
+        "color": "#c74440",
+        "latex": "r_{4}=-1.34",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "max": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1102",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "A_{4}\\left(P_{1},P_{2}\\right)=\\left(\\frac{a_{4}}{b_{4}}\\right)^{\\frac{r_{4}}{r_{4}-1}}\\left(\\frac{P_{2}}{P_{1}}\\right)^{\\frac{1}{r_{4}-1}}"
+      },
+      {
+        "type": "expression",
+        "id": "1105",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "X_{CES}\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}+A_{4}\\left(P_{1},P_{2}\\right)\\cdot P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "1110",
+        "folderId": "1073",
+        "color": "#388c46",
+        "latex": "Y_{CES}\\left(P_{1},P_{2},M\\right)=A_{4}\\left(P_{1},P_{2}\\right)\\cdot X_{CES}\\left(P_{1},P_{2},M\\right)"
+      },
+      {
+        "type": "text",
+        "id": "1112",
+        "folderId": "1073",
+        "text": "Note with CES, MRS=p1/p2 implies X=A_4*Y, so utility condition becomes ( (aAy)^r + (by)^r )^1/r= u"
+      },
+      {
+        "type": "expression",
+        "id": "1115",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "!X_{CCES}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=\\frac{u_{star}\\left(P_{1},P_{2},M\\right)}{\\left(\\left(a_{4}\\right)^{r_{4}}+\\left(b_{4}\\cdot A_{4}\\left(P_{1new},P_{2new}\\right)\\right)^{r_{4}}\\right)^{\\frac{1}{r_{4}}}}\\ "
+      },
+      {
+        "type": "expression",
+        "id": "1113",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "!Y_{CCES}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=A_{4}\\left(P_{1new},P_{2new}\\right)\\cdot X_{CCES}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1148",
+        "folderId": "1073",
+        "color": "#2d70b3",
+        "latex": "X_{CCES}\\left(P_{1},P_{2},U_{star}\\right)=\\frac{U_{star}}{\\left(\\left(a_{4}\\right)^{r_{4}}+\\left(b_{4}\\cdot A_{4}\\left(P_{1},P_{2}\\right)\\right)^{r_{4}}\\right)^{\\frac{1}{r_{4}}}}\\ "
+      },
+      {
+        "type": "expression",
+        "id": "1149",
+        "folderId": "1073",
+        "color": "#000000",
+        "latex": "Y_{CCES}\\left(P_{1},P_{2},U_{star}\\right)=A_{4}\\left(P_{1},P_{2}\\right)\\cdot X_{CCES}\\left(P_{1},P_{2},U_{star}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "182",
+        "title": "A.0: Q1/Q2 axis"
+      },
+      {
+        "type": "expression",
+        "id": "722",
+        "folderId": "182",
+        "color": "#c74440",
+        "latex": "A_{xisRatio}=2.2",
+        "slider": {
+          "hardMin": true,
+          "min": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "183",
+        "folderId": "182",
+        "color": "#2d70b3",
+        "latex": "x_{1}=-37",
+        "slider": {
+          "min": "-219",
+          "max": "311"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "184",
+        "folderId": "182",
+        "color": "#388c46",
+        "latex": "y_{1}=8.1",
+        "slider": {
+          "min": "-50",
+          "max": "47"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "185",
+        "folderId": "182",
+        "color": "#c74440",
+        "latex": "\\left(x_{1},y_{1}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "186",
+        "folderId": "182",
+        "text": "Define a&b to avoid draggable points moving the axis"
+      },
+      {
+        "type": "expression",
+        "id": "187",
+        "folderId": "182",
+        "color": "#c74440",
+        "latex": "a_{1}=x_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "188",
+        "folderId": "182",
+        "color": "#2d70b3",
+        "latex": "b_{1}=y_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "190",
+        "folderId": "182",
+        "color": "#000000",
+        "latex": "x=x_{1}\\left\\{y_{1}\\le y\\le y_{1}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "191",
+        "folderId": "182",
+        "color": "#000000",
+        "latex": "y=y_{1}\\left\\{x_{1}\\le x\\le x_{1}+A_{xisRatio}A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "192",
+        "folderId": "182",
+        "color": "#000000",
+        "latex": "\\left(x_{1},\\ y_{1}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "`Q_2`",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "193",
+        "folderId": "182",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+A_{xisRatio}A_{len},\\ y_{1}\\right)",
+        "showLabel": true,
+        "label": "`Q_1`",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "454",
+        "folderId": "182",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+\\frac{A_{len}}{2},\\ y_{1}+A_{len}\\right)",
+        "label": "A. Cost/Revenue axis",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "folder",
+        "id": "771",
+        "title": "A.1a Movable Indifference Curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "774",
+        "folderId": "771",
+        "text": "Movable bundle"
+      },
+      {
+        "type": "expression",
+        "id": "775",
+        "folderId": "771",
+        "color": "#6042a6",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "dragMode": "XY"
+      },
+      {
+        "type": "expression",
+        "id": "776",
+        "folderId": "771",
+        "color": "#c74440",
+        "latex": "x_{0}=-19.2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "x_{1}",
+          "max": "x_{1}+A_{len}",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "777",
+        "folderId": "771",
+        "color": "#2d70b3",
+        "latex": "y_{0}=25.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "y_{1}",
+          "max": "y_{1}+A_{len}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "778",
+        "folderId": "771",
+        "text": "Indifference curve @ movable bundle"
+      },
+      {
+        "type": "expression",
+        "id": "816",
+        "folderId": "771",
+        "color": "#c74440",
+        "latex": "u\\left(x_{0}-x_{1},y_{0}-y_{1}\\right)=u\\left(x-x_{1},y-y_{1}\\right)\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "766",
+        "title": "A.1b: Budget",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "767",
+        "folderId": "766",
+        "color": "#000000",
+        "latex": "p_{1}\\left(x-x_{1}\\right)+p_{2}\\left(y-y_{1}\\right)=I\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1164",
+        "folderId": "766",
+        "text": "Don't move initial prices when illustrating IE, SE, TE"
+      },
+      {
+        "type": "expression",
+        "id": "768",
+        "folderId": "766",
+        "color": "#c74440",
+        "latex": "p_{1}=23.15",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".05",
+          "max": "A_{len}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "877",
+        "folderId": "766",
+        "color": "#6042a6",
+        "latex": "p_{1new}=23.15",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.05",
+          "max": "A_{len}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "769",
+        "folderId": "766",
+        "color": "#2d70b3",
+        "latex": "p_{2}=11.85",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".05",
+          "max": "A_{len}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "878",
+        "folderId": "766",
+        "color": "#000000",
+        "latex": "p_{2new}=11.85",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".05",
+          "max": "A_{len}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "770",
+        "folderId": "766",
+        "color": "#388c46",
+        "latex": "I=160",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "I_{max}",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "836",
+        "folderId": "766",
+        "color": "#388c46",
+        "latex": "I_{max}=200",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "max": "200",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "859",
+        "title": "A.2: Levels of IC",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "861",
+        "folderId": "859",
+        "text": "A few indifference curves nearby the optimal bundle"
+      },
+      {
+        "type": "expression",
+        "id": "821",
+        "folderId": "859",
+        "color": "#000000",
+        "latex": "N=4"
+      },
+      {
+        "type": "expression",
+        "id": "823",
+        "folderId": "859",
+        "color": "#2d70b3",
+        "latex": "\\Delta_{u}=3.94"
+      },
+      {
+        "type": "expression",
+        "id": "822",
+        "folderId": "859",
+        "color": "#c74440",
+        "latex": "U=\\left[u\\left(d_{x},d_{y}\\right)-N\\Delta_{u},u\\left(d_{x},d_{y}\\right)-\\left(N-1\\right)\\Delta_{u},\\ ...u\\left(d_{x},d_{y}\\right)+N\\Delta_{u}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "793",
+        "folderId": "859",
+        "color": "#c74440",
+        "latex": "U\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}=u\\left(x-x_{1},y-y_{1}\\right)",
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "folder",
+        "id": "796",
+        "title": "A.3: Consumption curves",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "797",
+        "folderId": "796",
+        "text": "Income-consumption curve (aka income expansion path and income offer curve)"
+      },
+      {
+        "type": "expression",
+        "id": "798",
+        "folderId": "796",
+        "color": "#2d70b3",
+        "latex": "\\left(X\\left(p_{1},p_{2},t\\right)+x_{1},Y\\left(p_{1},p_{2},t\\right)+y_{1}\\right)\\left\\{X\\left(p_{1},p_{2},t\\right)<A_{xisRatio}A_{len}\\right\\}\\left\\{Y\\left(p_{1},p_{2},t\\right)<A_{len}\\right\\}",
+        "lines": true,
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "",
+          "max": "300"
+        },
+        "lineOpacity": "O_{pacity}",
+        "domain": {
+          "min": "0",
+          "max": "300"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "799",
+        "folderId": "796",
+        "color": "#2d70b3",
+        "latex": "\\left(X\\left(p_{1},p_{2},100\\right)+x_{1},Y\\left(p_{1},p_{2},100\\right)+y_{1}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "income-consumption curve",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "800",
+        "folderId": "796",
+        "text": "Price-consumption curve (Good 1)"
+      },
+      {
+        "type": "expression",
+        "id": "801",
+        "folderId": "796",
+        "color": "#388c46",
+        "latex": "\\left(X\\left(t,p_{2},I\\right)+x_{1},Y\\left(t,p_{2},I\\right)+y_{1}\\right)\\left\\{X\\left(t,p_{2},I\\right)<A_{xisRatio}A_{len}\\right\\}\\left\\{Y\\left(t,p_{2},I\\right)<A_{len}\\right\\}",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "0",
+          "max": "90"
+        },
+        "lineOpacity": "O_{pacity}",
+        "domain": {
+          "min": "0",
+          "max": "90"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "802",
+        "folderId": "796",
+        "color": "#388c46",
+        "latex": "!\\left(X\\left(1,p_{2},I\\right)+x_{1},Y\\left(1,p_{2},I\\right)+y_{1}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "`p_1` - consumption curve",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1179",
+        "folderId": "796",
+        "color": "#388c46",
+        "latex": "\\left(A_{xisRatio}A_{len}+x_{1},Y\\left(1,p_{2},I\\right)+y_{1}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "`p_1` - consumption curve",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "803",
+        "folderId": "796",
+        "text": "Price-consumption curve (Good 2)"
+      },
+      {
+        "type": "expression",
+        "id": "804",
+        "folderId": "796",
+        "color": "#fa7e19",
+        "latex": "\\left(X\\left(p_{1},t,I\\right)+x_{1},Y\\left(p_{1},t,I\\right)+y_{1}\\right)\\left\\{X\\left(p_{1},t,I\\right)<A_{xisRatio}A_{len}\\right\\}\\left\\{Y\\left(p_{1},t,I\\right)<A_{len}\\right\\}",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "",
+          "max": "90"
+        },
+        "lineOpacity": "O_{pacity}",
+        "domain": {
+          "min": "0",
+          "max": "90"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1178",
+        "folderId": "796",
+        "color": "#fa7e19",
+        "latex": "\\left(X\\left(p_{1},4,I\\right)+x_{1},Y\\left(p_{1},4,I\\right)+y_{1}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "`p_2` - consumption curve",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "790",
+        "title": "A.4: Optimal Indifference curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "792",
+        "folderId": "790",
+        "text": "Indifference curves through the optimal bundle, and a few nearby indifference curves"
+      },
+      {
+        "type": "expression",
+        "id": "791",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "\\left(d_{x}+a_{1},d_{y}+b_{1}\\right)",
+        "label": "Optimal Consumption`= (x^*,y^*) = (${d_xr},${d_yr})`",
+        "pointSize": "20",
+        "movablePointSize": "20",
+        "__stashed_V12PointStyle": "STAR"
+      },
+      {
+        "type": "expression",
+        "id": "844",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "\\left(x_{1}+d_{x},y_{1}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "`x^* = ${d_xr}`",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "846",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "y=y_{1}+d_{y}\\left\\{0\\le x-x_{1}\\le d_{x}\\right\\}\\left\\{C_{omp}=0\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "845",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "\\left(x_{1},y_{1}+d_{y}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "`y^* = ${d_yr}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "907",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "\\left(x_{1}+d_{x},y_{1}+d_{y}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "`(x^*,y^*) = (${d_xr}, ${d_yr})`",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "847",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "x=x_{1}+d_{x}\\left\\{0\\le y-y_{1}\\le d_{y}\\right\\}\\left\\{C_{omp}=0\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "820",
+        "folderId": "790",
+        "color": "#c74440",
+        "latex": "1u\\left(d_{x},d_{y}\\right)=u\\left(x-x_{1},y-y_{1}\\right)\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "901",
+        "title": "A.5: Compensated demand",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "922",
+        "folderId": "901",
+        "text": "New budget lines:"
+      },
+      {
+        "type": "expression",
+        "id": "903",
+        "folderId": "901",
+        "color": "#2d70b3",
+        "latex": "p_{1new}\\left(x-x_{1}\\right)+p_{2new}\\left(y-y_{1}\\right)=I\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}\\left\\{C_{omp}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "904",
+        "folderId": "901",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{1}+\\frac{I}{p_{1new}},y_{1}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "New budget",
+        "hidden": true,
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "905",
+        "folderId": "901",
+        "color": "#6042a6",
+        "latex": "p_{1new}\\left(x-x_{1}\\right)+p_{2new}\\left(y-y_{1}\\right)=I+S_{c}\\left\\{0\\le x-x_{1}\\le A_{xisRatio}A_{len}\\right\\}\\left\\{0\\le y-y_{1}\\le A_{len}\\right\\}\\left\\{C_{omp}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "906",
+        "folderId": "901",
+        "color": "#6042a6",
+        "latex": "\\left(x_{1}+\\frac{I+S_{c}}{p_{1new}},y_{1}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "Comp. budget",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "text",
+        "id": "924",
+        "folderId": "901",
+        "text": "Optimal bundle for new prices"
+      },
+      {
+        "type": "expression",
+        "id": "908",
+        "folderId": "901",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{1}+d_{xnewr},y_{1}+d_{ynewr}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "`(x_{new}^*,y_{new}^*) = (${d_xnewr}, ${d_ynewr})`"
+      },
+      {
+        "type": "text",
+        "id": "926",
+        "folderId": "901",
+        "text": "Optimal bundle for compensated demand"
+      },
+      {
+        "type": "expression",
+        "id": "927",
+        "folderId": "901",
+        "color": "#6042a6",
+        "latex": "\\left(x_{1}+d_{xcompr},y_{1}+d_{ycompr}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "`(x_{c},y_{c}) = (${d_xcompr}, ${d_ycompr})`"
+      },
+      {
+        "type": "folder",
+        "id": "1032",
+        "title": "A.5: SE (rotation on IC), IE (shift),TE (rotation on axis) with arrows",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1033",
+        "folderId": "1032",
+        "color": "#fa7e19",
+        "latex": "V_{ector}\\left(\\left(d_{x},d_{y}\\right)+\\left(x_{1},y_{1}\\right),\\left(d_{xnew},d_{ynew}\\right)+\\left(x_{1},y_{1}\\right)\\right)\\left\\{C_{omp}=1\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "lineWidth": "7"
+      },
+      {
+        "type": "expression",
+        "id": "1034",
+        "folderId": "1032",
+        "color": "#fa7e19",
+        "latex": ".5\\left(d_{x},d_{y}\\right)+.5\\left(d_{xnew},d_{ynew}\\right)+\\left(x_{1},y_{1}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "TE",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1035",
+        "folderId": "1032",
+        "color": "#6042a6",
+        "latex": "V_{ector}\\left(\\left(d_{x},d_{y}\\right)+\\left(x_{1},y_{1}\\right),\\left(d_{xcomp},d_{ycomp}\\right)+\\left(x_{1},y_{1}\\right)\\right)\\left\\{C_{omp}=1\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "pointSize": "7",
+        "lineWidth": "7"
+      },
+      {
+        "type": "expression",
+        "id": "1036",
+        "folderId": "1032",
+        "color": "#6042a6",
+        "latex": ".5\\left(d_{x},d_{y}\\right)+.5\\left(d_{xcomp},d_{ycomp}\\right)+\\left(x_{1},y_{1}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "SE",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1037",
+        "folderId": "1032",
+        "color": "#2d70b3",
+        "latex": "V_{ector}\\left(\\left(d_{xcomp},d_{ycomp}\\right)+\\left(x_{1},y_{1}\\right),\\left(d_{xnew},d_{ynew}\\right)+\\left(x_{1},y_{1}\\right)\\right)\\left\\{C_{omp}=1\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "lineWidth": "7"
+      },
+      {
+        "type": "expression",
+        "id": "1038",
+        "folderId": "1032",
+        "color": "#2d70b3",
+        "latex": ".5\\left(d_{xcomp},d_{ycomp}\\right)+.5\\left(d_{xnew},d_{ynew}\\right)+\\left(x_{1},y_{1}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "IE",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "724",
+        "title": "B.1: Q1/P1 axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "725",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "x_{2}=-36",
+        "slider": {
+          "min": "-219",
+          "max": "311"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "726",
+        "folderId": "724",
+        "color": "#388c46",
+        "latex": "y_{2}=-32.1",
+        "slider": {
+          "min": "-50",
+          "max": "47"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "727",
+        "folderId": "724",
+        "color": "#c74440",
+        "latex": "\\left(x_{2},y_{2}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "728",
+        "folderId": "724",
+        "text": "Define a&b to avoid draggable points moving the axis"
+      },
+      {
+        "type": "expression",
+        "id": "729",
+        "folderId": "724",
+        "color": "#c74440",
+        "latex": "a_{2}=x_{2}"
+      },
+      {
+        "type": "expression",
+        "id": "730",
+        "folderId": "724",
+        "color": "#2d70b3",
+        "latex": "b_{2}=y_{2}"
+      },
+      {
+        "type": "expression",
+        "id": "731",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "x=x_{2}\\left\\{y_{2}\\le y\\le y_{2}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "732",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "y=y_{2}\\left\\{x_{2}\\le x\\le x_{2}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "733",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "\\left(x_{2},\\ y_{2}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "`P_1`",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "734",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "\\left(x_{2}+A_{len},\\ y_{2}\\right)",
+        "showLabel": true,
+        "label": "`Q_1`",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "735",
+        "folderId": "724",
+        "color": "#000000",
+        "latex": "\\left(x_{2}+\\frac{A_{len}}{2},\\ y_{2}+A_{len}\\right)",
+        "label": "B. `Q_1`/`P_1` axis",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "text",
+        "id": "873",
+        "folderId": "724",
+        "text": "Movable p_1:"
+      },
+      {
+        "type": "expression",
+        "id": "828",
+        "folderId": "724",
+        "color": "#6042a6",
+        "latex": "\\left(a_{2},b_{2}+p_{1}\\left\\{C_{omp}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_1=${p_1}`",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "875",
+        "folderId": "724",
+        "text": "Fixed p_1 and movable p_1' for compensated demand:"
+      },
+      {
+        "type": "expression",
+        "id": "871",
+        "folderId": "724",
+        "color": "#6042a6",
+        "latex": "\\left(a_{2},b_{2}+p_{1}\\left\\{C_{omp}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_1=${p_1}`",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "876",
+        "folderId": "724",
+        "color": "#388c46",
+        "latex": "\\left(a_{2},b_{2}+p_{1new}\\left\\{C_{omp}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_1'=${p_1new}`",
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "folder",
+        "id": "841",
+        "title": "B.2: Good 1 demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "842",
+        "folderId": "841",
+        "color": "#000000",
+        "latex": "x-x_{2}=D_{1}\\left(y-y_{2}\\right)\\left\\{0\\le x-x_{2}\\le A_{len}\\right\\}\\left\\{0\\le y-y_{2}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "852",
+        "folderId": "841",
+        "color": "#6042a6",
+        "latex": "y=y_{2}+p_{1}\\left\\{0\\le x-x_{2}\\le d_{x}\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "855",
+        "folderId": "841",
+        "color": "#c74440",
+        "latex": "\\left(x_{2}+d_{x},y_{2}\\right)",
+        "showLabel": true,
+        "label": "`x^* = ${d_xr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "853",
+        "folderId": "841",
+        "color": "#c74440",
+        "latex": "x=x_{2}+d_{x}\\left\\{0\\le y-y_{2}\\le p_{1}\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "1053",
+        "title": "B.3: Good 1 Compensated demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1054",
+        "folderId": "1053",
+        "color": "#388c46",
+        "latex": "x-x_{2}=D_{1comp}\\left(y-y_{2}\\right)\\left\\{0\\le x-x_{2}\\le A_{len}\\right\\}\\left\\{0\\le y-y_{2}\\le A_{len}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "1061",
+        "folderId": "1053",
+        "color": "#388c46",
+        "latex": "y=y_{2}+p_{1new}\\left\\{0\\le x-x_{2}\\le d_{xcomp}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "1062",
+        "folderId": "1053",
+        "color": "#388c46",
+        "latex": "\\left(x_{2}+d_{xcomp},y_{2}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "`x_c = ${d_xcompr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "1063",
+        "folderId": "1053",
+        "color": "#388c46",
+        "latex": "x=x_{2}+d_{xcomp}\\left\\{0\\le y-y_{2}\\le p_{1new}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "1167",
+        "title": "B.4: Consumer Surplus?",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "1175",
+        "folderId": "1167",
+        "text": "(of course for these demand functions the functional form implies that CS is infinite in each case, but we can still illustrate the difference in the region that matters)"
+      },
+      {
+        "type": "text",
+        "id": "1170",
+        "folderId": "1167",
+        "text": "Approximate CS:"
+      },
+      {
+        "type": "expression",
+        "id": "1165",
+        "folderId": "1167",
+        "color": "#6042a6",
+        "latex": "x-x_{2}<D_{1}\\left(y-y_{2}\\right)\\left\\{0\\le x-x_{2}\\le d_{x}\\right\\}\\left\\{p_{1}\\le y-y_{2}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1172",
+        "folderId": "1167",
+        "text": "Exact CS:"
+      },
+      {
+        "type": "expression",
+        "id": "1168",
+        "folderId": "1167",
+        "color": "#388c46",
+        "latex": "x-x_{2}<D_{1comp}\\left(y-y_{2}\\right)\\left\\{0\\le x-x_{2}\\le d_{xcomp}\\right\\}\\left\\{p_{1new}\\le y-y_{2}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1396",
+        "text": "B5 for demonstration during lecture"
+      },
+      {
+        "type": "folder",
+        "id": "1309",
+        "title": "B.5: How Demand curve is generated (Keep B.2, C.2 off)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1311",
+        "folderId": "1309",
+        "color": "#388c46",
+        "latex": "\\left(-70,20\\right)",
+        "showLabel": true,
+        "label": "Record",
+        "hidden": true,
+        "labelOrientation": "below",
+        "pointOutline": true,
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "X_{Alg},Y_{Alg},P_{1Alg},P_{2Alg}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1351",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "\\left(-70,10\\right)",
+        "showLabel": true,
+        "label": "Reset",
+        "hidden": true,
+        "labelOrientation": "above",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "Q_{1}\\to\\left[\\right],Q_{2}\\to\\left[\\right],P_{1}\\to\\left[\\right],P_{2}\\to\\left[\\right]"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1324",
+        "folderId": "1309",
+        "color": "#000000",
+        "latex": "Q_{1sol}=X\\left(p_{1},p_{2},I\\right)+a_{1}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1339",
+        "folderId": "1309",
+        "color": "#388c46",
+        "latex": "Q_{2sol}=Y\\left(p_{1},p_{2},I\\right)+b_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "1387",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "P_{1adj}=P_{1}+b_{2}"
+      },
+      {
+        "type": "expression",
+        "id": "1388",
+        "folderId": "1309",
+        "color": "#000000",
+        "latex": "P_{2adj}=P_{2}+b_{3}"
+      },
+      {
+        "type": "text",
+        "id": "1317",
+        "folderId": "1309",
+        "text": "Algorithms"
+      },
+      {
+        "type": "expression",
+        "id": "1335",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "X_{Alg}=Q_{1}\\to\\operatorname{join}\\left(Q_{1},Q_{1sol}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1320",
+        "folderId": "1309",
+        "color": "#c74440",
+        "latex": "Y_{Alg}=Q_{2}\\to\\operatorname{join}\\left(Q_{2},Q_{2sol}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1378",
+        "folderId": "1309",
+        "color": "#c74440",
+        "latex": "P_{1Alg}=P_{1}\\to\\operatorname{join}\\left(P_{1},p_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1379",
+        "folderId": "1309",
+        "color": "#2d70b3",
+        "latex": "P_{2Alg}=P_{2}\\to\\operatorname{join}\\left(P_{2},p_{2}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "1329",
+        "folderId": "1309",
+        "text": "Initiate"
+      },
+      {
+        "type": "expression",
+        "id": "1330",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "Q_{1}=\\left[\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1331",
+        "folderId": "1309",
+        "color": "#000000",
+        "latex": "Q_{2}=\\left[\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1376",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "P_{1}=\\left[\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1377",
+        "folderId": "1309",
+        "color": "#000000",
+        "latex": "P_{2}=\\left[\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "1340",
+        "folderId": "1309",
+        "color": "#6042a6",
+        "latex": "\\left(Q_{1},Q_{2}\\right)"
+      },
+      {
+        "id": "1343",
+        "type": "table",
+        "folderId": "1309",
+        "columns": [
+          {
+            "hidden": true,
+            "id": "1341",
+            "color": "#000000",
+            "latex": "Q_{1}"
+          },
+          {
+            "id": "1342",
+            "color": "#c74440",
+            "latex": "Q_{2}"
+          }
+        ]
+      },
+      {
+        "id": "1385",
+        "type": "table",
+        "folderId": "1309",
+        "columns": [
+          {
+            "hidden": true,
+            "id": "1383",
+            "color": "#c74440",
+            "latex": "Q_{1}"
+          },
+          {
+            "id": "1384",
+            "color": "#2d70b3",
+            "latex": "P_{1adj}"
+          }
+        ]
+      },
+      {
+        "id": "1391",
+        "type": "table",
+        "folderId": "1309",
+        "columns": [
+          {
+            "hidden": true,
+            "id": "1389",
+            "color": "#c74440",
+            "latex": "Q_{2}"
+          },
+          {
+            "id": "1390",
+            "color": "#2d70b3",
+            "latex": "P_{2adj}"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "id": "743",
+        "title": "C.1: Q2/P2 axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "744",
+        "folderId": "743",
+        "color": "#2d70b3",
+        "latex": "x_{3}=7.4",
+        "slider": {
+          "min": "-219",
+          "max": "311"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "745",
+        "folderId": "743",
+        "color": "#388c46",
+        "latex": "y_{3}=-31.4",
+        "slider": {
+          "min": "-50",
+          "max": "47"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "746",
+        "folderId": "743",
+        "color": "#c74440",
+        "latex": "\\left(x_{3},y_{3}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "747",
+        "folderId": "743",
+        "text": "Define a&b to avoid draggable points moving the axis"
+      },
+      {
+        "type": "expression",
+        "id": "748",
+        "folderId": "743",
+        "color": "#c74440",
+        "latex": "a_{3}=x_{3}"
+      },
+      {
+        "type": "expression",
+        "id": "749",
+        "folderId": "743",
+        "color": "#2d70b3",
+        "latex": "b_{3}=y_{3}"
+      },
+      {
+        "type": "expression",
+        "id": "750",
+        "folderId": "743",
+        "color": "#000000",
+        "latex": "x=x_{3}\\left\\{y_{3}\\le y\\le y_{3}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "751",
+        "folderId": "743",
+        "color": "#000000",
+        "latex": "y=y_{3}\\left\\{x_{3}\\le x\\le x_{3}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "752",
+        "folderId": "743",
+        "color": "#000000",
+        "latex": "\\left(x_{3},\\ y_{3}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "`P_2`",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "753",
+        "folderId": "743",
+        "color": "#000000",
+        "latex": "\\left(x_{3}+A_{len},\\ y_{3}\\right)",
+        "showLabel": true,
+        "label": "`Q_2`",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "754",
+        "folderId": "743",
+        "color": "#000000",
+        "latex": "\\left(x_{3}+\\frac{A_{len}}{2},\\ y_{3}+A_{len}\\right)",
+        "label": "C. `Q_1`/`P_1` axis",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "text",
+        "id": "880",
+        "folderId": "743",
+        "text": "Movable p_2:"
+      },
+      {
+        "type": "expression",
+        "id": "829",
+        "folderId": "743",
+        "color": "#6042a6",
+        "latex": "\\left(a_{3},b_{3}+p_{2}\\left\\{C_{omp}=0\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2=${p_2}`"
+      },
+      {
+        "type": "text",
+        "id": "882",
+        "folderId": "743",
+        "text": "Fixed p_2 and movable p_2' for compensated demand:"
+      },
+      {
+        "type": "expression",
+        "id": "883",
+        "folderId": "743",
+        "color": "#6042a6",
+        "latex": "\\left(a_{3},b_{3}+p_{2}\\left\\{C_{omp}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2=${p_2}`",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "884",
+        "folderId": "743",
+        "color": "#388c46",
+        "latex": "\\left(a_{3},b_{3}+p_{2new}\\left\\{C_{omp}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "`p_2'=${p_2new}`",
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "folder",
+        "id": "849",
+        "title": "C.2: Good 2 demand",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "850",
+        "folderId": "849",
+        "color": "#000000",
+        "latex": "x-x_{3}=D_{2}\\left(y-y_{3}\\right)\\left\\{0\\le x-x_{3}\\le A_{len}\\right\\}\\left\\{0\\le y-y_{3}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "851",
+        "folderId": "849",
+        "color": "#6042a6",
+        "latex": "y=y_{3}+p_{2}\\left\\{0\\le x-x_{3}\\le d_{y}\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "856",
+        "folderId": "849",
+        "color": "#c74440",
+        "latex": "\\left(x_{3}+d_{y},y_{3}\\right)",
+        "showLabel": true,
+        "label": "`y^* = ${d_yr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "854",
+        "folderId": "849",
+        "color": "#c74440",
+        "latex": "x=x_{3}+d_{y}\\left\\{0\\le y-y_{3}\\le p_{2}\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "1065",
+        "title": "C.3: Good 2 compensated demand",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1066",
+        "folderId": "1065",
+        "color": "#388c46",
+        "latex": "x-x_{3}=D_{2comp}\\left(y-y_{3}\\right)\\left\\{0\\le x-x_{3}\\le A_{len}\\right\\}\\left\\{0\\le y-y_{3}\\le A_{len}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "1067",
+        "folderId": "1065",
+        "color": "#388c46",
+        "latex": "y=y_{3}+p_{2new}\\left\\{0\\le x-x_{3}\\le d_{ycomp}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "1068",
+        "folderId": "1065",
+        "color": "#388c46",
+        "latex": "\\left(x_{3}+d_{ycomp},y_{3}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "`y_c = ${d_ycompr}`",
+        "dragMode": "NONE",
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "1069",
+        "folderId": "1065",
+        "color": "#388c46",
+        "latex": "x=x_{3}+d_{ycomp}\\left\\{0\\le y-y_{3}\\le p_{2new}\\right\\}\\left\\{C_{omp}=1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "folder",
+        "id": "780",
+        "title": "Common: Utility function, Demand Functions, Calculating optimal bundle",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "819",
+        "folderId": "780",
+        "text": "Utility function definition"
+      },
+      {
+        "type": "expression",
+        "id": "1080",
+        "folderId": "780",
+        "color": "#6042a6",
+        "latex": "u\\left(x,y\\right)=C_{hoice}\\left(u_{CobbDouglas}\\left(x,y\\right),u_{Power}\\left(x,y\\right),u_{CES}\\left(x,y\\right)\\right)"
+      },
+      {
+        "type": "text",
+        "id": "781",
+        "folderId": "780",
+        "text": "Demand functions for each good "
+      },
+      {
+        "type": "expression",
+        "id": "782",
+        "folderId": "780",
+        "color": "#6042a6",
+        "latex": "X\\left(P_{1},P_{2},M\\right)=C_{hoice}\\left(X_{CobbDouglas}\\left(P_{1},P_{2},M\\right),X_{Power}\\left(P_{1},P_{2},M\\right),X_{CES}\\left(P_{1},P_{2},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "783",
+        "folderId": "780",
+        "color": "#2d70b3",
+        "latex": "Y\\left(P_{1},P_{2},M\\right)=C_{hoice}\\left(Y_{CobbDouglas}\\left(P_{1},P_{2},M\\right),Y_{Power}\\left(P_{1},P_{2},M\\right),Y_{CES}\\left(P_{1},P_{2},M\\right)\\right)"
+      },
+      {
+        "type": "text",
+        "id": "826",
+        "folderId": "780",
+        "text": "Partial demand functions (dep. only on own price)"
+      },
+      {
+        "type": "expression",
+        "id": "808",
+        "folderId": "780",
+        "color": "#c74440",
+        "latex": "D_{1}\\left(p\\right)=X\\left(p,p_{2},I\\right)\\left\\{p>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "810",
+        "folderId": "780",
+        "color": "#6042a6",
+        "latex": "D_{2}\\left(p\\right)=Y\\left(p_{1},p,I\\right)\\left\\{p>0\\right\\}\\ "
+      },
+      {
+        "type": "text",
+        "id": "784",
+        "folderId": "780",
+        "text": "The optimal consumption bundle at current prices and incomes"
+      },
+      {
+        "type": "expression",
+        "id": "785",
+        "folderId": "780",
+        "color": "#000000",
+        "latex": "d_{x}=X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "786",
+        "folderId": "780",
+        "color": "#388c46",
+        "latex": "d_{y}=Y\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "text",
+        "id": "787",
+        "folderId": "780",
+        "text": "Round the values for display purposes below"
+      },
+      {
+        "type": "expression",
+        "id": "788",
+        "folderId": "780",
+        "color": "#c74440",
+        "latex": "d_{xr}=R_{ound2}\\left(d_{x}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "789",
+        "folderId": "780",
+        "color": "#2d70b3",
+        "latex": "d_{yr}=R_{ound2}\\left(d_{y}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "887",
+        "title": "Common: Compensated demand equations",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "869",
+        "folderId": "887",
+        "text": "Below are equations for compensated demand. Basically, when solving for the conventional (uncompensated) demand, we solve the system of 2 equations:\n\n | p_1x+p_2y=I\n<\n | MRS(x,y)=p_1/p_2\n\nWhich results in solutions X(p_1,p_2,I) and Y(p_1,p_2,I), which in turn can be used both to get the optimal solution and to trace the demand on Q/P axis.\n\nHowever, for the compensated demand, we want to solve another system:\n\n | MRS(x,y)=p_1/p_2'\n<\n | u(x,y) = u(d_x,d_y)=u*\n\nThe new pair X_c(p_1,p_2,p_2',I) and Y_c(p_1,p_2,p_2',I) can now be used for several purposes, such as:\ncalculating the compensating variation (additional income needed to sustain the utility)\nshowing the arrows\nmost importantly - defining the compensated demand as D_c(p)= X_c(p,p_2,p_2',I)"
+      },
+      {
+        "type": "expression",
+        "id": "1055",
+        "folderId": "887",
+        "color": "#6042a6",
+        "latex": "u_{star}\\left(P_{1},P_{2},M\\right)=u\\left(X\\left(P_{1},P_{2},M\\right),Y\\left(P_{1},P_{2},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1083",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "!X_{C}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=C_{hoice}\\left(X_{CCobbDouglas}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right),X_{CPower}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right),X_{CCES}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1084",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "!Y_{C}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)=C_{hoice}\\left(Y_{CCobbDouglas}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right),Y_{CPower}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right),Y_{CCES}\\left(P_{1},P_{1new},P_{2},P_{2new},M\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1150",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "X_{C}\\left(P_{1},P_{2},U_{star}\\right)=C_{hoice}\\left(X_{CCobbDouglas}\\left(P_{1},P_{2},U_{star}\\right),X_{CPower}\\left(P_{1},P_{2},U_{star}\\right),X_{CCES}\\left(P_{1},P_{2},U_{star}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1151",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "Y_{C}\\left(P_{1},P_{2},U_{star}\\right)=C_{hoice}\\left(Y_{CCobbDouglas}\\left(P_{1},P_{2},U_{star}\\right),Y_{CPower}\\left(P_{1},P_{2},U_{star}\\right),Y_{CCES}\\left(P_{1},P_{2},U_{star}\\right)\\right)"
+      },
+      {
+        "type": "text",
+        "id": "896",
+        "folderId": "887",
+        "text": "Compensating variation"
+      },
+      {
+        "type": "expression",
+        "id": "897",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "!S_{c}=p_{1new}X_{C}\\left(p_{1},p_{1new},p_{2},p_{2new},I\\right)+p_{2new}Y_{C}\\left(p_{1},p_{1new},p_{2},p_{2new},I\\right)-I"
+      },
+      {
+        "type": "expression",
+        "id": "1152",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "S_{c}=p_{1new}\\cdot X_{C}\\left(p_{1new},p_{2new},u_{star}\\left(p_{1},p_{2},I\\right)\\right)+p_{2new}\\cdot Y_{C}\\left(p_{1new},p_{2new},u_{star}\\left(p_{1},p_{2},I\\right)\\right)-I"
+      },
+      {
+        "type": "text",
+        "id": "910",
+        "folderId": "887",
+        "text": "New optimal bundle"
+      },
+      {
+        "type": "expression",
+        "id": "911",
+        "folderId": "887",
+        "color": "#6042a6",
+        "latex": "d_{xnew}=X\\left(p_{1new},p_{2new},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "912",
+        "folderId": "887",
+        "color": "#000000",
+        "latex": "d_{ynew}=Y\\left(p_{1new},p_{2new},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "913",
+        "folderId": "887",
+        "color": "#c74440",
+        "latex": "d_{xnewr}=R_{ound2}\\left(d_{xnew}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "914",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "d_{ynewr}=R_{ound2}\\left(d_{ynew}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "916",
+        "folderId": "887",
+        "text": "The compensated bundle"
+      },
+      {
+        "type": "expression",
+        "id": "917",
+        "folderId": "887",
+        "color": "#6042a6",
+        "latex": "!d_{xcomp}=X_{C}\\left(p_{1},p_{1new},p_{2},p_{2new},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "918",
+        "folderId": "887",
+        "color": "#000000",
+        "latex": "!d_{ycomp}=Y_{C}\\left(p_{1},p_{1new},p_{2},p_{2new},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1153",
+        "folderId": "887",
+        "color": "#6042a6",
+        "latex": "d_{xcomp}=X_{C}\\left(p_{1new},p_{2new},u_{star}\\left(p_{1},p_{2},I\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1154",
+        "folderId": "887",
+        "color": "#000000",
+        "latex": "d_{ycomp}=Y_{C}\\left(p_{1new},p_{2new},u_{star}\\left(p_{1},p_{2},I\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "919",
+        "folderId": "887",
+        "color": "#c74440",
+        "latex": "d_{xcompr}=R_{ound2}\\left(d_{xcomp}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "920",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "d_{ycompr}=R_{ound2}\\left(d_{ycomp}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "1058",
+        "folderId": "887",
+        "text": "Compensated demand functions"
+      },
+      {
+        "type": "expression",
+        "id": "1059",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "!D_{1comp}\\left(p\\right)=X_{C}\\left(p_{1},p,p_{2},p_{2new},I\\right)\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1060",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "!D_{2comp}\\left(p\\right)=Y_{C}\\left(p_{1},p_{1new},p_{2},p,I\\right)\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1156",
+        "folderId": "887",
+        "color": "#2d70b3",
+        "latex": "D_{1comp}\\left(p\\right)=X_{C}\\left(p,p_{2new},u_{star}\\left(p_{1},p_{2},I\\right)\\right)\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1157",
+        "folderId": "887",
+        "color": "#388c46",
+        "latex": "D_{2comp}\\left(p\\right)=Y_{C}\\left(p_{1new},p,u_{star}\\left(p_{1},p_{2},I\\right)\\right)\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "482",
+        "title": "Misc",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "716",
+        "folderId": "482",
+        "text": "Define functions for rounding and solving quadratic equations"
+      },
+      {
+        "type": "expression",
+        "id": "483",
+        "folderId": "482",
+        "color": "#388c46",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "721",
+        "folderId": "482",
+        "text": "Axis length parameter"
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "folderId": "482",
+        "color": "#c74440",
+        "latex": "A_{len}=26",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "839",
+        "folderId": "482",
+        "color": "#c74440",
+        "latex": "l=A_{len}"
+      },
+      {
+        "type": "text",
+        "id": "832",
+        "folderId": "482",
+        "text": "Income slider"
+      },
+      {
+        "type": "expression",
+        "id": "833",
+        "folderId": "482",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{1},y_{1}+\\frac{5}{4}A_{len}\\right),\\left(x_{1}+A_{len},y_{1}+\\frac{5}{4}A_{len}\\right)\\right)",
+        "lineOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "834",
+        "folderId": "482",
+        "color": "#000000",
+        "latex": "\\left(x_{1},y_{1}+\\frac{5}{4}A_{len}\\right)",
+        "showLabel": true,
+        "label": "0",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "837",
+        "folderId": "482",
+        "color": "#000000",
+        "latex": "\\left(x_{1}+A_{len},y_{1}+\\frac{5}{4}A_{len}\\right)",
+        "showLabel": true,
+        "label": "${I_max}",
+        "dragMode": "NONE",
+        "labelOrientation": "below",
+        "pointOpacity": ".5"
+      },
+      {
+        "type": "expression",
+        "id": "838",
+        "folderId": "482",
+        "color": "#000000",
+        "latex": "\\left(a_{1}+\\frac{I}{I_{max}}l,b_{1}+\\frac{5}{4}l\\right)",
+        "showLabel": true,
+        "label": "`I=${I}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "863",
+        "folderId": "482",
+        "color": "#2d70b3",
+        "latex": "r_{ow}=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "866",
+        "folderId": "482",
+        "text": "Compensated demand indicator"
+      },
+      {
+        "type": "expression",
+        "id": "864",
+        "folderId": "482",
+        "color": "#388c46",
+        "latex": "C_{omp}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "862",
+        "folderId": "482",
+        "color": "#c74440",
+        "latex": "\\left(a_{1},b_{1}-r_{ow}\\right)\\left\\{C_{omp}=0\\right\\}",
+        "showLabel": true,
+        "label": "👉😎👈",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "C_{omp}\\to1,p_{1new}\\to p_{1},p_{2new}\\to p_{2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "867",
+        "folderId": "482",
+        "color": "#2d70b3",
+        "latex": "\\left(a_{1},b_{1}-r_{ow}\\right)\\left\\{C_{omp}=1\\right\\}",
+        "showLabel": true,
+        "label": "Exit compensated demand demonstration",
+        "hidden": true,
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "C_{omp}\\to0"
+        }
+      },
+      {
+        "type": "text",
+        "id": "889",
+        "folderId": "482",
+        "text": "Opacity parameter to hide consumption curves when demonstrating comp demand:"
+      },
+      {
+        "type": "expression",
+        "id": "890",
+        "folderId": "482",
+        "color": "#2d70b3",
+        "latex": "O_{pacity}=\\left\\{C_{omp}=0:\\ 0.9,\\ 0.2\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "1078",
+        "folderId": "482",
+        "text": "Choice function"
+      },
+      {
+        "type": "expression",
+        "id": "1079",
+        "folderId": "482",
+        "color": "#388c46",
+        "latex": "C_{hoice}\\left(f_{1},f_{2},f_{3}\\right)=\\left\\{U_{type}=1:f_{1},\\ U_{type}=2:f_{2},\\ U_{type}=3:f_{3}\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "1044",
+        "title": "Vector Function",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "1045",
+        "folderId": "1044",
+        "text": "note: the Vector function creates a list of points (ordered pairs), which define the vertices of an arrow. To see an arrow and not points the Desmos settings need to be adjusted to have \"points\" off and \"lines\" on"
+      },
+      {
+        "type": "expression",
+        "id": "1046",
+        "folderId": "1044",
+        "color": "#c74440",
+        "latex": "f_{V}\\left(w,v,c,n\\right)=\\left\\{c=1:\\left\\{n=1:w.x,v.x\\right\\},\\left\\{n=1:w.y,v.y\\right\\}\\right\\}-\\frac{\\left\\{\\left|n\\right|=1:0,\\left|n\\right|=2:1,\\frac{S_{tyle}\\left\\{c=1:v.x-w.x,v.y-w.y\\right\\}}{\\operatorname{distance}\\left(w,v\\right)}\\right\\}\\min\\left(L_{ength},\\operatorname{distance}\\left(w,v\\right)\\right)}{\\csc\\left(\\left\\{n=0:\\frac{\\pi}{2},\\arctan\\left(v.y-w.y,v.x-w.x\\right)+\\frac{\\pi c}{2}\\right\\}+\\left\\{n=2:-1,1\\right\\}W_{idth}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "1047",
+        "folderId": "1044",
+        "color": "#2d70b3",
+        "latex": "V_{ector}\\left(w,v\\right)=\\left(f_{V}\\left(w,v,1,\\left[1,0,-2,-1,2,0\\right]\\right),\\ f_{V}\\left(w,v,0,\\left[1,0,-2,-1,2,0\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1048",
+        "folderId": "1044",
+        "color": "#388c46",
+        "latex": "\\ \\ \\ \\ \\ L_{ength}=1.5",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1049",
+        "folderId": "1044",
+        "color": "#6042a6",
+        "latex": "W_{idth}=0.2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\frac{\\pi}{4}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1050",
+        "folderId": "1044",
+        "color": "#000000",
+        "latex": "\\ \\ \\ \\ \\ S_{tyle}=0.634",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

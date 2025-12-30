@@ -1,0 +1,752 @@
+{
+  "version": 11,
+  "randomSeed": "a48ccfb10b575d120f9a3eb478fac414",
+  "graph": {
+    "viewport": {
+      "xmin": -2.9234813436833136,
+      "ymin": -0.8448837805611471,
+      "xmax": 13.750648515872925,
+      "ymax": 4.441298693030053
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-2.9234813436833136",
+      "xmax": "13.750648515872925",
+      "ymin": "-0.8448837805611471",
+      "ymax": "4.441298693030053"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "128",
+        "text": "Edgeworth Box"
+      },
+      {
+        "type": "folder",
+        "id": "543",
+        "title": "Credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "123",
+        "folderId": "543",
+        "text": "Names and terminology from Pindyck & Rubinfeld (2018) Ch. 16.2"
+      },
+      {
+        "type": "text",
+        "id": "126",
+        "folderId": "543",
+        "text": "Creator: Joshua B. Miller, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "279",
+        "title": "1. Utility function and demand",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "239",
+        "folderId": "279",
+        "text": "James' utility function & demand"
+      },
+      {
+        "type": "expression",
+        "id": "240",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "u_{J}\\left(x,y\\right)=\\min\\left(a_{1}x,b_{1}y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "546",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "a_{1}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "547",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "b_{1}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "247",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "X_{J}\\left(p_{x},p_{y},I\\right)=\\frac{I}{p_{x}+\\frac{a_{1}}{b_{1}}p_{y}}"
+      },
+      {
+        "type": "expression",
+        "id": "248",
+        "folderId": "279",
+        "color": "#000000",
+        "latex": "Y_{J}\\left(p_{x},p_{y},I\\right)=\\frac{I}{\\frac{b_{1}}{a_{1}}p_{x}+p_{y}}"
+      },
+      {
+        "type": "text",
+        "id": "305",
+        "folderId": "279",
+        "text": "Karen's utility function and demand"
+      },
+      {
+        "type": "expression",
+        "id": "244",
+        "folderId": "279",
+        "color": "#2d70b3",
+        "latex": "u_{K}\\left(x,y\\right)=\\min\\left(a_{2}x,b_{2}y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "544",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "a_{2}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "545",
+        "folderId": "279",
+        "color": "#2d70b3",
+        "latex": "b_{2}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "249",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "X_{K}\\left(p_{x},p_{y},I\\right)=\\frac{I}{p_{x}+\\frac{a_{2}}{b_{2}}p_{y}}"
+      },
+      {
+        "type": "expression",
+        "id": "250",
+        "folderId": "279",
+        "color": "#2d70b3",
+        "latex": "Y_{K}\\left(p_{x},p_{y},I\\right)=\\frac{I}{\\frac{b_{2}}{a_{2}}p_{x}+p_{y}}"
+      },
+      {
+        "type": "text",
+        "id": "246",
+        "folderId": "279",
+        "text": "demand for each person"
+      },
+      {
+        "type": "folder",
+        "id": "174",
+        "title": "2. Endowment Parameters",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "174",
+        "color": "#c74440",
+        "latex": "F=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "174",
+        "color": "#2d70b3",
+        "latex": "C=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "174",
+        "color": "#c74440",
+        "latex": "F_{J}=1.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "F",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "77",
+        "folderId": "174",
+        "color": "#2d70b3",
+        "latex": "C_{J}=4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "C",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "174",
+        "color": "#388c46",
+        "latex": "F_{K}=F-F_{J}"
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "folderId": "174",
+        "color": "#6042a6",
+        "latex": "C_{K}=C-C_{J}"
+      },
+      {
+        "type": "folder",
+        "id": "138",
+        "title": "3. Plot endowment",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "83",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(F_{J},C_{J}\\right)",
+        "showLabel": true,
+        "label": "Endowment",
+        "dragMode": "XY",
+        "pointOpacity": "3"
+      },
+      {
+        "type": "text",
+        "id": "230",
+        "folderId": "138",
+        "text": "Karen's endowment (note: need inverse of rotation matrix)"
+      },
+      {
+        "type": "expression",
+        "id": "228",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(\\left(r_{x}\\left(F,C\\right)-F_{K}-\\frac{2F}{\\pi}\\alpha\\right)\\cos\\alpha+\\left(r_{y}\\left(F,C\\right)-C_{K}-\\frac{2C}{\\pi}\\alpha\\right)\\sin\\alpha,-\\left(r_{x}\\left(F,C\\right)-F_{K}-\\frac{2F}{\\pi}\\alpha\\right)\\sin\\alpha+\\left(r_{y}\\left(F,C\\right)-C_{K}-\\frac{2C}{\\pi}\\alpha\\right)\\cos\\alpha\\right)\\left\\{\\alpha>0\\right\\}",
+        "showLabel": true,
+        "label": "Endowment",
+        "dragMode": "XY",
+        "pointOpacity": "3"
+      },
+      {
+        "type": "expression",
+        "id": "211",
+        "folderId": "138",
+        "color": "#6042a6",
+        "latex": "\\left(F,C\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "145",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(F_{J},0\\right)",
+        "showLabel": true,
+        "label": "`F^0_J`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "146",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(0,C_{J}\\right)",
+        "showLabel": true,
+        "label": "`C^0_J`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "232",
+        "folderId": "138",
+        "text": "Karen Endowment"
+      },
+      {
+        "type": "expression",
+        "id": "147",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(F-F_{K},C\\right)\\left\\{\\alpha=0\\right\\}",
+        "showLabel": true,
+        "label": "`F^0_K`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "234",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(r_{x}\\left(F-F_{K},C\\right),r_{y}\\left(F-F_{K},C\\right)\\right)\\left\\{\\alpha>0\\right\\}",
+        "showLabel": true,
+        "label": "`F^0_K`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "148",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(F,C-C_{K}\\right)\\left\\{\\alpha=0\\right\\}",
+        "showLabel": true,
+        "label": "`C^0_K`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "235",
+        "folderId": "138",
+        "color": "#000000",
+        "latex": "\\left(r_{x}\\left(F,C-C_{K}\\right),r_{y}\\left(F,C-C_{K}\\right)\\right)\\left\\{\\alpha>0\\right\\}",
+        "showLabel": true,
+        "label": "`C^0_K`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "291",
+        "title": "4. ICs at endowment "
+      },
+      {
+        "type": "expression",
+        "id": "81",
+        "folderId": "291",
+        "color": "#2d70b3",
+        "latex": "1u_{J}\\left(F_{J},C_{J}\\right)=u_{J}\\left(x,y\\right)\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "3"
+      },
+      {
+        "type": "expression",
+        "id": "87",
+        "folderId": "291",
+        "color": "#c74440",
+        "latex": "1u_{K}\\left(F_{K},C_{K}\\right)=u_{K}\\left(\\left(r_{x}\\left(F,C\\right)-r_{x}\\left(x,y\\right)\\right),\\left(r_{y}\\left(F,C\\right)-r_{y}\\left(x,y\\right)\\right)\\right)\\ \\left\\{0\\le r_{x}\\left(F,C\\right)-r_{x}\\left(x,y\\right)\\le F\\right\\}\\left\\{0\\le r_{y}\\left(F,C\\right)-r_{y}\\left(x,y\\right)\\le C\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "3"
+      },
+      {
+        "type": "folder",
+        "id": "552",
+        "title": "5. Rotation",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "215",
+        "folderId": "552",
+        "color": "#2d70b3",
+        "latex": "\\alpha=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\pi",
+          "step": "\\frac{\\pi}{32}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "237",
+        "folderId": "552",
+        "text": "rotation parameter"
+      },
+      {
+        "type": "expression",
+        "id": "301",
+        "folderId": "552",
+        "color": "#000000",
+        "latex": "\\left(-5,T_{op}\\frac{\\alpha}{\\pi}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "303",
+        "folderId": "552",
+        "color": "#2d70b3",
+        "latex": "T_{op}=C"
+      },
+      {
+        "type": "expression",
+        "id": "302",
+        "folderId": "552",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(-5,0\\right),\\left(-5,C\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "149",
+        "color": "#000000",
+        "latex": "x=F_{J}\\left\\{y\\ge0\\right\\}\\left\\{y\\le C\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "150",
+        "color": "#000000",
+        "latex": "y=C_{J}\\left\\{x\\ge0\\right\\}\\left\\{x\\le F\\right\\}",
+        "hidden": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "folder",
+        "id": "535",
+        "title": "6. Contract curve"
+      },
+      {
+        "type": "expression",
+        "id": "539",
+        "folderId": "535",
+        "color": "#388c46",
+        "latex": "c=\\left(3.3,2.71\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "548",
+        "folderId": "535",
+        "color": "#2d70b3",
+        "latex": "b_{1}y=a_{1}x\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "549",
+        "folderId": "535",
+        "color": "#c74440",
+        "latex": "b_{2}\\left(C-y\\right)=a_{2}\\left(F-x\\right)\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "550",
+        "folderId": "535",
+        "color": "#6042a6",
+        "latex": "b_{1}y<a_{1}x\\left\\{b_{2}\\left(C-y\\right)<a_{2}\\left(F-x\\right)\\right\\}\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "fillOpacity": ".2",
+        "lineOpacity": ".3"
+      },
+      {
+        "type": "expression",
+        "id": "536",
+        "folderId": "535",
+        "color": "#2d70b3",
+        "latex": "1u_{J}\\left(c.x,c.y\\right)\\le u_{J}\\left(x,y\\right)\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "lines": false,
+        "lineStyle": "DASHED",
+        "lineWidth": "3"
+      },
+      {
+        "type": "expression",
+        "id": "554",
+        "folderId": "535",
+        "color": "#2d70b3",
+        "latex": "1u_{J}\\left(c.x,c.y\\right)=u_{J}\\left(x,y\\right)\\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "lines": true,
+        "lineStyle": "DOTTED",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "538",
+        "folderId": "535",
+        "color": "#c74440",
+        "latex": "1u_{K}\\left(F-c.x,C-c.y\\right)\\le u_{K}\\left(F-x,C-y\\right)\\ \\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "lines": false,
+        "lineStyle": "DASHED",
+        "lineWidth": "3"
+      },
+      {
+        "type": "expression",
+        "id": "555",
+        "folderId": "535",
+        "color": "#c74440",
+        "latex": "1u_{K}\\left(F-c.x,C-c.y\\right)=u_{K}\\left(F-x,C-y\\right)\\ \\left\\{0\\le x\\le F\\right\\}\\left\\{0\\le y\\le C\\right\\}",
+        "lines": true,
+        "lineStyle": "DOTTED",
+        "lineWidth": "2"
+      },
+      {
+        "type": "folder",
+        "id": "134",
+        "title": "Box Parameters",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "553",
+        "folderId": "134",
+        "color": "#6042a6",
+        "latex": "F_{ontSize}=1.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".5",
+          "max": "8",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "68",
+        "folderId": "134",
+        "color": "#2d70b3",
+        "latex": "\\left(0,0\\right)",
+        "showLabel": true,
+        "label": "James",
+        "labelOrientation": "below_left",
+        "labelSize": "F_{ontSize}"
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(F,0\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "134",
+        "color": "#c74440",
+        "latex": "\\left(r_{x}\\left(F,C\\right),r_{y}\\left(F,C\\right)\\right)\\left\\{\\alpha<\\pi\\right\\}",
+        "showLabel": true,
+        "label": "Karen",
+        "dragMode": "NONE",
+        "labelOrientation": "above_right",
+        "labelSize": "F_{ontSize}"
+      },
+      {
+        "type": "expression",
+        "id": "224",
+        "folderId": "134",
+        "color": "#c74440",
+        "latex": "\\left(r_{x}\\left(F,C\\right),r_{y}\\left(F,C\\right)\\right)\\left\\{\\alpha=\\pi\\right\\}",
+        "showLabel": true,
+        "label": "Karen",
+        "dragMode": "NONE",
+        "labelOrientation": "below_left",
+        "labelSize": "F_{ontSize}"
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(0,C\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "214",
+        "folderId": "134",
+        "color": "#c74440",
+        "latex": "r_{x}\\left(x,y\\right)=x\\cos\\alpha-y\\sin\\alpha+\\frac{2F}{\\pi}\\alpha"
+      },
+      {
+        "type": "expression",
+        "id": "216",
+        "folderId": "134",
+        "color": "#388c46",
+        "latex": "r_{y}\\left(x,y\\right)=x\\sin\\alpha+y\\cos\\alpha+\\frac{2C}{\\pi}\\alpha"
+      },
+      {
+        "type": "text",
+        "id": "218",
+        "folderId": "134",
+        "text": "James' axes"
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "x=0\\left\\{0\\le y\\le C\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "y=0\\left\\{0\\le x\\le F\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "220",
+        "folderId": "134",
+        "text": "Karen's Axes"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "r_{x}\\left(F,C\\right)-r_{x}\\left(x,y\\right)=0\\left\\{0\\le r_{y}\\left(F,C\\right)-r_{y}\\left(x,y\\right)\\le C\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "r_{y}\\left(F,C\\right)-r_{y}\\left(x,y\\right)=0\\left\\{0\\le r_{x}\\left(F,C\\right)-r_{x}\\left(x,y\\right)\\le F\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "139",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(\\frac{F}{2},-1\\right)",
+        "showLabel": true,
+        "label": "Food (F)",
+        "hidden": true,
+        "labelSize": "F_{ontSize}"
+      },
+      {
+        "type": "expression",
+        "id": "142",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(-.75,\\frac{C}{2}\\right)",
+        "showLabel": true,
+        "label": "Clothes (C)",
+        "hidden": true,
+        "labelOrientation": "above",
+        "labelSize": "F_{ontSize}",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "text",
+        "id": "223",
+        "folderId": "134",
+        "text": "Karen's Label's"
+      },
+      {
+        "type": "expression",
+        "id": "143",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(r_{x}\\left(\\frac{F}{2},C+1\\right),r_{y}\\left(\\frac{F}{2},C+1\\right)\\right)",
+        "showLabel": true,
+        "label": "Food (F)",
+        "hidden": true,
+        "labelSize": "F_{ontSize}"
+      },
+      {
+        "type": "expression",
+        "id": "144",
+        "folderId": "134",
+        "color": "#000000",
+        "latex": "\\left(r_{x}\\left(F+.75,\\frac{C}{2}\\right),r_{y}\\left(F+.75,\\frac{C}{2}\\right)\\right)",
+        "showLabel": true,
+        "label": "Clothes (C)",
+        "hidden": true,
+        "labelOrientation": "above",
+        "labelSize": "F_{ontSize}",
+        "labelAngle": "3\\frac{\\pi}{2}-\\alpha"
+      },
+      {
+        "type": "folder",
+        "id": "317",
+        "title": "Deleted",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "image",
+        "id": "177",
+        "folderId": "317",
+        "image_url": "data:image/png;base64,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",
+        "name": "table.PNG",
+        "foreground": true,
+        "disableGraphInteractions": true,
+        "center": "C_{10}",
+        "width": "2.482",
+        "height": "1.584"
+      },
+      {
+        "type": "expression",
+        "id": "182",
+        "folderId": "317",
+        "color": "#000000",
+        "latex": "\\left(6.83,-3.42\\right)",
+        "showLabel": true,
+        "label": "`${p_F}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelSize": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "176",
+        "folderId": "317",
+        "color": "#000000",
+        "latex": "\\left(8.12,-3.43\\right)",
+        "showLabel": true,
+        "label": "`${p_C}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelSize": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "172",
+        "color": "#000000"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

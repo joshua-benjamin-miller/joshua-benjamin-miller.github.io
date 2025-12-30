@@ -1,0 +1,1167 @@
+{
+  "version": 11,
+  "randomSeed": "6e5fd18fa219e50df029614e5093cd84",
+  "graph": {
+    "viewport": {
+      "xmin": 3.943921961121767,
+      "ymin": 34.38323174243213,
+      "xmax": 11.140280242272834,
+      "ymax": 49.815825509269814
+    },
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "3.943921961121767",
+      "xmax": "11.140280242272834",
+      "ymin": "34.38323174243213",
+      "ymax": "49.815825509269814"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "330",
+        "text": "This graph illustrates the income and substitution effects for quasilinear utility.  The transfer that IE/SE is based on needs to be adjusted manually, but the utility compensating transfer (compensating variation) can be toggled on/off."
+      },
+      {
+        "type": "text",
+        "id": "687",
+        "text": "note: careful the axis IE, SE is based on the income adjustment with Compensation parameter that affects (7), so won't be correct unless correctly adjusted {future: make it fixed}"
+      },
+      {
+        "type": "text",
+        "id": "329",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "233",
+        "title": "1. Original Budget Line"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "233",
+        "color": "#c74440",
+        "latex": "p_{1}=9",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "50",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "233",
+        "color": "#388c46",
+        "latex": "p_{2}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "50",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "233",
+        "color": "#2d70b3",
+        "latex": "I=117",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "50",
+          "max": "200"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "233",
+        "color": "#000000",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "362",
+        "title": "2. Taxes and transfers"
+      },
+      {
+        "type": "text",
+        "id": "683",
+        "folderId": "362",
+        "text": "good 1 unit tax (or change in price)"
+      },
+      {
+        "type": "expression",
+        "id": "684",
+        "folderId": "362",
+        "color": "#6042a6",
+        "latex": "t_{1}=4.4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-.7p_{1}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "276",
+        "folderId": "362",
+        "text": "good 2 unit tax (or change in price)"
+      },
+      {
+        "type": "expression",
+        "id": "685",
+        "folderId": "362",
+        "color": "#000000",
+        "latex": "t_{2}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-.7p_{2}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "278",
+        "folderId": "362",
+        "text": "Compensation (i.e. transfer) for the price change/tax"
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "362",
+        "color": "#000000",
+        "latex": "C_{ompensation}=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-40",
+          "max": "40"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "362",
+        "color": "#000000",
+        "latex": "S=C_{ompensation}"
+      },
+      {
+        "type": "folder",
+        "id": "232",
+        "title": "3. Def: Utility, Demand, compensated demand (edit these)"
+      },
+      {
+        "type": "text",
+        "id": "666",
+        "folderId": "232",
+        "text": "utility"
+      },
+      {
+        "type": "expression",
+        "id": "226",
+        "folderId": "232",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)=x+\\sqrt{y}"
+      },
+      {
+        "type": "text",
+        "id": "663",
+        "folderId": "232",
+        "text": "Demand functions (note: depends on utility)"
+      },
+      {
+        "type": "expression",
+        "id": "241",
+        "folderId": "232",
+        "color": "#000000",
+        "latex": "X\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}}-\\frac{P_{1}}{4P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "243",
+        "folderId": "232",
+        "color": "#2d70b3",
+        "latex": "Y\\left(P_{1},P_{2},M\\right)=\\left(\\frac{P_{1}}{2P_{2}}\\right)^{2}"
+      },
+      {
+        "type": "text",
+        "id": "669",
+        "folderId": "232",
+        "text": "Compensated optimal bundle at new prices P1, P2 and utility uc (note: depends on utility; use MRS tangency condition along with utility level condition)"
+      },
+      {
+        "type": "expression",
+        "id": "670",
+        "folderId": "232",
+        "color": "#000000",
+        "latex": "X_{c}\\left(P_{1},P_{2},u_{c}\\right)=u_{c}-\\frac{P_{1}}{2P_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "671",
+        "folderId": "232",
+        "color": "#c74440",
+        "latex": "Y_{c}\\left(P_{1},P_{2},u_{c}\\right)=\\left(\\frac{P_{1}}{2P_{2}}\\right)^{2}"
+      },
+      {
+        "type": "folder",
+        "id": "667",
+        "title": "4. Moveable bundle, IC",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "229",
+        "folderId": "667",
+        "color": "#6042a6",
+        "latex": "x_{0}=13.26",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "40"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "230",
+        "folderId": "667",
+        "color": "#000000",
+        "latex": "y_{0}=37.8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "40"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "227",
+        "folderId": "667",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{0},y_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "667",
+        "color": "#2d70b3",
+        "latex": "u\\left(x_{0},y_{0}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "13",
+        "title": "5. Optimal without tax (with IC)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "13",
+        "color": "#6042a6",
+        "latex": "d_{x}=X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "13",
+        "color": "#6042a6",
+        "latex": "d_{y}=Y\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "text",
+        "id": "681",
+        "folderId": "13",
+        "text": "rounded versions for display purposes"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "13",
+        "color": "#6042a6",
+        "latex": "d_{xr}=\\frac{\\operatorname{round}\\left(100d_{x}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "d_{yr}=\\frac{\\operatorname{round}\\left(100d_{y}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "`\\left(x^*,y^*\\right)=(${d_{xr}},${d_{yr}})`",
+        "labelSize": ".8",
+        "pointSize": "9"
+      },
+      {
+        "type": "expression",
+        "id": "253",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{x},0\\right),\\left(d_{x},d_{y}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "254",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{y}\\right),\\left(d_{x},d_{y}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "u\\left(d_{x},d_{y}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "246",
+        "title": "6. Optimal with tax on good 2 (with IC)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "235",
+        "folderId": "246",
+        "text": "Budget line with tax on good 2"
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "246",
+        "color": "#fa7e19",
+        "latex": "\\left(p_{1}+t_{1}\\right)x+\\left(p_{2}+t_{2}\\right)y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "29",
+        "folderId": "246",
+        "color": "#6042a6",
+        "latex": "d_{xt}=X\\left(p_{1}+t_{1},p_{2}+t_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "246",
+        "color": "#6042a6",
+        "latex": "d_{yt}=Y\\left(p_{1}+t_{1},p_{2}+t_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "246",
+        "color": "#fa7e19",
+        "latex": "\\left(d_{xt},d_{yt}\\right)",
+        "showLabel": true,
+        "label": "`\\left(x_t^*,y_t^*\\right)=(${d_{xtr}},${d_{ytr}})`",
+        "labelSize": ".8"
+      },
+      {
+        "type": "expression",
+        "id": "251",
+        "folderId": "246",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{xt},0\\right),\\left(d_{xt},d_{yt}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "252",
+        "folderId": "246",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{yt}\\right),\\left(d_{xt},d_{yt}\\right)\\right)",
+        "lines": true,
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "246",
+        "color": "#fa7e19",
+        "latex": "u\\left(d_{xt},d_{yt}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "text",
+        "id": "679",
+        "folderId": "246",
+        "text": "rounded versions for display purposes"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "246",
+        "color": "#c74440",
+        "latex": "d_{xtr}=\\frac{\\operatorname{round}\\left(100d_{xt}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "246",
+        "color": "#2d70b3",
+        "latex": "d_{ytr}=\\frac{\\operatorname{round}\\left(100d_{yt}\\right)}{100}"
+      },
+      {
+        "type": "folder",
+        "id": "240",
+        "title": "7. Optimal with tax on good 2 and **adjustable** transfer (with IC). Note: SE, IE are based on this, so need to adjust appropriately.",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "239",
+        "folderId": "240",
+        "text": "budget line with tax and transfer"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "240",
+        "color": "#fa7e19",
+        "latex": "\\left(p_{1}+t_{1}\\right)x+\\left(p_{2}+t_{2}\\right)y=\\left(I+S\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "242",
+        "folderId": "240",
+        "color": "#c74440",
+        "latex": "d_{xts}=X\\left(p_{1}+t_{1},p_{2}+t_{2},I+S\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "244",
+        "folderId": "240",
+        "color": "#388c46",
+        "latex": "d_{yts}=Y\\left(p_{1}+t_{1},p_{2}+t_{2},I+S\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "240",
+        "color": "#fa7e19",
+        "latex": "\\left(d_{xts},d_{yts}\\right)",
+        "showLabel": true,
+        "label": "`\\left(x_{tS}^*,y_{tS}^*\\right)=(${d_{xtsr}},${d_{ytsr}})`",
+        "labelSize": ".8"
+      },
+      {
+        "type": "expression",
+        "id": "249",
+        "folderId": "240",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(d_{xts},0\\right),\\left(d_{xts},d_{yts}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "250",
+        "folderId": "240",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,d_{yts}\\right),\\left(d_{xts},d_{yts}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".7",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "240",
+        "color": "#fa7e19",
+        "latex": "u\\left(d_{xts},d_{yts}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)",
+        "lineStyle": "DASHED",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "text",
+        "id": "677",
+        "folderId": "240",
+        "text": "rounded versions for display purposes"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "240",
+        "color": "#388c46",
+        "latex": "d_{xtsr}=\\frac{\\operatorname{round}\\left(100d_{xts}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "240",
+        "color": "#6042a6",
+        "latex": "d_{ytsr}=\\frac{\\operatorname{round}\\left(100d_{yts}\\right)}{100}"
+      },
+      {
+        "type": "folder",
+        "id": "307",
+        "title": "8. Total Effect",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "267",
+        "folderId": "307",
+        "text": "total effect on X"
+      },
+      {
+        "type": "expression",
+        "id": "268",
+        "folderId": "307",
+        "color": "#000000",
+        "latex": "T_{Ex}=d_{xt}-d_{x}"
+      },
+      {
+        "type": "expression",
+        "id": "255",
+        "folderId": "307",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(d_{x},X_{Location}+2X_{Offset}\\right),\\left(d_{xt},X_{Location}+2X_{Offset}\\right)\\right)\\left\\{T_{Ex}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "258",
+        "folderId": "307",
+        "color": "#388c46",
+        "latex": "\\left(\\max\\left(d_{x},d_{xt}\\right),X_{Location}+2X_{Offset}\\right)\\left\\{T_{Ex}>0\\right\\}",
+        "showLabel": true,
+        "label": "total effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "273",
+        "folderId": "307",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(d_{x},X_{Location}+2X_{Offset}\\right),\\left(d_{xt},X_{Location}+2X_{Offset}\\right)\\right)\\left\\{T_{Ex}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "274",
+        "folderId": "307",
+        "color": "#c74440",
+        "latex": "\\left(\\max\\left(d_{x},d_{xt}\\right),X_{Location}+2X_{Offset}\\right)\\left\\{T_{Ex}<0\\right\\}",
+        "showLabel": true,
+        "label": "total effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "292",
+        "folderId": "307",
+        "text": "total effect on Y"
+      },
+      {
+        "type": "expression",
+        "id": "293",
+        "folderId": "307",
+        "color": "#000000",
+        "latex": "T_{Ey}=d_{yt}-d_{y}"
+      },
+      {
+        "type": "expression",
+        "id": "294",
+        "folderId": "307",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(Y_{Location}+2Y_{Offset},d_{y}\\right),\\left(Y_{Location}+2Y_{Offset},d_{yt}\\right)\\right)\\left\\{T_{Ey}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "295",
+        "folderId": "307",
+        "color": "#388c46",
+        "latex": "\\left(Y_{Location}+2Y_{Offset},\\max\\left(d_{y},d_{yt}\\right)\\right)\\left\\{T_{Ey}>0\\right\\}",
+        "showLabel": true,
+        "label": "TE",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "296",
+        "folderId": "307",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(Y_{Location}+2Y_{Offset},d_{y}\\right),\\left(Y_{Location}+2Y_{Offset},d_{yt}\\right)\\right)\\left\\{T_{Ey}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "297",
+        "folderId": "307",
+        "color": "#c74440",
+        "latex": "\\left(Y_{Location}+2Y_{Offset},\\max\\left(d_{y},d_{yt}\\right)\\right)\\left\\{T_{Ey}<0\\right\\}",
+        "showLabel": true,
+        "label": "TE",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "folder",
+        "id": "306",
+        "title": "9. Substitution Effect (adjustable from 7)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "261",
+        "folderId": "306",
+        "text": "Substitution Effect X"
+      },
+      {
+        "type": "expression",
+        "id": "262",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "S_{Ex}=d_{xts}-d_{x}"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(d_{x},X_{Location}\\right),\\left(d_{xts},X_{Location}\\right)\\right)\\left\\{S_{Ex}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "256",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\left(\\max\\left(d_{x},d_{xts}\\right),X_{Location}\\right)\\left\\{S_{Ex}<0\\right\\}",
+        "showLabel": true,
+        "label": "substitution effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "269",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(d_{x},X_{Location}\\right),\\left(d_{xts},X_{Location}\\right)\\right)\\left\\{S_{Ex}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "270",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "\\left(\\max\\left(d_{x},d_{xts}\\right),X_{Location}\\right)\\left\\{S_{Ex}>0\\right\\}",
+        "showLabel": true,
+        "label": "substitution effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "280",
+        "folderId": "306",
+        "text": "Substitution Efffect"
+      },
+      {
+        "type": "expression",
+        "id": "281",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "S_{Ey}=d_{yts}-d_{y}"
+      },
+      {
+        "type": "expression",
+        "id": "282",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(Y_{Location},d_{y}\\right),\\left(Y_{Location},d_{yts}\\right)\\right)\\left\\{S_{Ey}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "283",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\left(Y_{Location},\\max\\left(d_{y},d_{yts}\\right)\\right)\\left\\{S_{Ey}<0\\right\\}",
+        "showLabel": true,
+        "label": "SE",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "284",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(Y_{Location},d_{y}\\right),\\left(Y_{Location},d_{yts}\\right)\\right)\\left\\{S_{Ey}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "285",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "\\left(Y_{Location},\\max\\left(d_{y},d_{yts}\\right)\\right)\\left\\{S_{Ey}>0\\right\\}",
+        "showLabel": true,
+        "label": "SE",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "folder",
+        "id": "259",
+        "title": "10. Income Effect (adjustable from 7)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "264",
+        "folderId": "259",
+        "text": "income effect X"
+      },
+      {
+        "type": "expression",
+        "id": "265",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "I_{Ex}=d_{xt}-d_{xts}"
+      },
+      {
+        "type": "expression",
+        "id": "35",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(d_{xts},X_{Location}+X_{Offset}\\right),\\left(d_{xt},X_{Location}+X_{Offset}\\right)\\right)\\left\\{I_{Ex}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "257",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "\\left(\\max\\left(d_{xt},d_{xts}\\right),X_{Location}+X_{Offset}\\right)\\left\\{I_{Ex}>0\\right\\}",
+        "showLabel": true,
+        "label": "income effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "271",
+        "folderId": "259",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(d_{xts},X_{Location}+X_{Offset}\\right),\\left(d_{xt},X_{Location}+X_{Offset}\\right)\\right)\\left\\{I_{Ex}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "272",
+        "folderId": "259",
+        "color": "#c74440",
+        "latex": "\\left(\\max\\left(d_{xt},d_{xts}\\right),X_{Location}+X_{Offset}\\right)\\left\\{I_{Ex}<0\\right\\}",
+        "showLabel": true,
+        "label": "income effect",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "286",
+        "folderId": "259",
+        "text": "income effect Y"
+      },
+      {
+        "type": "expression",
+        "id": "287",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "I_{Ey}=d_{yt}-d_{yts}"
+      },
+      {
+        "type": "expression",
+        "id": "288",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "V_{ector}\\left(\\left(Y_{Location}+Y_{Offset},d_{yts}\\right),\\left(Y_{Location}+Y_{Offset},d_{yt}\\right)\\right)\\left\\{I_{Ey}>0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "289",
+        "folderId": "259",
+        "color": "#388c46",
+        "latex": "\\left(Y_{Location}+Y_{Offset},\\max\\left(d_{yt},d_{yts}\\right)\\right)\\left\\{I_{Ey}>0\\right\\}",
+        "showLabel": true,
+        "label": "IE",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "290",
+        "folderId": "259",
+        "color": "#c74440",
+        "latex": "V_{ector}\\left(\\left(Y_{Location}+Y_{Offset},d_{yts}\\right),\\left(Y_{Location}+Y_{Offset},d_{yt}\\right)\\right)\\left\\{I_{Ey}<0\\right\\}",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "expression",
+        "id": "291",
+        "folderId": "259",
+        "color": "#c74440",
+        "latex": "\\left(Y_{Location}+Y_{Offset},\\max\\left(d_{yt},d_{yts}\\right)\\right)\\left\\{I_{Ey}<0\\right\\}",
+        "showLabel": true,
+        "label": "IE",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "351",
+        "title": "11. Optimal with tax on good 2 with (utility) compensating variation (with IC)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "672",
+        "folderId": "351",
+        "color": "#2d70b3",
+        "latex": "x_{c}=X_{c}\\left(p_{1}+t_{1},p_{2}+t_{2},u\\left(d_{x},d_{y}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "673",
+        "folderId": "351",
+        "color": "#388c46",
+        "latex": "y_{c}=Y_{c}\\left(p_{1}+t_{1},p_{2}+t_{2},u\\left(d_{x},d_{y}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "354",
+        "folderId": "351",
+        "color": "#2d70b3",
+        "latex": "S_{c}=\\left(p_{1}+t_{1}\\right)x_{c}+\\left(p_{2}+t_{2}\\right)y_{c}-I"
+      },
+      {
+        "type": "text",
+        "id": "356",
+        "folderId": "351",
+        "text": "Budget Line with compensating variation"
+      },
+      {
+        "type": "expression",
+        "id": "357",
+        "folderId": "351",
+        "color": "#6042a6",
+        "latex": "\\left(p_{1}+t_{1}\\right)x+\\left(p_{2}+t_{2}\\right)y=\\left(I+S_{c}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "358",
+        "folderId": "351",
+        "color": "#6042a6",
+        "latex": "u\\left(x_{c},y_{c}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)",
+        "lineStyle": "DASHED",
+        "lineOpacity": ".7"
+      },
+      {
+        "type": "text",
+        "id": "675",
+        "folderId": "351",
+        "text": "rounded versions for display purposes"
+      },
+      {
+        "type": "expression",
+        "id": "360",
+        "folderId": "351",
+        "color": "#2d70b3",
+        "latex": "x_{cr}=\\frac{\\operatorname{round}\\left(100x_{c}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "361",
+        "folderId": "351",
+        "color": "#388c46",
+        "latex": "y_{cr}=\\frac{\\operatorname{round}\\left(100y_{c}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "359",
+        "folderId": "351",
+        "color": "#6042a6",
+        "latex": "\\left(x_{c},y_{c}\\right)",
+        "showLabel": true,
+        "label": "`\\left(x_c,y_{c}\\right)=(${x_{cr}},${y_{cr}})`"
+      },
+      {
+        "type": "folder",
+        "id": "643",
+        "title": "12. SE (rotation on IC),IE (shift),TE (rotation on axis) with arrows "
+      },
+      {
+        "type": "text",
+        "id": "635",
+        "folderId": "643",
+        "text": "income & substitution effects"
+      },
+      {
+        "type": "expression",
+        "id": "636",
+        "folderId": "643",
+        "color": "#fa7e19",
+        "latex": "V_{ector}\\left(\\left(d_{x},d_{y}\\right),\\left(d_{xt},d_{yt}\\right)\\right)",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "lineWidth": "7"
+      },
+      {
+        "type": "expression",
+        "id": "637",
+        "folderId": "643",
+        "color": "#fa7e19",
+        "latex": ".5\\left(d_{x},d_{y}\\right)+.5\\left(d_{xt},d_{yt}\\right)",
+        "showLabel": true,
+        "label": "TE",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "638",
+        "folderId": "643",
+        "color": "#6042a6",
+        "latex": "V_{ector}\\left(\\left(d_{x},d_{y}\\right),\\left(x_{c},y_{c}\\right)\\right)",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "lineWidth": "6"
+      },
+      {
+        "type": "expression",
+        "id": "641",
+        "folderId": "643",
+        "color": "#6042a6",
+        "latex": ".5\\left(d_{x},d_{y}\\right)+.5\\left(x_{c},y_{c}\\right)",
+        "showLabel": true,
+        "label": "SE",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "640",
+        "folderId": "643",
+        "color": "#2d70b3",
+        "latex": "V_{ector}\\left(\\left(x_{c},y_{c}\\right),\\left(d_{xt},d_{yt}\\right)\\right)",
+        "points": false,
+        "lines": true,
+        "dragMode": "NONE",
+        "lineOpacity": ".5",
+        "lineWidth": "7"
+      },
+      {
+        "type": "expression",
+        "id": "639",
+        "folderId": "643",
+        "color": "#2d70b3",
+        "latex": ".5\\left(x_{c},y_{c}\\right)+.5\\left(d_{xt},d_{yt}\\right)",
+        "showLabel": true,
+        "label": "IE",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "298",
+        "title": "Display Parameters",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "299",
+        "folderId": "298",
+        "color": "#c74440",
+        "latex": "X_{Location}=-1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-4",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "300",
+        "folderId": "298",
+        "color": "#2d70b3",
+        "latex": "X_{Offset}=-2",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-4",
+          "max": "-1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "303",
+        "folderId": "298",
+        "color": "#c74440",
+        "latex": "Y_{Location}=-1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-4",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "305",
+        "folderId": "298",
+        "color": "#2d70b3",
+        "latex": "Y_{Offset}=-1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-4",
+          "max": "-1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "309",
+        "title": "Helper Functions (Vectors)",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "332",
+        "folderId": "309",
+        "text": "note: When the Vector function creates a list of ordered pairs the define the vertices of an arrow. When it is applied to two points the Desmos settings for that vector need to have \"points\" off and \"lines\" on"
+      },
+      {
+        "type": "expression",
+        "id": "311",
+        "folderId": "309",
+        "color": "#c74440",
+        "latex": "f_{V}\\left(w,v,c,n\\right)=\\left\\{c=1:\\left\\{n=1:w.x,v.x\\right\\},\\left\\{n=1:w.y,v.y\\right\\}\\right\\}-\\frac{\\left\\{\\left|n\\right|=1:0,\\left|n\\right|=2:1,\\frac{S_{tyle}\\left\\{c=1:v.x-w.x,v.y-w.y\\right\\}}{\\operatorname{distance}\\left(w,v\\right)}\\right\\}\\min\\left(L_{ength},\\operatorname{distance}\\left(w,v\\right)\\right)}{\\csc\\left(\\left\\{n=0:\\frac{\\pi}{2},\\arctan\\left(v.y-w.y,v.x-w.x\\right)+\\frac{\\pi c}{2}\\right\\}+\\left\\{n=2:-1,1\\right\\}W_{idth}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "312",
+        "folderId": "309",
+        "color": "#2d70b3",
+        "latex": "V_{ector}\\left(w,v\\right)=\\left(f_{V}\\left(w,v,1,\\left[1,0,-2,-1,2,0\\right]\\right),\\ f_{V}\\left(w,v,0,\\left[1,0,-2,-1,2,0\\right]\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "313",
+        "folderId": "309",
+        "color": "#388c46",
+        "latex": "\\ \\ \\ \\ \\ L_{ength}=0.52",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "314",
+        "folderId": "309",
+        "color": "#6042a6",
+        "latex": "W_{idth}=0.37",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\frac{\\pi}{4}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "315",
+        "folderId": "309",
+        "color": "#000000",
+        "latex": "\\ \\ \\ \\ \\ S_{tyle}=0.73",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

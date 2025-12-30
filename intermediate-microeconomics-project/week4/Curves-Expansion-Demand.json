@@ -1,0 +1,654 @@
+{
+  "version": 11,
+  "randomSeed": "0c56e08aaf514bb515c6574e72b0092f",
+  "graph": {
+    "viewport": {
+      "xmin": -32.34926226379207,
+      "ymin": -20.359720387059753,
+      "xmax": 281.8780334918696,
+      "ymax": 91.74503770870214
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "squareAxes": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-32.34926226379207",
+      "xmax": "281.8780334918696",
+      "ymin": "-20.359720387059753",
+      "ymax": "91.74503770870214"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "215",
+        "text": "This graph illustrates the consumer's optimal consumption problem, with indifference curves, demand functions, price-consumption & income-consumption curves, demand curves and engel curve. Useful for illustrating ICs, normal/inferior, ordinary demand behavior, gross substitution, etc."
+      },
+      {
+        "type": "text",
+        "id": "214",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "105",
+        "title": "1. Budget"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "105",
+        "color": "#000000",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "105",
+        "color": "#c74440",
+        "latex": "p_{1}=2.5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": ".5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "105",
+        "color": "#2d70b3",
+        "latex": "p_{2}=2",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "105",
+        "color": "#388c46",
+        "latex": "I=142",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "200",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "106",
+        "title": "2. Utility function, Movable Indifference Curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "106",
+        "color": "#2d70b3",
+        "latex": "u_{tility}\\left(x,y\\right)=x^{r}+y^{r}"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "folderId": "106",
+        "color": "#c74440",
+        "latex": "r=0.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "text",
+        "id": "130",
+        "folderId": "106",
+        "text": "Movable bundle"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "106",
+        "color": "#6042a6",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "dragMode": "XY"
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "106",
+        "color": "#c74440",
+        "latex": "x_{0}=24",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "60",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "106",
+        "color": "#2d70b3",
+        "latex": "y_{0}=5.86"
+      },
+      {
+        "type": "text",
+        "id": "132",
+        "folderId": "106",
+        "text": "Indifference curve @ movable bundle"
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "folderId": "106",
+        "color": "#6042a6",
+        "latex": "x^{r}+y^{r}=u_{tility}\\left(x_{0},y_{0}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "108",
+        "title": "3. Demand Functions, Calculating optimal bundle",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "134",
+        "folderId": "108",
+        "text": "Demand functions for each good "
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "108",
+        "color": "#6042a6",
+        "latex": "X\\left(P_{1},P_{2},M\\right)=\\frac{M}{P_{1}+P_{2}\\left(\\frac{P_{1}}{P_{2}}\\right)^{\\frac{1}{1-r}}}"
+      },
+      {
+        "type": "expression",
+        "id": "140",
+        "folderId": "108",
+        "color": "#2d70b3",
+        "latex": "Y\\left(P_{1},P_{2},M\\right)=\\frac{M}{\\left(\\frac{P_{2}}{P_{1}}\\right)^{\\frac{1}{1-r}}P_{1}+P_{2}}"
+      },
+      {
+        "type": "text",
+        "id": "144",
+        "folderId": "108",
+        "text": "The optimal consumption bundle at current prices and incomes"
+      },
+      {
+        "type": "expression",
+        "id": "138",
+        "folderId": "108",
+        "color": "#000000",
+        "latex": "d_{x}=X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "141",
+        "folderId": "108",
+        "color": "#388c46",
+        "latex": "d_{y}=Y\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "text",
+        "id": "225",
+        "folderId": "108",
+        "text": "round the values for display purposes below"
+      },
+      {
+        "type": "expression",
+        "id": "145",
+        "folderId": "108",
+        "color": "#c74440",
+        "latex": "d_{xr}=\\frac{\\operatorname{round}\\left(d_{x}\\cdot100\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "146",
+        "folderId": "108",
+        "color": "#2d70b3",
+        "latex": "d_{yr}=\\frac{\\operatorname{round}\\left(d_{y}\\cdot100\\right)}{100}"
+      },
+      {
+        "type": "folder",
+        "id": "223",
+        "title": "4. Optimal Indifference curve (and nearby)",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "223",
+        "color": "#c74440",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "Optimal Consumption`= (x^*,y^*) = (${d_xr},${d_yr})`",
+        "pointSize": "12",
+        "movablePointSize": "12"
+      },
+      {
+        "type": "text",
+        "id": "136",
+        "folderId": "223",
+        "text": "Indifference curves through the optimal bundle, and a few nearby indifference curves"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "223",
+        "color": "#c74440",
+        "latex": "x^{r}+y^{r}=u_{tility}\\left(d_{x},d_{y}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "223",
+        "color": "#c74440",
+        "latex": "x^{r}+y^{r}=\\left(u_{tility}\\left(d_{x},d_{y}\\right)+1\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "223",
+        "color": "#2d70b3",
+        "latex": "x^{r}+y^{r}=\\left(u_{tility}\\left(d_{x},d_{y}\\right)-1\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "109",
+        "title": "5a. p1-consumption curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "102",
+        "folderId": "109",
+        "text": "Price-consumption curve (Good 1)"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "109",
+        "color": "#388c46",
+        "latex": "\\left(X\\left(t,p_{2},I\\right),Y\\left(t,p_{2},I\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "1",
+          "max": "2000"
+        },
+        "domain": {
+          "min": "1",
+          "max": "2000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "112",
+        "folderId": "109",
+        "color": "#388c46",
+        "latex": "\\left(X\\left(1,p_{2},I\\right),Y\\left(1,p_{2},I\\right)\\right)",
+        "showLabel": true,
+        "label": "price (`p_1`) - consumption curve",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "folder",
+        "id": "236",
+        "title": "5b. p2-consumption curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "243",
+        "folderId": "236",
+        "text": "Price-consumption curve (Good 2)"
+      },
+      {
+        "type": "expression",
+        "id": "244",
+        "folderId": "236",
+        "color": "#fa7e19",
+        "latex": "\\left(X\\left(p_{1},t,I\\right),Y\\left(p_{1},t,I\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "",
+          "max": "2000"
+        },
+        "domain": {
+          "min": "0",
+          "max": "2000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "245",
+        "folderId": "236",
+        "color": "#fa7e19",
+        "latex": "\\left(X\\left(p_{1},4,I\\right),Y\\left(p_{1},4,I\\right)\\right)",
+        "showLabel": true,
+        "label": "price (`p_2`) - consumption curve",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "226",
+        "title": "5c. I-consumption curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "227",
+        "folderId": "226",
+        "text": "income-consumption curve (aka income expansion path and income offer curve)"
+      },
+      {
+        "type": "expression",
+        "id": "228",
+        "folderId": "226",
+        "color": "#2d70b3",
+        "latex": "\\left(X\\left(p_{1},p_{2},t\\right),Y\\left(p_{1},p_{2},t\\right)\\right)",
+        "lines": true,
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "",
+          "max": "2000"
+        },
+        "domain": {
+          "min": "0",
+          "max": "2000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "229",
+        "folderId": "226",
+        "color": "#2d70b3",
+        "latex": "\\left(X\\left(p_{1},p_{2},200\\right),Y\\left(p_{1},p_{2},200\\right)\\right)",
+        "showLabel": true,
+        "label": "income-consumption curve",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "280",
+        "text": "Alchian–Allen Effect"
+      },
+      {
+        "type": "folder",
+        "id": "261",
+        "title": "6a. Budget w/ uniform unit tax",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "267",
+        "folderId": "261",
+        "color": "#c74440",
+        "latex": "t_{1}=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "262",
+        "folderId": "261",
+        "color": "#000000",
+        "latex": "\\left(p_{1}+t_{1}\\right)x+\\left(p_{2}+t_{1}\\right)y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "268",
+        "title": "6b. Optimal Indifference curve (and nearby)",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "274",
+        "folderId": "268",
+        "color": "#000000",
+        "latex": "d_{xt}=X\\left(p_{1}+t_{1},p_{2}+t_{1},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "275",
+        "folderId": "268",
+        "color": "#388c46",
+        "latex": "d_{yt}=Y\\left(p_{1}+t_{1},p_{2}+t_{1},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "276",
+        "folderId": "268",
+        "color": "#c74440",
+        "latex": "d_{xtr}=\\frac{\\operatorname{round}\\left(d_{xt}\\cdot100\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "277",
+        "folderId": "268",
+        "color": "#2d70b3",
+        "latex": "d_{ytr}=\\frac{\\operatorname{round}\\left(d_{yt}\\cdot100\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "269",
+        "folderId": "268",
+        "color": "#388c46",
+        "latex": "\\left(d_{xt},d_{yt}\\right)",
+        "showLabel": true,
+        "label": "Optimal Consumption`= (x_t^*,y_t^*) = (${d_xtr},${d_ytr})`;  Percent x = `${P_ercGood}`%, Percent Spent on x = ${P_ercSpentOnGood}%",
+        "pointSize": "12",
+        "movablePointSize": "12"
+      },
+      {
+        "type": "text",
+        "id": "270",
+        "folderId": "268",
+        "text": "Indifference curves through the optimal bundle, and a few nearby indifference curves"
+      },
+      {
+        "type": "expression",
+        "id": "271",
+        "folderId": "268",
+        "color": "#2d70b3",
+        "latex": "x^{r}+y^{r}=u_{tility}\\left(d_{xt},d_{yt}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "283",
+        "folderId": "268",
+        "color": "#000000",
+        "latex": "P_{ercGood}=\\operatorname{round}\\left(100\\cdot\\frac{d_{xt}}{d_{xt}+d_{yt}}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "284",
+        "folderId": "268",
+        "color": "#c74440",
+        "latex": "P_{ercSpentOnGood}=\\operatorname{round}\\left(100\\frac{\\left(p_{1}+t_{1}\\right)d_{xt}}{I}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "257",
+        "title": "6c. uniform-unit-tax-consumption curve "
+      },
+      {
+        "type": "text",
+        "id": "258",
+        "folderId": "257",
+        "text": "Price-consumption curve (Good 1)"
+      },
+      {
+        "type": "expression",
+        "id": "259",
+        "folderId": "257",
+        "color": "#388c46",
+        "latex": "\\left(X\\left(p_{1}+t,p_{2}+t,I\\right),Y\\left(p_{1}+t,p_{2}+t,I\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "parametricDomain": {
+          "min": "",
+          "max": "2000"
+        },
+        "domain": {
+          "min": "0",
+          "max": "2000"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "260",
+        "folderId": "257",
+        "color": "#388c46",
+        "latex": "\\left(X\\left(p_{1}+1,p_{2}+1,I\\right),Y\\left(p_{1}+1,p_{2}+1,I\\right)\\right)",
+        "showLabel": true,
+        "label": "uniform unit tax (`t`) - consumption curve",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "text",
+        "id": "282",
+        "text": "Demand Curves"
+      },
+      {
+        "type": "folder",
+        "id": "113",
+        "title": "Demand Good 1",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "114",
+        "folderId": "113",
+        "text": "Demand Good 1  (flipped, price on the horizontal axis)"
+      },
+      {
+        "type": "expression",
+        "id": "139",
+        "folderId": "113",
+        "color": "#c74440",
+        "latex": "D_{1}\\left(p\\right)=X\\left(p,p_{2},I\\right)\\left\\{p>0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "253",
+        "folderId": "113",
+        "text": "Inverse demand"
+      },
+      {
+        "type": "expression",
+        "id": "251",
+        "folderId": "113",
+        "color": "#c74440",
+        "latex": "x=D_{1}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "246",
+        "title": "Demand Good "
+      },
+      {
+        "type": "text",
+        "id": "249",
+        "folderId": "246",
+        "text": "Demand Good 2 (flipped, price on the horizontal axis)"
+      },
+      {
+        "type": "expression",
+        "id": "250",
+        "folderId": "246",
+        "color": "#6042a6",
+        "latex": "D_{2}\\left(p\\right)=Y\\left(p_{1},p,I\\right)\\left\\{p>0\\right\\}\\ ",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "256",
+        "folderId": "246",
+        "text": "inverse Demand"
+      },
+      {
+        "type": "expression",
+        "id": "254",
+        "folderId": "246",
+        "color": "#388c46",
+        "latex": "x=D_{2}\\left(y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "128",
+        "title": "Engel Curves",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "123",
+        "folderId": "128",
+        "text": "Engel curve Good 1 (flipped, income on horizontal axis)"
+      },
+      {
+        "type": "expression",
+        "id": "117",
+        "folderId": "128",
+        "color": "#388c46",
+        "latex": "D_{engel1}\\left(m\\right)\\ =\\ \\ X\\left(p_{1},p_{2},m\\right)\\left\\{m>0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "126",
+        "folderId": "128",
+        "text": "Engel curve Good 2 (flipped, income on horizontal axis)"
+      },
+      {
+        "type": "expression",
+        "id": "124",
+        "folderId": "128",
+        "color": "#2d70b3",
+        "latex": "D_{engel2}\\left(m\\right)=Y\\left(p_{1},p_{2},m\\right)\\left\\{m>0\\right\\}"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

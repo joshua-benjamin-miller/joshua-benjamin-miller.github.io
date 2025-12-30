@@ -1,0 +1,410 @@
+{
+  "version": 11,
+  "randomSeed": "56051543ed136492b333e8c3f7ad067f",
+  "graph": {
+    "viewport": {
+      "xmin": -34.01749762340659,
+      "ymin": 14.075093720629129,
+      "xmax": 69.21331104927157,
+      "ymax": 31.14475499721371
+    },
+    "showGrid": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-34.01749762340659",
+      "xmax": "69.21331104927157",
+      "ymin": "14.075093720629129",
+      "ymax": "31.14475499721371"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "67",
+        "title": "Budget Constraint",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "67",
+        "color": "#2d70b3",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "67",
+        "color": "#388c46",
+        "latex": "p_{1}=28",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".2",
+          "max": "500",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "folderId": "67",
+        "color": "#6042a6",
+        "latex": "p_{2}=40",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".2",
+          "max": "500",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "46",
+        "folderId": "67",
+        "color": "#000000",
+        "latex": "I=1200",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "3000",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "69",
+        "title": "Utility Function",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "69",
+        "color": "#388c46",
+        "latex": "r=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "-40",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "69",
+        "color": "#000000",
+        "latex": "a=16",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "69",
+        "color": "#c74440",
+        "latex": "b=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "75",
+        "folderId": "69",
+        "text": "CES utility approximates perfect compliments"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "69",
+        "color": "#2d70b3",
+        "latex": "u_{tility}\\left(x,y\\right)=\\left\\{\\left|r\\right|>0:\\left(\\left(ax\\right)^{r}+\\left(by\\right)^{r}\\right)^{\\frac{1}{r}}\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\},r=0:\\exp\\left(\\ln\\left(ax\\right)+\\ln\\left(by\\right)\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "105",
+        "folderId": "69",
+        "color": "#6042a6",
+        "latex": "C=\\left(\\frac{a}{b}\\right)^{\\frac{r}{r-1}}\\left(\\frac{p_{2}}{p_{1}}\\right)^{\\frac{1}{r-1}}"
+      },
+      {
+        "type": "folder",
+        "id": "84",
+        "title": "Optimal consumption and its indifference curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "86",
+        "folderId": "84",
+        "text": "Demand, i.e. optimal consumption"
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "84",
+        "color": "#2d70b3",
+        "latex": "A=\\left(\\frac{a}{b}\\right)^{\\frac{r}{r-1}}\\left(\\frac{p_{2}}{p_{1}}\\right)^{\\frac{1}{r-1}}"
+      },
+      {
+        "type": "expression",
+        "id": "103",
+        "folderId": "84",
+        "color": "#2d70b3",
+        "latex": "X\\left(P_{1},P_{2},I\\right)=\\left\\{r<1:\\frac{I}{P_{1}+CP_{2}},u_{tility}\\left(\\frac{I}{P_{1}},0\\right)>u_{tility}\\left(0,\\frac{I}{P_{2}}\\right):\\frac{I}{P_{1}},u_{tility}\\left(\\frac{I}{P_{1}},0\\right)<u_{tility}\\left(0,\\frac{I}{P_{2}}\\right):0,\\frac{I}{P_{1}}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "104",
+        "folderId": "84",
+        "color": "#388c46",
+        "latex": "Y\\left(P_{1},P_{2},M\\right)=\\left\\{r<1:CX\\left(P_{1},P_{2},I\\right),u_{tility}\\left(\\frac{I}{P_{1}},0\\right)>u_{tility}\\left(0,\\frac{I}{P_{2}}\\right):0,u_{tility}\\left(\\frac{I}{P_{1}},0\\right)<u_{tility}\\left(0,\\frac{I}{P_{2}}\\right):\\frac{I}{P_{2}},0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "84",
+        "color": "#6042a6",
+        "latex": "d_{x}=X\\left(p_{1},p_{2},I\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "56",
+        "folderId": "84",
+        "color": "#000000",
+        "latex": "d_{y}=Y\\left(p_{1},p_{2},I\\right)",
+        "showLabel": true,
+        "label": "optimal bundle "
+      },
+      {
+        "type": "expression",
+        "id": "107",
+        "folderId": "84",
+        "color": "#c74440",
+        "latex": "d_{xr}=\\operatorname{round}\\left(d_{x},2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "108",
+        "folderId": "84",
+        "color": "#2d70b3",
+        "latex": "d_{yr}=\\operatorname{round}\\left(d_{y},2\\right)"
+      },
+      {
+        "type": "text",
+        "id": "88",
+        "folderId": "84",
+        "text": "Utility level, and indifference curve at the optimal consumption"
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "84",
+        "color": "#388c46",
+        "latex": "u=u_{tility}\\left(d_{x},d_{y}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "84",
+        "color": "#388c46",
+        "latex": "u_{tility}\\left(d_{x},d_{y}\\right)\\le u_{tility}\\left(x,y\\right)",
+        "lineOpacity": "0.5"
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "folderId": "84",
+        "color": "#388c46",
+        "latex": "\\left(d_{x}+5,\\frac{\\left(u^{r}-\\left(a\\left(d_{x}+5\\right)\\right)^{r}\\right)^{\\frac{1}{r}}}{b}\\right)",
+        "showLabel": true,
+        "label": "CES uitlity IC",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "102",
+        "folderId": "84",
+        "color": "#c74440",
+        "latex": "\\left(d_{x},d_{y}\\right)\\left\\{\\left|u_{tility}\\left(\\frac{I}{p_{1}},0\\right)-u_{tility}\\left(0,\\frac{I}{p_{2}}\\right)\\right|>0\\right\\}\\left\\{r>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "106",
+        "folderId": "84",
+        "color": "#388c46",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "`(x^*,y^*)=(${d_xr},${d_yr})`"
+      },
+      {
+        "type": "folder",
+        "id": "94",
+        "title": "Income-consumption curve, price-consumption curve, it's all the same!",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "96",
+        "folderId": "94",
+        "color": "#000000",
+        "latex": "y=Ax\\left\\{x>0\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "folder",
+        "id": "81",
+        "title": "Demand curve, Engel curve for good y",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "82",
+        "folderId": "81",
+        "color": "#6042a6",
+        "latex": "D_{x}\\left(p\\right)=\\frac{I}{p+Ap_{2}}\\left\\{p>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "83",
+        "folderId": "81",
+        "color": "#000000",
+        "latex": "D_{Engel}\\left(m\\right)=\\frac{m}{p_{1}+Ap_{2}}\\left\\{m>0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "80",
+        "title": "Perfect compliments",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "folderId": "80",
+        "color": "#388c46",
+        "latex": "T_{ype}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "4",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "80",
+        "color": "#c74440",
+        "latex": "\\min\\left(ax,by\\right)=u\\left\\{T_{ype}=1,T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "80",
+        "color": "#c74440",
+        "latex": "\\left(\\frac{u}{a},\\frac{u}{b}\\right)\\left\\{T_{ype}=1,T_{ype}=4\\right\\}",
+        "showLabel": true,
+        "label": "perfect compliments IC (same utility level)",
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "80",
+        "color": "#2d70b3",
+        "latex": "\\min\\left(ax,by\\right)=\\min\\left(ad_{x},bd_{y}\\right)\\left\\{T_{ype}=2,T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "98",
+        "folderId": "80",
+        "color": "#2d70b3",
+        "latex": "\\left(d_{x},d_{y}+10\\right)\\left\\{T_{ype}=2,T_{ype}=4\\right\\}",
+        "showLabel": true,
+        "label": "perfect complements IC (the same bundle)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "folderId": "80",
+        "color": "#c74440",
+        "latex": "d_{xcomplements}=\\frac{I}{p_{1}+\\frac{a}{b}p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "90",
+        "folderId": "80",
+        "color": "#2d70b3",
+        "latex": "d_{ycomplements}=\\frac{a}{b}d_{xcomplements}"
+      },
+      {
+        "type": "expression",
+        "id": "91",
+        "folderId": "80",
+        "color": "#6042a6",
+        "latex": "\\left(d_{xcomplements}+20,d_{ycomplements}+3\\right)\\left\\{T_{ype}=3,T_{ype}=4\\right\\}",
+        "showLabel": true,
+        "label": "optimal bundle for perfect compliments",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "101",
+        "folderId": "80",
+        "color": "#6042a6",
+        "latex": "\\left(d_{xcomplements},d_{ycomplements}\\right)\\left\\{T_{ype}=3,T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "92",
+        "folderId": "80",
+        "color": "#6042a6",
+        "latex": "\\min\\left(ax,by\\right)=\\min\\left(ad_{xcomplements},bd_{ycomplements}\\right)\\left\\{T_{ype}=3,T_{ype}=4\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "93",
+        "color": "#000000"
+      },
+      {
+        "type": "expression",
+        "id": "95",
+        "color": "#c74440"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "color": "#c74440"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

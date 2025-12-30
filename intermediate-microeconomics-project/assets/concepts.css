@@ -1,0 +1,222 @@
+/* ================== Base Reset ================== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", Roboto, sans-serif;
+  background: #f7f7f7;
+  color: #111827;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.navbar {
+  width: 100%;
+  background: #111827; 
+  color:#fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro",
+    "Segoe UI", Roboto, sans-serif;
+}
+
+.nav-left {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-right: 32px;
+}
+
+.nav-left a { color: #fff; }
+.nav-right a { color: #fff; }
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+/* ================== Dropdown (single clean version) ================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.dropdown-btn {
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 12px 4px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:#111827;
+  color:#fff;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover { background: rgba(255,255,255,0.08);color:#fff }
+
+/* ================== Layout ================== */
+  .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+
+  .subtitle{
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 28px;   
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px 60px;
+}
+
+@media (max-width: 600px) {
+  .container { padding-inline: 14px; }
+}
+
+/* ================== Typography ================== */
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 6px;
+}
+
+
+/* ================== Cards Grid ================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.graph-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-height: 190px;
+}
+
+/* ================== Image: fixed frame, full cover, centered crop ================== */
+.graph-thumb {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.graph-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================== Card Content ================== */
+.graph-content {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.graph-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.graph-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.graph-desc {
+  font-size: 0.88rem;
+  margin: 0;
+  color: #4b5563;
+  flex: 1;
+}
+
+/* ================== Buttons ================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.05s ease,
+    box-shadow 0.1s ease;
+}
+
+.btn-primary {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.btn-primary:hover {
+  background: #020617;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.35);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+    .intro-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      margin-bottom: 26px;
+      font-size: 0.95rem;
+    }
+
+    .intro-box h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }

@@ -1,0 +1,834 @@
+{
+  "version": 11,
+  "randomSeed": "f52c9ec13a010b96434e46eda2dc27b7",
+  "graph": {
+    "viewport": {
+      "xmin": -19.33137400938498,
+      "ymin": -27.72222843287632,
+      "xmax": 33.42719593794736,
+      "ymax": -8.254465157819013
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "xAxisLabel": "Quantity",
+    "yAxisLabel": "Price",
+    "__v12ViewportLatexStash": {
+      "xmin": "-19.33137400938498",
+      "xmax": "33.42719593794736",
+      "ymin": "-27.72222843287632",
+      "ymax": "-8.254465157819013"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "4",
+        "title": "Market axis: Demand, costs and revenue definitions",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "215",
+        "folderId": "4",
+        "text": "Define market Demand function"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "4",
+        "color": "#6042a6",
+        "latex": "C_{onstD}=14.3",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "A_{len}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "4",
+        "color": "#c74440",
+        "latex": "S_{lopeD}=0.8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.1",
+          "max": "3",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "4",
+        "color": "#000000",
+        "latex": "P_{D}\\left(Q\\right)=C_{onstD}-S_{lopeD}Q\\left\\{0\\le Q\\right\\}\\left\\{Q\\le\\frac{C_{onstD}}{S_{lopeD}}\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "147",
+        "folderId": "4",
+        "color": "#2d70b3",
+        "latex": "Q_{D}\\left(P\\right)\\ =\\left\\{P\\ge C_{onstD}:0,P>0:\\frac{C_{onstD}}{S_{lopeD}}-\\frac{1}{S_{lopeD}}P\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "152",
+        "folderId": "4",
+        "text": "graphing the inverse"
+      },
+      {
+        "type": "expression",
+        "id": "148",
+        "folderId": "4",
+        "color": "#2d70b3",
+        "latex": "x-x_{Market}=Q_{D}\\left(y-y_{Market}\\right)\\left\\{0\\le y-y_{Market}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "220",
+        "folderId": "4",
+        "text": "Define market Supply function"
+      },
+      {
+        "type": "expression",
+        "id": "800",
+        "folderId": "4",
+        "color": "#c74440",
+        "latex": "C_{onstS}=5.3",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "801",
+        "folderId": "4",
+        "color": "#2d70b3",
+        "latex": "S_{lopeS}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "3",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "4",
+        "color": "#c74440",
+        "latex": "P_{S}\\left(Q\\right)=C_{onstS}+S_{lopeS}Q",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "799",
+        "folderId": "4",
+        "color": "#c74440",
+        "latex": "y-y_{Market}=P_{S}\\left(x-x_{Market}\\right)\\left\\{0\\le y-y_{Market}\\le A_{len}\\right\\}\\left\\{0\\le x-x_{Market}\\le A_{len}\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "972",
+        "title": "Market axis: Equilibrium price and quantity",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "973",
+        "folderId": "972",
+        "color": "#388c46",
+        "latex": "Q_{eq}=\\frac{C_{onstD}-C_{onstS}}{S_{lopeS}+S_{lopeD}}"
+      },
+      {
+        "type": "expression",
+        "id": "974",
+        "folderId": "972",
+        "color": "#6042a6",
+        "latex": "P_{eq}=P_{S}\\left(Q_{eq}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "978",
+        "folderId": "972",
+        "color": "#388c46",
+        "latex": "Q_{eqr}=R_{ound2}\\left(Q_{eq}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "979",
+        "folderId": "972",
+        "color": "#6042a6",
+        "latex": "P_{eqr}=R_{ound2}\\left(P_{eq}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "975",
+        "folderId": "972",
+        "color": "#000000",
+        "latex": "y=P_{eq}+y_{Market}\\left\\{0\\le x-x_{Market}\\le\\min\\left(Q_{eq},A_{len}\\right)\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "976",
+        "folderId": "972",
+        "color": "#000000",
+        "latex": "x=Q_{eq}+x_{Market}\\left\\{0\\le y-y_{Market}\\le\\min\\left(P_{eq},A_{len}\\right)\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "977",
+        "folderId": "972",
+        "color": "#000000",
+        "latex": "\\left(x_{Market},P_{eq}+y_{Market}\\right)",
+        "showLabel": true,
+        "label": "`P_{eq}=${P_eqr}`",
+        "hidden": true,
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "980",
+        "folderId": "972",
+        "color": "#000000",
+        "latex": "\\left(x_{Market}+Q_{eq},y_{Market}\\right)",
+        "showLabel": true,
+        "label": "`Q_{eq}=${Q_eqr}`",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "806",
+        "title": "Firm axis: Costs and revenue definitions",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "815",
+        "folderId": "806",
+        "text": "Costs are defined as sum of fixed and variable costs:"
+      },
+      {
+        "type": "expression",
+        "id": "816",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "F_{C}=4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "817",
+        "folderId": "806",
+        "color": "#388c46",
+        "latex": "b=1.5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "818",
+        "folderId": "806",
+        "color": "#6042a6",
+        "latex": "c=0.5",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "819",
+        "folderId": "806",
+        "color": "#000000",
+        "latex": "d=0",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "820",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "V_{C}\\left(Q\\right)=bQ+cQ^{2}+dQ^{3}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "821",
+        "folderId": "806",
+        "color": "#000000",
+        "latex": "C\\left(Q\\right)=F_{C}+V_{C}\\left(Q\\right)\\left\\{0\\le Q\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "822",
+        "folderId": "806",
+        "text": "Define other functions: MC, Revenue, MR and Profit"
+      },
+      {
+        "type": "expression",
+        "id": "823",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "M_{C}\\left(Q\\right)=C'\\left(Q\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "970",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "y-y_{QP}=M_{C}\\left(x-x_{QP}\\right)\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{0\\le y-y_{QP}\\le Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP}+q_{label},\\ y_{QP}+M_{C}\\left(q_{label}\\right)\\right)",
+        "showLabel": true,
+        "label": "MC",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "981",
+        "folderId": "806",
+        "color": "#c74440",
+        "latex": "R\\left(Q\\right)=P_{eq}Q",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "825",
+        "folderId": "806",
+        "color": "#000000",
+        "latex": "M_{R}\\left(Q\\right)=R'\\left(Q\\right)\\left\\{R'\\left(Q\\right)\\ge0\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "982",
+        "folderId": "806",
+        "color": "#000000",
+        "latex": "y-y_{QP}=M_{R}\\left(x-x_{QP}\\right)\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{0\\le y-y_{QP}\\le Q_{Plen}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "984",
+        "folderId": "806",
+        "color": "#000000",
+        "latex": "\\left(Q_{Plen},P_{eq}\\right)+\\left(x_{QP},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "MR",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "826",
+        "folderId": "806",
+        "color": "#388c46",
+        "latex": "P_{rofit}\\left(Q\\right)=R\\left(Q\\right)-C\\left(Q\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "806",
+        "color": "#2d70b3",
+        "latex": "A_{TC}\\left(Q\\right)=\\frac{C\\left(Q\\right)}{Q}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "983",
+        "folderId": "806",
+        "color": "#388c46",
+        "latex": "y-y_{QP}=A_{TC}\\left(x-x_{QP}\\right)\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{0\\le y-y_{QP}\\le Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "806",
+        "color": "#388c46",
+        "latex": "\\left(q_{label},\\ A_{TC}\\left(q_{label}\\right)\\right)+\\left(x_{QP},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "ATC",
+        "hidden": true,
+        "dragMode": "NONE"
+      },
+      {
+        "type": "folder",
+        "id": "24",
+        "title": "Firm axis: Profit maximization",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "224",
+        "folderId": "24",
+        "text": "Move quantity along the axis to estimate profit."
+      },
+      {
+        "type": "expression",
+        "id": "26",
+        "folderId": "24",
+        "color": "#c74440",
+        "latex": "Q_{1}=8.8",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "Q_{Plen}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "226",
+        "folderId": "24",
+        "text": "Rounded values for display:"
+      },
+      {
+        "type": "expression",
+        "id": "140",
+        "folderId": "24",
+        "color": "#2d70b3",
+        "latex": "P_{1}=P_{eq}"
+      },
+      {
+        "type": "expression",
+        "id": "142",
+        "folderId": "24",
+        "color": "#6042a6",
+        "latex": "A_{C1}=R_{ound2}\\left(A_{TC}\\left(Q_{1}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "24",
+        "color": "#c74440",
+        "latex": "P_{r}=R_{ound2}\\left(P_{rofit}\\left(Q_{1}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "29",
+        "folderId": "24",
+        "color": "#000000",
+        "latex": "\\left(0,\\ A_{TC}\\left(Q_{1}\\right)\\right)+\\left(x_{QP},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "`ATC(q_1)=${A_C1}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "144",
+        "folderId": "24",
+        "color": "#000000",
+        "latex": "\\left(0,\\ P_{eq}\\right)+\\left(x_{QP},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "`AR(q_1)=P_1=${P_1}`",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "228",
+        "folderId": "24",
+        "text": "Draggable quantity:"
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "24",
+        "color": "#000000",
+        "latex": "\\left(Q_{1}+a_{QP},b_{QP}\\right)",
+        "showLabel": true,
+        "label": "`q_1=${Q_1}`",
+        "dragMode": "X",
+        "labelOrientation": "below",
+        "pointOpacity": "1"
+      },
+      {
+        "type": "text",
+        "id": "230",
+        "folderId": "24",
+        "text": "Profit box, turns green when profit is positive and red when profit is negative"
+      },
+      {
+        "type": "expression",
+        "id": "132",
+        "folderId": "24",
+        "color": "#000000",
+        "latex": "\\pi_{box}=\\left[\\left(0,A_{TC}\\left(Q_{1}\\right)\\right),\\left(0,P_{eq}\\right),\\left(Q_{1},P_{eq}\\right),\\left(Q_{1},A_{TC}\\left(Q_{1}\\right)\\right)\\right]+\\left(x_{QP},y_{QP}\\right)",
+        "hidden": true,
+        "pointSize": "1"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "24",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{box}\\left\\{P_{r}\\ge0\\right\\}\\right)",
+        "lineStyle": "DOTTED",
+        "fillOpacity": "0.2",
+        "lineOpacity": "0.5"
+      },
+      {
+        "type": "expression",
+        "id": "131",
+        "folderId": "24",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{box}\\left\\{P_{r}<0\\right\\}\\right)",
+        "lineStyle": "DOTTED",
+        "fillOpacity": "0.2",
+        "lineOpacity": "0.5"
+      },
+      {
+        "type": "expression",
+        "id": "28",
+        "folderId": "24",
+        "color": "#000000",
+        "latex": "\\left(\\frac{Q_{1}}{2},\\ \\frac{A_{TC}\\left(Q_{1}\\right)+P_{eq}}{2}\\right)+\\left(x_{QP},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "Profit `\\pi\\approx ${P_r}`",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "232",
+        "folderId": "24",
+        "text": "Display messages below for optimal quantity or cases when there is no production"
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "24",
+        "color": "#6042a6",
+        "latex": "\\left(Q_{1},\\ P_{eq}\\right)+\\left(x_{QP},y_{QP}\\right)\\left\\{M_{C}\\left(Q_{1}\\right)=M_{R}\\left(Q_{1}\\right)\\right\\}",
+        "showLabel": true,
+        "label": "**OPTIMAL**",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "24",
+        "color": "#c74440",
+        "latex": "\\left(Q_{1},\\ P_{eq}\\right)+\\left(x_{QP},y_{QP}\\right)\\left\\{A_{TC}\\left(Q_{1}\\right)>P_{eq}\\right\\}",
+        "showLabel": true,
+        "label": "``NO PRODUCTION - P<ATC and negative profit",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "folder",
+        "id": "16",
+        "title": "Labels + misc",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "267",
+        "folderId": "16",
+        "text": "Labels for MC and MR:"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "16",
+        "color": "#388c46",
+        "latex": "q_{label}=12",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "158",
+        "folderId": "16",
+        "color": "#6042a6",
+        "latex": "d_{label}=0.9",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": ".05"
+        }
+      },
+      {
+        "type": "text",
+        "id": "269",
+        "folderId": "16",
+        "text": "Helper functions:"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "16",
+        "color": "#6042a6",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "211",
+        "folderId": "16",
+        "color": "#2d70b3",
+        "latex": "A_{rea}\\left(P_{oly}\\right)=\\left|\\sum_{n=1}^{\\operatorname{length}\\left(P_{oly}\\right)}\\frac{\\left(\\left(P_{oly}\\left[n\\right].x\\cdot P_{oly}\\left[\\operatorname{mod}\\left(n,\\operatorname{length}\\left(P_{oly}\\right)\\right)+1\\right].y-P_{oly}\\left[n\\right].y\\cdot P_{oly}\\left[\\operatorname{mod}\\left(n,\\operatorname{length}\\left(P_{oly}\\right)\\right)+1\\right].x\\right)\\right)}{2}\\right|"
+      },
+      {
+        "type": "folder",
+        "id": "625",
+        "title": "Market QP axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "626",
+        "folderId": "625",
+        "color": "#2d70b3",
+        "latex": "x_{Market}=17.5",
+        "slider": {
+          "min": "-22.4",
+          "max": "19"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "627",
+        "folderId": "625",
+        "color": "#388c46",
+        "latex": "y_{Market}=-19.3",
+        "slider": {
+          "min": "-19.3"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "628",
+        "folderId": "625",
+        "color": "#c74440",
+        "latex": "A_{len}=15",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "629",
+        "folderId": "625",
+        "color": "#c74440",
+        "latex": "\\left(x_{Market},y_{Market}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "630",
+        "folderId": "625",
+        "color": "#000000",
+        "latex": "x=x_{Market}\\left\\{y_{Market}\\le y\\le y_{Market}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "631",
+        "folderId": "625",
+        "color": "#000000",
+        "latex": "y=y_{Market}\\left\\{x_{Market}\\le x\\le x_{Market}+A_{len}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "632",
+        "folderId": "625",
+        "color": "#000000",
+        "latex": "\\left(x_{Market},\\ y_{Market}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "P",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "795",
+        "folderId": "625",
+        "color": "#000000",
+        "latex": "\\left(x_{Market}+\\frac{A_{len}}{2},\\ y_{Market}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "Market",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "633",
+        "folderId": "625",
+        "color": "#000000",
+        "latex": "\\left(x_{Market}+A_{len},\\ y_{Market}\\right)",
+        "showLabel": true,
+        "label": "Q",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "folder",
+        "id": "696",
+        "title": "Firm QP axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "696",
+        "color": "#c74440",
+        "latex": "x_{QP}=-7.1",
+        "slider": {
+          "min": "-15.95",
+          "max": "17.3"
+        }
+      },
+      {
+        "type": "text",
+        "id": "987",
+        "folderId": "696",
+        "text": "Making draggable quanity requires fixed axis start (a_QP,b_QP)"
+      },
+      {
+        "type": "expression",
+        "id": "985",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "a_{QP}=x_{QP}"
+      },
+      {
+        "type": "expression",
+        "id": "988",
+        "folderId": "696",
+        "color": "#2d70b3",
+        "latex": "b_{QP}=y_{QP}"
+      },
+      {
+        "type": "expression",
+        "id": "698",
+        "folderId": "696",
+        "color": "#2d70b3",
+        "latex": "y_{QP}=-19.34",
+        "slider": {
+          "min": "-26.9"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "699",
+        "folderId": "696",
+        "color": "#388c46",
+        "latex": "Q_{Plen}=15"
+      },
+      {
+        "type": "expression",
+        "id": "701",
+        "folderId": "696",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP},y_{QP}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "702",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "x=x_{QP}\\left\\{y_{QP}\\le y\\le y_{QP}+Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "703",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "y=y_{QP}\\left\\{x_{QP}\\le x\\le x_{QP}+Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "704",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "\\left(x_{QP},y_{QP}+Q_{Plen}\\right)",
+        "showLabel": true,
+        "label": "P (Price)",
+        "hidden": true,
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "705",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "\\left(x_{QP}+Q_{Plen},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "q (Quantity)",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "708",
+        "folderId": "696",
+        "color": "#000000",
+        "latex": "\\left(x_{QP}+\\frac{A_{len}}{2},\\ y_{QP}+A_{len}\\right)",
+        "showLabel": true,
+        "label": "Firm",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelOrientation": "above"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

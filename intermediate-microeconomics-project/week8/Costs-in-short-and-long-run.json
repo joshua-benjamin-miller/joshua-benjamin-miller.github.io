@@ -1,0 +1,1641 @@
+{
+  "version": 11,
+  "randomSeed": "0b02b8e1ffde5d5f48215fb96a0ebbd8",
+  "graph": {
+    "viewport": {
+      "xmin": -11.937281981814143,
+      "ymin": -7.746424207311568,
+      "xmax": 18.635331570398627,
+      "ymax": 10.880078136838632
+    },
+    "showGrid": false,
+    "showXAxis": false,
+    "showYAxis": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-11.937281981814143",
+      "xmax": "18.635331570398627",
+      "ymin": "-7.746424207311568",
+      "ymax": "10.880078136838632"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "235",
+        "color": "#2d70b3",
+        "latex": "L_{ong}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "55",
+        "color": "#388c46",
+        "latex": "P_{type}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "3",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "193",
+        "color": "#2d70b3",
+        "latex": "w=1.58",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "194",
+        "color": "#388c46",
+        "latex": "r=1.08",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "219",
+        "color": "#6042a6",
+        "latex": "K_{cur}=2.97",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "C_{Llen}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "220",
+        "color": "#000000",
+        "latex": "L_{cur}=12.398",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "max": "12.425"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "56",
+        "title": "Production function definition",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "157",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "Cobb Douglas production function `q(K,L)=K^\\alpha L^{1-\\alpha}` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "158",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=2\\right\\}",
+        "showLabel": true,
+        "label": "Perfect substitutes production function `q(K,L)=\\alpha K + (1-\\alpha)L` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "159",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "\\left(0,10\\right)\\left\\{P_{type}=3\\right\\}",
+        "showLabel": true,
+        "label": "Fixed proportions production function `q(K,L)=2min\\left(\\alpha K, (1-\\alpha)L\\right)` (`\\alpha=${\\alpha}`)",
+        "hidden": true,
+        "labelOrientation": "right",
+        "labelSize": "1.2"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "56",
+        "color": "#388c46",
+        "latex": "\\ C_{obbDouglas}\\left(K,L\\right)=K^{\\alpha}L^{1-\\alpha}\\left\\{K>0\\right\\}\\left\\{L>0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "209",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "M_{rtsCobbDouglas}\\left(K,L\\right)=\\frac{\\alpha}{1-\\alpha}\\frac{K}{L}"
+      },
+      {
+        "type": "expression",
+        "id": "291",
+        "folderId": "56",
+        "color": "#388c46",
+        "latex": "S_{olutionCobbDouglas}\\left(K\\right)=\\frac{r}{w}\\frac{\\alpha}{1-\\alpha}K",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "folderId": "56",
+        "color": "#6042a6",
+        "latex": "P_{erfectSubs}\\left(K,L\\right)=\\alpha K+\\left(1-\\alpha\\right)L"
+      },
+      {
+        "type": "expression",
+        "id": "373",
+        "folderId": "56",
+        "color": "#6042a6",
+        "latex": "S_{olutionPS}\\left(K\\right)=\\left\\{\\frac{r}{\\alpha}<\\frac{w}{b}:\\frac{Q}{a},0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "56",
+        "color": "#000000",
+        "latex": "F_{ixedProportions}\\left(K,L_{cur}\\right)\\ =\\ 2\\min\\left(\\alpha K,\\ \\left(1-\\alpha\\right)L_{cur}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "372",
+        "folderId": "56",
+        "color": "#388c46",
+        "latex": "S_{olutionPC}\\left(K\\right)=\\frac{\\alpha}{1-\\alpha}K",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "56",
+        "color": "#c74440",
+        "latex": "\\alpha=0.4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "56",
+        "color": "#fa7e19",
+        "latex": "f\\left(x,y\\right)=\\frac{\\left(P_{type}-2\\right)\\left(P_{type}-3\\right)}{2}C_{obbDouglas}\\left(x,y\\right)+\\frac{\\left(P_{type}-1\\right)\\left(P_{type}-3\\right)}{-1}P_{erfectSubs}\\left(x,y\\right)+\\frac{\\left(P_{type}-1\\right)\\left(P_{type}-2\\right)}{2}F_{ixedProportions}\\left(x,y\\right)",
+        "labelSize": "1",
+        "parametricDomain": {
+          "min": "0",
+          "max": "10"
+        },
+        "fillOpacity": "0.4",
+        "domain": {
+          "min": "0",
+          "max": "10"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "212",
+        "title": "Cost function definition",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "202",
+        "folderId": "212",
+        "color": "#6042a6",
+        "latex": "V_{C}\\left(L\\right)=wL",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "203",
+        "folderId": "212",
+        "color": "#000000",
+        "latex": "F_{C}\\left(K\\right)=rK",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "204",
+        "folderId": "212",
+        "color": "#c74440",
+        "latex": "T_{C}\\left(K,L\\right)=F_{C}\\left(K\\right)+V_{C}\\left(L\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "127",
+        "title": "CL: Capital-Labor axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "121",
+        "folderId": "127",
+        "color": "#2d70b3",
+        "latex": "x_{CL}=-7.2"
+      },
+      {
+        "type": "expression",
+        "id": "122",
+        "folderId": "127",
+        "color": "#388c46",
+        "latex": "y_{CL}=-1.6",
+        "slider": {
+          "min": "-14.97"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "120",
+        "folderId": "127",
+        "color": "#c74440",
+        "latex": "C_{Llen}=10",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "125",
+        "folderId": "127",
+        "color": "#c74440",
+        "latex": "\\left(x_{CL},y_{CL}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "58",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "x=x_{CL}\\left\\{y_{CL}\\le y\\le y_{CL}+C_{Llen}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "y=y_{CL}\\left\\{x_{CL}\\le x\\le x_{CL}+C_{Llen}\\right\\}",
+        "lineWidth": "2.5"
+      },
+      {
+        "type": "expression",
+        "id": "123",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "\\left(x_{CL},\\ y_{CL}+C_{Llen}\\right)",
+        "showLabel": true,
+        "label": "K (Capital)",
+        "hidden": true,
+        "labelOrientation": "above_left",
+        "labelAngle": "0"
+      },
+      {
+        "type": "expression",
+        "id": "124",
+        "folderId": "127",
+        "color": "#000000",
+        "latex": "\\left(x_{CL}+C_{Llen},\\ y_{CL}\\right)",
+        "showLabel": true,
+        "label": "L (Labor)",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "222",
+        "folderId": "127",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{CL}+L_{cur},y_{CL}\\right)",
+        "showLabel": true,
+        "label": "`L=${L_cur}`",
+        "dragMode": "X"
+      },
+      {
+        "type": "expression",
+        "id": "223",
+        "folderId": "127",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{CL}\\left\\{L_{ong}=1\\right\\},y_{CL}+K_{cur}\\right)",
+        "showLabel": true,
+        "label": "`K=${K_cur}`",
+        "dragMode": "Y",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "244",
+        "folderId": "127",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{CL}\\left\\{L_{ong}=0\\right\\},y_{CL}+K_{cur}\\right)",
+        "showLabel": true,
+        "label": "`K=${K_cur}`",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "folder",
+        "id": "162",
+        "title": "CL: MRTS, isoquant and isocost at bundle",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "164",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{M}=f\\left(L_{cur},K_{cur}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "225",
+        "folderId": "162",
+        "color": "#000000",
+        "latex": "q_{Mr}=R_{ound2}\\left(q_{M}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "178",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "\\left(L_{cur}+x_{CL},K_{cur}+y_{CL}\\right)",
+        "showLabel": true,
+        "label": "`q(K,L)=${q_Mr}`",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "text",
+        "id": "229",
+        "folderId": "162",
+        "text": "Isoquant curve at bundle"
+      },
+      {
+        "type": "expression",
+        "id": "185",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{M}\\left\\{x_{CL}<x<x_{CL}+C_{Llen}\\right\\}\\left\\{y_{CL}<y<y_{CL}+C_{Llen}\\right\\}\\le f(\\left(x-x_{CL}\\right),\\left(y-y_{CL}\\right))",
+        "fillOpacity": ".1"
+      },
+      {
+        "type": "expression",
+        "id": "234",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "\\left(x_{CL}+C_{Llen},y_{CL}+1\\right)",
+        "showLabel": true,
+        "label": "Isoquant at (K,L)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "231",
+        "folderId": "162",
+        "text": "MRTS at bundle"
+      },
+      {
+        "type": "expression",
+        "id": "174",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "q_{L}\\left(L\\right)=f\\left(L,\\ K_{cur}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "176",
+        "folderId": "162",
+        "color": "#c74440",
+        "latex": "q_{K}\\left(K\\right)=f\\left(L_{cur},\\ K\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "175",
+        "folderId": "162",
+        "color": "#000000",
+        "latex": "M_{rts}=\\frac{q_{L}'\\left(L_{cur}\\right)}{q'_{K}\\left(K_{cur}\\right)}"
+      },
+      {
+        "type": "expression",
+        "id": "208",
+        "folderId": "162",
+        "color": "#6042a6",
+        "latex": "M_{rtsr}=R_{ound2}\\left(M_{rts}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "177",
+        "folderId": "162",
+        "color": "#c74440",
+        "latex": "\\left(y-y_{CL}-K_{cur}\\right)=-M_{rts}\\left(x-x_{CL}-L_{cur}\\right)\\left\\{L_{cur}-1<x-x_{CL}<L_{cur}+1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "233",
+        "folderId": "162",
+        "color": "#c74440",
+        "latex": "\\left(L_{cur}+1+x_{CL},\\ y_{CL}+K_{cur}-M_{rts}\\right)",
+        "showLabel": true,
+        "label": "MRTS=`${M_rtsr}`",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "227",
+        "folderId": "162",
+        "text": "Isocost curve at bundle"
+      },
+      {
+        "type": "expression",
+        "id": "200",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "T_{C}\\left(y-y_{CL},\\ x-x_{CL}\\right)=T_{C}\\left(K_{cur},L_{cur}\\right)\\left\\{0\\le x-x_{CL}\\le C_{Llen}\\right\\}\\left\\{0\\le y-y_{CL}\\le C_{Llen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "232",
+        "folderId": "162",
+        "color": "#2d70b3",
+        "latex": "\\left(\\min\\left(\\frac{T_{C}\\left(K_{cur},L_{cur}\\right)}{w},\\ C_{Llen}\\right)+x_{CL},y_{CL}\\right)",
+        "showLabel": true,
+        "label": "Isocost at (K,L)",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "68",
+        "title": "CL: Isoquant curves",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "68",
+        "color": "#6042a6",
+        "latex": "q_{1}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "68",
+        "color": "#000000",
+        "latex": "\\Delta_{q}=1",
+        "slider": {
+          "hardMax": true,
+          "max": "100"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "68",
+        "color": "#c74440",
+        "latex": "N=5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "321",
+        "folderId": "68",
+        "color": "#c74440",
+        "latex": "K_{q}\\left(q\\right)=y_{CL}+\\left(\\frac{q}{C_{Llen}^{1-\\alpha}}\\right)^{\\frac{1}{\\alpha}}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "323",
+        "folderId": "68",
+        "color": "#388c46",
+        "latex": "\\left[\\left(,F_{ }\\right)\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "68",
+        "color": "#2d70b3",
+        "latex": "F=\\left[q_{1}+0\\Delta_{q},q_{1}+1\\Delta_{q}...q_{1}+N\\Delta_{q}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "186",
+        "folderId": "68",
+        "color": "#c74440"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "folderId": "68",
+        "color": "#2d70b3",
+        "latex": "F\\left\\{x_{CL}<x<x_{CL}+C_{Llen}\\right\\}\\left\\{y_{CL}<y<y_{CL}+C_{Llen}\\right\\}=f(\\left(x-x_{CL}\\right),\\left(y-y_{CL}\\right))",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "text",
+        "id": "192",
+        "folderId": "68",
+        "text": "DISCUSS: is it possible to match labels to lines"
+      },
+      {
+        "type": "expression",
+        "id": "190",
+        "folderId": "68",
+        "color": "#000000",
+        "latex": "F\\cdot1=f(C_{Llen},\\left(y-y_{CL}\\right))\\left\\{2<x<3\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "188",
+        "folderId": "68",
+        "color": "#388c46",
+        "latex": "\\left[\\left(x_{CL}+C_{Llen},K_{q}\\left(q\\right)\\right)\\ \\operatorname{for}\\ q=F\\right]",
+        "showLabel": true,
+        "label": "`q=${F}`",
+        "hidden": true,
+        "labelOrientation": "right",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "expression",
+        "id": "320",
+        "folderId": "68",
+        "color": "#c74440",
+        "latex": "!\\left[\\left(x_{CL}+C_{Llen},q+y_{CL}\\right)\\ \\operatorname{for}\\ q=F\\right]"
+      },
+      {
+        "type": "folder",
+        "id": "196",
+        "title": "CL: LR expansion curve",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "199",
+        "folderId": "196",
+        "color": "#388c46",
+        "latex": "M_{rtsCobbDouglas}\\left(y-y_{CL},x-x_{CL}\\right)=\\frac{w}{r}\\left\\{0\\le x-x_{CL}\\le C_{Llen}\\right\\}\\left\\{y_{CL}<y<y_{CL}+C_{Llen}\\right\\}\\left\\{P_{type}=1\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "217",
+        "folderId": "196",
+        "color": "#388c46",
+        "latex": "\\left(x_{CL}+C_{Llen},\\frac{w}{r}\\frac{1-\\alpha}{\\alpha}\\left(C_{Llen}\\right)+y_{CL}\\right)\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "LR expansion curve",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "129",
+        "title": "LQ: Labor-Quantity axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "130",
+        "folderId": "129",
+        "color": "#6042a6",
+        "latex": "x_{LQ}=11.85",
+        "slider": {
+          "max": "12.5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "131",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "y_{LQ}=-1.8"
+      },
+      {
+        "type": "expression",
+        "id": "133",
+        "folderId": "129",
+        "color": "#2d70b3",
+        "latex": "L_{len}=C_{Llen}"
+      },
+      {
+        "type": "expression",
+        "id": "132",
+        "folderId": "129",
+        "color": "#c74440",
+        "latex": "\\left(x_{LQ},y_{LQ}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "x=x_{LQ}\\left\\{y_{LQ}\\le y\\le y_{LQ}+L_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "138",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "y=y_{LQ}\\left\\{x_{LQ}\\le x\\le x_{LQ}+L_{len}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "\\left(x_{LQ},y_{LQ}+L_{len}\\right)",
+        "showLabel": true,
+        "label": "Q (Quantity)",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "\\left(x_{LQ}+L_{len},y_{LQ}\\right)",
+        "showLabel": true,
+        "label": "L (Labor)",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "245",
+        "folderId": "129",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{LQ}+L_{cur},y_{LQ}\\right)",
+        "showLabel": true,
+        "label": "`L=${L_cur}`",
+        "dragMode": "X",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "264",
+        "folderId": "129",
+        "color": "#fa7e19",
+        "latex": "x=x_{LQ}+L_{cur}\\left\\{y_{LQ}\\le y\\le y_{LQ}+q_{M}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "255",
+        "folderId": "129",
+        "text": "Trick to make a movable q_M is to display the right point and then add a simple meaningless dependency on L (like L*0 below)"
+      },
+      {
+        "type": "expression",
+        "id": "248",
+        "folderId": "129",
+        "color": "#2d70b3",
+        "latex": "a=x_{LQ}"
+      },
+      {
+        "type": "expression",
+        "id": "249",
+        "folderId": "129",
+        "color": "#388c46",
+        "latex": "b=y_{LQ}"
+      },
+      {
+        "type": "expression",
+        "id": "246",
+        "folderId": "129",
+        "color": "#000000",
+        "latex": "\\left(a,\\ b+q_{M}+L_{cur}\\cdot0\\right)",
+        "showLabel": true,
+        "label": "`Q=${q_Mr}`",
+        "dragMode": "XY",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "263",
+        "color": "#000000",
+        "latex": "y=y_{LQ}+q_{M}\\left\\{x_{LQ}\\le x\\le x_{LQ}+L_{cur}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "142",
+        "title": "LQ + CL: SR expansion path",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "150",
+        "folderId": "142",
+        "color": "#000000",
+        "latex": "\\left(x_{LQ}+L_{len},y_{LQ}+L_{len}\\right)\\left\\{L_{ong}=1\\right\\}",
+        "showLabel": true,
+        "label": "Capital `K=${K_cur}`",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "324",
+        "folderId": "142",
+        "color": "#000000",
+        "latex": "\\left(x_{LQ}+L_{len},y_{LQ}+L_{len}\\right)\\left\\{L_{ong}=0\\right\\}",
+        "showLabel": true,
+        "label": "Fixed Capital `K=${K_cur}`",
+        "hidden": true,
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "text",
+        "id": "258",
+        "folderId": "142",
+        "text": "SR expansion path at LQ axis"
+      },
+      {
+        "type": "expression",
+        "id": "146",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(y-y_{LQ}\\right)=f\\left(\\left(x-x_{LQ}\\right),K_{cur}\\right)\\left\\{x_{LQ}<x<x_{LQ}+L_{len}\\right\\}\\left\\{y_{LQ}<y<y_{LQ}+L_{len}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "153",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(x_{LQ}+L_{len},\\ y_{LQ}+f\\left(K_{cur},L_{len}\\right)\\right)",
+        "showLabel": true,
+        "label": "SR expansion curve",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "260",
+        "folderId": "142",
+        "text": "SR expansion path at KL axis"
+      },
+      {
+        "type": "expression",
+        "id": "256",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "y=K_{cur}+y_{CL}\\left\\{0\\le x-x_{CL}\\le C_{Llen}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "261",
+        "folderId": "142",
+        "color": "#c74440",
+        "latex": "\\left(x_{CL}+C_{Llen},\\ K_{cur}+y_{CL}\\right)",
+        "showLabel": true,
+        "label": "SR expansion curve",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "144",
+        "folderId": "142",
+        "text": "Marginal product of labor is additional output produced as labor is increased by 1 unit:"
+      },
+      {
+        "type": "expression",
+        "id": "145",
+        "folderId": "142",
+        "color": "#6042a6",
+        "latex": "\\left(y-y_{LQ}\\right)=\\frac{d}{dx}f\\left(x-x_{LQ},K_{cur}\\right)\\left\\{x_{LQ}<x<x_{LQ}+L_{len}\\right\\}\\left\\{y_{LQ}<y<y_{LQ}+L_{len}\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "154",
+        "folderId": "142",
+        "color": "#6042a6",
+        "latex": "\\left(x_{LQ}+L_{len},0\\right)",
+        "label": "`MP_L`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "266",
+        "title": "QP: Quantity-Price axis",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "267",
+        "folderId": "266",
+        "color": "#c74440",
+        "latex": "x_{QP}=11.97",
+        "slider": {
+          "max": "12.46"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "268",
+        "folderId": "266",
+        "color": "#2d70b3",
+        "latex": "y_{QP}=-16.1",
+        "slider": {
+          "min": "-16.6"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "269",
+        "folderId": "266",
+        "color": "#388c46",
+        "latex": "Q_{Plen}=10"
+      },
+      {
+        "type": "expression",
+        "id": "270",
+        "folderId": "266",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP},y_{QP}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "271",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "x=x_{QP}\\left\\{y_{QP}\\le y\\le y_{QP}+Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "272",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "y=y_{QP}\\left\\{x_{QP}\\le x\\le x_{QP}+Q_{Plen}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "273",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "\\left(x_{QP},y_{QP}+Q_{Plen}\\right)",
+        "showLabel": true,
+        "label": "P (Price)",
+        "hidden": true,
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "274",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "\\left(x_{QP}+Q_{Plen},y_{QP}\\right)",
+        "showLabel": true,
+        "label": "Q (Quantity)",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "275",
+        "folderId": "266",
+        "color": "#6042a6",
+        "latex": "c=x_{QP}"
+      },
+      {
+        "type": "expression",
+        "id": "276",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "d=y_{QP}"
+      },
+      {
+        "type": "expression",
+        "id": "277",
+        "folderId": "266",
+        "color": "#000000",
+        "latex": "\\left(c+q_{M}+L_{cur}\\cdot0,\\ d\\right)",
+        "showLabel": true,
+        "label": "`Q=${q_Mr}`",
+        "dragMode": "XY",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "282",
+        "title": "QP: AC levels",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "283",
+        "folderId": "282",
+        "color": "#000000",
+        "latex": "K_{levels}=\\left[2,4...10\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "284",
+        "folderId": "282",
+        "color": "#c74440",
+        "latex": "A_{CSRlevels}\\left(Q\\right)=\\frac{T_{C}\\left(K_{levels},\\left(\\frac{Q}{K_{levels}^{\\alpha}}\\right)^{\\frac{1}{1-\\alpha}}\\right)}{Q}",
+        "hidden": true,
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "expression",
+        "id": "287",
+        "folderId": "282",
+        "color": "#6042a6",
+        "latex": "A_{CSRlevels}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSRlevels}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{type}=1\\right\\}",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "expression",
+        "id": "346",
+        "folderId": "282",
+        "color": "#2d70b3",
+        "latex": "L_{SR}\\left(K,Q\\right)=\\max\\left(0,\\frac{\\left(Q-aK\\right)}{b}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "347",
+        "folderId": "282",
+        "color": "#388c46",
+        "latex": "A_{CSRlevelsPC}\\left(Q\\right)=\\frac{\\left(rK_{levels}+wL_{SR}\\left(K_{levels},Q\\right)\\right)}{Q}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "348",
+        "folderId": "282",
+        "color": "#6042a6",
+        "latex": "A_{CSRlevelsPC}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSRlevelsPC}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{type}=3\\right\\}",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "expression",
+        "id": "349",
+        "folderId": "282",
+        "color": "#000000",
+        "latex": "A_{CSRlevelsPS}\\left(Q\\right)=\\left(rK_{levels}+\\frac{wL_{SR}\\left(K_{levels},Q\\right)}{Q}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "350",
+        "folderId": "282",
+        "color": "#c74440",
+        "latex": "A_{CSRlevelsPS}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSRlevelsPS}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{type}=2\\right\\}",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "folder",
+        "id": "279",
+        "title": "QP: Costs",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "301",
+        "folderId": "279",
+        "color": "#2d70b3",
+        "latex": "T_{CSR}\\left(Q\\right)=T_{C}\\left(K_{cur},\\left(\\frac{Q}{K_{cur}^{\\alpha}}\\right)^{\\frac{1}{1-\\alpha}}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "352",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "T_{CSRPC}\\left(Q\\right)=\\left(rK_{cur}+wL_{SR}\\left(K_{cur},Q\\right)\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "353",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "T_{CSRPS}\\left(Q\\right)=\\left(rK_{cur}+\\frac{wL_{SR}\\left(K_{cur},Q\\right)}{Q}\\right)Q",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "294",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "A_{CSR}\\left(Q\\right)=\\frac{T_{CSR}\\left(Q\\right)}{Q}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "355",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "A_{CSRPS}\\left(Q\\right)=\\frac{T_{CSRPS}\\left(Q\\right)}{Q}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "354",
+        "folderId": "279",
+        "color": "#000000",
+        "latex": "A_{CSRPC}\\left(Q\\right)=\\frac{T_{CSRPC}\\left(Q\\right)}{Q}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "289",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "A_{CSR}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSR}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "290",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP}+Q_{Plen},\\ \\min\\left(Q_{Plen},A_{CSR}\\left(Q_{Plen}\\right)+y_{QP}\\right)\\right)\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{sr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "357",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "A_{CSRPS}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSRPS}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "359",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP}+Q_{Plen},\\ \\min\\left(Q_{Plen},A_{CSRPS}\\left(Q_{Plen}\\right)+y_{QP}\\right)\\right)\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=2\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{sr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "356",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "A_{CSRPC}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CSRPC}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "358",
+        "folderId": "279",
+        "color": "#c74440",
+        "latex": "\\left(x_{QP}+Q_{Plen},\\ \\min\\left(Q_{Plen},A_{CSRPC}\\left(Q_{Plen}\\right)+y_{QP}\\right)\\right)\\left\\{L_{ong}=0\\right\\}\\left\\{P_{type}=3\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{sr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "302",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "y-y_{QP}=T_{CSR}'\\left(x-x_{QP}\\right)\\left\\{0\\le y-y_{QP}\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{type}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "303",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "\\left(x_{QP}+Q_{Plen},\\min\\left(Q_{Plen},T_{CSR}'\\left(Q_{Plen}\\right)\\right)+y_{QP}\\right)\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "`MC_{sr}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "297",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "K_{CobbDouglas}\\left(Q\\right)=\\left(\\frac{r}{w}\\frac{\\alpha}{1-\\alpha}\\right)^{\\alpha-1}Q",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "368",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "P_{erfectComplements}\\left(Q\\right)=\\frac{Q}{2\\left(1-\\alpha\\right)}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "371",
+        "folderId": "279",
+        "color": "#2d70b3",
+        "latex": "P_{erfectSubstitutes}\\left(Q\\right)=\\left\\{\\frac{r}{\\alpha}<\\frac{w}{b}:\\frac{Q}{\\alpha},\\frac{r}{\\alpha}>\\frac{w}{b}:0\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "292",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "A_{CLR}\\left(Q\\right)=\\frac{T_{C}\\left(K_{CobbDouglas}\\left(Q\\right),S_{olutionCobbDouglas}\\left(K_{CobbDouglas}\\left(Q\\right)\\right)\\right)}{Q}\\left\\{P_{type}=1\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "293",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "A_{CLR}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CLR}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "304",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "\\left(x_{QP}+Q_{Plen},A_{CLR}\\left(x_{QP}+Q_{Plen}\\right)+y_{QP}\\right)\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{lr}`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "367",
+        "folderId": "279",
+        "color": "#388c46",
+        "latex": "A_{CLRPC}\\left(Q\\right)=\\frac{r}{2\\alpha}+\\frac{w}{2\\left(1-\\alpha\\right)}\\left\\{P_{type}=3\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "374",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "A_{CLRPC}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CLRPC}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "375",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "\\left(x_{QP}+Q_{Plen},A_{CLRPC}\\left(x_{QP}+Q_{Plen}\\right)+y_{QP}\\right)\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=3\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{lr}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "376",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "A_{CLRPS}\\left(Q\\right)=\\min\\left(\\frac{r}{\\alpha},\\frac{w}{1-\\alpha}\\right)\\left\\{P_{type}=2\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "377",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "A_{CLRPS}\\left(x-x_{QP}\\right)+y_{QP}\\left\\{0\\le A_{CLRPS}\\left(x-x_{QP}\\right)\\le Q_{Plen}\\right\\}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "380",
+        "folderId": "279",
+        "color": "#6042a6",
+        "latex": "\\left(x_{QP}+Q_{Plen},A_{CLRPS}\\left(x_{QP}+Q_{Plen}\\right)+y_{QP}\\right)\\left\\{L_{ong}=1\\right\\}\\left\\{P_{type}=2\\right\\}",
+        "showLabel": true,
+        "label": "`AC_{lr}`",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "306",
+        "title": "QP: Demand side & profit",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "309",
+        "folderId": "306",
+        "text": "The firm is a price-taker, so P=MR is fixed from outside"
+      },
+      {
+        "type": "expression",
+        "id": "333",
+        "folderId": "306",
+        "color": "#6042a6",
+        "latex": "A_{C0}=\\left\\{L_{ong}=0:A_{CSR}\\left(q_{M}\\right),\\ A_{CLR}\\left(q_{M}\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "383",
+        "folderId": "306",
+        "color": "#6042a6",
+        "latex": "A_{C0PS}=\\left\\{L_{ong}=0:A_{CSRPS}\\left(q_{M}\\right),\\ A_{CLRPS}\\left(q_{M}\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "382",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "A_{C0PC}=\\left\\{L_{ong}=0:A_{CSRPC}\\left(q_{M}\\right),\\ A_{CLRPC}\\left(q_{M}\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "336",
+        "folderId": "306",
+        "color": "#2d70b3",
+        "latex": "P_{rofit0}=\\left\\{P_{type}=1:q_{M}\\left(P_{0}-A_{C0}\\right),P_{type}=2:q_{M}\\left(P_{0}-A_{C0PS}\\right),P_{type}=3:q_{M}\\left(P_{0}-A_{C0PC}\\right)\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "338",
+        "folderId": "306",
+        "color": "#6042a6",
+        "latex": "P_{rofit0r}=\\operatorname{round}\\left(P_{rofit0},2\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "334",
+        "folderId": "306",
+        "color": "#000000",
+        "latex": "\\pi_{box}=\\left[\\left(0,A_{C0}\\right),\\left(0,P_{0}\\right),\\left(q_{M},P_{0}\\right),\\left(q_{M},A_{C0}\\right)\\right]+\\left(x_{QP},y_{QP}\\right)\\left\\{P_{type}=1\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "385",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\pi_{boxPS}=\\left[\\left(0,A_{C0PS}\\right),\\left(0,P_{0}\\right),\\left(q_{M},P_{0}\\right),\\left(q_{M},A_{C0PS}\\right)\\right]+\\left(x_{QP},y_{QP}\\right)\\left\\{P_{type}=2\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "384",
+        "folderId": "306",
+        "color": "#000000",
+        "latex": "\\pi_{boxPC}=\\left[\\left(0,A_{C0PC}\\right),\\left(0,P_{0}\\right),\\left(q_{M},P_{0}\\right),\\left(q_{M},A_{C0PC}\\right)\\right]+\\left(x_{QP},y_{QP}\\right)\\left\\{P_{type}=3\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "335",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{box}\\left\\{P_{rofit0}\\ge0\\right\\}\\right)\\left\\{P_{type}=1\\right\\}",
+        "colorLatex": "C_{p0}",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "395",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{boxPS}\\left\\{P_{rofit0}\\ge0\\right\\}\\right)\\left\\{P_{type}=2\\right\\}",
+        "colorLatex": "C_{p0}"
+      },
+      {
+        "type": "expression",
+        "id": "396",
+        "folderId": "306",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{boxPC}\\left\\{P_{rofit0}\\ge0\\right\\}\\right)\\left\\{P_{type}=3\\right\\}",
+        "colorLatex": "C_{p0}"
+      },
+      {
+        "type": "expression",
+        "id": "339",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{box}\\left\\{P_{rofit0}<0\\right\\}\\right)\\left\\{P_{type}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "397",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{boxPS}\\left\\{P_{rofit0}<0\\right\\}\\right)\\left\\{P_{type}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "398",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\pi_{boxPC}\\left\\{P_{rofit0}<0\\right\\}\\right)\\left\\{P_{type}=3\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "311",
+        "folderId": "306",
+        "color": "#000000",
+        "latex": "P_{0}=1.4",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "312",
+        "folderId": "306",
+        "color": "#000000",
+        "latex": "\\left(c,d+P_{0}\\right)",
+        "showLabel": true,
+        "label": "`P_0=${P_0}`",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "310",
+        "folderId": "306",
+        "color": "#fa7e19",
+        "latex": "y-y_{QP}=P_{0}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{rofit0}\\ge0\\right\\}",
+        "lineStyle": "DOTTED",
+        "colorLatex": "C_{p0}"
+      },
+      {
+        "type": "expression",
+        "id": "341",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "y-y_{QP}=P_{0}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}\\left\\{P_{rofit0}<0\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "337",
+        "folderId": "306",
+        "color": "#388c46",
+        "latex": "\\left(0+x_{QP}+1,P_{0}+y_{QP}-2\\right)\\left\\{P_{rofit0}\\ge0\\right\\}\\left\\{L_{ong}=0\\right\\}",
+        "showLabel": true,
+        "label": "LR profit `\\pi\\approx ${P_rofit0r}`",
+        "hidden": true,
+        "labelOrientation": "above",
+        "colorLatex": "C_{p0}"
+      },
+      {
+        "type": "expression",
+        "id": "340",
+        "folderId": "306",
+        "color": "#c74440",
+        "latex": "\\left(0+x_{QP}+1,P_{0}+y_{QP}-2\\right)\\left\\{P_{rofit0}<0\\right\\}\\left\\{L_{ong}=0\\right\\}",
+        "showLabel": true,
+        "label": "LR profit `\\pi\\approx ${P_rofit0r}`",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "folder",
+        "id": "319",
+        "title": "QP: Change in market price",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "313",
+        "folderId": "319",
+        "color": "#2d70b3",
+        "latex": "P_{1}=3.9",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "314",
+        "folderId": "319",
+        "color": "#fa7e19",
+        "latex": "\\left(c,d+P_{1}\\right)",
+        "showLabel": true,
+        "label": "`P_1=${P_1}`",
+        "labelOrientation": "left",
+        "colorLatex": "C_{p1}"
+      },
+      {
+        "type": "expression",
+        "id": "315",
+        "folderId": "319",
+        "color": "#fa7e19",
+        "latex": "y-y_{QP}=P_{1}\\left\\{0\\le x-x_{QP}\\le Q_{Plen}\\right\\}",
+        "lineStyle": "DOTTED",
+        "colorLatex": "C_{p1}"
+      },
+      {
+        "type": "folder",
+        "id": "206",
+        "title": "Misc",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "236",
+        "folderId": "206",
+        "color": "#388c46",
+        "latex": "\\left(x_{button},y_{button}\\right)",
+        "showLabel": true,
+        "label": "Toggle short/long term",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "L_{ong}\\to1-L_{ong}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "242",
+        "folderId": "206",
+        "color": "#c74440",
+        "latex": "x_{button}=-5.1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "243",
+        "folderId": "206",
+        "color": "#2d70b3",
+        "latex": "y_{button}=15",
+        "hidden": true,
+        "slider": {
+          "max": "12.52"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "239",
+        "folderId": "206",
+        "color": "#388c46",
+        "latex": "\\left(x_{button},y_{button}-1\\right)\\left\\{L_{ong}=0\\right\\}",
+        "showLabel": true,
+        "label": "Now showing short term",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "240",
+        "folderId": "206",
+        "color": "#388c46",
+        "latex": "\\left(x_{button},y_{button}-1\\right)\\left\\{L_{ong}=1\\right\\}",
+        "showLabel": true,
+        "label": "Now showing long term",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "207",
+        "folderId": "206",
+        "color": "#388c46",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "262",
+        "folderId": "206",
+        "color": "#388c46",
+        "latex": "\\left(x_{button},y_{button}-2\\right)\\left\\{P_{type}=1\\right\\}",
+        "showLabel": true,
+        "label": "Solve short term",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "L_{cur}\\to S_{olutionCobbDouglas}\\left(K_{cur}\\right)"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "112",
+        "title": "Color Palette",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "113",
+        "folderId": "112",
+        "text": "The number of colors in the palette"
+      },
+      {
+        "type": "expression",
+        "id": "114",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "I=\\left[1...N+1\\right]"
+      },
+      {
+        "type": "text",
+        "id": "115",
+        "folderId": "112",
+        "text": "The intensity of each RGB value as we move through the palette"
+      },
+      {
+        "type": "expression",
+        "id": "116",
+        "folderId": "112",
+        "color": "#6042a6",
+        "latex": "R=255\\frac{\\left(I-1\\right)}{N}"
+      },
+      {
+        "type": "expression",
+        "id": "117",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "G=0I"
+      },
+      {
+        "type": "expression",
+        "id": "118",
+        "folderId": "112",
+        "color": "#2d70b3",
+        "latex": "B=255\\left(1-\\frac{\\left(I-1\\right)}{N}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "119",
+        "folderId": "112",
+        "color": "#388c46",
+        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+      },
+      {
+        "type": "expression",
+        "id": "316",
+        "folderId": "112",
+        "color": "#000000",
+        "latex": "C_{p0}=\\operatorname{rgb}\\left(150,150,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "317",
+        "folderId": "112",
+        "color": "#c74440",
+        "latex": "C_{p1}=\\operatorname{rgb}\\left(0,150,150\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

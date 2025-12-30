@@ -1,0 +1,1866 @@
+{
+  "version": 11,
+  "randomSeed": "d035bf8e6361f04170f7dbf3cbb2e990",
+  "graph": {
+    "viewport": {
+      "xmin": -30.47504323975626,
+      "ymin": 0.7217235140874045,
+      "xmax": 85.55466991948954,
+      "ymax": 42.12748808906021
+    },
+    "showGrid": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-30.47504323975626",
+      "xmax": "85.55466991948954",
+      "ymin": "0.7217235140874045",
+      "ymax": "42.12748808906021"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "426",
+        "text": "Interventions have 3 parameters: type of intervention, side of intervention and desired final price"
+      },
+      {
+        "type": "text",
+        "id": "429",
+        "text": "Types of intervention and relevant parameters: 1. No intervention 2. Tax  3. Subsidy 4. Price floor 5. Price support  6. Production quota 7. Voluntary reduction (use the purple button on the left to change this)"
+      },
+      {
+        "type": "text",
+        "id": "434",
+        "text": "Tax and subsidy can be either on producer (side=1) or consumer (side=2) side and can both reduce or increase the price (use the red button on the left to change this)"
+      },
+      {
+        "type": "text",
+        "id": "436",
+        "text": "Policies 4-7 are relevant only for price increase"
+      },
+      {
+        "type": "text",
+        "id": "857",
+        "text": "Move price slider (and optional tax or subsidy sliders) o adjust desired final price"
+      },
+      {
+        "type": "folder",
+        "id": "894",
+        "title": "Credits",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "896",
+        "folderId": "894",
+        "text": "Miller & Tashevtev \"Desmos Graphs for Micro\""
+      },
+      {
+        "type": "text",
+        "id": "898",
+        "folderId": "894",
+        "text": "Designed by: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "text",
+        "id": "900",
+        "folderId": "894",
+        "text": "Desmos commands by Artem Tashevtev & Joshua Miller"
+      },
+      {
+        "type": "expression",
+        "id": "422",
+        "color": "#2d70b3",
+        "latex": "S_{ide}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "394",
+        "color": "#000000",
+        "latex": "T_{ype}=7",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "7",
+          "step": "1"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "133",
+        "title": "Demand and supply",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "390",
+        "folderId": "133",
+        "text": "This folder defines demand and supply curves and calculates the equilibrium price and quantity"
+      },
+      {
+        "type": "expression",
+        "id": "134",
+        "folderId": "133",
+        "color": "#6042a6",
+        "latex": "C_{onstD}=40",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50",
+          "step": "4"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "135",
+        "folderId": "133",
+        "color": "#c74440",
+        "latex": "S_{lopeD}=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.1",
+          "max": "3",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "136",
+        "folderId": "133",
+        "color": "#c74440",
+        "latex": "S_{lopeS}=0.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.2",
+          "max": "5",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "806",
+        "folderId": "133",
+        "color": "#388c46",
+        "latex": "C_{onstS}=4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "C_{onstD}",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "137",
+        "folderId": "133",
+        "color": "#000000",
+        "latex": "P_{D}\\left(Q\\right)=C_{onstD}-S_{lopeD}Q\\left\\{0\\le Q\\le\\frac{C_{onstD}}{S_{lopeD}}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "138",
+        "folderId": "133",
+        "color": "#000000",
+        "latex": "P_{S}\\left(Q\\right)=C_{onstS}+S_{lopeS}Q\\left\\{0\\le Q\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "437",
+        "folderId": "133",
+        "color": "#388c46",
+        "latex": "Q_{eq}=\\frac{C_{onstD}-C_{onstS}}{S_{lopeS}+S_{lopeD}}"
+      },
+      {
+        "type": "expression",
+        "id": "438",
+        "folderId": "133",
+        "color": "#6042a6",
+        "latex": "P_{eq}=P_{S}\\left(Q_{eq}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "439",
+        "folderId": "133",
+        "color": "#000000",
+        "latex": "y=P_{eq}\\left\\{0\\le x\\le Q_{eq}\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "442",
+        "folderId": "133",
+        "color": "#000000",
+        "latex": "x=Q_{eq}\\left\\{0\\le y\\le P_{eq}\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "445",
+        "folderId": "133",
+        "color": "#000000",
+        "latex": "\\left(Q_{eq},P_{eq}\\right)",
+        "showLabel": true,
+        "label": "Free market Eq. at `(${Q_eq}, ${P_eq})`",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE",
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "text",
+        "id": "859",
+        "folderId": "133",
+        "text": "An alternative way to calculate areas - use numerical integration"
+      },
+      {
+        "type": "expression",
+        "id": "803",
+        "folderId": "133",
+        "color": "#c74440",
+        "latex": "!\\int_{0}^{Q_{eq}}\\left(P_{D}\\left(Q\\right)-P_{S}\\left(Q\\right)\\right)dQ"
+      },
+      {
+        "type": "folder",
+        "id": "398",
+        "title": "Intervention parameters and labels",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "786",
+        "folderId": "398",
+        "text": "Define choice for type of intervention (i.e. tax or price floor)"
+      },
+      {
+        "type": "expression",
+        "id": "395",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,T_{ype}\\cdot4\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "393",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\operatorname{polygon}\\left(\\left(-5,4\\right),\\left(-5,28\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "401",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 4\\right)",
+        "showLabel": true,
+        "label": "No intervention",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "403",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 8\\right)",
+        "showLabel": true,
+        "label": "Tax",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "405",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 12\\right)",
+        "showLabel": true,
+        "label": "Subsidy",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to3"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "407",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 16\\right)",
+        "showLabel": true,
+        "label": "Price floor",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to4"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "490",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 20\\right)",
+        "showLabel": true,
+        "label": "Price support",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to5"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "411",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 24\\right)",
+        "showLabel": true,
+        "label": "Production quota",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to6"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "413",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(-5,\\ 28\\right)",
+        "showLabel": true,
+        "label": "Voluntary reduction",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "T_{ype}\\to7"
+        }
+      },
+      {
+        "type": "text",
+        "id": "788",
+        "folderId": "398",
+        "text": "Define choice for side of intervention (producers or consumers)"
+      },
+      {
+        "type": "expression",
+        "id": "811",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "\\left(-5,-4S_{ide}\\left\\{2\\le T_{ype}\\le3\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "810",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(-5,-4\\right)\\left\\{2\\le T_{ype}\\le3\\right\\},\\left(-5,-8\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "416",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "\\left(-5,\\ -4\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "showLabel": true,
+        "label": "Producers",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "S_{ide}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "419",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "\\left(-5,\\ -8\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "showLabel": true,
+        "label": "Consumers",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "S_{ide}\\to2"
+        }
+      },
+      {
+        "type": "text",
+        "id": "814",
+        "folderId": "398",
+        "text": "2 equations below define minimum and maximum possible prices for different combinations of parameters. For all interventions but subsidy and tax price can vary from P_eq to maximal. For tax and subsidy,  there are limits of type: \"tax on producers can only raise price\" and so on"
+      },
+      {
+        "type": "expression",
+        "id": "813",
+        "folderId": "398",
+        "color": "#000000",
+        "latex": "P_{min}=\\left\\{T_{ype}=1:\\ P_{eq},T_{ype}>3:P_{eq},\\left\\{T_{ype}=2:1,0\\right\\}\\left\\{S_{ide}=2:1,0\\right\\}=1:0,\\left\\{T_{ype}=2:1,0\\right\\}\\left\\{S_{ide}=1:1,0\\right\\}=1:P_{eq},\\left\\{T_{ype}=3:1,0\\right\\}\\left\\{S_{ide}=2:1,0\\right\\}=1:P_{eq},\\left\\{T_{ype}=3:1,0\\right\\}\\left\\{S_{ide}=1:1,0\\right\\}=1:0\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "452",
+        "folderId": "398",
+        "text": "Define P_min and P_max as minimum and maximum price achievable with current intervention"
+      },
+      {
+        "type": "expression",
+        "id": "447",
+        "folderId": "398",
+        "color": "#388c46",
+        "latex": "P_{max}=\\left\\{T_{ype}=1:\\ P_{eq},T_{ype}>3:C_{onstD},\\left\\{T_{ype}=2:1,0\\right\\}\\left\\{S_{ide}=2:1,0\\right\\}=1:P_{eq},\\left\\{T_{ype}=2:1,0\\right\\}\\left\\{S_{ide}=1:1,0\\right\\}=1:C_{onstD},\\left\\{T_{ype}=3:1,0\\right\\}\\left\\{S_{ide}=2:1,0\\right\\}=1:C_{onstD},\\left\\{T_{ype}=3:1,0\\right\\}\\left\\{S_{ide}=1:1,0\\right\\}=1:P_{eq}\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "454",
+        "folderId": "398",
+        "text": "Add slider to change the desired price"
+      },
+      {
+        "type": "expression",
+        "id": "450",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(5,-5\\right),\\left(20,-5\\right)\\right)",
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "455",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(\\frac{P_{min}}{C_{onstD}}\\cdot15+5,-5\\right),\\left(\\frac{P_{max}}{C_{onstD}}\\cdot15+5,-5\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "456",
+        "folderId": "398",
+        "color": "#000000",
+        "latex": "P_{1}=30",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "playDirection": -1,
+          "min": "P_{min}",
+          "max": "P_{max}",
+          "step": "0.1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "457",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(\\frac{P_{1}}{C_{onstD}}\\cdot15+5,\\ -5\\right)",
+        "showLabel": true,
+        "label": "`P_1=${P_1}`",
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "458",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(5,-5\\right)",
+        "showLabel": true,
+        "label": "`0`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "459",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(20,-5\\right)",
+        "showLabel": true,
+        "label": "`${C_onstD}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "460",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(\\frac{P_{eq}}{C_{onstD}}\\cdot15+5,\\ -5\\right)",
+        "showLabel": true,
+        "label": "`P_{eq}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "text",
+        "id": "863",
+        "folderId": "398",
+        "text": "Quantity supplied and demanded at desired price P1:"
+      },
+      {
+        "type": "expression",
+        "id": "705",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "Q_{1D}=\\frac{C_{onstD}-P_{1}}{S_{lopeD}}"
+      },
+      {
+        "type": "expression",
+        "id": "717",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "Q_{1S}=\\frac{P_{1}-C_{onstS}}{S_{lopeS}}"
+      },
+      {
+        "type": "text",
+        "id": "865",
+        "folderId": "398",
+        "text": "Calculating subsidy/taxes on producers/consumers + define draggable points.  Subsidy on producers is denoted as S_p, Tax on Consumers is denoted T_c and so on. For producers, tax/subsidy is calculated as the difference between P1 and Inverse Supply at Quantity demanded. For consumers, tax/subsidy is calculated as the difference between P1 and Inverse Demand at Quantity supplied"
+      },
+      {
+        "type": "expression",
+        "id": "848",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "S_{p}=R_{ound2}\\left(P_{S}\\left(Q_{1D}\\right)-P_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "838",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{\\left(P_{S}\\left(Q_{1D}\\right)-P_{1}\\right)}{P_{S}\\left(\\frac{C_{onstD}}{S_{lopeD}}\\right)}\\cdot15+5,\\ -10\\left\\{T_{ype}=3\\right\\}\\left\\{S_{ide}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "Subsidy `=${S_p}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "850",
+        "folderId": "398",
+        "color": "#388c46",
+        "latex": "T_{p}=-R_{ound2}\\left(P_{S}\\left(Q_{1D}\\right)-P_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "841",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{\\left(P_{1}-P_{S}\\left(Q_{1D}\\right)\\right)}{C_{onstD}-C_{onstS}}\\cdot15+5,\\ -10\\left\\{T_{ype}=2\\right\\}\\left\\{S_{ide}=1\\right\\}\\right)",
+        "showLabel": true,
+        "label": "Tax `=${T_p}`"
+      },
+      {
+        "type": "expression",
+        "id": "851",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "S_{c}=R_{ound2}\\left(P_{1}-P_{D}\\left(Q_{1S}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "842",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{\\left(P_{1}-P_{D}\\left(Q_{1S}\\right)\\right)}{P_{S}\\left(\\frac{C_{onstD}}{S_{lopeD}}\\right)}\\cdot15+5,\\ -10\\left\\{T_{ype}=3\\right\\}\\left\\{S_{ide}=2\\right\\}\\right)",
+        "showLabel": true,
+        "label": "Subsidy `=${S_c}`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "852",
+        "folderId": "398",
+        "color": "#000000",
+        "latex": "T_{c}=-R_{ound2}\\left(P_{1}-P_{D}\\left(Q_{1S}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "844",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(\\frac{\\left(P_{D}\\left(Q_{1S}\\right)-P_{1}\\right)}{C_{onstD}-C_{onstS}}\\cdot15+5,\\ -10\\left\\{T_{ype}=2\\right\\}\\left\\{S_{ide}=2\\right\\}\\right)",
+        "showLabel": true,
+        "label": "Tax `=${T_c}`"
+      },
+      {
+        "type": "expression",
+        "id": "845",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(5,-10\\right)\\left\\{2\\le T_{ype}\\le3\\right\\},\\left(20,-10\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "846",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(5,-10\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "showLabel": true,
+        "label": "`0`",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "847",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(20,-10\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "showLabel": true,
+        "label": "max"
+      },
+      {
+        "type": "expression",
+        "id": "855",
+        "folderId": "398",
+        "color": "#fa7e19",
+        "latex": "\\left(30,-10\\right)\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "showLabel": true,
+        "label": "Reset",
+        "pointStyle": "CROSS",
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "P_{1}\\to P_{eq}"
+        }
+      },
+      {
+        "type": "text",
+        "id": "871",
+        "folderId": "398",
+        "text": "Horizontal line at P1"
+      },
+      {
+        "type": "expression",
+        "id": "704",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "y=P_{1}\\left\\{0\\le x\\le Q_{1D}\\right\\}\\left\\{T_{ype}>1\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": "2"
+      },
+      {
+        "type": "expression",
+        "id": "718",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "y=P_{1}\\left\\{Q_{1D}\\le x\\le Q_{1S}\\right\\}\\left\\{T_{ype}=5,T_{ype}=7\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "779",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "y=P_{1}\\left\\{Q_{1D}\\le x\\le Q_{1S}\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "706",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{1D},\\ P_{1}\\right)\\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=1\\right\\}",
+        "showLabel": true,
+        "label": "`P_{buyer}=${P_1}`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "expression",
+        "id": "904",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(Q_{1D},\\ P_{1}\\right)\\left\\{T_{ype}>3\\right\\}",
+        "showLabel": true,
+        "label": "`P_1=${P_1}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "909",
+        "folderId": "398",
+        "color": "#6042a6",
+        "latex": "\\left(Q_{1S},\\ P_{1}\\right)\\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "showLabel": true,
+        "label": "`P_{seller}=${P_1}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "903",
+        "folderId": "398",
+        "color": "#388c46",
+        "latex": "P_{seller}=P_{S}\\left(Q_{1D}\\right)\\ \\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "911",
+        "folderId": "398",
+        "color": "#c74440",
+        "latex": "P_{buyerC}=P_{D}\\left(Q_{1S}\\right)\\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=2\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "902",
+        "folderId": "398",
+        "color": "#2d70b3",
+        "latex": "\\left(Q_{1D},P_{seller}\\right)\\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=1\\right\\}",
+        "showLabel": true,
+        "label": "`P_{seller}=${P_seller}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "913",
+        "folderId": "398",
+        "color": "#388c46",
+        "latex": "\\left(Q_{1S},P_{buyerC}\\right)\\left\\{T_{ype}=2,T_{ype}=3\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "showLabel": true,
+        "label": "`P_{buyer}=${P_buyerC}`",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "736",
+        "text": "Click legend for different welfare effects"
+      },
+      {
+        "type": "folder",
+        "id": "685",
+        "title": "No intervention welfare",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "873",
+        "folderId": "685",
+        "text": "For each intervention, first define a list of points which form the welfare polygon and then display it"
+      },
+      {
+        "type": "expression",
+        "id": "686",
+        "folderId": "685",
+        "color": "#388c46",
+        "latex": "S_{CS1}=\\left[\\left(0,P_{eq}\\right),\\left(0,C_{onstD}\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "687",
+        "folderId": "685",
+        "color": "#388c46",
+        "latex": "P_{CS1}=\\operatorname{polygon}\\left(S_{CS1}\\left\\{T_{ype}=1\\right\\}\\left\\{S_{howCS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "688",
+        "folderId": "685",
+        "color": "#6042a6",
+        "latex": "S_{PS1}=\\left[\\left(0,P_{eq}\\right),\\left(0,C_{onstS}\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "689",
+        "folderId": "685",
+        "color": "#fa7e19",
+        "latex": "P_{PS1}=\\operatorname{polygon}\\left(S_{PS1}\\left\\{T_{ype}=1\\right\\}\\left\\{S_{howPS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "folder",
+        "id": "750",
+        "title": "Tax/subsidy on producers welfare",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "757",
+        "folderId": "750",
+        "text": "Effect of tax and subsidy on producer can be seen as shift of supply curve in either direction"
+      },
+      {
+        "type": "text",
+        "id": "883",
+        "folderId": "750",
+        "text": "New supply curve:"
+      },
+      {
+        "type": "expression",
+        "id": "752",
+        "folderId": "750",
+        "color": "#6042a6",
+        "latex": "C_{onstS1}=\\left(P_{1}-S_{lopeS}Q_{1D}\\right)\\left\\{S_{ide}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "751",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "P_{S1}\\left(Q\\right)=C_{onstS1}+S_{lopeS}Q\\left\\{0\\le Q\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=1\\right\\}",
+        "hidden": true,
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "753",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "y=P_{S1}\\left(Q\\right)\\left\\{P_{S1}\\left(Q\\right)>0\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "885",
+        "folderId": "750",
+        "text": "Arrow representing tax/subsidy:"
+      },
+      {
+        "type": "expression",
+        "id": "755",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "A_{rrow}\\left(\\left(30,P_{S}\\left(30\\right)\\right),\\ \\left(30,P_{S1}\\left(30\\right)\\right),\\operatorname{abs}\\left(C_{onstS1}-C_{onstS}\\right)\\right)\\left\\{S_{ide}=1\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "760",
+        "folderId": "750",
+        "color": "#c74440",
+        "latex": "t_{axP}=R_{ound2}\\left(\\operatorname{abs}\\left(C_{onstS1}-C_{onstS}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "758",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "\\left(30,\\frac{P_{S}\\left(30\\right)+P_{S1}\\left(30\\right)}{2}\\right)\\left\\{S_{ide}=1\\right\\}\\left\\{T_{ype}=2\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}",
+        "showLabel": true,
+        "label": "Tax of ${t_{axP}} on producers",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "759",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "\\left(30,\\frac{P_{S}\\left(30\\right)+P_{S1}\\left(30\\right)}{2}\\right)\\left\\{S_{ide}=1\\right\\}\\left\\{T_{ype}=3\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}",
+        "showLabel": true,
+        "label": "Subsidy of ${t_{axP}} on producers",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "766",
+        "folderId": "750",
+        "text": "Define CS and PS as area between respective curves, and DWL and Revenue as polygons:"
+      },
+      {
+        "type": "expression",
+        "id": "763",
+        "folderId": "750",
+        "color": "#fa7e19",
+        "latex": "P_{S}\\left(x\\right)\\le y\\le P_{S}\\left(Q_{1D}\\right)\\left\\{t_{axP}>0,t_{axP}<0\\right\\}\\left\\{S_{howPS}=1\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "lines": false
+      },
+      {
+        "type": "expression",
+        "id": "764",
+        "folderId": "750",
+        "color": "#388c46",
+        "latex": "P_{1}\\le y\\le P_{D}\\left(x\\right)\\left\\{t_{axP}>0,t_{axP}<0\\right\\}\\left\\{S_{howCS}=1\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "lines": false
+      },
+      {
+        "type": "expression",
+        "id": "769",
+        "folderId": "750",
+        "color": "#6042a6",
+        "latex": "S_{DWLP}=\\left[\\left(Q_{1D},P_{1}\\right),\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "770",
+        "folderId": "750",
+        "color": "#c74440",
+        "latex": "P_{DWLP}=\\operatorname{polygon}\\left(S_{DWLP}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=1\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}\\left\\{S_{howDWL}=1\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "767",
+        "folderId": "750",
+        "color": "#2d70b3",
+        "latex": "S_{RP}=\\left[\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(Q_{1D},P_{1}\\right),\\left(0,\\ P_{1}\\right),\\left(0,P_{S}\\left(Q_{1D}\\right)\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "768",
+        "folderId": "750",
+        "color": "#6042a6",
+        "latex": "P_{RP}=\\operatorname{polygon}\\left(S_{RP}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=1\\right\\}\\left\\{t_{axP}>0,t_{axP}<0\\right\\}\\left\\{S_{howG}=1\\right\\}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "772",
+        "title": "Tax/subsidy on consumers welfare",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "778",
+        "folderId": "772",
+        "text": "Effect of tax and subsidy on consumer can be seen as shift of demand curve in either direction"
+      },
+      {
+        "type": "text",
+        "id": "887",
+        "folderId": "772",
+        "text": "New demand curve:"
+      },
+      {
+        "type": "expression",
+        "id": "774",
+        "folderId": "772",
+        "color": "#388c46",
+        "latex": "C_{onstD1}=\\left(P_{1}+S_{lopeD}Q_{1S}\\right)\\left\\{S_{ide}=2\\right\\}\\left\\{Q_{1S}\\le\\frac{C_{onstD}}{S_{lopeD}}\\right\\}\\left\\{Q_{1S}\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "777",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "P_{D1}\\left(Q\\right)=C_{onstD1}-S_{lopeD}Q\\left\\{0\\le Q\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "780",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "y=P_{D1}\\left(Q\\right)\\left\\{P_{D1}\\left(Q\\right)>0\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "889",
+        "folderId": "772",
+        "text": "On Consumer side, subsidy may be too large - it happens when subsidy is large enough to make price paid by consumers negative"
+      },
+      {
+        "type": "expression",
+        "id": "801",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "\\left(10,10\\right)\\left\\{Q_{1S}>\\frac{C_{onstD}}{S_{lopeD}}\\right\\}\\left\\{S_{ide}=2\\right\\}\\left\\{T_{ype}=3\\right\\}",
+        "showLabel": true,
+        "label": "Subsidy too large!",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "891",
+        "folderId": "772",
+        "text": "On Consumer side, tax may be too large - it happens when tax is large enough to make price received by producers less than Inverse Supply at 0"
+      },
+      {
+        "type": "expression",
+        "id": "853",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "\\left(10,10\\right)\\left\\{Q_{1S}<0\\right\\}\\left\\{S_{ide}=2\\right\\}\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "Tax too large!",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "text",
+        "id": "893",
+        "folderId": "772",
+        "text": "Arrow representing tax/subsidy:"
+      },
+      {
+        "type": "expression",
+        "id": "781",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "A_{rrow}\\left(\\left(-2,P_{D}\\left(0\\right)\\right),\\ \\left(-2,P_{D1}\\left(0\\right)\\right),\\operatorname{abs}\\left(C_{onstD1}-C_{onstD}\\right)\\right)\\left\\{S_{ide}=2\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "782",
+        "folderId": "772",
+        "color": "#000000",
+        "latex": "t_{axS}=R_{ound2}\\left(\\operatorname{abs}\\left(C_{onstD1}-C_{onstD}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "783",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "\\left(-2,\\frac{P_{D}\\left(0\\right)+P_{D1}\\left(0\\right)}{2}\\right)\\left\\{S_{ide}=2\\right\\}\\left\\{T_{ype}=2\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}",
+        "showLabel": true,
+        "label": "Tax of ${t_{axS}} on consumers",
+        "hidden": true,
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "784",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "\\left(-2,\\frac{P_{D}\\left(0\\right)+P_{D1}\\left(0\\right)}{2}\\right)\\left\\{S_{ide}=2\\right\\}\\left\\{T_{ype}=3\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}",
+        "showLabel": true,
+        "label": "Subsidy of ${t_{axS}} on consumers",
+        "hidden": true,
+        "labelOrientation": "left"
+      },
+      {
+        "type": "text",
+        "id": "791",
+        "folderId": "772",
+        "text": "Define CS and PS as area between respective curves, and DWL and Revenue as polygons:"
+      },
+      {
+        "type": "expression",
+        "id": "792",
+        "folderId": "772",
+        "color": "#fa7e19",
+        "latex": "P_{S}\\left(x\\right)\\le y\\le P_{1}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}\\left\\{S_{howPS}=1\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "lines": false
+      },
+      {
+        "type": "expression",
+        "id": "793",
+        "folderId": "772",
+        "color": "#388c46",
+        "latex": "P_{1}-\\left(C_{onstD1}-C_{onstD}\\right)\\le y\\le P_{D}\\left(x\\right)\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}\\left\\{S_{howCS}=1\\right\\}\\left\\{2\\le T_{ype}\\le3\\right\\}",
+        "lines": false
+      },
+      {
+        "type": "expression",
+        "id": "798",
+        "folderId": "772",
+        "color": "#388c46",
+        "latex": "S_{DWLC}=\\left[\\left(Q_{1S},P_{D}\\left(Q_{1S}\\right)\\right),\\left(Q_{1S},P_{S}\\left(Q_{1S}\\right)\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "797",
+        "folderId": "772",
+        "color": "#c74440",
+        "latex": "P_{DWLC}=\\operatorname{polygon}\\left(S_{DWLC}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=2\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}\\left\\{S_{howDWL}=1\\right\\}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "794",
+        "folderId": "772",
+        "color": "#6042a6",
+        "latex": "S_{RC}=\\left[\\left(Q_{1S},P_{D1}\\left(Q_{1S}\\right)\\right),\\left(Q_{1S},P_{D}\\left(Q_{1S}\\right)\\right),\\left(0,\\ P_{D}\\left(Q_{1S}\\right)\\right),\\left(0,P_{D1}\\left(Q_{1S}\\right)\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "795",
+        "folderId": "772",
+        "color": "#6042a6",
+        "latex": "P_{RC}=\\operatorname{polygon}\\left(S_{RC}\\left\\{2\\le T_{ype}\\le3\\right\\}\\left\\{S_{ide}=2\\right\\}\\left\\{C_{onstD1}>C_{onstD},C_{onstD1}<C_{onstD}\\right\\}\\left\\{S_{howG}=1\\right\\}\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "695",
+        "title": "Price floor welfare == Production quota welfare",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "875",
+        "folderId": "695",
+        "text": "For each intervention, first define a list of points which form the welfare polygon and then display it"
+      },
+      {
+        "type": "expression",
+        "id": "696",
+        "folderId": "695",
+        "color": "#388c46",
+        "latex": "S_{CS4}=\\left[\\left(0,P_{1}\\right),\\left(0,C_{onstD}\\right),\\left(Q_{1D},P_{1}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "695",
+        "color": "#388c46",
+        "latex": "P_{CS4}=\\operatorname{polygon}\\left(S_{CS4}\\left\\{T_{ype}=4,\\ T_{ype}=6\\right\\}\\left\\{S_{howCS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "698",
+        "folderId": "695",
+        "color": "#6042a6",
+        "latex": "S_{PS4}=\\left[\\left(0,P_{1}\\right),\\left(Q_{1D},P_{1}\\right),\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(0,C_{onstS}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "699",
+        "folderId": "695",
+        "color": "#fa7e19",
+        "latex": "P_{PS4}=\\operatorname{polygon}\\left(S_{PS4}\\left\\{T_{ype}=4,\\ T_{ype}=6\\right\\}\\left\\{S_{howPS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "700",
+        "folderId": "695",
+        "color": "#2d70b3",
+        "latex": "S_{DWL4}=\\left[\\left(Q_{1D},P_{1}\\right),\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "701",
+        "folderId": "695",
+        "color": "#c74440",
+        "latex": "P_{DWL4}=\\operatorname{polygon}\\left(S_{DWL4}\\left\\{T_{ype}=4,\\ T_{ype}=6\\right\\}\\left\\{S_{howDWL}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "1174",
+        "folderId": "695",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1D},P_{1}\\right),\\left(Q_{1D},0\\right)\\right)\\left\\{T_{ype}=6\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1175",
+        "folderId": "695",
+        "color": "#c74440",
+        "latex": "\\left(Q_{1D}+10,\\frac{P_{1}}{2}+4\\right)\\left\\{T_{ype}=6\\right\\}",
+        "showLabel": true,
+        "label": "maximum Q traded:`${Q_1D}(Q_{quota} < Q_{eq})`",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "708",
+        "title": "Price support welfare"
+      },
+      {
+        "type": "text",
+        "id": "877",
+        "folderId": "708",
+        "text": "For each intervention, first define a list of points which form the welfare polygon and then display it"
+      },
+      {
+        "type": "expression",
+        "id": "709",
+        "folderId": "708",
+        "color": "#388c46",
+        "latex": "S_{CS5}=\\left[\\left(0,P_{1}\\right),\\left(0,C_{onstD}\\right),\\left(Q_{1D},P_{1}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "710",
+        "folderId": "708",
+        "color": "#388c46",
+        "latex": "P_{CS5}=\\operatorname{polygon}\\left(S_{CS5}\\left\\{T_{ype}=5\\right\\}\\left\\{S_{howCS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "711",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "S_{PS5}=\\left[\\left(0,P_{1}\\right),\\left(0,C_{onstS}\\right),\\left(Q_{1S},P_{1}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "712",
+        "folderId": "708",
+        "color": "#fa7e19",
+        "latex": "P_{PS5}=\\operatorname{polygon}\\left(S_{PS5}\\left\\{T_{ype}=5\\right\\}\\left\\{S_{howPS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "713",
+        "folderId": "708",
+        "color": "#2d70b3",
+        "latex": "S_{DWL5}=\\left[\\left(Q_{1D},P_{1}\\right),\\left(Q_{eq},P_{eq}\\right),\\left(Q_{1S},P_{1}\\right),\\left(Q_{1S},0\\right),\\left(Q_{1D},0\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "714",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "P_{DWL5}=\\operatorname{polygon}\\left(S_{DWL5}\\left\\{T_{ype}=5\\right\\}\\left\\{S_{howDWL}=1\\right\\}\\right)",
+        "lines": true,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "715",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "S_{R5}=\\left[\\left(Q_{1D},P_{1}\\right),\\left(Q_{1S},P_{1}\\right),\\left(Q_{1S},0\\right),\\left(Q_{1D},0\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "716",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "P_{R5}=\\operatorname{polygon}\\left(S_{R5}\\left\\{T_{ype}=5\\right\\}\\left\\{S_{howG}=1\\right\\}\\right)",
+        "hidden": true,
+        "lines": true,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "906",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\left(Q_{1D},0\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": " `Q_D(P_1)=${Q_{1D}}`"
+      },
+      {
+        "type": "expression",
+        "id": "907",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\left(Q_{1S},0\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": " `Q_S(P_1)=${Q_{1S}}`"
+      },
+      {
+        "type": "expression",
+        "id": "1167",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1D},-1\\right),\\left(Q_{1S},-1\\right)\\right)\\left\\{T_{ype}=5\\right\\}",
+        "lines": true,
+        "lineStyle": "DASHED",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "1168",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1D},0\\right),\\left(Q_{1D},-2\\right)\\right)\\left\\{T_{ype}=5\\right\\}",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "1169",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1S},0\\right),\\left(Q_{1S},-2\\right)\\right)\\left\\{T_{ype}=5\\right\\}",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "1178",
+        "folderId": "708",
+        "color": "#6042a6",
+        "latex": "\\operatorname{polygon}\\left(\\left(Q_{1D},0\\right),\\left(Q_{1D},P_{1}\\right),\\left(Q_{1S},P_{1}\\right),\\left(Q_{1S},0\\right)\\right)\\left\\{T_{ype}=5\\right\\}\\left\\{S_{howG}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "1171",
+        "folderId": "708",
+        "color": "#000000",
+        "latex": "Q_{govpurchase}=Q_{1S}-Q_{1D}"
+      },
+      {
+        "type": "expression",
+        "id": "1170",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\left(\\frac{\\left(Q_{1D}+Q_{1S}\\right)}{2},-2\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": "Quantity Gov purchase: ${Q_govpurchase}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1176",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,P_{1}\\right),\\left(5000,P_{1}\\right)\\right)\\left\\{T_{ype}=5\\right\\}",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "1177",
+        "folderId": "708",
+        "color": "#c74440",
+        "latex": "\\left(30,P_{1}+2\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": "Gov-set support price:${P_1}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "739",
+        "title": "Voluntary reduction welfare",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "879",
+        "folderId": "739",
+        "text": "For each intervention, first define a list of points which form the welfare polygon and then display it"
+      },
+      {
+        "type": "text",
+        "id": "881",
+        "folderId": "739",
+        "text": "For Voluntary Reduction, CS and PS areas are the same as for Price Support"
+      },
+      {
+        "type": "expression",
+        "id": "741",
+        "folderId": "739",
+        "color": "#388c46",
+        "latex": "P_{CS7}=\\operatorname{polygon}\\left(S_{CS5}\\left\\{T_{ype}=7\\right\\}\\left\\{S_{howCS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "743",
+        "folderId": "739",
+        "color": "#fa7e19",
+        "latex": "P_{PS7}=\\operatorname{polygon}\\left(S_{PS5}\\left\\{T_{ype}=7\\right\\}\\left\\{S_{howPS}=1\\right\\}\\right)",
+        "lines": false,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "744",
+        "folderId": "739",
+        "color": "#2d70b3",
+        "latex": "S_{DWL7}=\\left[\\left(Q_{1D},P_{1}\\right),\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(Q_{eq},P_{eq}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "745",
+        "folderId": "739",
+        "color": "#c74440",
+        "latex": "P_{DWL7}=\\operatorname{polygon}\\left(S_{DWL7}\\left\\{T_{ype}=7\\right\\}\\left\\{S_{howDWL}=1\\right\\}\\right)",
+        "lines": true,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "expression",
+        "id": "746",
+        "folderId": "739",
+        "color": "#6042a6",
+        "latex": "S_{R7}=\\left[\\left(Q_{1D},P_{S}\\left(Q_{1D}\\right)\\right),\\left(Q_{1D},P_{1}\\right),\\left(Q_{1S},\\ P_{1}\\right)\\right]",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "747",
+        "folderId": "739",
+        "color": "#6042a6",
+        "latex": "P_{R7}=\\operatorname{polygon}\\left(S_{R7}\\left\\{T_{ype}=7\\right\\}\\left\\{S_{howG}=1\\right\\}\\right)",
+        "hidden": true,
+        "lines": true,
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "folder",
+        "id": "623",
+        "title": "Labels + misc",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "732",
+        "folderId": "623",
+        "text": "Defines draggable title"
+      },
+      {
+        "type": "expression",
+        "id": "624",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "463",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=1\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of no intervention",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "466",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=2\\right\\}\\left\\{S_{ide}=1\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of tax on producers",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "471",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=2\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of tax on consumers",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "474",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=3\\right\\}\\left\\{S_{ide}=1\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of subsidy on producers",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "477",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=3\\right\\}\\left\\{S_{ide}=2\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of subsidy on consumers",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "480",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=4\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of price floor",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "483",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of price support",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "486",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=6\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of production quota",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "488",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{title},y_{title}\\right)\\left\\{T_{ype}=7\\right\\}",
+        "showLabel": true,
+        "label": "Graph shows effect of voluntary reduction",
+        "hidden": true,
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "625",
+        "folderId": "623",
+        "color": "#6042a6",
+        "latex": "x_{title}=5",
+        "hidden": true,
+        "slider": {
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "626",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "y_{title}=43",
+        "hidden": true,
+        "slider": {
+          "max": "50",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "734",
+        "folderId": "623",
+        "text": "Defines draggable legend with colored boxes"
+      },
+      {
+        "type": "expression",
+        "id": "639",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "\\left(x_{legend},y_{legend}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "640",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "x_{legend}=57",
+        "hidden": true,
+        "slider": {
+          "min": "-20",
+          "max": "68",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "641",
+        "folderId": "623",
+        "color": "#2d70b3",
+        "latex": "y_{legend}=54",
+        "hidden": true,
+        "slider": {
+          "max": "60",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "651",
+        "folderId": "623",
+        "color": "#2d70b3",
+        "latex": "r_{ow}=3.7"
+      },
+      {
+        "type": "expression",
+        "id": "652",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "c_{ol}=15",
+        "slider": {
+          "max": "15"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "815",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "S_{howCS}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "816",
+        "folderId": "623",
+        "color": "#2d70b3",
+        "latex": "S_{howPS}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "817",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "S_{howDWL}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "818",
+        "folderId": "623",
+        "color": "#6042a6",
+        "latex": "S_{howG}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "819",
+        "folderId": "623",
+        "color": "#000000",
+        "latex": "R_{CS}=S_{howCS}\\to\\left\\{S_{howCS}=0:1,0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "820",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "R_{PS}=S_{howPS}\\to\\left\\{S_{howPS}=0:1,0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "821",
+        "folderId": "623",
+        "color": "#2d70b3",
+        "latex": "R_{DWL}=S_{howDWL}\\to\\left\\{S_{howDWL}=0:1,0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "822",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "R_{G}=S_{howG}\\to\\left\\{S_{howG}=0:1,0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "642",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "\\left(x_{legend},y_{legend}\\right)",
+        "showLabel": true,
+        "label": "CS",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{CS}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "823",
+        "folderId": "623",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{legend},y_{legend}-r_{ow}\\right)",
+        "showLabel": true,
+        "label": "PS",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{PS}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "824",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "\\left(x_{legend},y_{legend}-2r_{ow}\\right)",
+        "showLabel": true,
+        "label": "DW loss",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{DWL}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "653",
+        "folderId": "623",
+        "color": "#6042a6",
+        "latex": "\\left(x_{legend},y_{legend}-3r_{ow}\\right)\\left\\{\\ T_{ype}=3,T_{ype}=5\\right\\}",
+        "showLabel": true,
+        "label": "Gov-t Expenditure",
+        "hidden": true,
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{G}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "737",
+        "folderId": "623",
+        "color": "#6042a6",
+        "latex": "\\left(x_{legend},y_{legend}-3r_{ow}\\right)\\left\\{T_{ype}=2\\right\\}",
+        "showLabel": true,
+        "label": "Gov-t revenue",
+        "hidden": true,
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "R_{G}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "646",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}+\\frac{r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}+\\frac{r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{r_{ow}}{4}\\right),\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{r_{ow}}{4}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "647",
+        "folderId": "623",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{3r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{3r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{5r_{ow}}{4}\\right),\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{5r_{ow}}{4}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "648",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{7r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{7r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{9r_{ow}}{4}\\right),\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{9r_{ow}}{4}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "654",
+        "folderId": "623",
+        "color": "#6042a6",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{11r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{11r_{ow}}{4}\\right),\\left(x_{legend},\\ y_{legend}-\\frac{13r_{ow}}{4}\\right),\\left(x_{legend}-\\frac{c_{ol}}{2},\\ y_{legend}-\\frac{13r_{ow}}{4}\\right)\\right)\\left\\{T_{ype}=2,T_{ype}=3,T_{ype}=5\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "754",
+        "folderId": "623",
+        "color": "#c74440",
+        "latex": "A_{rrow}\\left(x,y,h\\right)=\\left[\\left(x.x\\left(1-t\\right)+y.xt,\\ x.y\\left(1-t\\right)+y.yt\\right),\\left(y.x+\\frac{-\\left|2t-1\\right|\\left(y.x-x.x\\right)+\\frac{2t-1}{2}\\left(y.y-x.y\\right)}{h},y.y+\\frac{-\\left|2t-1\\right|\\left(y.y-x.y\\right)-\\frac{2t-1}{2}\\left(y.x-x.x\\right)}{h}\\right)\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "762",
+        "folderId": "623",
+        "color": "#388c46",
+        "latex": "R_{ound2}\\left(z\\right)=\\operatorname{round}\\left(z\\cdot100\\right)\\cdot0.01",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "761",
+        "color": "#2d70b3"
+      },
+      {
+        "type": "expression",
+        "id": "905",
+        "color": "#000000"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

@@ -1,0 +1,612 @@
+{
+  "version": 11,
+  "randomSeed": "d65f9ba9cf2ed86824b7e8365f643283",
+  "graph": {
+    "viewport": {
+      "xmin": -10.753977993131002,
+      "ymin": -11.4169143995756,
+      "xmax": 18.020246526598694,
+      "ymax": 9.252570213763565
+    },
+    "showGrid": false,
+    "xAxisLabel": "Soda",
+    "yAxisLabel": "Pizza",
+    "__v12ViewportLatexStash": {
+      "xmin": "-10.753977993131002",
+      "xmax": "18.020246526598694",
+      "ymin": "-11.4169143995756",
+      "ymax": "9.252570213763565"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "706",
+        "text": "Indifference curves and MRS"
+      },
+      {
+        "type": "text",
+        "id": "705",
+        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+      },
+      {
+        "type": "folder",
+        "id": "688",
+        "title": "1. Utility function, MRS"
+      },
+      {
+        "type": "text",
+        "id": "764",
+        "folderId": "688",
+        "text": "Cobb-Douglas"
+      },
+      {
+        "type": "expression",
+        "id": "689",
+        "folderId": "688",
+        "color": "#c74440",
+        "latex": "\\alpha=0.46",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "1",
+          "step": ".01"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "688",
+        "color": "#c74440",
+        "latex": "v_{1}\\left(x,y\\right)=x^{\\alpha}y^{1-\\alpha}"
+      },
+      {
+        "type": "text",
+        "id": "766",
+        "folderId": "688",
+        "text": "inferior good utility from Liebhafsky"
+      },
+      {
+        "type": "expression",
+        "id": "759",
+        "folderId": "688",
+        "color": "#6042a6",
+        "latex": "v_{2}\\left(x,y\\right)=a\\ln\\left(x\\right)+\\frac{y^{2}}{2}"
+      },
+      {
+        "type": "text",
+        "id": "768",
+        "folderId": "688",
+        "text": "Choose between the two functions (further below is a choice between indifference curves"
+      },
+      {
+        "type": "expression",
+        "id": "758",
+        "folderId": "688",
+        "color": "#388c46",
+        "latex": "U_{type}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "770",
+        "folderId": "688",
+        "color": "#c74440",
+        "latex": "\\left(-3,3\\right)",
+        "showLabel": true,
+        "label": "Normal Good",
+        "pointStyle": "OPEN",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "U_{type}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "771",
+        "folderId": "688",
+        "color": "#2d70b3",
+        "latex": "\\left(-3,2\\right)",
+        "showLabel": true,
+        "label": "Inferior Good",
+        "pointStyle": "OPEN",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "U_{type}\\to2"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "761",
+        "folderId": "688",
+        "color": "#c74440",
+        "latex": "C_{hoice}\\left(f_{1},f_{2}\\right)=\\left\\{U_{type}=1:f_{1},\\ U_{type}=2:f_{2}\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "756",
+        "folderId": "688",
+        "color": "#c74440",
+        "latex": "u\\left(x,y\\right)=C_{hoice}\\left(v_{1}\\left(x,y\\right),v_{2}\\left(x,y\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "757",
+        "folderId": "688",
+        "color": "#2d70b3",
+        "latex": "a=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "755",
+        "folderId": "688",
+        "color": "#000000",
+        "latex": "M_{RS}\\left(x,y\\right)=\\frac{\\frac{d}{dx}u\\left(x,y\\right)}{\\frac{d}{dy}u\\left(x,y\\right)}"
+      },
+      {
+        "type": "folder",
+        "id": "693",
+        "title": "2.  Fixed Indifference curves",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "694",
+        "folderId": "693",
+        "color": "#6042a6",
+        "latex": "u_{1}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "695",
+        "folderId": "693",
+        "color": "#000000",
+        "latex": "\\Delta_{u}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "696",
+        "folderId": "693",
+        "color": "#c74440",
+        "latex": "N=7",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "2",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "697",
+        "folderId": "693",
+        "color": "#2d70b3",
+        "latex": "U=\\left[u_{1}+0\\Delta_{u},u_{1}+1\\Delta_{u}...u_{1}+N\\Delta_{u}\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "folderId": "693",
+        "color": "#2d70b3",
+        "latex": "U\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u(x,y)",
+        "colorLatex": "C_{olorPalette}"
+      },
+      {
+        "type": "text",
+        "id": "749",
+        "folderId": "693",
+        "text": "number of colors"
+      },
+      {
+        "type": "folder",
+        "id": "699",
+        "title": "3. Movable Indifference curve",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "folderId": "699",
+        "color": "#388c46",
+        "latex": "U_{tility}=3.7",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": ".01",
+          "max": "40"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "folderId": "699",
+        "color": "#388c46",
+        "latex": "U_{tility}\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "701",
+        "title": "4. Moveable bundle with indifference curve",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "15",
+        "folderId": "701",
+        "text": "bundle and its indifference curve"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "701",
+        "color": "#c74440",
+        "latex": "x_{0}=2.89",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "701",
+        "color": "#2d70b3",
+        "latex": "y_{0}=1.14",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "50"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "labelOrientation": "right"
+      },
+      {
+        "type": "expression",
+        "id": "724",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{0},0\\right),\\left(x_{0},y_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "727",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "\\left(x_{0},0\\right)",
+        "showLabel": true,
+        "label": "${x_0}",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "728",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "\\left(0,y_{0}\\right)",
+        "showLabel": true,
+        "label": "${y_0}",
+        "pointStyle": "OPEN",
+        "dragMode": "NONE",
+        "labelOrientation": "left"
+      },
+      {
+        "type": "expression",
+        "id": "726",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(0,y_{0}\\right),\\left(x_{0},y_{0}\\right)\\right)",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".5",
+        "lineWidth": "1"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "701",
+        "color": "#000000",
+        "latex": "u\\left(x_{0},y_{0}\\right)\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=u\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "730",
+        "title": "5. Label utility",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "730",
+        "color": "#6042a6",
+        "latex": "u_{0}=\\frac{\\operatorname{round}\\left(100u\\left(x_{0},y_{0}\\right)\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "731",
+        "folderId": "730",
+        "color": "#000000",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "showLabel": true,
+        "label": "`u(x,y) =x^\\alpha y^{1-\\alpha}\\approx${u_0}`",
+        "hidden": true,
+        "dragMode": "NONE",
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "723",
+        "title": "6. Label continuous MRS",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "704",
+        "folderId": "723",
+        "text": "MRS tangency"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "723",
+        "color": "#388c46",
+        "latex": "m=-M_{RS}\\left(x_{0},y_{0}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "702",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "l=0.75",
+        "slider": {
+          "hardMin": true,
+          "min": ".25",
+          "step": ".25"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "y-y_{0}=m\\cdot\\left(x-x_{0}\\right)\\left\\{\\left(1-l\\right)x_{0}<x<\\left(1+l\\right)x_{0}\\right\\}",
+        "lineStyle": "DOTTED",
+        "lineOpacity": ".6",
+        "lineWidth": "1.5"
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "723",
+        "color": "#6042a6",
+        "latex": "m_{r}=\\frac{\\operatorname{round}\\left(100m\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "723",
+        "color": "#000000",
+        "latex": "\\left(\\left(1+l\\right)x_{0},y_{0}+m\\cdot lx_{0}\\right)",
+        "showLabel": true,
+        "label": "`-MRS=${m_r}`",
+        "hidden": true,
+        "labelOrientation": "below"
+      },
+      {
+        "type": "folder",
+        "id": "712",
+        "title": "7. Discrete MRS approximation",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "713",
+        "folderId": "712",
+        "color": "#2d70b3",
+        "latex": "x_{1}=6.82",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "10x_{0}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "714",
+        "folderId": "712",
+        "color": "#388c46",
+        "latex": "y_{1}=C_{hoice}\\left(\\left(\\frac{u\\left(x_{0},y_{0}\\right)}{x_{1}^{\\alpha}}\\right)^{\\frac{1}{1-\\alpha}},\\sqrt{2\\left(u\\left(x_{0},y_{0}\\right)-a\\ln\\left(x_{1}\\right)\\right)}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "717",
+        "folderId": "712",
+        "color": "#fa7e19",
+        "latex": "\\left(x_{1},y_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "718",
+        "folderId": "712",
+        "color": "#fa7e19",
+        "latex": "\\operatorname{polygon}\\left(\\left(x_{0},y_{0}\\right),\\left(x_{1},y_{1}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "732",
+        "folderId": "712",
+        "color": "#000000",
+        "latex": "\\Delta_{x}=x_{1}-x_{0}"
+      },
+      {
+        "type": "expression",
+        "id": "733",
+        "folderId": "712",
+        "color": "#c74440",
+        "latex": "\\Delta_{y}=y_{1}-y_{0}"
+      },
+      {
+        "type": "text",
+        "id": "736",
+        "folderId": "712",
+        "text": "round for display purposes"
+      },
+      {
+        "type": "expression",
+        "id": "734",
+        "folderId": "712",
+        "color": "#2d70b3",
+        "latex": "\\Delta_{yr}=\\frac{\\operatorname{round}\\left(100\\Delta_{y}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "722",
+        "folderId": "712",
+        "color": "#c74440",
+        "latex": "M_{RSd}=\\frac{\\operatorname{round}\\left(100\\frac{\\Delta_{y}}{\\Delta_{x}}\\right)}{100}"
+      },
+      {
+        "type": "expression",
+        "id": "719",
+        "folderId": "712",
+        "color": "#fa7e19",
+        "latex": ".5\\left(x_{0},y_{0}\\right)+.5\\left(x_{1},y_{1}\\right)",
+        "showLabel": true,
+        "label": "`MRS\\approx\\frac{\\Delta Y}{\\Delta X}=\\frac{${\\Delta_yr}}{${\\Delta_x}}=${M_RSd}`",
+        "hidden": true,
+        "labelOrientation": "above_right"
+      },
+      {
+        "type": "folder",
+        "id": "708",
+        "title": "Movable labels",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "709",
+        "folderId": "708",
+        "color": "#000000",
+        "latex": "\\left(17.94,-3.96\\right)",
+        "showLabel": true,
+        "label": "Pizza",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "pointSize": "2"
+      },
+      {
+        "type": "expression",
+        "id": "710",
+        "folderId": "708",
+        "color": "#000000",
+        "latex": "\\left(-5.74,14.74\\right)",
+        "showLabel": true,
+        "label": "Soda",
+        "hidden": true,
+        "dragMode": "XY",
+        "labelSize": "2",
+        "labelAngle": "\\frac{\\pi}{2}"
+      },
+      {
+        "type": "folder",
+        "id": "752",
+        "title": "Color Palatte",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "738",
+        "folderId": "752",
+        "text": "The number of colors in the palette"
+      },
+      {
+        "type": "expression",
+        "id": "747",
+        "folderId": "752",
+        "color": "#000000",
+        "latex": "I=\\left[1...N+1\\right]"
+      },
+      {
+        "type": "text",
+        "id": "754",
+        "folderId": "752",
+        "text": "The intensity of each RGB value as we move through the palette"
+      },
+      {
+        "type": "expression",
+        "id": "741",
+        "folderId": "752",
+        "color": "#6042a6",
+        "latex": "R=255\\frac{\\left(I-1\\right)}{N}"
+      },
+      {
+        "type": "expression",
+        "id": "739",
+        "folderId": "752",
+        "color": "#2d70b3",
+        "latex": "G=0I"
+      },
+      {
+        "type": "expression",
+        "id": "750",
+        "folderId": "752",
+        "color": "#2d70b3",
+        "latex": "B=255\\left(1-\\frac{\\left(I-1\\right)}{N}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "740",
+        "folderId": "752",
+        "color": "#388c46",
+        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

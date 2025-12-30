@@ -1,0 +1,187 @@
+{
+  "version": 11,
+  "randomSeed": "0c56e08aaf514bb515c6574e72b0092f",
+  "graph": {
+    "viewport": {
+      "xmin": -2.3241805180140496,
+      "ymin": -0.35151034883407917,
+      "xmax": 7.338168727322261,
+      "ymax": 4.389361944438409
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "__v12ViewportLatexStash": {
+      "xmin": "-2.3241805180140496",
+      "xmax": "7.338168727322261",
+      "ymin": "-0.35151034883407917",
+      "ymax": "4.389361944438409"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#000000",
+        "latex": "p_{1}x+p_{2}y=I\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#c74440",
+        "latex": "p_{1}=9",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#2d70b3",
+        "latex": "p_{2}=12",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "20",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#388c46",
+        "latex": "I=69",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "100",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "color": "#388c46",
+        "latex": "B_{udgetLine}\\left(x\\right)=\\frac{I}{p_{2}}-\\frac{p_{1}}{p_{2}}x",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "color": "#2d70b3",
+        "latex": "u_{tility}\\left(x,y\\right)=x^{\\frac{1}{3}}y"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "color": "#c74440",
+        "latex": "x^{\\frac{1}{3}}y=u_{tility}\\left(d_{x},d_{y}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "52",
+        "title": "Other IC for illustration",
+        "hidden": true,
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "x_{0}=3.4",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\frac{I}{p_{1}}",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "52",
+        "color": "#2d70b3",
+        "latex": "y_{0}=3.26"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "52",
+        "color": "#6042a6",
+        "latex": "\\left(x_{0},y_{0}\\right)",
+        "dragMode": "XY"
+      },
+      {
+        "type": "expression",
+        "id": "45",
+        "folderId": "52",
+        "color": "#6042a6",
+        "latex": "x^{\\frac{1}{3}}y=u_{tility}\\left(x_{0},y_{0}\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "x^{\\frac{1}{3}}y=\\left(u_{tility}\\left(d_{x},d_{y}\\right)+3\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "52",
+        "color": "#2d70b3",
+        "latex": "x^{\\frac{1}{3}}y=\\left(u_{tility}\\left(d_{x},d_{y}\\right)-3\\right)\\left\\{x\\ge0\\right\\}\\left\\{y\\ge0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "color": "#c74440",
+        "latex": "\\left(d_{x},d_{y}\\right)",
+        "showLabel": true,
+        "label": "Optimal Consumption"
+      },
+      {
+        "type": "folder",
+        "id": "48",
+        "title": "Answer"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "48",
+        "color": "#2d70b3",
+        "latex": "d_{y}=\\frac{3I}{4p_{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "48",
+        "color": "#000000",
+        "latex": "d_{x}=\\frac{I}{4p_{1}}"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "48",
+        "color": "#388c46",
+        "latex": "u_{tility}\\left(d_{x},d_{y}\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

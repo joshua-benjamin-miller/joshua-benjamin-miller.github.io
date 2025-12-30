@@ -1,0 +1,186 @@
+{
+  "version": 11,
+  "randomSeed": "d8c60ea046869a07bea57faecbdb7cd9",
+  "graph": {
+    "viewport": {
+      "xmin": 3.648982471787932,
+      "ymin": 3.8143162154092933,
+      "xmax": 4.406281334573238,
+      "ymax": 4.001193725614833
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "3.648982471787932",
+      "xmax": "4.406281334573238",
+      "ymin": "3.8143162154092933",
+      "ymax": "4.001193725614833"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "739",
+        "text": "1. Given them some basics"
+      },
+      {
+        "type": "expression",
+        "id": "752",
+        "color": "#6042a6",
+        "latex": "\\alpha=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "753",
+        "color": "#000000",
+        "latex": "\\beta=2",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "f\\left(x,y\\right)=x^{\\alpha}y^{\\beta}"
+      },
+      {
+        "type": "expression",
+        "id": "740",
+        "color": "#6042a6",
+        "latex": "f_{1}\\left(x,y\\right)=\\frac{d}{dx}f\\left(x,y\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "742",
+        "color": "#c74440",
+        "latex": "f_{2}\\left(x,y\\right)=\\frac{d}{dy}f\\left(x,y\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "768",
+        "title": "Answer",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "737",
+        "folderId": "768",
+        "color": "#2d70b3",
+        "latex": "f\\left(2,2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "743",
+        "folderId": "768",
+        "color": "#2d70b3",
+        "latex": "f_{1}\\left(2,2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "744",
+        "folderId": "768",
+        "color": "#388c46",
+        "latex": "f_{2}\\left(2,2\\right)"
+      },
+      {
+        "type": "text",
+        "id": "746",
+        "text": "2. non linear equation"
+      },
+      {
+        "type": "expression",
+        "id": "747",
+        "color": "#000000",
+        "latex": "u\\left(x_{1},y_{1}\\right)=\\ln\\left(x_{1}\\right)+.5\\ln\\left(y_{1}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "748",
+        "color": "#c74440",
+        "latex": "\\frac{y^{2}}{x^{3}}=.25"
+      },
+      {
+        "type": "expression",
+        "id": "755",
+        "color": "#2d70b3",
+        "latex": "4x+5y=36"
+      },
+      {
+        "type": "text",
+        "id": "751",
+        "text": "quadratic equation"
+      },
+      {
+        "type": "expression",
+        "id": "756",
+        "color": "#388c46",
+        "latex": "\\frac{y^{2}}{x^{3}}=.25"
+      },
+      {
+        "type": "expression",
+        "id": "757",
+        "color": "#6042a6",
+        "latex": "p_{1}x+p_{2}y=I"
+      },
+      {
+        "type": "expression",
+        "id": "758",
+        "color": "#000000",
+        "latex": "p_{1}=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "759",
+        "color": "#c74440",
+        "latex": "p_{2}=1",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "760",
+        "color": "#2d70b3",
+        "latex": "I=1",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "766",
+        "text": "3. Math"
+      },
+      {
+        "type": "expression",
+        "id": "761",
+        "color": "#388c46",
+        "latex": "g\\left(x\\right)=5\\ln\\left(x\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "762",
+        "color": "#6042a6",
+        "latex": "g'\\left(x\\right)=\\frac{d}{dx}g\\left(x\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "769",
+        "title": "Answer",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "764",
+        "folderId": "769",
+        "color": "#c74440",
+        "latex": "g\\left(10\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "763",
+        "folderId": "769",
+        "color": "#000000",
+        "latex": "g'\\left(10\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

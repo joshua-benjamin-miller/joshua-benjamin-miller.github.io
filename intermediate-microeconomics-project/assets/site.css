@@ -1,0 +1,288 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", Roboto, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ================== Navbar ================== */
+.navbar {
+  width: 100%;
+  background: #111827; 
+  color:#fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro",
+    "Segoe UI", Roboto, sans-serif;
+}
+
+.nav-left {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-right: 32px;
+}
+
+.nav-left a { color: #fff; }
+.nav-right a { color: #fff; }
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+}
+
+/* ================== Dropdown (single clean version) ================== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.dropdown-btn {
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 12px 4px;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:#111827;
+  color:#fff;
+  padding: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover { background: rgba(255,255,255,0.08);color:#fff }
+
+/* ================== Layout ================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 40px 60px;
+}
+
+@media (max-width: 600px) {
+  .container { padding-inline: 14px; }
+}
+
+    /* page body */
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 18px 60px;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+
+    .page-subtitle {
+      text-align: center;
+      margin: 0 0 28px;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    /* Week sections */
+
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .week-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 150px;
+    }
+
+    .week-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .week-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+    }
+
+    .week-number {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .week-title {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 12px;
+    }
+
+    .week-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.05s ease;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-outline {
+      border: 1px solid #d1d5db;
+      background: white;
+      color: #111827;
+    }
+
+    .btn-outline:hover {
+      background: #f3f4f6;
+    }
+
+    .btn-solid {
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    .btn-solid:hover {
+      background: #020617;
+    }
+
+    /* bottom About / Credits */
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .footer h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .footer-section {
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar-inner {
+        padding-inline: 12px;
+      }
+
+      .page {
+        padding-inline: 14px;
+      }
+
+      .page-title {
+        font-size: 1.6rem;
+      }
+    }
+body {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+.dropdown.dropdown-right .dropdown-content{
+  left: auto;
+  right: 0;
+}
+
+
+.dropdown-content{
+  min-width: 220px;
+  max-width: 320px;
+  width: max-content;  
+}
+
+
+.dropdown-content a{
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+
+.nav-right{
+  min-width: 0;
+  flex: 0 1 auto;
+}

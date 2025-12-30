@@ -1,0 +1,704 @@
+{
+  "version": 11,
+  "randomSeed": "39bd589b9d00320ef274eb9269c07904",
+  "graph": {
+    "viewport": {
+      "xmin": -1.5047849166569502,
+      "ymin": 0.7027693991332828,
+      "xmax": 15.169344942899402,
+      "ymax": 9.661363591028598
+    },
+    "showGrid": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-1.5047849166569502",
+      "xmax": "15.169344942899402",
+      "ymin": "0.7027693991332828",
+      "ymax": "9.661363591028598"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "83",
+        "text": "Lessons for LR: IRS: no solution (produce infinite), CRS: 0 or infinite (linear cost), DRS ("
+      },
+      {
+        "type": "expression",
+        "id": "90",
+        "color": "#c74440",
+        "latex": "L_{ong}=0",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "A=4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "1",
+          "step": "1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "81",
+        "text": "not difficult to show that labor productivity satisfies: "
+      },
+      {
+        "type": "expression",
+        "id": "79",
+        "color": "#2d70b3",
+        "latex": "\\frac{w}{p\\alpha}"
+      },
+      {
+        "type": "expression",
+        "id": "73",
+        "color": "#c74440",
+        "latex": "q_{optLR}"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "color": "#2d70b3",
+        "latex": "q_{optSR}"
+      },
+      {
+        "type": "expression",
+        "id": "89",
+        "color": "#000000",
+        "latex": "K_{optLR}"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "color": "#388c46",
+        "latex": "L_{optLR}"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "color": "#6042a6",
+        "latex": "L_{optSR}"
+      },
+      {
+        "type": "text",
+        "id": "46",
+        "text": "long run optimal quantity is infinite if alpha+beta>1"
+      },
+      {
+        "type": "text",
+        "id": "48",
+        "text": "long run optimal quantity "
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "w=2.26",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "r=1.7",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "color": "#000000",
+        "latex": "p=1.33",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "color": "#000000",
+        "latex": "\\alpha=0.4",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "color": "#6042a6",
+        "latex": "\\beta=0.44",
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "F\\left(L,K\\right)=AL^{\\alpha}K^{\\beta}"
+      },
+      {
+        "type": "folder",
+        "id": "91",
+        "title": "Long Run"
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "L_{LR}\\left(q\\right)=\\left(\\frac{q}{A\\cdot\\left(\\frac{\\beta}{\\alpha}\\cdot\\frac{w}{r}\\right)^{\\beta}}\\right)^{\\frac{1}{\\alpha+\\beta}}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "K_{LR}\\left(q\\right)=\\left(\\frac{q}{A\\cdot\\left(\\frac{\\beta}{\\alpha}\\cdot\\frac{w}{r}\\right)^{-\\alpha}}\\right)^{\\frac{1}{\\alpha+\\beta}}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "D=\\frac{\\beta}{\\alpha}\\cdot\\frac{w}{r}"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "c_{LR}\\left(q\\right)=w\\cdot L_{LR}\\left(q\\right)+rK_{LR}\\left(q\\right)\\left\\{q\\ge0\\right\\}\\left\\{L_{ong}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "91",
+        "color": "#388c46",
+        "latex": "R_{ev}\\left(q\\right)=p\\cdot q\\left\\{q\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "A_{CLR}\\left(q\\right)=\\frac{c_{LR}\\left(q\\right)}{q}\\left\\{L_{ong}=1\\right\\}",
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "49",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "\\left(3,c_{LR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "LR Cost",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "91",
+        "color": "#388c46",
+        "latex": "\\left(3,R_{ev}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "Revenue",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "54",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "\\left(3,A_{CLR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "`AC_{LR}`",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "q_{optLR}=\\left\\{\\alpha+\\beta<1:\\left(AD^{\\beta}\\left(\\frac{\\alpha}{w}p\\right)^{\\alpha+\\beta}\\right)^{\\frac{1}{1-\\alpha-\\beta}},0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "L_{optLR}=L_{LR}\\left(q_{optLR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "K_{optLR}=K_{LR}\\left(q_{optLR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "\\pi_{optLR}=R_{ev}\\left(q_{optLR}\\right)-c_{LR}\\left(q_{optLR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "P_{roductivityLR}=\\frac{q_{optLR}}{L_{optLR}}"
+      },
+      {
+        "type": "text",
+        "id": "27",
+        "folderId": "91",
+        "text": "set MC=MR to find:"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "91",
+        "color": "#6042a6",
+        "latex": "M_{CLR}\\left(q\\right)=\\frac{d}{dq}c_{LR}\\left(q\\right)\\left\\{q>0\\right\\}\\left\\{L_{ong}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "M_{R}\\left(q\\right)=p\\left\\{q\\ge0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "52",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "\\left(3,M_{R}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "MR",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "53",
+        "folderId": "91",
+        "color": "#6042a6",
+        "latex": "\\left(3,M_{CLR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "`MC_{LR}`",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "29",
+        "folderId": "91",
+        "text": "Double Check the work (should only work in the long-run"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "91",
+        "color": "#000000",
+        "latex": "M_{CLR}\\left(q_{optLR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "91",
+        "color": "#c74440",
+        "latex": "p"
+      },
+      {
+        "type": "expression",
+        "id": "30",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{optLR},R_{ev}\\left(q_{optLR}\\right)\\right),\\left(q_{optLR},0\\right)\\right)\\left\\{L_{ong}=1\\right\\}",
+        "lineStyle": "DASHED",
+        "lineWidth": "2"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "91",
+        "color": "#6042a6",
+        "latex": "\\left(q_{optLR},R_{ev}\\left(q_{optLR}\\right)\\right)\\left\\{L_{ong}=1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optLR},c_{LR}\\left(q_{optLR}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "35",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optLR},M_{CLR}\\left(q_{optLR}\\right)\\right)",
+        "showLabel": true,
+        "label": "MR=MC",
+        "pointStyle": "CROSS"
+      },
+      {
+        "type": "expression",
+        "id": "34",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optLR},0\\right)\\left\\{L_{ong}=1\\right\\}",
+        "showLabel": true,
+        "label": "`q_{LR}`",
+        "pointStyle": "OPEN"
+      },
+      {
+        "type": "expression",
+        "id": "105",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{optLR},c_{LR}\\left(q_{optLR}\\right)\\right),\\left(q_{optLR},\\left(R_{ev}\\left(q_{optLR}\\right)\\right)\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "106",
+        "folderId": "91",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optLR},\\frac{\\left(c_{LR}\\left(q_{optLR}\\right)+R_{ev}\\left(q_{optLR}\\right)\\right)}{2}\\right)",
+        "showLabel": true,
+        "label": "`max(Revenue-Cost_{LR})`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "92",
+        "title": "Short Run"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "92",
+        "color": "#6042a6",
+        "latex": "L_{SR}\\left(q,K\\right)=\\left(\\frac{q}{AK^{\\beta}}\\right)^{\\frac{1}{\\alpha}}"
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "92",
+        "color": "#c74440",
+        "latex": "c_{ShortRun}\\left(q,K\\right)=wL_{SR}\\left(q,K\\right)+rK"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "92",
+        "color": "#fa7e19",
+        "latex": "c_{SR}\\left(q\\right)=wL_{SR}\\left(q,K_{0}\\right)+rK_{0}\\left\\{q\\ge0\\right\\}\\left\\{L_{ong}=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "folderId": "92",
+        "color": "#000000",
+        "latex": "A_{CSR}\\left(q\\right)=\\frac{c_{SR}\\left(q\\right)}{q}\\left\\{L_{ong}=0\\right\\}",
+        "lineOpacity": "0.3"
+      },
+      {
+        "type": "expression",
+        "id": "102",
+        "folderId": "92",
+        "color": "#000000",
+        "latex": "\\left(3,A_{CSR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "`AC_{SR}`",
+        "hidden": true,
+        "labelOrientation": "above"
+      },
+      {
+        "type": "expression",
+        "id": "51",
+        "folderId": "92",
+        "color": "#fa7e19",
+        "latex": "\\left(3,c_{SR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "SR Cost",
+        "hidden": true,
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "57",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "M_{CSR}\\left(q\\right)=\\frac{d}{dq}c_{SR}\\left(q\\right)\\left\\{L_{ong}=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(3,M_{CSR}\\left(3\\right)\\right)",
+        "showLabel": true,
+        "label": "`MC_{SR}`",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "92",
+        "color": "#000000",
+        "latex": "q_{optSR}=\\left(AK_{0}^{\\beta}\\right)^{\\frac{1}{1-\\alpha}}\\left(\\frac{p\\alpha}{w}\\right)^{\\frac{\\alpha}{1-\\alpha}}"
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "folderId": "92",
+        "color": "#6042a6",
+        "latex": "L_{optSR}=L_{SR}\\left(q_{optSR},K_{0}\\right)"
+      },
+      {
+        "type": "text",
+        "id": "59",
+        "folderId": "92",
+        "text": "check SR solutions"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "92",
+        "color": "#6042a6",
+        "latex": "M_{CSR}\\left(q_{optSR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "92",
+        "color": "#000000",
+        "latex": "p"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "92",
+        "color": "#388c46",
+        "latex": "P_{roductivitySR}=\\frac{q_{optSR}}{L_{optSR}}"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "92",
+        "color": "#000000",
+        "latex": "K_{0}=2.3",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": ".1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "folderId": "92",
+        "color": "#c74440",
+        "latex": "K_{1}=K_{0}"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "L_{1}=16",
+        "slider": {
+          "max": "16"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "92",
+        "color": "#388c46",
+        "latex": "L_{2}=25"
+      },
+      {
+        "type": "expression",
+        "id": "98",
+        "folderId": "92",
+        "color": "#c74440",
+        "latex": "\\pi_{optSR}=R_{ev}\\left(q_{optSR}\\right)-c_{SR}\\left(q_{optSR}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optSR},R_{ev}\\left(q_{optSR}\\right)\\right)\\left\\{L_{ong}=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optSR},c_{SR}\\left(q_{optSR}\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optSR},M_{CSR}\\left(q_{optSR}\\right)\\right)",
+        "showLabel": true,
+        "label": "MR=MC",
+        "pointStyle": "CROSS",
+        "labelOrientation": "above_left"
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optSR},0\\right)\\left\\{L_{ong}=0\\right\\}",
+        "showLabel": true,
+        "label": "`q_{SR}`",
+        "pointStyle": "OPEN",
+        "labelOrientation": "below"
+      },
+      {
+        "type": "expression",
+        "id": "64",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{optSR},c_{SR}\\left(q_{optSR}\\right)\\right),\\left(q_{optSR},0\\right)\\right)\\left\\{L_{ong}=0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "103",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\operatorname{polygon}\\left(\\left(q_{optSR},R_{ev}\\left(q_{optSR}\\right)\\right),\\left(q_{optSR},c_{SR}\\left(q_{optSR}\\right)\\right)\\right)\\left\\{L_{ong}=0\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "104",
+        "folderId": "92",
+        "color": "#2d70b3",
+        "latex": "\\left(q_{optSR},\\frac{\\left(R_{ev}\\left(q_{optSR}\\right)+c_{SR}\\left(q_{optSR}\\right)\\right)}{2}\\right)",
+        "showLabel": true,
+        "label": "`Max(Revenue-Cost_{SR})`",
+        "hidden": true,
+        "labelOrientation": "right"
+      },
+      {
+        "type": "folder",
+        "id": "108",
+        "title": "Buttons",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "109",
+        "folderId": "108",
+        "color": "#c74440",
+        "latex": "\\left(-3,2\\right)",
+        "showLabel": true,
+        "label": "Long Run",
+        "pointStyle": "OPEN",
+        "labelOrientation": "right",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "L_{ong}\\to1"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "110",
+        "folderId": "108",
+        "color": "#2d70b3",
+        "latex": "\\left(-3,1\\right)",
+        "showLabel": true,
+        "label": "Short Run",
+        "pointStyle": "OPEN",
+        "clickableInfo": {
+          "enabled": true,
+          "latex": "L_{ong}\\to0"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "94",
+        "title": "Answer",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "95",
+        "folderId": "94",
+        "color": "#388c46",
+        "latex": "q_{optLR}"
+      },
+      {
+        "type": "expression",
+        "id": "96",
+        "folderId": "94",
+        "color": "#6042a6",
+        "latex": "q_{optSR}"
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "94",
+        "color": "#388c46",
+        "latex": "\\pi_{optLR}"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "folderId": "94",
+        "color": "#000000",
+        "latex": "\\pi_{optSR}"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "94",
+        "color": "#6042a6",
+        "latex": "P_{roductivityLR}"
+      },
+      {
+        "type": "expression",
+        "id": "72",
+        "folderId": "94",
+        "color": "#000000",
+        "latex": "P_{roductivitySR}"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
