@@ -37,9 +37,10 @@ JS:document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".container");
-  const graphBox = document.querySelector(".graph-resizable");
+  const container = document.querySelector("body.graph-page .container");
+  const graphBox = document.getElementById("graphBox");
   const handle = graphBox?.querySelector(".resize-handle");
 
   if (!container || !graphBox || !handle) return;
@@ -51,7 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const dx = e.clientX - startX;
     const nextW = Math.max(900, startW + dx);
 
+    // ✅ 改整个 container
     container.style.width = nextW + "px";
+
+    // ✅ Desmos 跟着 resize（不然会糊 / 画面不更新）
+    if (window.Calc && typeof window.Calc.resize === "function") {
+      window.Calc.resize();
+    }
   };
 
   const onUp = () => {
@@ -60,14 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   handle.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-    handle.setPointerCapture(e.pointerId); // 🔑 很关键
-
-    const rect = container.getBoundingClientRect();
-    startX = e.clientX;
-    startW = rect.width;
-
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-  });
-});
+    e.preventDef
