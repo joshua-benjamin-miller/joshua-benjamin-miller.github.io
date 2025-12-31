@@ -255,3 +255,35 @@ h2 {
 }
 
 
+
+/* ===== Default: responsive 16:9 ===== */
+.graph-resizable{
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+
+  /* default as auto adapt */
+  aspect-ratio: 16 / 9;
+  height: auto;
+
+  /* allow drag */
+  resize: both;
+}
+
+.graph-resizable .graph-wrapper{
+  position: absolute;
+  inset: 0;
+}
+
+/* ===== After user resizes: switch to fixed-height mode ===== */
+.graph-resizable.user-sized{
+  aspect-ratio: auto;   /* unlock 16:9 ratio */
+  height: var(--box-h);
+  min-height: 300px;
+  max-height: 85vh;
+}
+
+
