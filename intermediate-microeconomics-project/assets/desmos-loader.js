@@ -39,23 +39,29 @@ JS:document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector("body.graph-page .container");
   const graphBox = document.getElementById("graphBox");
   const handle = graphBox?.querySelector(".resize-handle");
 
-  if (!container || !graphBox || !handle) return;
+  if (!graphBox || !handle) return;
 
-  let startX = 0;
-  let startW = 0;
+  let startX, startY, startWidth, startHeight;
 
   const onMove = (e) => {
-    const dx = e.clientX - startX;
-    const nextW = Math.max(900, startW + dx);
+ 
+    const nextW = startWidth + (e.clientX - startX);
+    const nextH = startHeight + (e.clientY - startY);
 
-    // ✅ 改整个 container
-    container.style.width = nextW + "px";
 
-    // ✅ Desmos 跟着 resize（不然会糊 / 画面不更新）
+    const finalW = Math.max(320, nextW);
+    const finalH = Math.max(320, nextH);
+
+    graphBox.style.width = finalW + "px";
+    graphBox.style.height = finalH + "px";
+    
+  
+    graphBox.style.aspectRatio = "auto";
+
+
     if (window.Calc && typeof window.Calc.resize === "function") {
       window.Calc.resize();
     }
@@ -64,17 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const onUp = () => {
     window.removeEventListener("pointermove", onMove);
     window.removeEventListener("pointerup", onUp);
+    document.body.style.cursor = "default"; 
   };
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-
-    // ✅ Safari/Trackpad 稳定性关键
     if (handle.setPointerCapture) handle.setPointerCapture(e.pointerId);
 
     startX = e.clientX;
-    startW = Math.round(container.getBoundingClientRect().width);
+    startY = e.clientY;
 
+    const rect = graphBox.getBoundingClientRect();
+    startWidth = rect.width;
+    startHeight = rect.height;
+
+    document.body.style.cursor = "nwse-resize"; 
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
   });
