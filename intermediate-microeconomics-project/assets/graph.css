@@ -256,6 +256,7 @@ h2 {
 
 
 
+
 /* ===== Default: responsive 16:9 ===== */
 .graph-resizable{
   width: 100%;
@@ -269,45 +270,43 @@ h2 {
   aspect-ratio: 16 / 9;
   height: auto;
 
-  /* allow drag */
+  /* we're using custom handle, not native resize */
   resize: none;
+
+  min-height: 320px;
+  max-height: 85vh;
 }
 
+/* fill */
 .graph-resizable .graph-wrapper{
   position: absolute;
   inset: 0;
 }
 
-/* ===== After user resizes: switch to fixed-height mode ===== */
+/* ===== After user drags: lock width + height ===== */
 .graph-resizable.user-sized{
-  aspect-ratio: auto;   /* unlock 16:9 ratio */
+  aspect-ratio: auto;
+  width: var(--box-w, 100%);
   height: var(--box-h);
-  min-height: 300px;
+
+  max-width: 100%;     /* 不允许超过卡片宽 */
+  min-width: 320px;
+  min-height: 320px;
   max-height: 85vh;
+
+  margin: 0 auto;      /* 变窄后居中 */
 }
 
-.graph-resizable::after{
-  content: "⇲ drag";
-  position: absolute;
-  right: 10px;
-  bottom: 8px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.85);
-  background: rgba(17,24,39,0.55);
-  padding: 3px 8px;
-  border-radius: 999px;
-  pointer-events: none;
-}
-
+/* ===== The only visible drag handle ===== */
 .resize-handle{
   position: absolute;
   right: 10px;
   bottom: 10px;
-  width: 40px;
+  width: 44px;
   height: 34px;
   border-radius: 999px;
   background: rgba(17,24,39,0.55);
-  cursor: ns-resize;
+  cursor: nwse-resize;
   z-index: 50;
 
   display: flex;
@@ -316,8 +315,11 @@ h2 {
 }
 
 .resize-handle::before{
-  content: "↕ drag";
+  content: "↘ drag";
   font-size: 12px;
   color: rgba(255,255,255,0.9);
 }
 
+.graph-resizable.resizing{
+  user-select: none;
+}
