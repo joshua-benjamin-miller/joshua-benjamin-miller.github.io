@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let startX, startY, startWidth, startHeight;
 
-  const onMove = (e) => {
+ const onMove = (e) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     const nextW = startWidth + dx;
@@ -55,15 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalW = Math.max(600, nextW); 
     const finalH = Math.max(400, nextH);
     
-    container.style.setProperty('width', finalW + 'px', 'important'); 
-    graphBox.style.height = finalH + "px";
+    container.style.maxWidth = "none"; 
+    container.style.width = finalW + 'px'; 
     
+    graphBox.style.height = finalH + "px";
     graphBox.style.aspectRatio = "auto";
 
     if (window.Calc && typeof window.Calc.resize === "function") {
-      window.Calc.resize();
+        window.Calc.resize();
     }
-  };
+};
 
   const onUp = () => {
     window.removeEventListener("pointermove", onMove);
