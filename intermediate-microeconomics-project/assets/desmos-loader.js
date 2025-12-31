@@ -65,4 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const rect = container.getBoundingClientRect();
     startX = e.clientX;
-    startW =
+    startW = rect.width;
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
+});
