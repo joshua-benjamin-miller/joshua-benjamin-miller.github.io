@@ -36,35 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const box = document.gettheElementById?.("graphBox") || document.getElementById("graphBox");
-  if (!box) return;
+  const container = document.querySelector(".container");
+  const graphBox = document.getElementById("graphBox");
+  if (!container || !graphBox) return;
 
-  const handle = box.querySelector(".resize-handle");
+  const handle = graphBox.querySelector(".resize-handle");
   if (!handle) return;
 
-  const MIN_W = 320;
-  const MIN_H = 320;
-
-  let startX = 0, startY = 0;
-  let startW = 0, startH = 0;
-
-  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  let startX = 0;
+  let startW = 0;
 
   const onMove = (e) => {
     const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
+    const nextW = Math.max(900, startW + dx); // 给个下限，别拖太小
 
-    const maxH = Math.round(window.innerHeight * 0.85);
-
-    // 宽度不设上限（由 graph-scroll 提供滚动）
-    const nextW = clamp(startW + dx, MIN_W, 99999);
-    const nextH = clamp(startH + dy, MIN_H, maxH);
-
-    box.classList.add("user-sized");
-    box.style.setProperty("--box-w", nextW + "px");
-    box.style.setProperty("--box-h", nextH + "px");
+    container.style.width = nextW + "px";     // ✅ 改的是容器宽度
   };
 
   const onUp = () => {
@@ -74,11 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    const rect = box.getBoundingClientRect();
+    const rect = container.getBoundingClientRect();
     startX = e.clientX;
-    startY = e.clientY;
     startW = Math.round(rect.width);
-    startH = Math.round(rect.height);
 
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
