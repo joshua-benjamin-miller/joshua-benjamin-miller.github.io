@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const finalW = Math.max(600, nextW); 
     const finalH = Math.max(400, nextH);
     
-    container.style.setProperty('width', finalW + 'px', 'important'); // 强制覆盖 CSS 的 !important
+    container.style.setProperty('width', finalW + 'px', 'important'); 
     graphBox.style.height = finalH + "px";
     
     graphBox.style.aspectRatio = "auto";
