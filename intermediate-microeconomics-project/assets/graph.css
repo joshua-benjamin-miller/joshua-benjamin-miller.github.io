@@ -286,4 +286,17 @@ h2 {
   max-height: 85vh;
 }
 
+.graph-resizable::after{
+  content: "⇲ drag";
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(17,24,39,0.55);
+  padding: 3px 8px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
 
