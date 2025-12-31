@@ -342,3 +342,22 @@ html, body{
   overflow-x: auto !important;
 }
 
+/* ✅ graph page: allow JS to set container width */
+.graph-page .container{
+  max-width: none !important;
+  width: auto !important;     /* 关键：不要 100% */
+}
+
+/* ✅ allow horizontal scrolling when container grows */
+html, body{
+  overflow-x: auto !important;
+}
+
+/* ✅ make handle reliably draggable on Safari */
+.resize-handle{
+  pointer-events: auto;
+  touch-action: none;         /* 关键：不然 Safari 会把拖拽当滚动/缩放 */
+  user-select: none;
+}
+
+
