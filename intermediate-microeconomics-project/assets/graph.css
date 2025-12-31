@@ -257,47 +257,51 @@ h2 {
 
 
 
-/* ===== Default: responsive 16:9 ===== */
+/* 横向滚动外壳：在文档流里，所以会把下面 section 挤下去 */
+.graph-scroll{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 8px;
+}
+
+/* 默认自适应 */
 .graph-resizable{
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: #fff;
   overflow: hidden;
   position: relative;
 
-  /* default as auto adapt */
-  aspect-ratio: 16 / 9;
-  height: auto;
-
-  /* we're using custom handle, not native resize */
   resize: none;
-
   min-height: 320px;
   max-height: 85vh;
 }
 
-/* fill */
-.graph-resizable .graph-wrapper{
-  position: absolute;
-  inset: 0;
-}
-
-/* ===== After user drags: lock width + height ===== */
+/* 拖过一次后锁定宽高（宽度允许超过容器，由 graph-scroll 提供滚动条） */
 .graph-resizable.user-sized{
   aspect-ratio: auto;
   width: var(--box-w, 100%);
   height: var(--box-h);
 
-  max-width: 100%;     /* 不允许超过卡片宽 */
   min-width: 320px;
   min-height: 320px;
   max-height: 85vh;
 
-  margin: 0 auto;      /* 变窄后居中 */
+  max-width: none;     /* ✅ 允许变宽 */
 }
 
-/* ===== The only visible drag handle ===== */
+/* 内部铺满 */
+.graph-resizable .graph-wrapper{
+  position: absolute;
+  inset: 0;
+}
+
+/* 右下角拖拽把手 */
 .resize-handle{
   position: absolute;
   right: 10px;
@@ -319,6 +323,7 @@ h2 {
   font-size: 12px;
   color: rgba(255,255,255,0.9);
 }
+
 
 .graph-resizable.resizing{
   user-select: none;
