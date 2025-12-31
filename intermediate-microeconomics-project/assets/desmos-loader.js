@@ -59,13 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
     window.removeEventListener("pointerup", onUp);
   };
 
-  handle.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-    const rect = container.getBoundingClientRect();
-    startX = e.clientX;
-    startW = Math.round(rect.width);
+ handle.addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
 
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-  });
+  const rect = container.getBoundingClientRect();
+  startX = e.clientX;
+  startW = Math.round(rect.width);
+
+  handle.setPointerCapture?.(e.pointerId);
+
+  window.addEventListener("pointermove", onMove);
+  window.addEventListener("pointerup", onUp);
 });
