@@ -323,3 +323,9 @@ h2 {
   font-size: 12px;
   color: rgba(255,255,255,0.9);
 }
+
+/* Only for graph page: unlock container width */
+.graph-page .container{
+  max-width: none !important;   /* 解除 1100px 上限 */
+  width: 100%;
+}
