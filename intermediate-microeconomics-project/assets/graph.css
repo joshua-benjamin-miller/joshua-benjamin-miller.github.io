@@ -352,3 +352,9 @@ h2 {
 
   margin: 0;            /* ✅ 不居中，不然滚动计算会怪 */
 }
+
+/* Only for graph page: unlock container width */
+.graph-page .container{
+  max-width: none !important;   /* 解除 1100px 上限 */
+  width: 100%;
+}
