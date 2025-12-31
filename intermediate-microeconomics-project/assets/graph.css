@@ -30,12 +30,6 @@ h2 {
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-.graph-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
 #calculator {
   position: absolute;
   inset: 0;
@@ -257,7 +251,7 @@ h2 {
 
 
 
-/* 横向滚动外壳：在文档流里，所以会把下面 section 挤下去 */
+/* 横向滚动外壳 */
 .graph-scroll{
   width: 100%;
   overflow-x: auto;
@@ -265,37 +259,39 @@ h2 {
   padding-bottom: 8px;
 }
 
-/* 默认自适应 */
-.graph-resizable{
+/* 外包裹框（会被拖动变大） */
+.graph-shell{
+  position: relative;
+  display: inline-block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;
 
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: #fff;
   overflow: hidden;
-  position: relative;
 
-  resize: none;
   min-height: 320px;
-  max-height: 85vh;
 }
 
-/* 拖过一次后锁定宽高（宽度允许超过容器，由 graph-scroll 提供滚动条） */
-.graph-resizable.user-sized{
+/* 拖过一次后，用 JS 写入的宽高 */
+.graph-shell.user-sized{
   aspect-ratio: auto;
   width: var(--box-w, 100%);
-  height: var(--box-h);
+  height: var(--box-h, 520px);
 
+  max-width: none;
+  max-height: 85vh;
   min-width: 320px;
   min-height: 320px;
-  max-height: 85vh;
-
-  max-width: none;     /* ✅ 允许变宽 */
 }
 
-/* 内部铺满 */
+/* 内部填满外壳（只是承载 calculator） */
+.graph-resizable{
+  position: absolute;
+  inset: 0;
+}
+
 .graph-resizable .graph-wrapper{
   position: absolute;
   inset: 0;
@@ -324,54 +320,7 @@ h2 {
   color: rgba(255,255,255,0.9);
 }
 
-
-.graph-resizable.resizing{
+.graph-shell.resizing{
   user-select: none;
 }
 
-
-
-
-
-/* 横向滚动外壳 */
-.graph-scroll{
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: visible;
-  padding-bottom: 8px;
-}
-
-/* ✅ 真正的“外包裹框”：你截图里看到的那圈白底/边框 */
-.graph-shell{
-  position: relative;
-  display: inline-block;        /* 关键：让它可以比容器更宽，超出就滚动 */
-  width: 100%;
-  aspect-ratio: 16 / 9;
-
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #fff;
-  overflow: hidden;
-}
-
-/* 拖过一次后，使用 JS 写入的宽高 */
-.graph-shell.user-sized{
-  aspect-ratio: auto;
-  width: var(--box-w, 100%);
-  height: var(--box-h, 520px);
-  max-width: none;              /* 关键：允许无限变宽 */
-  max-height: 85vh;
-  min-width: 320px;
-  min-height: 320px;
-}
-
-/* 内部填满外壳 */
-.graph-resizable{
-  position: absolute;
-  inset: 0;
-}
-
-.graph-resizable .graph-wrapper{
-  position: absolute;
-  inset: 0;
-}
