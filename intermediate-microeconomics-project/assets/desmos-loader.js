@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+JS:document.addEventListener("DOMContentLoaded", function () {
   // 1. get the json file name
   let filename = window.location.pathname.split("/").pop() || "";
   filename = filename.replace(/\.html$/i, "");
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
   const graphBox = document.getElementById("graphBox");
@@ -59,16 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.removeEventListener("pointerup", onUp);
   };
 
- handle.addEventListener("pointerdown", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  handle.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    const rect = container.getBoundingClientRect();
+    startX = e.clientX;
+    startW = Math.round(rect.width);
 
-  const rect = container.getBoundingClientRect();
-  startX = e.clientX;
-  startW = Math.round(rect.width);
-
-  handle.setPointerCapture?.(e.pointerId);
-
-  window.addEventListener("pointermove", onMove);
-  window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
 });
