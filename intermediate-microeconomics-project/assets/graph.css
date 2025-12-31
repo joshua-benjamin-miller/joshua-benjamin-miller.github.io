@@ -330,33 +330,20 @@ h2 {
   overflow-x: auto;
 }
 
-/* allow container to grow wider than viewport on graph page */
-.graph-page .container{
+/* ✅ graph page: container must be resizable by JS */
+body.graph-page .container{
   max-width: none !important;
-  width: auto !important;     /* 🔑 不要 100% */
-  min-width: 100%;
+  width: auto !important;    /* 🔑 不能是 100% */
 }
 
-/* make overflow visible so you can actually see the extra width */
+/* ✅ allow horizontal scroll when container grows */
 html, body{
   overflow-x: auto !important;
 }
 
-/* ✅ graph page: allow JS to set container width */
-.graph-page .container{
-  max-width: none !important;
-  width: auto !important;     /* 关键：不要 100% */
-}
-
-/* ✅ allow horizontal scrolling when container grows */
-html, body{
-  overflow-x: auto !important;
-}
-
-/* ✅ make handle reliably draggable on Safari */
+/* ✅ make the handle draggable on Safari */
 .resize-handle{
-  pointer-events: auto;
-  touch-action: none;         /* 关键：不然 Safari 会把拖拽当滚动/缩放 */
+  touch-action: none;
   user-select: none;
 }
 
