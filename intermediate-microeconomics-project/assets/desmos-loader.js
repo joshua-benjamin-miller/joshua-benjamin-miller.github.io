@@ -2,25 +2,21 @@
 // 1) Load Desmos JSON
 // =====================
 document.addEventListener("DOMContentLoaded", function () {
-  // get the json file name
   let filename = window.location.pathname.split("/").pop() || "";
   filename = filename.replace(/\.html$/i, "");
   const jsonPath = `${filename}.json`;
 
-  // get calculator element
   const elt = document.getElementById("calculator");
   if (!elt) {
     console.warn("No #calculator element found. Skipping Desmos init.");
     return;
   }
 
-  // create Desmos calculator
   window.Calc = Desmos.GraphingCalculator(elt, {
     expressionsCollapsed: true,
     keypad: false,
   });
 
-  // load json state
   fetch(jsonPath)
     .then((response) => {
       if (!response.ok) throw new Error(`Failed to load JSON: ${jsonPath}`);
@@ -28,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then((state) => {
       Calc.setState(state);
+      // ✅ 初次加载完也 resize 一下更稳
+      window.Calc?.resize?.();
     })
     .catch((err) => {
       console.error("Error loading Desmos JSON:", err);
@@ -36,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // =====================
-// 2) Resize shell
+// 2) Resize shell (wrapper) + tell Desmos to resize
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
- const shell = document.getElementById("graphShell");
+  const shell = document.getElementById("graphShell");
   if (!shell) return;
 
   const handle = shell.querySelector(".resize-handle");
@@ -51,13 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const MIN_W = 900;
   const MIN_H = 320;
 
+  // ✅ 节流：避免 pointermove 太频繁把 Desmos 卡死
+  let raf = 0;
+  const desmosResize = () => {
+    if (!window.Calc || typeof window.Calc.resize !== "function") return;
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      window.Calc.resize();
+    });
+  };
+
   const onMove = (e) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
 
     const nextW = Math.max(MIN_W, startW + dx);
-
-    // 每次 move 动态算 MAX_H，避免你拖完再 resize 窗口高度后不一致
     const MAX_H = Math.round(window.innerHeight * 0.85);
     const nextH = Math.min(MAX_H, Math.max(MIN_H, startH + dy));
 
@@ -65,28 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
     shell.style.setProperty("--box-h", `${nextH}px`);
     shell.classList.add("user-sized");
     shell.classList.add("resizing");
+
+    desmosResize(); // ✅ 拖动中实时重排
   };
 
   const onUp = () => {
     shell.classList.remove("resizing");
     window.removeEventListener("pointermove", onMove);
-    window.removeEventListener("pointerup", onUp);
-  };
-
-  handle.addEventListener("pointerdown", (e) => {
-    e.preventDefault();
-    const rect = shell.getBoundingClientRect();
-    startX = e.clientX;
-    startY = e.clientY;
-    startW = Math.round(rect.width);
-    startH = Math.round(rect.height);
-
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-  });
-});
-
-if (window.Calc && typeof window.Calc.resize === "function") {
-  window.Calc.resize();
-}
-
+    window.removeEvent
