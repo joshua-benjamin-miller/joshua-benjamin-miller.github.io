@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<script>
+
   document.addEventListener("DOMContentLoaded", () => {
     const box = document.getElementById("graphBox");
     if (!box) return;
@@ -52,4 +52,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ro.observe(box);
   });
-</script>
