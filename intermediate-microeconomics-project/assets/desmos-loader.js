@@ -52,3 +52,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ro.observe(box);
   });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const box = document.getElementById("graphBox");
+  if (!box) return;
+
+  const handle = box.querySelector(".resize-handle");
+  if (!handle) return;
+
+  const MIN_H = 320;
+
+  let startY = 0;
+  let startH = 0;
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+
+  const onMove = (e) => {
+    const maxH = Math.round(window.innerHeight * 0.85);
+    const dy = e.clientY - startY;
+    const nextH = clamp(startH + dy, MIN_H, maxH);
+
+    box.classList.add("user-sized");
+    box.style.setProperty("--box-h", nextH + "px");
+  };
+
+  const onUp = () => {
+    window.removeEventListener("pointermove", onMove);
+    window.removeEventListener("pointerup", onUp);
+    box.classList.remove("resizing");
+  };
+
+  handle.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    startY = e.clientY;
+    startH = Math.round(box.getBoundingClientRect().height);
+
+    box.classList.add("resizing");
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
+});
