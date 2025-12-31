@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // =====================
-// 2) Resize graphBox
+// 2) Resize shell
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
-  const graphBox = document.getElementById("graphBox");
-  if (!graphBox) return;
+ const shell = document.getElementById("graphShell");
+  if (!shell) return;
 
-  const handle = graphBox.querySelector(".resize-handle");
+  const handle = shell.querySelector(".resize-handle");
   if (!handle) return;
 
   let startX = 0, startY = 0;
@@ -61,21 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const MAX_H = Math.round(window.innerHeight * 0.85);
     const nextH = Math.min(MAX_H, Math.max(MIN_H, startH + dy));
 
-    graphBox.style.setProperty("--box-w", `${nextW}px`);
-    graphBox.style.setProperty("--box-h", `${nextH}px`);
-    graphBox.classList.add("user-sized");
-    graphBox.classList.add("resizing");
+    shell.style.setProperty("--box-w", `${nextW}px`);
+    shell.style.setProperty("--box-h", `${nextH}px`);
+    shell.classList.add("user-sized");
+    shell.classList.add("resizing");
   };
 
   const onUp = () => {
-    graphBox.classList.remove("resizing");
+    shell.classList.remove("resizing");
     window.removeEventListener("pointermove", onMove);
     window.removeEventListener("pointerup", onUp);
   };
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    const rect = graphBox.getBoundingClientRect();
+    const rect = shell.getBoundingClientRect();
     startX = e.clientX;
     startY = e.clientY;
     startW = Math.round(rect.width);
@@ -85,3 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("pointerup", onUp);
   });
 });
+
+if (window.Calc && typeof window.Calc.resize === "function") {
+  window.Calc.resize();
+}
+
