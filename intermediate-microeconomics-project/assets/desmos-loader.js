@@ -36,35 +36,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".container");
   const graphBox = document.getElementById("graphBox");
-  if (!container || !graphBox) return;
+  if (!graphBox) return;
 
   const handle = graphBox.querySelector(".resize-handle");
   if (!handle) return;
 
-  let startX = 0;
-  let startW = 0;
+  let startX = 0, startY = 0;
+  let startW = 0, startH = 0;
+
+  const MIN_W = 900;     // 你想要的最小宽
+  const MIN_H = 320;     // 保底高度
+  const MAX_H = Math.round(window.innerHeight * 0.85);
 
   const onMove = (e) => {
     const dx = e.clientX - startX;
-    const nextW = Math.max(900, startW + dx); // 给个下限，别拖太小
+    const dy = e.clientY - startY;
 
-    container.style.width = nextW + "px";     // ✅ 改的是容器宽度
+    const nextW = Math.max(MIN_W, startW + dx);
+    const nextH = Math.min(MAX_H, Math.max(MIN_H, startH + dy));
+
+    // 关键：写进 CSS 变量，让 graphBox 自己变宽变高
+    graphBox.style.setProperty("--box-w", `${nextW}px`);
+    graphBox.style.setProperty("--box-h", `${nextH}px`);
+    graphBox.classList.add("user-sized");
+    graphBox.classList.add("resizing");
   };
 
   const onUp = () => {
+    graphBox.classList.remove("resizing");
     window.removeEventListener("pointermove", onMove);
     window.removeEventListener("pointerup", onUp);
   };
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    const rect = container.getBoundingClientRect();
+    const rect = graphBox.getBoundingClientRect();
     startX = e.clientX;
+    startY = e.clientY;
     startW = Math.round(rect.width);
+    startH = Math.round(rect.height);
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
+});
+
 
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
