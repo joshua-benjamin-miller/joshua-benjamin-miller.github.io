@@ -345,12 +345,12 @@ body.graph-page .container {
   width: 95%;  
 }
 
-/* ✅ allow horizontal scroll when container grows */
+
 html, body{
   overflow-x: auto !important;
 }
 
-/* ✅ make the handle draggable on Safari */
+
 .resize-handle{
   touch-action: none;
   user-select: none;
@@ -358,10 +358,10 @@ html, body{
 
 .resize-handle {
   position: absolute;
-  right: -5px;   /* 稍微往外一点更好抓取 */
+  right: -5px;  
   bottom: -5px;
   z-index: 10000;
-  touch-action: none; /* 禁用系统手势，防止移动端冲突 */
+  touch-action: none; 
 }
 
 
