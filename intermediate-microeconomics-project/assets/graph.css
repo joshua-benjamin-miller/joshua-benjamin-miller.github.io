@@ -347,4 +347,7 @@ html, body{
   user-select: none;
 }
 
+.resize-handle{ z-index: 9999; }
+
+
 
