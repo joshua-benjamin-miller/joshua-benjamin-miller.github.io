@@ -324,18 +324,6 @@ h2 {
   color: rgba(255,255,255,0.9);
 }
 
-/* Only for graph page: unlock container width */
-.graph-page .container{
-  max-width: none !important;   /* 解除 1100px 上限 */
-  width: 100%;
-}
-
-/* graph page only: allow container to grow wider than 1100px */
-.graph-page .container{
-  max-width: none !important;  /* 解除 1100px 上限 */
-  width: auto !important;      /* ✅ 别用 100%，否则永远锁死 */
-  min-width: 100%;             /* 默认至少撑满屏幕 */
-}
 
 /* 让页面允许横向滚动（容器变宽后才看得到） */
 .graph-page, 
