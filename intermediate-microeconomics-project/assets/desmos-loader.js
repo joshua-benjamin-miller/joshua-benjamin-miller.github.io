@@ -23,9 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then((state) => {
-      Calc.setState(state);
-      // ✅ 初次加载完也 resize 一下更稳
-      window.Calc?.resize?.();
+      window.Calc.setState(state);
+      window.Calc.resize();
     })
     .catch((err) => {
       console.error("Error loading Desmos JSON:", err);
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const MIN_W = 900;
   const MIN_H = 320;
 
-  // ✅ 节流：避免 pointermove 太频繁把 Desmos 卡死
+  // throttle Desmos resize using RAF
   let raf = 0;
   const desmosResize = () => {
     if (!window.Calc || typeof window.Calc.resize !== "function") return;
@@ -73,10 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
     shell.classList.add("user-sized");
     shell.classList.add("resizing");
 
-    desmosResize(); // ✅ 拖动中实时重排
+    desmosResize();
   };
 
   const onUp = () => {
     shell.classList.remove("resizing");
     window.removeEventListener("pointermove", onMove);
-    window.removeEvent
+    window.removeEventListener("pointerup", onUp);
+    desmosResize();
+  };
+
+  handle.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+
+    const rect = shell.getBoundingClientRect();
+    startX = e.clientX;
+    startY = e.clientY;
+    startW = Math.round(rect.width);
+    startH = Math.round(rect.height);
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
+});
