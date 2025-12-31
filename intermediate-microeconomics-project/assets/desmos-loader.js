@@ -67,4 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   handle.addEventListener("pointerdown", (e) => {
-    e.preventDef
+    e.preventDefault();
+
+    // ✅ Safari/Trackpad 稳定性关键
+    if (handle.setPointerCapture) handle.setPointerCapture(e.pointerId);
+
+    startX = e.clientX;
+    startW = Math.round(container.getBoundingClientRect().width);
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+  });
+});
