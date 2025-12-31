@@ -37,30 +37,28 @@ JS:document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector("body.graph-page .container");
   const graphBox = document.getElementById("graphBox");
   const handle = graphBox?.querySelector(".resize-handle");
 
-  if (!graphBox || !handle) return;
+  if (!container || !graphBox || !handle) return;
 
   let startX, startY, startWidth, startHeight;
 
   const onMove = (e) => {
- 
-    const nextW = startWidth + (e.clientX - startX);
-    const nextH = startHeight + (e.clientY - startY);
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    const nextW = startWidth + dx;
+    const nextH = startHeight + dy;
 
-
-    const finalW = Math.max(320, nextW);
-    const finalH = Math.max(320, nextH);
-
-    graphBox.style.width = finalW + "px";
+    const finalW = Math.max(600, nextW); 
+    const finalH = Math.max(400, nextH);
+    
+    container.style.setProperty('width', finalW + 'px', 'important'); // 强制覆盖 CSS 的 !important
     graphBox.style.height = finalH + "px";
     
-  
     graphBox.style.aspectRatio = "auto";
-
 
     if (window.Calc && typeof window.Calc.resize === "function") {
       window.Calc.resize();
@@ -70,21 +68,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const onUp = () => {
     window.removeEventListener("pointermove", onMove);
     window.removeEventListener("pointerup", onUp);
-    document.body.style.cursor = "default"; 
+    document.body.style.cursor = "default";
   };
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
+    
     if (handle.setPointerCapture) handle.setPointerCapture(e.pointerId);
 
     startX = e.clientX;
     startY = e.clientY;
+    
+    const rectCont = container.getBoundingClientRect();
+    const rectBox = graphBox.getBoundingClientRect();
+    
+    startWidth = rectCont.width;
+    startHeight = rectBox.height;
 
-    const rect = graphBox.getBoundingClientRect();
-    startWidth = rect.width;
-    startHeight = rect.height;
-
-    document.body.style.cursor = "nwse-resize"; 
+    document.body.style.cursor = "nwse-resize";
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
   });
