@@ -342,3 +342,16 @@ h2 {
 .graph-page body{
   overflow-x: auto;
 }
+
+/* allow container to grow wider than viewport on graph page */
+.graph-page .container{
+  max-width: none !important;
+  width: auto !important;     /* 🔑 不要 100% */
+  min-width: 100%;
+}
+
+/* make overflow visible so you can actually see the extra width */
+html, body{
+  overflow-x: auto !important;
+}
+
