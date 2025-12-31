@@ -270,7 +270,7 @@ h2 {
   height: auto;
 
   /* allow drag */
-  resize: both;
+  resize: none;
 }
 
 .graph-resizable .graph-wrapper{
@@ -299,4 +299,25 @@ h2 {
   pointer-events: none;
 }
 
+.resize-handle{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(17,24,39,0.55);
+  cursor: ns-resize;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resize-handle::before{
+  content: "↕ drag";
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+}
 
