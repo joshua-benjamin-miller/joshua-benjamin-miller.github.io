@@ -95,6 +95,7 @@ h2 {
   margin-right: 0; 
 }
 
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -253,7 +254,6 @@ h2 {
   transform: translateY(1px);
   box-shadow: none;
 }
-
 
 
 
