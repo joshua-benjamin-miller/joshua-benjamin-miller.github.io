@@ -36,26 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const box = document.getElementById("graphBox");
-    if (!box) return;
-
-    const ro = new ResizeObserver(entries => {
-      for (const entry of entries) {
-        if (!box.classList.contains("user-sized")) {
-          box.classList.add("user-sized");
-        }
-        const h = Math.round(entry.contentRect.height);
-        box.style.setProperty("--box-h", h + "px");
-      }
-    });
-
-    ro.observe(box);
-  });
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const box = document.getElementById("graphBox");
   if (!box) return;
