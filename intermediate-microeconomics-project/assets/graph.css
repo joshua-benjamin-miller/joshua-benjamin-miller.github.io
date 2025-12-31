@@ -328,3 +328,27 @@ h2 {
 .graph-resizable.resizing{
   user-select: none;
 }
+
+
+
+
+
+.graph-scroll{
+  width: 100%;
+  overflow-x: auto;     /* ✅ 超宽就滚动 */
+  overflow-y: visible;
+  padding-bottom: 8px;
+}
+
+.graph-resizable.user-sized{
+  aspect-ratio: auto;
+  width: var(--box-w);  /* ✅ 用 JS 写入的宽度 */
+  height: var(--box-h);
+
+  max-width: none;      /* ✅ 关键：别限制 100% */
+  min-width: 320px;
+  min-height: 320px;
+  max-height: 85vh;
+
+  margin: 0;            /* ✅ 不居中，不然滚动计算会怪 */
+}
