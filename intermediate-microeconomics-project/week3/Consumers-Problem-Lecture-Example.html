@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../assets/graph.css?v=1">
 
 </head>
-<body>
+<body class="graph-page">
   
   <div id="navbar-container"></div>
   <script src="../assets/navbarG-loader.js"></script>
@@ -48,22 +48,23 @@
 
     <a
       class="desmos-btn"
-      href="https://www.desmos.com/calculator/gaqik8ya09"
+      href="https://www.desmos.com/calculator/suuswo4mrx"
       target="_blank"
       rel="noopener"
     >
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>"
-      target="_blank"
-      rel="noopener"
-    >
-      Open in Desmos <!--Change desmos link above-->
-    </a>
+   
+       <div class="graph-scroll">
+  <div class="graph-resizable" id="graphBox">
+    <div class="graph-wrapper">
+      <div id="calculator"></div>
+    </div>
+    <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
-       <div class="graph-wrapper">
-    <div id="calculator"></div>
-  </div>
+</div>
+
    </section>
 
 
