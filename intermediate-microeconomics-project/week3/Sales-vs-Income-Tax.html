@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../assets/graph.css?v=1">
   
 </head>
-<body>
+<body class="graph-page">
   
   <div id="navbar-container"></div>
   <script src="../assets/navbarG-loader.js"></script>
@@ -34,9 +34,15 @@
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
-       <div class="graph-wrapper">
-    <div id="calculator"></div>
+        <div class="graph-scroll">
+  <div class="graph-resizable" id="graphBox">
+    <div class="graph-wrapper">
+      <div id="calculator"></div>
+    </div>
+    <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
+</div>
+
    </section>
 
 
