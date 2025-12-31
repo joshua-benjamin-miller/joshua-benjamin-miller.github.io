@@ -39,20 +39,19 @@ JS:document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
-  const graphBox = document.getElementById("graphBox");
-  if (!container || !graphBox) return;
+  const graphBox = document.querySelector(".graph-resizable");
+  const handle = graphBox?.querySelector(".resize-handle");
 
-  const handle = graphBox.querySelector(".resize-handle");
-  if (!handle) return;
+  if (!container || !graphBox || !handle) return;
 
   let startX = 0;
   let startW = 0;
 
   const onMove = (e) => {
     const dx = e.clientX - startX;
-    const nextW = Math.max(900, startW + dx); // 给个下限，别拖太小
+    const nextW = Math.max(900, startW + dx);
 
-    container.style.width = nextW + "px";     // ✅ 改的是容器宽度
+    container.style.width = nextW + "px";
   };
 
   const onUp = () => {
@@ -62,11 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handle.addEventListener("pointerdown", (e) => {
     e.preventDefault();
+    handle.setPointerCapture(e.pointerId); // 🔑 很关键
+
     const rect = container.getBoundingClientRect();
     startX = e.clientX;
-    startW = Math.round(rect.width);
-
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-  });
-});
+    startW =
