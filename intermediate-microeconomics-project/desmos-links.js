@@ -121,61 +121,61 @@ const DESMOS_LINKS = {
   
    //Week4 Aggregate-Demand
   "Aggregate-Demand": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/5i9rwqxqd6",
     title: "Open in Desmos"
   },
 
      //Week4 Consumers-Problem-HW
   "Consumers-Problem-HW": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/bj4hn7g1f1",
     title: "Open in Desmos"
   },
 
      //Week4 Curves&Demand
   "Curves&Demand": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/pmw2uq5wtv",
     title: "Open in Desmos"
   },
 
      //Week4 Curves-Expansion-Demand
   "SCurves-Expansion-Demand":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/ecgx3owuay",
     title: "Open in Desmos"
   },
 
      //Week4 Ex-2023-Q3
   "Ex-2023-Q3": {
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/d6bano3ftx",
     title: "Open in Desmos"
   },
 
      //Week4 IE-SE-CobbDouglas
   "IE-SE-CobbDouglas": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/9pbvyzswbh",
     title: "Open in Desmos"
   },
 
      //Week4 IE-SE-Quasilinear
   "IE-SE-Quasilinear": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/v1t3cidvxl",
     title: "Open in Desmos"
   },
 
      //Week4 Intertemporal-consumption
   "Intertemporal-consumption": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/s3dkj1eham",
     title: "Open in Desmos"
   },
 
      //Week4 Time-IE-SE
   "Time-IE-SE": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/3y5rzvqfei",
     title: "Open in Desmos"
   },
 
      //Week4 Consumer-Optimization
   "Consumer-Optimization": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/hyyyp1mzl0",
     title: "Open in Desmos"
   },
 
