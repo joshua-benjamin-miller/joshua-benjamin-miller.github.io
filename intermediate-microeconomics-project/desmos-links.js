@@ -247,7 +247,7 @@ const DESMOS_LINKS = {
 
     //Week7 Production-returns-to-scale
   "Production-returns-to-scale":{
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/388a42942f",
     title: "Open in Desmos"
   },
 
