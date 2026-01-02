@@ -271,13 +271,13 @@ const DESMOS_LINKS = {
   
     //Week9  Cost-Revenue-illustration
   "Cost-Revenue-illustration": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/ggdpkf2ldm",
     title: "Open in Desmos"
   },
   
     //Week9  Production-Profit-CobbDouglas
   "Production-Profit-CobbDouglas": {
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/uelfsabz1m",
     title: "Open in Desmos"
   },
 };
