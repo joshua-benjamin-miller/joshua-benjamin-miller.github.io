@@ -1,871 +1,217 @@
 {
   "version": 11,
-  "randomSeed": "2afcc25f14dcc1770e8c8fe864f0f558",
+  "randomSeed": "7986f85ff8ce52d7ea2d574e9bc4e1d2",
   "graph": {
     "viewport": {
-      "xmin": -97.301975024715,
-      "ymin": 20.884809092210645,
-      "xmax": 282.21975922637716,
-      "ymax": 156.31897635520122
+      "xmin": -37.78716878604543,
+      "ymin": -25.091767750234517,
+      "xmax": 93.19949958513239,
+      "ymax": 48.65136945616123
     },
-    "xAxisMinorSubdivisions": 1,
-    "yAxisMinorSubdivisions": 1,
-    "xAxisLabel": "Heads",
-    "yAxisLabel": "Tails",
+    "xAxisLabel": "Number of Flips",
+    "yAxisLabel": "Expected Utility",
     "__v12ViewportLatexStash": {
-      "xmin": "-97.301975024715",
-      "xmax": "282.21975922637716",
-      "ymin": "20.884809092210645",
-      "ymax": "156.31897635520122"
+      "xmin": "-37.78716878604543",
+      "xmax": "93.19949958513239",
+      "ymin": "-25.091767750234517",
+      "ymax": "48.65136945616123"
     }
   },
   "expressions": {
     "list": [
       {
-        "type": "folder",
-        "id": "87",
-        "title": "Credit",
-        "collapsed": true
+        "type": "text",
+        "id": "102",
+        "text": "Same rules, but flip the coin M times, if Heads on the Mth flip the payoff is 2^M, of no heads, then the payoff is 2^{M+1}"
+      },
+      {
+        "type": "expression",
+        "id": "773",
+        "color": "#c74440",
+        "latex": "P_{r}\\left(k\\right)=\\frac{1}{2^{k}}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "774",
+        "color": "#2d70b3",
+        "latex": "P_{rMoreThanM}\\left(M\\right)=\\left(1-\\sum_{n=1}^{M}\\frac{1}{2^{n}}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "775",
+        "color": "#388c46",
+        "latex": "P_{rMoreThanM}\\left(10\\right)"
       },
       {
         "type": "text",
-        "id": "90",
-        "folderId": "87",
-        "text": "Creator: Joshua B. Miller, Department of Economics, University of Melbourne, joshua.benjamin.miller@gmail.com, https://www.joshua-benjamin-miller.com/"
+        "id": "777",
+        "text": "SM= sum up to m"
       },
       {
-        "type": "folder",
-        "id": "68",
-        "title": "Choices",
-        "collapsed": true
+        "type": "text",
+        "id": "781",
+        "text": "(1/2)SM= sum from n= 2 to M+1"
       },
       {
-        "type": "expression",
-        "id": "138",
-        "folderId": "68",
-        "color": "#000000",
-        "latex": "x=y\\left\\{x>0\\right\\}"
+        "type": "text",
+        "id": "783",
+        "text": "SM-(1/2)SM=1/2-(1/2)^(M+1)"
       },
       {
-        "type": "expression",
-        "id": "12",
-        "folderId": "68",
-        "color": "#c74440",
-        "latex": "p=.5"
+        "type": "text",
+        "id": "785",
+        "text": "1/2*SM=1/2-(1/2)^(M+1)"
       },
       {
-        "id": "5",
-        "type": "table",
-        "folderId": "68",
-        "columns": [
-          {
-            "values": [
-              "50",
-              "45",
-              "40",
-              "35",
-              "30",
-              "20",
-              "10",
-              "0"
-            ],
-            "hidden": true,
-            "id": "3",
-            "color": "#388c46",
-            "latex": "x_{1}"
-          },
-          {
-            "values": [
-              "50",
-              "95",
-              "120",
-              "125",
-              "150",
-              "160",
-              "190",
-              "200"
-            ],
-            "id": "4",
-            "color": "#000000",
-            "latex": "y_{1}"
-          }
-        ]
+        "type": "text",
+        "id": "787",
+        "text": "SM=1-(1/2)^(M)"
       },
       {
-        "type": "image",
-        "id": "29",
-        "folderId": "68",
-        "image_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAAD3CAYAAAAewrhMAAAAAXNSR0IArs4c6QAAGzxJREFUeF7tnb1rH8e6x5/zLxiM4UBiQdwYXNlNiEEJpLjYBCLcJCHg4jQCB5U2BxxuERIwUili+DUuDCZ2ExQwx6Qw2AIbN1ElOI0Dis01GIGK21xudS/7Mruz87Izz/x2d347801zjqWZnZnPzHfedvV8//bf//O//0f4DwRAYBYE/gbBzqKfUEkQKAlAsBgIIDAjAhDsjDoLVQUBCBZjAARmRACCnVFnoaogAMFiDIDAjAhAsDPqLFQVBCBYjAEQmBEBCHZGnYWqggAEizEAAjMiAMHOqLNQVRCAYFdxDBz8TB8+/ZTe3LywirVbrTplxgqCXa3hV9Xm4GfaPPqGFtdOrWLtVqtOmbGKJtiDnXXauEd088E+bV30HwNVvq9o79/fkZ7thH7b3KCtc3fHXZ3eP6bNz/bp6rNt+vKMf92dKYvV4ttHUjK9nYJb51nrt+iPxRd0uvnhIe2ev0E7zb9tvNQaqflMNe5/1vGvt+jS7Vdtv5Zt+ot2k2Pl7M1REsQRbDngt+lJ0aR/8MSVrGBrsRYT2NdHt+jh2nb5v5dun5Ump2pCerPZM8kJthLXfmY946p+1gXGpFqV9XEr0DEEu4qsRpGn/tAogq1m4bO094Bogzn7pinYSoj/+o+9chtc8CkEq+88ihXwPn3Ys1qVfF6rK27gziNAsNoQG1ywK8oqXcFW267Dn4rB+U76/37ntRDBdreR0uwvICtb0Stl3aT6yDsCIrr50y06vC1viWtB7IsHSttGbZvb9mxbTldQRX1ffG5YRct6/EWbxuNA8VyZbZdnM0kWeaUVqvc4YhGs2PaKlnSONapANcHOjNVEQvQtZvoVVunAzkDyqDVXsNqKo54/y/pQu+1UB2n9b5JErG77tDJCbi4bYX9MV9aJrv5gOB8bxN+ZXPpWRIn7Jy+qc6Y2Man8Dc8r++v39fbM7BKo8vu5sRr0jsJjfLuSTCzYenYlacvG3HYZL13UVorzm+VyqHwG2c7O+mqnbTE7zw3cbhp7pmf1IaLj9yd0+oxh5e+0d5uMZ86QralX3yireq+AE2blUtpAv59WsMYBYBBxT+NYK2zPdrR72aUKRVyG/b1ztmyqZVyl69td9RLNa0ssN7ioyy/0weJTelHe9DpueGWBUHWZN75g9dvkZrX2WnETZDWQIF2PmVSw/auj4WxpqD1fsNJ210RDCKoRmrwKkPmMbX2t0w5k53bT2jPFM57T5fKcWj2P+m5pOwLxPMO6RoX4vW1L3NlOc1ZYueDEWPkyXTLdhIK1DyZxWbLj8YqHJVjnls60RZN/Vq2w2ntdx3tY802tb08d0u7mEX1dvFf1eN+r3gGMe0ts6sNQwVY8kmHl271LpptMsNXAIusLdHngUc/HESzBigGhfGgh38KqA6a5ARWTh3ajKlaGdkfQvdXtm5gsvdV5d0q1YNfoYbElbj6K6L7OqEZ79aGF6eLpSd972OBbYn2CE7sm3y3x7FgtKbChs08jWMPLfK0hTZo7tPv6n7S1b94icwVblKO+hijOr3ufE128WHyr2z2PFQPvR7pDl/683nwt1c1fnCmL86V4H3pIBzvPaeOe9IWSx06h0/73J3RML+l78TGJ+KX8nPeHdPBfR7T4tv7gpExjO0b0f+kk2uPctpt2KOorrgf7dPnpOi0+ql+F9Z5h58dqaMEt+7xpBLtsLXPKXwji/hotRv7w//jXn+nl5e+G/bRy6n6aiNXUzeorD4Jdpd4Q29yx/1In5D3xqnGaitWKtRuCXbEOQXVAACssxgAIJEIAK2wiHYlm5EEAgs2jn9HKRAhAsIl0JJqRBwEINo9+RisTIQDBJtKRaEYeBCDYPPoZrUyEAASbSEeiGXkQgGDz6Ge0MhECEGwiHYlm5EEAgs2jn9HKRAhAsIl0JJqRBwEINo9+RisTIQDBrmJHpvLnb1OwzYwVBDvFoOKWkZnBExdPJ31mrKYVrDXkp69ZUx20K2MzLHmwWuNkGTn7RKVMywyLlHA2ZAoZG8xqqWkmOHMUwXYd60RMYD/RhsR0CqZjy+gRzZBdphQYzW6GJT1VcgpQneFKIUsxqdh1ERmcUSf1J6+MGZYhQJ3JZWIwVsGQeRlXQLBEYib0cUlLU7C+Bk+ic0W84rtE3+rmWAWjJigabzx0UwcIVisuxHGgt85+rMzuDnrkycFYLcOZkXelBCv719jaECLYZMywSihqoHNVsB6WlMFhTqteWX0zLJsliPpzD1YMMU2RdAUEO6JVhylQ9ZzNsLT2mOwnDedQxfB5mTCnczHDMp3v9Xa7WU0hQk4ZUQSrVtAZH1c+utXO7b2NTNUMS/jqNnaTBsEWMY7PnJLc2Hl3BB2uXltiTuT/6cywinaYrWGky7chWXFUt0TaKILtXjq1Wyz156Z2sbbEKZlhGcXjNniuGAa4ERTZrIKdoRmWwTbUrJtAVkuIkJN1JQTbnMtkG0pLK/iCTcMMq4iuv3Gvr2v7btkDB2EyZlj1BKMcDSBY11RhvezwP8eyBOvc0s3dDMtzhXVysHSclm+eZljaq6a+cRrKyjX2B/r9Sqyw4jJAbIn7RMkSbFJmWKYe1wWrXQoJ7yB5dQm+JZ6LGVbLSh1bMkUvVgMJbajHRBGsXnn5KxxxSQIzrK7ptI9gT+jg4B29Xdygrf02vXqpt8wtsfr1UDHJrpwZVt10zYmwg9CP1VBCG+o50wp2qFqn/JyJDJ5ghjXPQQTBrlq/TfHXJ1OUMQXXVNrBYAXBMmAhKQjEJgDBxu4BlA8CDAIQLAMWkoJAbAIQbOweQPkgwCAAwTJgISkIxCYAwcbuAZQPAgwCECwDFpKCQGwCEGzsHkD5IMAgAMEyYCEpCMQmAMHG7gGUDwIMAhAsAxaSgkBsAhBs7B5A+SDAIADBMmAhKQjEJgDBxu4BlA8CDAIQLAPWZEkz/LOxYLaZsYJgg0fKiBkzM3haimRmrKII1hgvVsQSdvQeN6bTUoPBlnkMb52iLC0sa7/fkNUMS8Rxaurv51skwqHu9ELzqdMrakLWDm7VUVeOwcrOqXiWGrLVFJpIhC0SYHyMxUYZeTStYBs3MbXT/cNQJivYocywBGNpAuxn1jOwAiIIrowZVtksWWgmkdXjTmKli1sfm/0TwDhCFU+dULD+ouxrcpqC9TN4arnYzbBKPq9v0R+LL/To/+fu0pubF/xHVIBgtYcPvsL6shIr51e09+wsLT7bp6vPtunLM20NTW52atB1c5raVUDj7I82NOVkgh1qVgoRbD5mWPaA4Z2BFxzmtBpmq2+GVRwvHtPm0Rotrl2oHQwMgn1/QqfPnFK0I4dy/Tv9trlBW6aJbvCJyE/CkwnWPPP7VVJOxRWsVm7KZlh9K6I0wD55cYsu3X5FTk8jW+T/39fbFVwduI5/a/0RcssreeNeWSe6+kN35dRGFefOoTOZ9TgmDLH74A//qc6w/pH9XW0wGxwpuXI1w/IUrLwt7OXtNShX1wyraZu3YNUzbbaCHW7Pz1phczPDmkywMzPD8hKs6Y4lY8FGOcOWgs3JDOtTenH+Bh3+tEeLa92zme3yhLvC2jxWmzJdW+SmwFb0zq25tZLFM57T5dJ+U1zE7dPWRSWDU7C2C9Eee8zUz7DN+y7P9622PmKtsM4tXXpmWOPeEs/TDKuyF9Evnaox1v/2Ittb4pJNs0VV3sOKd4e1YdPb0rTZ/IKeJdgMzbAa75u+97DBt8TzM8Mqx51NsMq4O21cJbJ9DytoqF+NVD9vzZxhhtWMG+duxGY3qZ4xu5NfLmZYtgvKagtO1SsbyTSso9eOl2yuXzq5roDx+2o1uL9GC84HDgHcYIYVAG0Fskz2HnYF2jqPKoS8l+S2bIoyuHUKSZ9KOxhth2AZsJAUBGITgGBj9wDKBwEGAQiWAQtJQSA2AQg2dg+gfBBgEIBgGbCQFARiE4BgY/cAygcBBgEIlgELSUEgNgEINnYPoHwQYBCAYBmwkBQEYhOAYGP3AMoHAQYBCJYBC0lBIDYBCDZ2D6B8EGAQgGAZsJAUBGITgGBj9wDKBwEGAQiWAWuypBn+2Vgw28xYQbDBI2XEjJkZPC1FMjNWkwnWHk+YZyzEjem01GCwZXZG4Qss1cfgqfEnEmUYYl8Zw7v6cNbDl+otydAMS2NeUWnDGgX2d0C2iQXbM7g6MXTsLUlWsD5mWPXAISmMqYlHGbPpz+s8Hx0TcmfUST1TemZYdfDAxVnFryhAbQNkiS/YohGGgWhrW5qC9TN4MoYwNYiqSLf4SI9NzB4vAYLVyhg8fq8fq9ZGcjkzrKI9g02A7A7QM6yGYC3hSE3tCxFsGmZYJ3T8/hSdltzXSj7a9rwa0G82DQG1BdDgMKfVA/Ixw6qc/gabAFMSrIhZ7DoXcAWbmhmW2uf6qms4hyrHjWXCnJZ5szHDKmibwvL6GmQPoFDlESuzwvIE6wCRqBlW22ppEKmxi9+f0PGZU7o37H7AIPPaEqdshlUJVt3ZaOf04XVpfeJMBWsbfEpk+pTMsCxd6Dd4ekyd+gabVbC5mGHZ4PR47ows3pURbP9Wt6XA2hInZIalGTw1SLqXMObxMpxg8zLDgmBpr3QaU/4b65bYuaWbkRkWFYZO23ThgXqZ5CFGJwfLwNTy5WeGNegEOMDqG3+FFdtW6WKkbxVlrbCJmWGZtr8qD+1SyOTOFnxLnKEZlrZLE/cHAXcC8xOsqcbqFzgww2ooGcyw1FcqRPLAOaGDg3f0dnGjY/Kk+q8uc0vcuOPVlSxu9S8/ld779vrDHtLBznPauPeoHQhOwy91N3ZCx/SSvv9sm57IvzI8ZwgzrLcHh0RPb9DGPakwbp0HEKp4xGQr7IB1TvtRMMPy79+JWPlXaPyUEOz4jHklTPHXJ1OUwWt1WOpU2sFoPQTLgIWkIBCbAAQbuwdQPggwCECwDFhICgKxCUCwsXsA5YMAgwAEy4CFpCAQmwAEG7sHUD4IMAhAsAxYSAoCsQlAsLF7AOWDAIMABMuAhaQgEJsABBu7B1A+CDAIQLAMWEgKArEJQLCxewDlgwCDAATLgIWkIBCbAAQbuwdQPggwCECwDFiTJc3wz8aC2WbGCoINHikjZszM4Gkpkpmxml6wfaFHPfx1uDGdlhoMtsyrboYl4jg19feNP5ShGZaXcZgaTNzHWGyUkUfRBOuK8G9rbrKCHcoMSzitSXGHfEPIaswDoi3OywzLxzennsSkxaSKiUW0+2ybvlStU8bRafNUCDYE8OArrJ/Bk48ZljGNsJs4d5fnaBcgWA3nCpthFXV1+eZU4jyrhec1cw4ZTLw8WQg2HzMse4zizsALDnNaDa5UzLCEb47dOKwnwv/gE5GfcJMXbFZmWH0rojTAPnlRrBqvSA1/6rMlTssMy2Uc1hOkfYjdh59GO6miCVarq2esV1us2c7zcjXD8hSs97nLa1DO2AzLaRwGwZKvS90gl065mWFZ7TxqF/Fv/+JdlGRlhiVGnCzSd7R7/gYdSo73zbj0mswCllBHlmgr7CS3xNmZYdkHmO3ypHd8GAZlmmZYMgVZsFSaY2+ZLutwhvWbjVivdZyzYHpmWOPeEqdohqWMO2XM4JbY44YSZlhH9PVijR6ev0E7mklY96W9xsrnPaxHH5TDWJvw0jLD8jIOM5iJZfke1rieloPzE3pZbEP2zV+TsFbYuhDNQOofd2nvc6KLFy8QKV8FFTenP9IduvTn9eadZTd/8dXQp/Ti/H36sHxxPq3BU78ZVvccttNA7n7pBDOsPVpcIy/jsAphzl86+e188001kcHT8a8/08vL303+pc6gHTsRq0HrvOTDpr90WrLCyWef4q9Ppihjio5KpR0MVhAsAxaSgkBsAhBs7B5A+SDAIADBMmAhKQjEJgDBxu4BlA8CDAIQLAMWkoJAbAIQbOweQPkgwCAAwTJgISkIxCYAwcbuAZQPAgwCECwDFpKCQGwCEGzsHkD5IMAgAMEyYCEpCMQmAMHG7gGUDwIMAhAsAxaSgkBsAhBs7B5A+SDAIADBMmBNljTDPxsLZpsZKwg2eKSMmDEzg6elSGbGKppg++IL9wW4DgkRs9SAMGUe3KqjLkQLy2owsVLTGA3E1ADZMMPy8cIRY1IffwgRU3qabNzzHUitapIVrI8ZlhY8rR5IVMTC+oJOF5h8grD5zmDOqJP6g+ZmhtW0wBq2NHczLLGYQLDSaPcxw7L4vCgDbdwwp75Kl9INHr/Xh1VRvthlfEV7z87S4rN9umpzm+uZmBDmNIJg0zfD2qYLD/Zp6yLMsNoV8zFtHq3R4tqFetdhE2yPHUef69/gE5HfZBj5DDv+ljgLMyxxtPD01oEZlnLEev0xXdl/RU/qH7euFPDWaSfAcktsmFUcplgww1K3m4+oGWCegoUZlnLJp5k1v6qZQrCKYEdeYVM2w6rb1rnRnEywuk1jUw91q2j896NqHKiTc09/md8cFOfZX+iDRRHY/QbtkGU8WW71babM7c8r94W8zbCmPMOmaoZlEmvJ1fMM63dcMlh1tGbOrYA4dpNywa3onT611voWz3hOl//9HV2s207lWV7JYBRs9/JKztFeNH1Db7M3w5pSsM7XEjMywzrT3cbZBvm4t8RpmWGVrOhuY8kiRCszpF8L8+uztFdOCurZV3qd5jsJLpluJS+dYIZlNsPy8sTxeQ8LM6xKNjUrkvxfdaMrvIctWdlFKb4qgRlW54wnhGiZobsrbv+XTl7ClwZ09cqoLlipR3HhdfnpOi0+KgymTtWG3ZJxdOcMO61xmO2CksOqajW+dFpyY5Bw9okMnmCGNc8xFG1LPE9cE9R6ir8+maKMCVBRKu1gsIJgGbCQFARiE4BgY/cAygcBBgEIlgELSUEgNgEINnYPoHwQYBCAYBmwkBQEYhOAYGP3AMoHAQYBCJYBC0lBIDYBCDZ2D6B8EGAQgGAZsJAUBGITgGBj9wDKBwEGAQiWAQtJQSA2AQg2dg+gfBBgEIBgGbCQFARiE4BgY/cAygcBBgEIlgFrsqQZ/tlYMNvMWEGwwSNlxIyZGTwtRTIzVtML1hLKsg3e3N99yXrrFM32McOq8eixh2RuMMOSafSzUsO/UBvnuXlIliFi2kZr4rSG7dTFm6xgfcywShzy4DHEvfIJwua7pDmjTtr6R6rXGJYWQ7ES/juyA6DW5kyDsIW61alDIk3BDmfwNG6YU1+lS+kGF+xwrKodDWkhTMsV+ff10hEwzzCnhnCSAV1fZgkRbBpmWEXjXQZPnoHEg8OcVr0moi6KPuzsmFyR/7UIhFK0fq/I/91Y0kXfvvjcEDzcyUq0Q485jEDiA86yXMEma4ZlimbvadUBM6x6qjEtJOJIUW6TM7XqsB/6lcsRhxFWu8I61mfxnD5PFUPE9+qp+gy+8VqJ8N55rsW3NWgLoV5u9HgPLSFYmGGpW/ba60f6cRW7+B3tZumt41xh/Qc9a4VN2QwrqmDTMMPS51TV0T5X9zrnGXZMweqXCp2OEqJuVne5LmSeYS0rd+v6TRTH4MnzDOu7+hu22LprwFzNsDxuuHM2dK5WRrP9hroN7RtPrBXW+VpihmZYAg7LQtF/Quywt7zi6Novhgq2Kslm+eg3pxzS7mbhQ/QFnbZOosJDx+bAXpdkebXYXkBlZ4Zlfw/b3DrWqxzMsMxmWLqYDIPQ5z1s8C2xLnxxA+/rD9u91e3ZctoU22kf1YKtLod25Pepcv4+MRfpDMza7Jm+h20AWM6V7RYSZlgNK8Ml3BAGTzDDqo27ZLHazKDli8h90TO2naLfvmCZVNN/mrhMbXPICzMs/16eiJV/hcZPCcGOz5hXwhR/fTJFGbxWh6VOpR2M1kOwDFhICgKxCUCwsXsA5YMAgwAEy4CFpCAQmwAEG7sHUD4IMAhAsAxYSAoCsQlAsLF7AOWDAIMABMuAhaQgEJsABBu7B1A+CDAIQLAMWEgKArEJQLCxewDlgwCDAATLgIWkIBCbAAQbuwdQPggwCECwDFhICgKxCUCwsXsA5YMAgwAEy4CFpEMRKIIU3CH6YZu8IzgOVfTMnwPBzrwD51n9QrC/0AeLbpykebZl2lpPI1hX1ERnGNQWCisI21gsXTGCAstVI+r7Rl5U85mK73+WGrcoMGibs9268ZReLx9zKt19wNg+NRyRR9xrZxMiJ4BgQzpgBMFqUSVdk1xPvdmRCLUgZGMIVo75u0YPy2iHamR9NS5w6+gn24H4sBKTWJuvnpRmLloIdhUEawvHyth5yM1gC1ZjMIJgO8ZTUnjSTsULc6q/aPeZfLZV6uLFyhKN0Rn2NmQwTJsnC8GuuhmWLfatCExexQEm+m1zg7ZIsQ0xjBejYJXtYXcLqQrUIFhrft0FoKmSHHZUnnzoMW3+J9GPRTxhqf7H70/o9JlTWovk9tjc5Dqs1n4xCL947AgT0bR6peQFOwczLPuKqLsQ7PSG46xGj/Y81VZRW2kcgjWm597ySmfT9Y/pyrnrtLh5wT3claOBD6s/PrpPl27rrnRGNu4arFSKSQX7pLfpfrFebXF5O4+emRmWzyB84zO4awjuLbFrRVV+H7g1N3Z370qv5tDPtD6sINhl5xjXBQpjQLBuiWdihuUzCJcXrH77SkY/oWLVswi6DKStTqyeW2LlrLp59A39SHfo0u1XFh8iUd+ug58PKwh21oJdfTMsvzOsfrazdYt5S/yI2AI9d5fUiaJ9hdRjhekYL8Uzvqd/0uLaqcocunY7b8+zZrEWj/VihTPskoqNtcI6bwVXxAzL6+bTvw+6gnW1sWdFNQi2rIWTa39dC9E9XNumrYv1ebvj1WsXa2/ZnV0abon9R4spJVOw2ZlhiYsi2d1PY2Z4R2npFXWFVf+tmo9Zt8BCsEVdpFtd+ypnHybyu9PCAb4Q7NdHt8otsfau1HGxhvewy8nRnZsl2AzNsGqC/V86ibOieyuqn/O658zilU55fvzzer3l7b+EOj54TA8X27QTbAZ1QsfvT9Hb+4XlqDxcuufh/gvFbru9vgrDl05ubSLFmAQOaXeHaItxYzxmbUKffbBzi95ex4f/Ifymea0TUjPkUQik8hcuqbQjzgCFYONwR6kgEEQAgg3ChkwgEIcABBuHO0oFgSACEGwQNmQCgTgEINg43FEqCAQRgGCDsCETCMQhAMHG4Y5SQSCIAAQbhA2ZQCAOAQg2DneUCgJBBCDYIGzIBAJxCECwcbijVBAIIgDBBmFDJhCIQwCCjcMdpYJAEAEINggbMoFAHAIQbBzuKBUEgghAsEHYkAkE4hCAYONwR6kgEETg/wHBfiPBrLvJOQAAAABJRU5ErkJggg==",
-        "name": "Capture.PNG",
-        "foreground": true,
-        "center": "C_{2}",
-        "width": "96",
-        "height": "100",
-        "draggable": true
+        "type": "text",
+        "id": "790",
+        "text": "1-SM=(1/2)^M"
+      },
+      {
+        "type": "text",
+        "id": "792",
+        "text": "M+2"
       },
       {
         "type": "expression",
-        "id": "30",
-        "folderId": "68",
-        "color": "#000000",
-        "latex": "C_{2}=\\left(214,153\\right)",
-        "hidden": true,
-        "dragMode": "XY"
-      },
-      {
-        "type": "folder",
-        "id": "43",
-        "title": "Label points",
-        "hidden": true,
-        "collapsed": true
-      },
-      {
-        "type": "expression",
-        "id": "32",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[1\\right],y_{1}\\left[1\\right]\\right)",
-        "showLabel": true,
-        "label": "A",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "33",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[2\\right],y_{1}\\left[2\\right]\\right)",
-        "showLabel": true,
-        "label": "B",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "36",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[3\\right],y_{1}\\left[3\\right]\\right)",
-        "showLabel": true,
-        "label": "C",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "35",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[4\\right],y_{1}\\left[4\\right]\\right)",
-        "showLabel": true,
-        "label": "D",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "34",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[5\\right],y_{1}\\left[5\\right]\\right)",
-        "showLabel": true,
-        "label": "E",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "39",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[6\\right],y_{1}\\left[6\\right]\\right)",
-        "showLabel": true,
-        "label": "F",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "38",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[7\\right],y_{1}\\left[7\\right]\\right)",
-        "showLabel": true,
-        "label": "G",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "37",
-        "folderId": "43",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[8\\right],y_{1}\\left[8\\right]\\right)",
-        "showLabel": true,
-        "label": "H",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "folder",
-        "id": "70",
-        "title": "Utility",
-        "hidden": true,
-        "collapsed": true
+        "id": "788",
+        "color": "#000000"
       },
       {
         "type": "expression",
         "id": "1",
-        "folderId": "70",
         "color": "#c74440",
-        "latex": "u_{RN}\\left(x\\right)=x",
+        "latex": "E_{U}\\left(M\\right)=\\sum_{n=1}^{M}P_{r}\\left(n\\right)\\cdot\\ln\\left(2^{n}\\right)+P_{rMoreThanM}\\left(M\\right)\\cdot\\ln\\left(2^{M+1}\\right)",
         "hidden": true
       },
       {
         "type": "expression",
-        "id": "76",
-        "folderId": "70",
-        "color": "#2d70b3",
-        "latex": "u_{RA}\\left(x\\right)=\\frac{x^{\\alpha}}{\\alpha}",
+        "id": "5",
+        "color": "#000000",
+        "latex": "E_{V}\\left(M\\right)=\\sum_{n=1}^{M}\\frac{1}{2^{n}}\\cdot2^{n}+\\left(1-\\sum_{n=1}^{M}\\frac{1}{2^{n}}\\right)\\cdot2^{M+1}",
         "hidden": true
       },
       {
         "type": "expression",
-        "id": "78",
-        "folderId": "70",
-        "color": "#388c46",
-        "latex": "\\alpha=-8",
-        "hidden": true
-      },
-      {
-        "type": "expression",
-        "id": "8",
-        "folderId": "70",
+        "id": "2",
         "color": "#2d70b3",
-        "latex": "!u_{RA}\\left(x\\right)=\\frac{x^{1-\\alpha_{2}}-1}{1-\\alpha_{2}}",
-        "hidden": true
-      },
-      {
-        "type": "expression",
-        "id": "9",
-        "folderId": "70",
-        "color": "#388c46",
-        "latex": "\\alpha_{2}=1.65",
-        "hidden": true,
-        "slider": {
-          "hardMin": true,
-          "hardMax": true,
-          "min": "-2.05",
-          "step": ".1"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "13",
-        "folderId": "70",
-        "color": "#2d70b3",
-        "latex": "E_{V}\\left(x,y\\right)=px+\\left(1-p\\right)y"
-      },
-      {
-        "type": "expression",
-        "id": "15",
-        "folderId": "70",
-        "color": "#6042a6",
-        "latex": "E_{U}\\left(x,y\\right)=pu_{RA}\\left(x\\right)+\\left(1-p\\right)u_{RA}\\left(y\\right)"
-      },
-      {
-        "type": "folder",
-        "id": "72",
-        "title": "Graph Expected Value",
-        "hidden": true,
-        "collapsed": true
-      },
-      {
-        "type": "expression",
-        "id": "7",
-        "folderId": "72",
-        "color": "#c74440",
-        "latex": "E_{Values}=E_{V}\\left(x_{1},y_{1}\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "28",
-        "folderId": "72",
-        "color": "#6042a6",
-        "latex": "E_{Values}\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=E_{V}\\left(x,y\\right)",
-        "colorLatex": "C_{olorPalette}"
-      },
-      {
-        "type": "folder",
-        "id": "120",
-        "title": "Label Expected Values",
-        "collapsed": true
-      },
-      {
-        "type": "expression",
-        "id": "121",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{1}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[1\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "122",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{2}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[2\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "123",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{3}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[3\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "124",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{4}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[4\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "125",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{5}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[5\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "126",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{6}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[6\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "127",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{7}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[7\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "128",
-        "folderId": "120",
-        "color": "#6042a6",
-        "latex": "v_{8}=.001\\operatorname{round}\\left(1000\\cdot E_{Values}\\left[8\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "129",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[1\\right],y_{1}\\left[1\\right]\\right)",
-        "showLabel": true,
-        "label": "A, `EV=${v_1}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "130",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[2\\right],y_{1}\\left[2\\right]\\right)",
-        "showLabel": true,
-        "label": "B, `EV=${v_2}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "131",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[3\\right],y_{1}\\left[3\\right]\\right)",
-        "showLabel": true,
-        "label": "C, `EV=${v_3}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "132",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[4\\right],y_{1}\\left[4\\right]\\right)",
-        "showLabel": true,
-        "label": "D, `EV=${v_4}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "133",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[5\\right],y_{1}\\left[5\\right]\\right)",
-        "showLabel": true,
-        "label": "E, `EV=${v_5}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "134",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[6\\right],y_{1}\\left[6\\right]\\right)",
-        "showLabel": true,
-        "label": "F, `EV=${v_6}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "135",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[7\\right],y_{1}\\left[7\\right]\\right)",
-        "showLabel": true,
-        "label": "G, `EV=${v_7}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "136",
-        "folderId": "120",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[8\\right],y_{1}\\left[8\\right]\\right)",
-        "showLabel": true,
-        "label": "H, `EV=${v_8}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "folder",
-        "id": "66",
-        "title": "Graph Expected Utility",
-        "collapsed": true
-      },
-      {
-        "type": "expression",
-        "id": "40",
-        "folderId": "66",
-        "color": "#c74440",
-        "latex": "E_{Utilities}=E_{U}\\left(x_{1},y_{1}\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "75",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "E_{utilitiesSorted}=\\operatorname{sort}\\left(E_{Utilities}\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "41",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "E_{utilitiesSorted}\\left\\{x>0\\right\\}\\left\\{y>0\\right\\}=E_{U}\\left(x,y\\right)",
-        "colorLatex": "C_{olorPalette}"
-      },
-      {
-        "type": "expression",
-        "id": "795",
-        "folderId": "66",
-        "color": "#388c46",
-        "latex": "x_{button}=-71",
-        "hidden": true,
-        "slider": {
-          "hardMin": true,
-          "min": "-100"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "797",
-        "folderId": "66",
-        "color": "#000000",
-        "latex": "y_{button}=39",
-        "hidden": true,
-        "slider": {
-          "max": "73.2"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "798",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "\\left(x_{button},y_{button}\\right)",
-        "showLabel": true,
-        "label": "Risk Seeking",
-        "dragMode": "NONE",
-        "labelOrientation": "right",
-        "clickableInfo": {
-          "enabled": true,
-          "latex": "R_{H}"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "799",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "\\left(x_{button},y_{button}+10\\right)",
-        "showLabel": true,
-        "label": "Risk Neutral",
-        "dragMode": "NONE",
-        "labelOrientation": "right",
-        "clickableInfo": {
-          "enabled": true,
-          "latex": "R_{N}"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "801",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "\\left(x_{button},y_{button}+20\\right)",
-        "showLabel": true,
-        "label": "Risk Averse",
-        "dragMode": "NONE",
-        "labelOrientation": "right",
-        "clickableInfo": {
-          "enabled": true,
-          "latex": "R_{E}"
-        }
-      },
-      {
-        "type": "expression",
-        "id": "804",
-        "folderId": "66",
-        "color": "#2d70b3",
-        "latex": "\\left(x_{button},y_{button}+30\\right)",
-        "showLabel": true,
-        "label": "Highly Risk Averse",
-        "dragMode": "NONE",
-        "labelOrientation": "right",
-        "clickableInfo": {
-          "enabled": true,
-          "latex": "R_{A}"
-        }
-      },
-      {
-        "type": "folder",
-        "id": "44",
-        "title": "Label Expected utilities",
-        "hidden": true,
-        "collapsed": true
-      },
-      {
-        "type": "expression",
-        "id": "53",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{1}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[1\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "58",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{2}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[2\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "57",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{3}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[3\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "56",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{4}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[4\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "55",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{5}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[5\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "54",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{6}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[6\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "59",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{7}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[7\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "60",
-        "folderId": "44",
-        "color": "#6042a6",
-        "latex": "u_{8}=.001\\operatorname{round}\\left(1000\\cdot E_{Utilities}\\left[8\\right]\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "45",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[1\\right],y_{1}\\left[1\\right]\\right)",
-        "showLabel": true,
-        "label": "A, `EU=${u_1}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "46",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[2\\right],y_{1}\\left[2\\right]\\right)",
-        "showLabel": true,
-        "label": "B, `EU=${u_2}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "47",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[3\\right],y_{1}\\left[3\\right]\\right)",
-        "showLabel": true,
-        "label": "C, `EU=${u_3}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "48",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[4\\right],y_{1}\\left[4\\right]\\right)",
-        "showLabel": true,
-        "label": "D, `EU=${u_4}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "49",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[5\\right],y_{1}\\left[5\\right]\\right)",
-        "showLabel": true,
-        "label": "E, `EU=${u_5}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "50",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[6\\right],y_{1}\\left[6\\right]\\right)",
-        "showLabel": true,
-        "label": "F, `EU=${u_6}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "51",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[7\\right],y_{1}\\left[7\\right]\\right)",
-        "showLabel": true,
-        "label": "G, `EU=${u_7}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "expression",
-        "id": "52",
-        "folderId": "44",
-        "color": "#000000",
-        "latex": "\\left(x_{1}\\left[8\\right],y_{1}\\left[8\\right]\\right)",
-        "showLabel": true,
-        "label": "H, `EU=${u_8}`",
-        "hidden": true,
-        "labelOrientation": "above_right"
-      },
-      {
-        "type": "folder",
-        "id": "104",
-        "title": "Intervals",
-        "hidden": true,
-        "collapsed": true
-      },
-      {
-        "type": "text",
-        "id": "92",
-        "folderId": "104",
-        "text": "H: a>1"
-      },
-      {
-        "type": "expression",
-        "id": "105",
-        "folderId": "104",
-        "color": "#c74440",
-        "latex": "R_{H}=\\alpha\\to1.5"
-      },
-      {
-        "type": "text",
-        "id": "95",
-        "folderId": "104",
-        "text": "G: a in (.6845,1]"
-      },
-      {
-        "type": "expression",
-        "id": "107",
-        "folderId": "104",
-        "color": "#388c46",
-        "latex": "R_{G}=\\alpha\\to\\frac{.6845+1}{2}"
-      },
-      {
-        "type": "text",
-        "id": "97",
-        "folderId": "104",
-        "text": "E: a in (.1876,.6845]"
-      },
-      {
-        "type": "expression",
-        "id": "109",
-        "folderId": "104",
-        "color": "#000000",
-        "latex": "R_{E}=\\alpha\\to\\frac{.1876+.6845}{2}"
-      },
-      {
-        "type": "text",
-        "id": "98",
-        "folderId": "104",
-        "text": "C: a in (-.743,.1876]"
-      },
-      {
-        "type": "expression",
-        "id": "110",
-        "folderId": "104",
-        "color": "#c74440",
-        "latex": "R_{C}=\\alpha\\to\\frac{-.743+.1876}{2}"
-      },
-      {
-        "type": "text",
-        "id": "100",
-        "folderId": "104",
-        "text": "B: a in (-6.505,-.743]"
-      },
-      {
-        "type": "expression",
-        "id": "111",
-        "folderId": "104",
-        "color": "#2d70b3",
-        "latex": "R_{B}=\\alpha\\to\\frac{-6.505+-.743}{2}"
-      },
-      {
-        "type": "text",
-        "id": "102",
-        "folderId": "104",
-        "text": "A: a<-6.505"
-      },
-      {
-        "type": "expression",
-        "id": "112",
-        "folderId": "104",
-        "color": "#388c46",
-        "latex": "R_{A}=\\alpha\\to-8"
-      },
-      {
-        "type": "expression",
-        "id": "805",
-        "folderId": "104",
-        "color": "#388c46",
-        "latex": "R_{N}=\\alpha\\to1"
-      },
-      {
-        "type": "folder",
-        "id": "16",
-        "title": "Color Palatte",
-        "collapsed": true
-      },
-      {
-        "type": "text",
-        "id": "19",
-        "folderId": "16",
-        "text": "The number of colors in the palette"
-      },
-      {
-        "type": "expression",
-        "id": "20",
-        "folderId": "16",
-        "color": "#2d70b3",
-        "latex": "I=\\left[1...N+1\\right]"
-      },
-      {
-        "type": "expression",
-        "id": "21",
-        "folderId": "16",
-        "color": "#388c46",
-        "latex": "N=7",
+        "latex": "N=10",
         "hidden": true,
         "slider": {
           "hardMin": true,
           "hardMax": true,
           "min": "1",
+          "max": "100",
           "step": "1"
         }
       },
       {
-        "type": "text",
-        "id": "23",
-        "folderId": "16",
-        "text": "\"The intensity of each RGB value as we move through the palette"
-      },
-      {
         "type": "expression",
-        "id": "24",
-        "folderId": "16",
-        "color": "#000000",
-        "latex": "R=255\\frac{\\left(I-1\\right)}{N}"
-      },
-      {
-        "type": "expression",
-        "id": "25",
-        "folderId": "16",
-        "color": "#c74440",
-        "latex": "G=0I"
-      },
-      {
-        "type": "expression",
-        "id": "26",
-        "folderId": "16",
-        "color": "#2d70b3",
-        "latex": "B=255\\left(1-\\frac{\\left(I-1\\right)}{N}\\right)"
-      },
-      {
-        "type": "expression",
-        "id": "27",
-        "folderId": "16",
+        "id": "3",
         "color": "#388c46",
-        "latex": "C_{olorPalette}=\\operatorname{rgb}(R,G,B)"
+        "latex": "E_{U}\\left(N\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#c74440",
+        "latex": "E_{V}\\left(N\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "98",
+        "color": "#6042a6",
+        "latex": "p_{heads}=1-.5^{N}"
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "color": "#000000",
+        "latex": "l_{ow}=2"
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "color": "#c74440",
+        "latex": "h_{igh}=2^{N+1}"
+      },
+      {
+        "type": "expression",
+        "id": "103",
+        "color": "#388c46",
+        "latex": "E_{Val}=E_{V}\\left(N\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "105",
+        "color": "#000000",
+        "latex": "p_{aboveEV}=1-\\sum_{n=1}^{\\operatorname{ceil}\\left(\\log_{2}\\left(E_{V}\\left(N\\right)\\right)\\right)-1}\\frac{1}{2^{n}}"
+      },
+      {
+        "type": "expression",
+        "id": "104",
+        "color": "#6042a6"
+      },
+      {
+        "type": "expression",
+        "id": "94",
+        "color": "#000000",
+        "latex": "\\left(N,0\\right)",
+        "showLabel": true,
+        "label": "N=${N}",
+        "labelOrientation": "below",
+        "__stashed_V12PointStyle": "DIAMOND"
+      },
+      {
+        "type": "expression",
+        "id": "97",
+        "color": "#000000",
+        "latex": "\\left(N,E_{V}\\left(N\\right)\\right)",
+        "showLabel": true,
+        "label": "EV=$${E_Val}; low=$${l_ow}, high=$${h_igh}; Prob(payoff`\\geq`EV)=${p_aboveEV}",
+        "labelOrientation": "right",
+        "__stashed_V12PointStyle": "DIAMOND"
+      },
+      {
+        "type": "expression",
+        "id": "95",
+        "color": "#000000",
+        "latex": "\\operatorname{polygon}\\left(\\left(N,E_{U}\\left(N\\right)\\right),\\left(N,E_{V}\\left(N\\right)\\ \\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "96",
+        "color": "#388c46"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "color": "#6042a6",
+        "latex": "F=\\left[1...50\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#2d70b3",
+        "latex": "\\left(F,E_{V}\\left(F\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#c74440",
+        "latex": "\\left(F,E_{U}\\left(F\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6"
       }
     ]
   },
