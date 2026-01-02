@@ -258,13 +258,13 @@ const DESMOS_LINKS = {
   },
 
   //Week8  Costs-in-short-and-long-run-4th-panel
-  " Costs-in-short-and-long-run-4th-panel": {
+  "Costs-in-short-and-long-run-4th-panel": {
   url: "https://www.desmos.com/calculator/wpzeuxuhtq",
     title: "Open in Desmos"
   },
 
 //Week8  Profit-maximization+supply-demand
-  " Profit-maximization+supply-demand":{
+  "Profit-maximization+supply-demand":{
     url: "https://www.desmos.com/calculator/phkheluq4t",
     title: "Open in Desmos"
   },
