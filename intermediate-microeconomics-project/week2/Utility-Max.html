@@ -75,7 +75,7 @@
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
 <script>
   const elt = document.getElementById('calculator-3d');
-  const calc3d = Desmos.Calculator3D(elt, {
+  window.calc3d = Desmos.Calculator3D(elt, {
     expressions: true,         //can turn off if needed
     expressionsCollapsed: true,
     settingsMenu: false,
