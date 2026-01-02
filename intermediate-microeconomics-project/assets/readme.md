@@ -4,7 +4,7 @@
 3. concepts.css: controls three types of pages, that is:
   - [Students page>Concepts](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/concepts.html)
   - [Students page>Exercise](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/exercise.html)
-  - [Instructor pages>graphs]{https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/Instructor-Page/Foundations-of-Consumer-Behavior.html}
+  - [Instructor pages>graphs](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/Instructor-Page/Foundations-of-Consumer-Behavior.html)
 5. desmos-loader.js
 6. export-desmons.js
 7. graph.css
