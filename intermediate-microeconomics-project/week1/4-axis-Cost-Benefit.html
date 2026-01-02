@@ -34,7 +34,7 @@
 
     <a
       class="desmos-btn"
-      href="https://www.desmos.com/calculator/gaqik8ya09"
+      data-desmos-id="4-axis-Cost-Benefit"
       target="_blank"
       rel="noopener"
     >
@@ -94,6 +94,26 @@
   }
     });
   });
+
+  <script src="../assets/desmos-links.js"></script>
+
+<!--Automatically fill in Desmos link-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = document.querySelectorAll("[data-desmos-id]");
+
+  btns.forEach(btn => {
+    const id = btn.dataset.desmosId;
+    if (DESMOS_LINKS[id]) {
+      btn.href = DESMOS_LINKS[id].url;
+      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
+    } else {
+      console.warn("Missing Desmos link for:", id);
+    }
+  });
+});
+</script>
+
 </script>
 </body>
 </html>
