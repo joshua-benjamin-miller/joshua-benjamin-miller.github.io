@@ -215,12 +215,12 @@ const VIDEOS = {
   },
 
   //Week8  Costs-in-short-and-long-run-4th-panel
-  " Costs-in-short-and-long-run-4th-panel": {
+  "Costs-in-short-and-long-run-4th-panel": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 
 //Week8  Profit-maximization+supply-demand
-  " Profit-maximization+supply-demand":{
+  "Profit-maximization+supply-demand":{
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   
