@@ -196,7 +196,7 @@ const EXPLANATIONS = {
    <p><b>Scenario 1: No discount (\\(p_x = p_{1x}\\))</b></p>
    <p>The budget constraint under this scenario is:\\[I = p_{1x} Q_x + p_y Q_y,\\]with the restriction \\(Q_x < C\\).</p>
    <p>With Cobb–Douglas preferences, the consumer spends a constant fraction of income on each good:\\(\\frac{\\gamma}{\\gamma+\\beta}\\) on good x and\\(\\frac{\\beta}{\\gamma+\\beta}\\) on good y.</p>
-   <p>This gives the consumer optimal bundle:\\[Q_x^* = \\frac{\\gamma}{\\gamma+\\beta} \\frac{I}{p_{1x}}, \\[Q_y^* = \\frac{\\beta}{\\gamma+\\beta} \\frac{I}{p_y}.\\]</p>
+   <p>This gives the consumer optimal bundle:\\[Q_x^* = \\frac{\\gamma}{\\gamma+\\beta} \\frac{I}{p_{1x}}, Q_y^* = \\frac{\\beta}{\\gamma+\\beta} \\frac{I}{p_y}.\\]</p>
    <p>If \\(Q_x^* < C\\), this bundle is feasible and therefore optimal.Otherwise, we must consider the second scenario.</p>
    <p></p
    <p><b>Optimal bundle under scenario 2</b></p>
@@ -217,21 +217,21 @@ const EXPLANATIONS = {
   "Consumers-Problem-Lecture-Exampleans": `
   <p><b>Step 1: Compute marginal utilities</b></p>
   <p>Utility function: \\(U(x,y)=x^{1/3}y\\).</p>
-  <p>\\(MU_x = \\frac{\\partial U}{\\partial x} = \\frac{1}{3}x^{-2/3}y\\),\\quad\\(MU_y = \\frac{\\partial U}{\\partial y} = x^{1/3}\\).</p>
+  <p>\\(MU_x = \\frac{\\partial U}{\\partial x} = \\frac{1}{3}x^{-2/3}y\\),(MU_y = \\frac{\\partial U}{\\partial y} = x^{1/3}\\).</p>
   <p></p>
   <p><b>Step 2: Compute MRS</b></p>
   <p>\\[MRS = \\frac{MU_x}{MU_y} = \\frac{\\frac{1}{3}x^{-2/3}y}{x^{1/3}} = \\frac{1}{3}\\frac{y}{x} \\]</p>
   <p></p>
   <p><b>Step 3: Optimality condition</b></p>
   <p>At the optimum, \\(MRS = \\frac{p_x}{p_y} = \\frac{9}{12} = \\frac{3}{4}\\).</p>
-  <p>\\[\\frac{1}{3}\\frac{y}{x} = \\frac{3}{4}\\quad\\Longrightarrow\\quady = \\frac{9}{4}x\\]</p>
+  <p>\\[\\frac{1}{3}\\frac{y}{x} = \\frac{3}{4}\\Longrightarrow\\quady = \\frac{9}{4}x\\]</p>
   <p></p>
   <p><b>Step 4: Budget constraint</b></p>
   <p>\\[ 9x + 12y = 69\\]</p>
   <p>Substitute \\(y = \\frac{9}{4}x\\):\\[9x + 12\\left(\\frac{9}{4}x\\right) = 69\\quad\\Longrightarrow\\quad36x = 69\\]</p>
   <p></p>
   <p><b>Step 5: Solve for optimal bundle</b></p>
-  <p>\\[x^* = \\frac{23}{12}, \\quady^* = \\frac{69}{16}\\]</p>
+  <p>\\[x^* = \\frac{23}{12}, y^* = \\frac{69}{16}\\]</p>
 `,
 
 
