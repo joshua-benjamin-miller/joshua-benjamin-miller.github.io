@@ -28,73 +28,169 @@
     });
   });
 </script>
-<!-- =================================================== -->  
-<div class="container">
+<!-- =================================================== -->
+
+  <div class="container">
     <!-- Page title -->
-    <h1>Production & Returns to scale</h1> <!--Change Page title-->
+    <h1>Production & Return to scale</h1>
 
     <!-- 1. Desmos section -->
-   <section class="section">
+    <section class="section">
   <div class="section-header">
     <h2>📈 Interactive Graph</h2>
 
     <a
       class="desmos-btn"
-      href="https://www.desmos.com/calculator/388a42942f"
+      data-desmos-id="Production-returns-to-scale"
       target="_blank"
       rel="noopener"
     >
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
-
-   <div class="graph-scroll">
+         <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
     <div class="graph-wrapper">
-      <div id="calculator"></div>
+      <div id="calculator-3d"></div>
     </div>
     <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
 </div>
    </section>
 
+
     <!-- 2. Video section -->
     <section class="section">
-      <h2>🎥 Video</h2><!--Change section title-->
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          allowfullscreen
-        ></iframe><!--upload video link-->
-      </div>
+      <h2>🎥 Video</h2>
+       <div class="video-frame" data-video-id="Production-returns-to-scale"></div>
     </section>
 
     <!-- 3. Textbox section -->
-     <section class="section">
-      <h2>📘Production & Returns to scale</h2> <!--Change the explanation title-->
-<div class="textbox" data-explain-id="Production-returns-to-scale"></div> <!--ID must match with the id in "explanations.js"-->
+    <section class="section">
+      <h2>📘 Utility Max</h2>
+      <div class="textbox" data-explain-id="Production-returns-to-scale"></div>
     </section>
   </div>
 
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
 <script>
-  const elt = document.getElementById('calculator-3d');
-  const calc3d = Desmos.Calculator3D(elt, {
-    expressions: true,         //can turn off if needed
-    expressionsCollapsed: true,
-    settingsMenu: false,
-    zoomButtons: true,
-    keypad: false,
-    border: false
-  });
+// 1. Initialize the 3D Calculator globally immediately
+const elt = document.getElementById('calculator-3d');
+window.calc3d = Desmos.Calculator3D(elt, {
+  expressions: true,
+  expressionsCollapsed: true,
+  settingsMenu: false,
+  zoomButtons: true,
+  keypad: false,
+  border: false
+});
 
-  fetch('Production-returns-to-scale.json') //Change json loaded here
-    .then(r => r.json())
-    .then(state => {
-      calc3d.setState(state);
-      calc3d.setDefaultState(state);   
-    })
-    .catch(e => console.error(e));
+// 2. Load the state
+fetch('Production-returns-to-scale.json')
+  .then(r => r.json())
+  .then(state => {
+    window.calc3d.setState(state);
+    window.calc3d.setDefaultState(state);
+  })
+  .catch(e => console.error("JSON Load Error:", e));
+
+// 3. Setup Resize Logic HERE (Ensures it sees window.calc3d)
+document.addEventListener("pointerdown", (e) => {
+  // Check if we clicked the handle
+  const handle = e.target.closest('.resize-handle');
+  if (!handle) return;
+
+  e.preventDefault();
+  
+  const graphBox = document.getElementById("graphBox");
+  const container = document.querySelector(".container");
+  
+  let startX = e.clientX;
+  let startY = e.clientY;
+  let startW = container.offsetWidth;
+  let startH = graphBox.offsetHeight;
+
+  function onMove(moveEvent) {
+    const newW = startW + (moveEvent.clientX - startX);
+    const newH = startH + (moveEvent.clientY - startY);
+    
+    container.style.width = Math.max(600, newW) + "px";
+    container.style.maxWidth = "none";
+    graphBox.style.height = Math.max(400, newH) + "px";
+    
+    // Force Desmos to update
+    if (window.calc3d) window.calc3d.resize();
+  }
+
+  function onUp() {
+    window.removeEventListener("pointermove", onMove);
+    window.removeEventListener("pointerup", onUp);
+  }
+
+  window.addEventListener("pointermove", onMove);
+  window.addEventListener("pointerup", onUp);
+});
   </script>
+
+      <!--Import Desmos link-->
+<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+    <!--Import Video link-->
+<script src="/intermediate-microeconomics-project/video.js"></script>
+
+<!-- Automatically fill in texts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll("[data-explain-id]");
+
+    boxes.forEach(function (box) {
+      const id = box.dataset.explainId;
+      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
+    box.innerHTML = EXPLANATIONS[id];
+  } else {
+    console.warn("Missing explanation for id:", id);
+  }
+    });
+  });
+</script>
+  
+<!--Automatically fill in text-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = document.querySelectorAll("[data-desmos-id]");
+
+  btns.forEach(btn => {
+    const id = btn.dataset.desmosId;
+    if (DESMOS_LINKS[id]) {
+      btn.href = DESMOS_LINKS[id].url;
+      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
+    } else {
+      console.warn("Missing Desmos link for:", id);
+    }
+  });
+});
+</script>
+
+  <!--Automatically fill in video link-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const containers = document.querySelectorAll("[data-video-id]");
+
+  containers.forEach(container => {
+    const id = container.dataset.videoId;
+    if (VIDEOS[id]) {
+      container.innerHTML = `
+        <iframe
+          src="${VIDEOS[id].src}"
+          title="${VIDEOS[id].title || ""}"
+          allowfullscreen
+        ></iframe>
+      `;
+    } else {
+      console.warn("Missing video for:", id);
+    }
+  });
+});
+</script>
+  
 </body>
 </html>
