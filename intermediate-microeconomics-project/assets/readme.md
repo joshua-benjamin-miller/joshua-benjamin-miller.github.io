@@ -40,3 +40,7 @@
   - navbar.html
   - navbarG-loader.js
   - navbarH.html.
+2. To update the graph that that people manipulate within the website must go to original Desmons>Dev Tools>console>
+    - Type: "copy(JSON.stringify(Calc.getState(), null, 2))" in the console field (terminal)
+    - Paste into a text file and save with .json suffix, keeping the name the same as the html
+    - Within the html, use your API key the the begining.
