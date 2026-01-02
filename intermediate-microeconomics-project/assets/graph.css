@@ -368,8 +368,21 @@ html, body{
   touch-action: none; 
 }
 
+
+
+.graph-resizable {
+  position: relative;
+  overflow: visible !important; /* Allow handle to be visible if it slightly overlaps */
+}
+
 .resize-handle {
-  z-index: 9999; /* Ensure it stays above the WebGL canvas */
-  pointer-events: auto !important; /* Force interaction */
+  position: absolute;
+  right: -5px; 
+  bottom: -5px;
+  z-index: 10000 !important; /* Extremely high to stay above WebGL */
+  cursor: nwse-resize;
+  touch-action: none;
+  background: #111827; /* Make it solid so it's easy to grab */
+  pointer-events: auto !important;
 }
 
