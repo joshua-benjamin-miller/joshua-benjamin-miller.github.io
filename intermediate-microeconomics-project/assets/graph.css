@@ -368,5 +368,8 @@ html, body{
   touch-action: none; 
 }
 
-
+.resize-handle {
+  z-index: 9999; /* Ensure it stays above the WebGL canvas */
+  pointer-events: auto !important; /* Force interaction */
+}
 
