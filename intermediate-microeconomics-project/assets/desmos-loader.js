@@ -45,27 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!container || !graphBox || !handle) return;
 
   let startX, startY, startWidth, startHeight;
-
 const onMove = (e) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
-    const nextW = startWidth + dx;
-    const nextH = startHeight + dy;
-
-    const finalW = Math.max(600, nextW); 
-    const finalH = Math.max(400, nextH);
+    
+    const finalW = Math.max(600, startWidth + dx); 
+    const finalH = Math.max(400, startHeight + dy);
     
     container.style.maxWidth = "none"; 
     container.style.width = finalW + 'px'; 
-    
     graphBox.style.height = finalH + "px";
-    graphBox.style.aspectRatio = "auto";
-
-    if (window.calc3d && typeof window.calc3d.resize === "function") {
-        window.calc3d.resize();
-    } else if (window.Calc && typeof window.Calc.resize === "function") {
-        window.Calc.resize();
-    }
+    requestAnimationFrame(() => {
+        if (window.calc3d) {
+            window.calc3d.resize();
+        } else if (window.Calc) {
+            window.Calc.resize();
+        }
+    });
 };
   const onUp = () => {
     window.removeEventListener("pointermove", onMove);
