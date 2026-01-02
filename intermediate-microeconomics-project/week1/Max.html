@@ -42,7 +42,7 @@
 
     <a
       class="desmos-btn"
-      href="https://www.desmos.com/calculator/ywpebw6bbx"
+      data-desmos-id="Max"
       target="_blank"
       rel="noopener"
     >
@@ -71,12 +71,7 @@
     <!-- 4. Video section -->
     <section class="section">
       <h2>🎥 Video</h2>
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <div class="video-frame" data-video-id="Max"></div>
     </section>
 
 <!--Desmos-->
@@ -85,6 +80,10 @@
 <script src="../assets/export-desmos.js?v=1"></script>
     <!-- Import text-->
 <script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
+    <!--Import Desmos link-->
+<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+    <!--Import Video link-->
+<script src="/intermediate-microeconomics-project/video.js"></script>
 
 <!-- Automatically fill in texts -->
 <script>
@@ -101,7 +100,45 @@
     });
   });
 </script>
+  
+<!--Automatically fill in text-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = document.querySelectorAll("[data-desmos-id]");
 
+  btns.forEach(btn => {
+    const id = btn.dataset.desmosId;
+    if (DESMOS_LINKS[id]) {
+      btn.href = DESMOS_LINKS[id].url;
+      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
+    } else {
+      console.warn("Missing Desmos link for:", id);
+    }
+  });
+});
+</script>
+
+  <!--Automatically fill in video link-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const containers = document.querySelectorAll("[data-video-id]");
+
+  containers.forEach(container => {
+    const id = container.dataset.videoId;
+    if (VIDEOS[id]) {
+      container.innerHTML = `
+        <iframe
+          src="${VIDEOS[id].src}"
+          title="${VIDEOS[id].title || ""}"
+          allowfullscreen
+        ></iframe>
+      `;
+    } else {
+      console.warn("Missing video for:", id);
+    }
+  });
+});
+</script>
       <!--Import Answer btton-->
       <script src="../assets/answer.js"></script>
 
