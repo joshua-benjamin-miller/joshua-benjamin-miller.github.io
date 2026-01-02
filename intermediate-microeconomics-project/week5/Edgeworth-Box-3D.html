@@ -28,11 +28,11 @@
     });
   });
 </script>
-<!-- =================================================== -->  
+<!-- =================================================== -->
 
   <div class="container">
     <!-- Page title -->
-    <h1>Edgeworth Box 3D</h1> <!--Change page title-->
+    <h1>3D Edgeworth Box</h1>
 
     <!-- 1. Desmos section -->
     <section class="section">
@@ -48,8 +48,7 @@
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
-
-   <div class="graph-scroll">
+         <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
     <div class="graph-wrapper">
       <div id="calculator-3d"></div>
@@ -59,38 +58,78 @@
 </div>
    </section>
 
+
     <!-- 2. Video section -->
     <section class="section">
-      <h2>🎥 Video</h2> <!--Change section title-->
-     <div class="video-frame" data-video-id="Edgeworth-Box-3D"></div>
+      <h2>🎥 Video</h2>
+       <div class="video-frame" data-video-id="Edgeworth-Box-3D"></div>
     </section>
 
     <!-- 3. Textbox section -->
-     <section class="section">
-      <h2>📘Edgeworth Box 3D</h2> <!--Change the explanation title-->
-<div class="textbox" data-explain-id="Edgeworth-Box-3D"></div> <!--ID must match with the id in "explanations.js"-->
+    <section class="section">
+      <h2>📘 3D Edgeworth Box</h2>
+      <div class="textbox" data-explain-id="Edgeworth-Box-3D"></div>
     </section>
   </div>
 
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
 <script>
-  const elt = document.getElementById('calculator-3d');
-  const calc3d = Desmos.Calculator3D(elt, {
-    expressions: true,         //can turn off if needed
-    expressionsCollapsed: true,
-    settingsMenu: false,
-    zoomButtons: true,
-    keypad: false,
-    border: false
-  });
+// 1. Initialize the 3D Calculator globally immediately
+const elt = document.getElementById('calculator-3d');
+window.calc3d = Desmos.Calculator3D(elt, {
+  expressions: true,
+  expressionsCollapsed: true,
+  settingsMenu: false,
+  zoomButtons: true,
+  keypad: false,
+  border: false
+});
 
-  fetch('Edgeworth-Box-3D.json') //Change json loaded here
-    .then(r => r.json())
-    .then(state => {
-      calc3d.setState(state);
-      calc3d.setDefaultState(state);   
-    })
-    .catch(e => console.error(e));
+// 2. Load the state
+fetch('Edgeworth-Box-3D.json')  
+  .then(r => r.json())
+  .then(state => {
+    window.calc3d.setState(state);
+    window.calc3d.setDefaultState(state);
+  })
+  .catch(e => console.error("JSON Load Error:", e));
+
+// 3. Setup Resize Logic HERE (Ensures it sees window.calc3d)
+document.addEventListener("pointerdown", (e) => {
+  // Check if we clicked the handle
+  const handle = e.target.closest('.resize-handle');
+  if (!handle) return;
+
+  e.preventDefault();
+  
+  const graphBox = document.getElementById("graphBox");
+  const container = document.querySelector(".container");
+  
+  let startX = e.clientX;
+  let startY = e.clientY;
+  let startW = container.offsetWidth;
+  let startH = graphBox.offsetHeight;
+
+  function onMove(moveEvent) {
+    const newW = startW + (moveEvent.clientX - startX);
+    const newH = startH + (moveEvent.clientY - startY);
+    
+    container.style.width = Math.max(600, newW) + "px";
+    container.style.maxWidth = "none";
+    graphBox.style.height = Math.max(400, newH) + "px";
+    
+    // Force Desmos to update
+    if (window.calc3d) window.calc3d.resize();
+  }
+
+  function onUp() {
+    window.removeEventListener("pointermove", onMove);
+    window.removeEventListener("pointerup", onUp);
+  }
+
+  window.addEventListener("pointermove", onMove);
+  window.addEventListener("pointerup", onUp);
+});
   </script>
 
       <!--Import Desmos link-->
@@ -98,7 +137,23 @@
     <!--Import Video link-->
 <script src="/intermediate-microeconomics-project/video.js"></script>
 
-  <!--Automatically fill in text-->
+<!-- Automatically fill in texts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll("[data-explain-id]");
+
+    boxes.forEach(function (box) {
+      const id = box.dataset.explainId;
+      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
+    box.innerHTML = EXPLANATIONS[id];
+  } else {
+    console.warn("Missing explanation for id:", id);
+  }
+    });
+  });
+</script>
+  
+<!--Automatically fill in text-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll("[data-desmos-id]");
@@ -136,5 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+  
 </body>
 </html>
