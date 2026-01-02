@@ -28,13 +28,14 @@
     });
   });
 </script>
-<!-- =================================================== -->  
-<div class="container">
+<!-- =================================================== -->
+
+  <div class="container">
     <!-- Page title -->
-    <h1>Production & Returns to scale</h1> <!--Change Page title-->
+    <h1>Production & Returns to scale</h1>
 
     <!-- 1. Desmos section -->
-   <section class="section">
+    <section class="section">
   <div class="section-header">
     <h2>📈 Interactive Graph</h2>
 
@@ -47,8 +48,7 @@
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
-
-   <div class="graph-scroll">
+         <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
     <div class="graph-wrapper">
       <div id="calculator-3d"></div>
@@ -58,16 +58,17 @@
 </div>
    </section>
 
+
     <!-- 2. Video section -->
     <section class="section">
-      <h2>🎥 Video</h2><!--Change section title-->
+      <h2>🎥 Video</h2>
        <div class="video-frame" data-video-id="Production-returns-to-scale"></div>
     </section>
 
     <!-- 3. Textbox section -->
-     <section class="section">
-      <h2>📘Production & Returns to scale</h2> <!--Change the explanation title-->
-<div class="textbox" data-explain-id="Production-returns-to-scale"></div> <!--ID must match with the id in "explanations.js"-->
+    <section class="section">
+      <h2>📘 Production & Returns to scale</h2>
+      <div class="textbox" data-explain-id="Utility-Max"></div>
     </section>
   </div>
 
@@ -83,7 +84,7 @@
     border: false
   });
 
-  fetch('Production-returns-to-scale.json') //Change json loaded here
+  fetch('Utility-Max.json')
     .then(r => r.json())
     .then(state => {
       calc3d.setState(state);
@@ -97,7 +98,23 @@
     <!--Import Video link-->
 <script src="/intermediate-microeconomics-project/video.js"></script>
 
-  <!--Automatically fill in Desmos-->
+<!-- Automatically fill in texts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll("[data-explain-id]");
+
+    boxes.forEach(function (box) {
+      const id = box.dataset.explainId;
+      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
+    box.innerHTML = EXPLANATIONS[id];
+  } else {
+    console.warn("Missing explanation for id:", id);
+  }
+    });
+  });
+</script>
+  
+<!--Automatically fill in text-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll("[data-desmos-id]");
@@ -135,5 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+  
 </body>
 </html>
