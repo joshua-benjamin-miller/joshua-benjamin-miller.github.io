@@ -217,31 +217,31 @@ const DESMOS_LINKS = {
 
   //Week6 Eckel-Grossman
   "Eckel-Grossman": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/e72ijlqhvi",
     title: "Open in Desmos"
   },
 
       //Week6 Risk-Averse-Seeking-Neutral
   "Risk-Averse-Seeking-Neutral":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/myukutt7xy",
     title: "Open in Desmos"
   },
 
   //Week6 BombRisk
   "BombRisk": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/ydwaeiwcxl",
     title: "Open in Desmos"
   },
   
   //Week6 CRRA-Peter-Wakker
   "CRRA-Peter-Wakker":{
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/wlfbnrprlo",
     title: "Open in Desmos"
   },
 
   //Week6 St-Petersburg-Paradox
   "St-Petersburg-Paradox": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/uchvlldzc8",
     title: "Open in Desmos"
   },
 
