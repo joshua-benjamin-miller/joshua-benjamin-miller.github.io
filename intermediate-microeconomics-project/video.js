@@ -115,7 +115,7 @@ const VIDEOS = {
   },
 
      //Week4 Curves-Expansion-Demand
-  "SCurves-Expansion-Demand":{
+  "Curves-Expansion-Demand":{
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 
