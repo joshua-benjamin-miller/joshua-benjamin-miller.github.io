@@ -40,7 +40,14 @@
   - navbar.html
   - navbarG-loader.js
   - navbarH.html.
-2. To update the graph that that people manipulate within the website must go to original Desmons>Dev Tools>console>
+2. To update the graph in an existing html that that people manipulate within the website must go to original Desmons>Dev Tools>console>
     - Type: "copy(JSON.stringify(Calc.getState(), null, 2))" in the console field (terminal)
     - Paste into a text file and save with .json suffix, keeping the name the same as the html
     - Within the html, use your API key the the begining.
+3. To add a new graph/new html/new json/new explanations entry:
+    - Copy existing html, call it "file-X"
+    - Page title, change <h1>
+    - 1. Desmos section modify URL for go to Desmos button
+    - 2. Video section upload link
+    - 3.  Texbox section: change <h2>, and the div class id to "file-X"
+      4.  *note* for exercises there are two div elements, one it the textbox section at the top, and one at 3. 
