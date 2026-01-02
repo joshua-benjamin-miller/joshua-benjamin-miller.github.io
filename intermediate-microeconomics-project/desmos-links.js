@@ -49,25 +49,25 @@ const DESMOS_LINKS = {
 
   //Week2 Consumers Problem
   "Consumers-Problem":{
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/xhaabarvyt",
     title: "Open in Desmos"
   },
   
     //Week2 Indifference-curve
   "Indifference-curve": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/0fj5hq6wag",
     title: "Open in Desmos"
   },
 
    //Week2 Utility-Max
   "Utility-Max":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/3d/nd6bsbsrqv",
     title: "Open in Desmos"
   },
 
     //Week2 Discrete-Demand-Supply
   "Discrete-Demand-Supply":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/7vql5cyvmj",
     title: "Open in Desmos"
   },
 
