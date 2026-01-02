@@ -50,4 +50,4 @@
     - 1. Desmos section modify URL for go to Desmos button
     - 2. Video section upload link
     - 3.  Texbox section: change <h2>, and the div class id to "file-X"
-      4.  *note* for exercises there are two div elements, one it the textbox section at the top, and one at 3. 
+    - 4.  *note* for exercises there are two div elements, one it the textbox section at the top, and one at 3. 
