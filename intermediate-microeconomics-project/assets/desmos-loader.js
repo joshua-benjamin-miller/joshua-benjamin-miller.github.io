@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let startX, startY, startWidth, startHeight;
 
- const onMove = (e) => {
+const onMove = (e) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     const nextW = startWidth + dx;
@@ -61,11 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
     graphBox.style.height = finalH + "px";
     graphBox.style.aspectRatio = "auto";
 
-    if (window.Calc && typeof window.Calc.resize === "function") {
+    if (window.calc3d && typeof window.calc3d.resize === "function") {
+        window.calc3d.resize();
+    } else if (window.Calc && typeof window.Calc.resize === "function") {
         window.Calc.resize();
     }
 };
-
   const onUp = () => {
     window.removeEventListener("pointermove", onMove);
     window.removeEventListener("pointerup", onUp);
