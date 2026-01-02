@@ -181,31 +181,37 @@ const DESMOS_LINKS = {
 
    //Week5 Edgeworth-Box
   "Edgeworth-Box": {
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/inapvepqd1",
     title: "Open in Desmos"
   },
-
+  
+//Week5 Edgeworth-Box-3D
+  "Edgeworth-Box-3D": {
+    url: "https://www.desmos.com/3d/ttjjrfhziv",
+    title: "Open in Desmos"
+  },
+  
   //Week5 Contract Curve
   "Contract-Curve": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/deqx4tid5r",
     title: "Open in Desmos"
   },
 
    //Week5 Contract Curve Complements
   "Contract-Curve-Complements": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/tgvdynxw0x",
     title: "Open in Desmos"
   },
 
    //Week5 Weird-Edgeworth-Box
   "Weird-Edgeworth-Box": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/catzvjkfxi",
     title: "Open in Desmos"
   },
 
    //Week5 Supply-Demand-From-Edgeworth
   "Supply-Demand-From-Edgeworth": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/elmrejwslv",
     title: "Open in Desmos"
   },
 
