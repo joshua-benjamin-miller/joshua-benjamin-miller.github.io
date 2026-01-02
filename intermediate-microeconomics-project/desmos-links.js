@@ -138,7 +138,7 @@ const DESMOS_LINKS = {
   },
 
      //Week4 Curves-Expansion-Demand
-  "SCurves-Expansion-Demand":{
+  "Curves-Expansion-Demand":{
   url: "https://www.desmos.com/calculator/ecgx3owuay",
     title: "Open in Desmos"
   },
