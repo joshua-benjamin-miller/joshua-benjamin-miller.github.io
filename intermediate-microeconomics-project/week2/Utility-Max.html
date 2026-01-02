@@ -74,23 +74,26 @@
 
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
 <script>
-  const elt = document.getElementById('calculator-3d');
-  window.calc3d = Desmos.Calculator3D(elt, {
-    expressions: true,         //can turn off if needed
-    expressionsCollapsed: true,
-    settingsMenu: false,
-    zoomButtons: true,
-    keypad: false,
-    border: false
-  });
+const elt = document.getElementById('calculator-3d');
+// Use window.calc3d immediately so the variable exists for the resize script
+window.calc3d = Desmos.Calculator3D(elt, {
+  expressions: true,
+  expressionsCollapsed: true,
+  settingsMenu: false,
+  zoomButtons: true,
+  keypad: false,
+  border: false
+});
 
-  fetch('Utility-Max.json')
-    .then(r => r.json())
-    .then(state => {
-      calc3d.setState(state);
-      calc3d.setDefaultState(state);   
-    })
-    .catch(e => console.error(e));
+fetch('Utility-Max.json')
+  .then(r => r.json())
+  .then(state => {
+    window.calc3d.setState(state);
+    window.calc3d.setDefaultState(state);
+    // Explicitly call resize once state is loaded
+    window.calc3d.resize();
+  })
+  .catch(e => console.error(e));
   </script>
 
       <!--Import Desmos link-->
