@@ -26,7 +26,7 @@
     Line 48 has:  ```<div id="calculator"></div>```
     Line 76 has: ```<script src="../assets/desmos-loader.js"></script>``` which loads the javascript
 
-6. export-desmons.js
+6. export-desmos.js
 7. graph.css
 8. navbar-loader.js
 9. navbar.html
