@@ -71,8 +71,12 @@
 <script src="../assets/desmos-loader.js"></script>
     <!--Export Desmos-->
 <script src="../assets/export-desmos.js?v=1"></script>
-  <!-- Import text-->
-<script src="/intermediate-microeconomics-project/explanations.js"></script>
+    <!-- Import text-->
+<script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
+    <!--Import Desmos link-->
+<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+    <!--Import Video link-->
+<script src="/intermediate-microeconomics-project/video.js"></script>
 
 <!-- Automatically fill in texts -->
 <script>
@@ -81,7 +85,6 @@
 
     boxes.forEach(function (box) {
       const id = box.dataset.explainId;
-
       if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
     box.innerHTML = EXPLANATIONS[id];
   } else {
@@ -89,9 +92,9 @@
   }
     });
   });
-
-//Automatically fill in Desmos link
-  <script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+</script>
+  
+<!--Automatically fill in text-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll("[data-desmos-id]");
@@ -109,8 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
   <!--Automatically fill in video link-->
-  <script src="/intermediate-microeconomics-project/videos.js"></script>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const containers = document.querySelectorAll("[data-video-id]");
@@ -131,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
   
 </script>
 </body>
