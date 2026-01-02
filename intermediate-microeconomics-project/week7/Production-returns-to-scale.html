@@ -50,9 +50,15 @@
   </div>
          <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
-    <div class="graph-wrapper">
-      <div id="calculator-3d"></div>
-    </div>
+<div class="graph-wrapper">
+ <div class="graph-wrapper">
+  <iframe
+    class="desmos-embed"
+    src="https://www.desmos.com/calculator/6mne6a1bqi?embed"
+    loading="lazy"
+    allowfullscreen
+  ></iframe>
+</div>
     <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
 </div>
@@ -84,14 +90,6 @@
     border: false
   });
 
-  fetch('Production-returns-to-scale.json')
-    .then(r => r.json())
-    .then(state => {
-      calc3d.setState(state);
-      calc3d.setDefaultState(state);   
-    })
-    .catch(e => console.error(e));
-  </script>
 
       <!--Import Desmos link-->
 <script src="/intermediate-microeconomics-project/desmos-links.js"></script>
