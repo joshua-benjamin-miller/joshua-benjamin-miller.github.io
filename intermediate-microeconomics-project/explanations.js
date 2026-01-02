@@ -491,7 +491,7 @@ const EXPLANATIONS = {
   `,
 
   //Week8  Costs-in-short-and-long-run-4th-panel
-  " Costs-in-short-and-long-run-4th-panel": `
+  "Costs-in-short-and-long-run-4th-panel": `
    <p>1. Exp 1.</p>
     <p>2. Exp 1.</p>
     <p>3. AExp 1.</p>
