@@ -148,7 +148,12 @@ const VIDEOS = {
   "Consumer-Optimization": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
-
+  
+//Week5 Edgeworth-Box-3D
+  "Edgeworth-Box-3D": {
+   src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+  
    //Week5 Edgeworth-Box
   "Edgeworth-Box": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
