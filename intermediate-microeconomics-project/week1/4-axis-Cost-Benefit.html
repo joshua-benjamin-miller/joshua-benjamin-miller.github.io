@@ -54,15 +54,10 @@
    </section>
 
     <!-- 2. Video section -->
-    <section class="section">
-      <h2>🎥 Video</h2>
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </section>
+   <section class="section">
+  <h2>🎥 Video</h2>
+  <div class="video-frame" data-video-id="4-axis-Cost-Benefit"></div>
+</section>
 
     <!-- 3. Textbox section -->
     <section class="section">
@@ -77,7 +72,7 @@
     <!--Export Desmos-->
 <script src="../assets/export-desmos.js?v=1"></script>
   <!-- Import text-->
-<script src="/intermediate-microeconomics-project/explanations.js?v=2"></script>
+<script src="/intermediate-microeconomics-project/explanations.js"></script>
 
 <!-- Automatically fill in texts -->
 <script>
@@ -95,9 +90,8 @@
     });
   });
 
-  <script src="../assets/desmos-links.js"></script>
-
-<!--Automatically fill in Desmos link-->
+//Automatically fill in Desmos link
+  <script src="/intermediate-microeconomics-project/desmos-links.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll("[data-desmos-id]");
@@ -114,6 +108,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+  <!--Automatically fill in video link-->
+  <script src="/intermediate-microeconomics-project/videos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const containers = document.querySelectorAll("[data-video-id]");
+
+  containers.forEach(container => {
+    const id = container.dataset.videoId;
+    if (VIDEOS[id]) {
+      container.innerHTML = `
+        <iframe
+          src="${VIDEOS[id].src}"
+          title="${VIDEOS[id].title || ""}"
+          allowfullscreen
+        ></iframe>
+      `;
+    } else {
+      console.warn("Missing video for:", id);
+    }
+  });
+});
+</script>
+
+  
 </script>
 </body>
 </html>
