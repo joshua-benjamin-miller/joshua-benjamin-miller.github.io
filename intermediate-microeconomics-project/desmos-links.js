@@ -73,49 +73,49 @@ const DESMOS_LINKS = {
 
  //Week3 Budget-Line-With-Complex-Pricing
 "Budget-Line-With-Complex-Pricing": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/zsctmwgzfv",
     title: "Open in Desmos"
   },
 
   //Week3 Consumers-Problem-Lecture-Example
   "Consumers-Problem-Lecture-Example": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/pcxkakirky",
     title: "Open in Desmos"
   },
   
    //Week3 Inferior-Good
   "Inferior-Good": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/eolgl44jrr",
     title: "Open in Desmos"
   },
   
   //Week3 Perfect-Complements
   "Perfect-Complements":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/45frf38tu8",
     title: "Open in Desmos"
   },
 
    //Week3 Quasi-Linear-Optimization
   "Quasi-Linear-Optimization": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/dturs5b620",
     title: "Open in Desmos"
   },
 
   //Week3 Revealed-Preference
   "Revealed-Preference": {
-    url: "https://www.desmos.com/calculator/gaqik8ya09",
+    url: "https://www.desmos.com/calculator/s7ikgw8ezp",
     title: "Open in Desmos"
   },
 
   //Week3 Utility-Max-CES
   "Utility-Max-CES": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/bo8srlp0ud",
     title: "Open in Desmos"
   },
   
   //Week3 Sales-vs-Income-Tax
  "Sales-vs-Income-Tax": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/9i6tmkqgod",
     title: "Open in Desmos"
   },
   
