@@ -1,11 +1,11 @@
 # Instructions
 ## Files
 1. answer.js: Within the exercise page there is a button "Answers", and this script controls it.
-3. concepts.css: controls three types of pages, that is:
-  - [Students page>Concepts](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/concepts.html)
-  - [Students page>Exercise](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/exercise.html)
-  - [Instructor pages>graphs](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/Instructor-Page/Foundations-of-Consumer-Behavior.html)
-5. desmos-loader.js: The relevant graph .html calls this piece of Javacript
+2. concepts.css: controls three types of pages, that is:
+    - [Students page>Concepts](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/concepts.html)
+    - [Students page>Exercise](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/week1/exercise.html)
+    - [Instructor pages>graphs](https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project/Instructor-Page/Foundations-of-Consumer-Behavior.html)
+2. desmos-loader.js: The relevant graph .html calls this piece of Javacript
   - line 4-5: gets the json associated with the .html. They must have the same name (prefix):
     ```
     filename = filename.replace(/\.html$/i, "");
