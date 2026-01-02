@@ -74,8 +74,8 @@
 
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
 <script>
+// 1. Initialize the 3D Calculator globally immediately
 const elt = document.getElementById('calculator-3d');
-// Use window.calc3d immediately so the variable exists for the resize script
 window.calc3d = Desmos.Calculator3D(elt, {
   expressions: true,
   expressionsCollapsed: true,
@@ -85,15 +85,51 @@ window.calc3d = Desmos.Calculator3D(elt, {
   border: false
 });
 
+// 2. Load the state
 fetch('Utility-Max.json')
   .then(r => r.json())
   .then(state => {
     window.calc3d.setState(state);
     window.calc3d.setDefaultState(state);
-    // Explicitly call resize once state is loaded
-    window.calc3d.resize();
   })
-  .catch(e => console.error(e));
+  .catch(e => console.error("JSON Load Error:", e));
+
+// 3. Setup Resize Logic HERE (Ensures it sees window.calc3d)
+document.addEventListener("pointerdown", (e) => {
+  // Check if we clicked the handle
+  const handle = e.target.closest('.resize-handle');
+  if (!handle) return;
+
+  e.preventDefault();
+  
+  const graphBox = document.getElementById("graphBox");
+  const container = document.querySelector(".container");
+  
+  let startX = e.clientX;
+  let startY = e.clientY;
+  let startW = container.offsetWidth;
+  let startH = graphBox.offsetHeight;
+
+  function onMove(moveEvent) {
+    const newW = startW + (moveEvent.clientX - startX);
+    const newH = startH + (moveEvent.clientY - startY);
+    
+    container.style.width = Math.max(600, newW) + "px";
+    container.style.maxWidth = "none";
+    graphBox.style.height = Math.max(400, newH) + "px";
+    
+    // Force Desmos to update
+    if (window.calc3d) window.calc3d.resize();
+  }
+
+  function onUp() {
+    window.removeEventListener("pointermove", onMove);
+    window.removeEventListener("pointerup", onUp);
+  }
+
+  window.addEventListener("pointermove", onMove);
+  window.addEventListener("pointerup", onUp);
+});
   </script>
 
       <!--Import Desmos link-->
