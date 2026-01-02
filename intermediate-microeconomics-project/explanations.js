@@ -383,7 +383,14 @@ const EXPLANATIONS = {
     <p>2. Exp 1.</p>
     <p>3. AExp 1.</p>
   `,
-
+  
+   //Edgeworth box 3D
+   "Edgeworth-Box-3D": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
    //Week5 Edgeworth-Box
   "Edgeworth-Box": `
    <p>1. Exp 1.</p>
