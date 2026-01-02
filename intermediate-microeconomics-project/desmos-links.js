@@ -7,43 +7,43 @@ const DESMOS_LINKS = {
   
   //Week1 Elasticity-Flexible-Demand
   "Elasticity-Flexible-Demand": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/cgu6yyp5gn",
     title: "Open in Desmos"
   },
   
    //Week1 Elasticity-Staircase-Demand
   "Elasticity-Staircase-Demand": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/seuznqczmk",
     title: "Open in Desmos"
   },
   
   //Week1 Market-interventions-revised
   "Market-interventions-revised":{
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/um1lwgnlr4",
     title: "Open in Desmos"
   },
   
    //Week1 Lectorial
   "Lectorial": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/dectbpszrh",
     title: "Open in Desmos"
   },
   
   //Week1 Max
   "Max": {
-  url: "https://www.desmos.com/calculator/gaqik8ya09",
+  url: "https://www.desmos.com/calculator/ywpebw6bbx",
     title: "Open in Desmos"
   },
 
   //Week1 Quiz
   "W1Quiz": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/emkib4vlr5",
     title: "Open in Desmos"
   },
  
   //Week1 Elasticity
  "Elasticity": {
-   url: "https://www.desmos.com/calculator/gaqik8ya09",
+   url: "https://www.desmos.com/calculator/ocyvg58abx",
     title: "Open in Desmos"
   },
 
