@@ -28,7 +28,7 @@
 
     <a
       class="desmos-btn"
-      href="https://www.desmos.com/calculator/0fj5hq6wag"
+       data-desmos-id="Indifference-curve"
       target="_blank"
       rel="noopener"
     >
@@ -49,12 +49,7 @@
     <!-- 2. Video section, embedd the video code here -->
     <section class="section">
       <h2>🎥 Video</h2>
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          allowfullscreen 
-        ></iframe>
-      </div>
+        <div class="video-frame" data-video-id="Indifference-curve"></div>
     </section>
 
     <!-- 3. Textbox section -->
@@ -71,6 +66,17 @@
  <!-- Import text-->
 <script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
 
+<!--Desmos-->
+<script src="../assets/desmos-loader.js"></script>
+    <!--Export Desmos-->
+<script src="../assets/export-desmos.js?v=1"></script>
+    <!-- Import text-->
+<script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
+    <!--Import Desmos link-->
+<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+    <!--Import Video link-->
+<script src="/intermediate-microeconomics-project/video.js"></script>
+
 <!-- Automatically fill in texts -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -78,7 +84,6 @@
 
     boxes.forEach(function (box) {
       const id = box.dataset.explainId;
-
       if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
     box.innerHTML = EXPLANATIONS[id];
   } else {
@@ -86,6 +91,45 @@
   }
     });
   });
+</script>
+  
+<!--Automatically fill in text-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btns = document.querySelectorAll("[data-desmos-id]");
+
+  btns.forEach(btn => {
+    const id = btn.dataset.desmosId;
+    if (DESMOS_LINKS[id]) {
+      btn.href = DESMOS_LINKS[id].url;
+      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
+    } else {
+      console.warn("Missing Desmos link for:", id);
+    }
+  });
+});
+</script>
+
+  <!--Automatically fill in video link-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const containers = document.querySelectorAll("[data-video-id]");
+
+  containers.forEach(container => {
+    const id = container.dataset.videoId;
+    if (VIDEOS[id]) {
+      container.innerHTML = `
+        <iframe
+          src="${VIDEOS[id].src}"
+          title="${VIDEOS[id].title || ""}"
+          allowfullscreen
+        ></iframe>
+      `;
+    } else {
+      console.warn("Missing video for:", id);
+    }
+  });
+});
 </script>
 </body>
 </html>
