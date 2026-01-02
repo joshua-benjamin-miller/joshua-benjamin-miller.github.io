@@ -1,118 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini EconGraphs Demo</title>
-<link rel="stylesheet" href="../assets/site.css">
-<link rel="stylesheet" href="../assets/graph.css?v=3">
+  <meta charset="UTF-8" />
+  <title>Production & Returns to scale</title>
+
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/graph.css?v=3">
+
+  <style>
+    .graph-wrapper { width: 100%; height: 100%; }
+    .desmos-embed { width: 100%; height: 100%; border: 0; display: block; }
+  </style>
 </head>
+
 <body class="graph-page">
   <div id="navbar-container"></div>
   <script src="../assets/navbarG-loader.js"></script>
-  <!--Import Text-->
-<script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
-  
-  <!-- Automatically fill in texts-->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
 
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
-<!-- =================================================== -->
+  <!-- Import Text -->
+  <script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
 
   <div class="container">
-    <!-- Page title -->
     <h1>Production & Returns to scale</h1>
 
     <!-- 1. Desmos section -->
     <section class="section">
-  <div class="section-header">
-    <h2>📈 Interactive Graph</h2>
+      <div class="section-header">
+        <h2>📈 Interactive Graph</h2>
 
-    <a
-      class="desmos-btn"
-      data-desmos-id="Production-returns-to-scale"
-      target="_blank"
-      rel="noopener"
-    >
-      Open in Desmos <!--Change desmos link above-->
-    </a>
-  </div>
-         <div class="graph-scroll">
+        <a
+          class="desmos-btn"
+          data-desmos-id="Production-returns-to-scale"
+          target="_blank"
+          rel="noopener"
+        >Open in Desmos</a>
+      </div>
+
+     <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
-<div class="graph-wrapper">
- <div class="graph-wrapper">
-  <iframe
-    class="desmos-embed"
-    src="https://www.desmos.com/calculator/6mne6a1bqi?embed"
-    loading="lazy"
-    allowfullscreen
-  ></iframe>
-</div>
+    <div class="graph-wrapper">
+      <iframe
+        class="desmos-embed"
+        src="https://www.desmos.com/calculator/6mne6a1bqi?embed"
+        loading="lazy"
+        allowfullscreen
+      ></iframe>
+    </div>
     <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
 </div>
-   </section>
 
+          <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- 2. Video section -->
     <section class="section">
       <h2>🎥 Video</h2>
-       <div class="video-frame" data-video-id="Production-returns-to-scale"></div>
+      <div class="video-frame" data-video-id="Production-returns-to-scale"></div>
     </section>
 
     <!-- 3. Textbox section -->
     <section class="section">
       <h2>📘 Production & Returns to scale</h2>
-      <div class="textbox" data-explain-id="Utility-Max"></div>
+      <div class="textbox" data-explain-id="Production-returns-to-scale"></div>
     </section>
   </div>
 
-<script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
-<script>
-  const elt = document.getElementById('calculator-3d');
-  const calc3d = Desmos.Calculator3D(elt, {
-    expressions: true,         //can turn off if needed
-    expressionsCollapsed: true,
-    settingsMenu: false,
-    zoomButtons: true,
-    keypad: false,
-    border: false
-  });
-
-
-      <!--Import Desmos link-->
-<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
-    <!--Import Video link-->
-<script src="/intermediate-microeconomics-project/video.js"></script>
-
-<!-- Automatically fill in texts -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
+  <!-- Auto fill in texts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const boxes = document.querySelectorAll("[data-explain-id]");
+      boxes.forEach(function (box) {
+        const id = box.dataset.explainId;
+        if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
+          box.innerHTML = EXPLANATIONS[id];
+        } else {
+          console.warn("Missing explanation for id:", id);
+        }
+      });
     });
-  });
-</script>
-  
-<!--Automatically fill in text-->
+  </script>
+
+  <!-- Import Video link -->
+  <script src="/intermediate-microeconomics-project/video.js"></script>
+  <!--Import Desmos link-->
+<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
+
+  <!--Automatically fill in text-->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const btns = document.querySelectorAll("[data-desmos-id]");
@@ -128,28 +104,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
-  <!--Automatically fill in video link-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll("[data-video-id]");
-
-  containers.forEach(container => {
-    const id = container.dataset.videoId;
-    if (VIDEOS[id]) {
-      container.innerHTML = `
-        <iframe
-          src="${VIDEOS[id].src}"
-          title="${VIDEOS[id].title || ""}"
-          allowfullscreen
-        ></iframe>
-      `;
-    } else {
-      console.warn("Missing video for:", id);
-    }
-  });
-});
-</script>
   
+  <!-- Auto fill in video -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const containers = document.querySelectorAll("[data-video-id]");
+      containers.forEach(container => {
+        const id = container.dataset.videoId;
+        if (typeof VIDEOS !== "undefined" && VIDEOS[id]) {
+          container.innerHTML = `
+            <iframe
+              src="${VIDEOS[id].src}"
+              title="${VIDEOS[id].title || ""}"
+              allowfullscreen
+            ></iframe>
+          `;
+        } else {
+          console.warn("Missing video for:", id);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
