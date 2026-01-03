@@ -27,13 +27,20 @@
     Line 76 has: ```<script src="../assets/desmos-loader.js"></script>``` which loads the javascript
 
 6. export-desmos.js
-7. graph.css
-8. navbar-loader.js
-9. navbar.html
-10. navbarG-loader.js
-11. navbarH-loader.js
-12. navbarH.html
-13. site.css
+    - for exporting PNG of the graph
+8. graph.css
+    - Display format for graphs. Loaded by the html along with site.css
+10. navbar-loader.js
+    - Fetches  navbar.html and inserts it in a page (the bar within concepts & exercise page)
+12. navbar.html
+    - Links in each navigation bar (the bar within concepts & exercise page)
+14. navbarG-loader.js
+    -  Navigation bar when a graph page html is loaded (no fetching like the other loaders because of the export graph created issues)
+16. navbarH-loader.js
+    -  Navigation bar Home page a graph page html is loaded. Fetches navbarH.html
+18. navbarH.html
+    -  Linkes in the homepage navigation. 
+20. site.css
 
 ## Changing Files
 1. To change navbar and make them consistent, three places need to be changed
