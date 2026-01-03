@@ -41,6 +41,7 @@
 18. navbarH.html
     -  Linkes in the homepage navigation. 
 20. site.css
+    - All pages styles and fonts
 
 ## Changing Files
 1. To change navbar and make them consistent, three places need to be changed
