@@ -31,20 +31,24 @@ function initNavbarSearch() {
           return;
         }
 
-        matches.forEach(item => {
-          const div = document.createElement("div");
-          div.className = "nav-search-item";
-          div.innerHTML = `
-            <div class="nav-search-title">${item.title}</div>
-            <div class="nav-search-meta">
-              Week ${item.week} · ${item.type}${item.hasVideo ? " · 🎥" : ""}
-            </div>
-          `;
-          div.onclick = () => {
-            window.location.href = item.url;
-          };
-          box.appendChild(div);
-        });
+       matches.forEach(item => {
+  const div = document.createElement("div");
+  div.className = "nav-search-item";
+
+  const weekMatch = item.url.match(/week(\d+)/);
+  const week = weekMatch ? `Week ${weekMatch[1]}` : "";
+
+  div.innerHTML = `
+    <div class="nav-search-title">${item.title}</div>
+    <div class="nav-search-meta">${week}</div>
+  `;
+
+  div.onclick = () => {
+    window.location.href = item.url;
+  };
+
+  box.appendChild(div);
+});
 
         box.classList.add("active");
       });
@@ -75,28 +79,6 @@ function loadNavbar() {
 }
 
 document.addEventListener("DOMContentLoaded", loadNavbar);
-
-
-
-
-matches.forEach(item => {
-  const div = document.createElement("div");
-  div.className = "nav-search-item";
-
-  const weekMatch = item.url.match(/week(\d+)/);
-  const week = weekMatch ? `Week ${weekMatch[1]}` : "";
-
-  div.innerHTML = `
-    <div class="nav-search-title">${item.title}</div>
-    <div class="nav-search-meta">${week}</div>
-  `;
-
-  div.onclick = () => {
-    window.location.href = item.url;
-  };
-
-  box.appendChild(div);
-});
 
 
 
