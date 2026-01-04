@@ -41,14 +41,30 @@ function subsequenceMatch(text, pattern) {
           return;
         }
 
-        const matches = index
-          .filter(item =>
-            item.title.toLowerCase().includes(q) ||
-            (item.keywords || []).some(k =>
-              k.toLowerCase().includes(q)
-            )
-          )
-          .slice(0, 8);
+      const qNorm = normalize(q);
+const qTokens = qNorm.split(" ").filter(Boolean);
+
+const matches = index
+  .map(item => {
+    const title = normalize(item.title);
+    const kws = normalize((item.keywords || []).join(" "));
+    const hay = (title + " " + kws).trim();
+
+    let score = 999;
+
+    if (hay.includes(qNorm)) score = 0;
+
+    else if (tokenMatch(hay, qTokens)) score = 1;
+
+    else if (subsequenceMatch(hay.replace(/\s+/g, ""), qNorm.replace(/\s+/g, ""))) score = 2;
+
+    return { item, score };
+  })
+  .filter(x => x.score < 999)
+  .sort((a, b) => a.score - b.score)
+  .slice(0, 8)
+  .map(x => x.item);
+
 
         if (!matches.length) {
           box.classList.remove("active");
