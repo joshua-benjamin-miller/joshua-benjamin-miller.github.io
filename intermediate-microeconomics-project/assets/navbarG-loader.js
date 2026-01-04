@@ -2,6 +2,16 @@ const NAVBAR_HTML=`
 <nav class="navbar">
   <div class="nav-left">
     <a href="/intermediate-microeconomics-project/index.html">Home</a>
+     <!--Search bar-->
+      <div class="nav-search">
+      <input
+        id="nav-search-input"
+        type="text"
+        placeholder="Search graphs…"
+        autocomplete="off"
+      />
+      <div id="nav-search-results" class="nav-search-results"></div>
+    </div>
   </div>
 
   <div class="nav-menu">
