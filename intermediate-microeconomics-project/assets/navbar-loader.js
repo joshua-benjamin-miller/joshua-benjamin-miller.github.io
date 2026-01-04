@@ -76,3 +76,14 @@ function loadNavbar() {
 
 document.addEventListener("DOMContentLoaded", loadNavbar);
 
+
+
+const weekMatch = item.url.match(/week(\d+)/);
+const week = weekMatch ? `Week ${weekMatch[1]}` : "";
+
+div.innerHTML = `
+  <div class="nav-search-title">${item.title}</div>
+  <div class="nav-search-meta">${week}</div>
+`;
+
+
