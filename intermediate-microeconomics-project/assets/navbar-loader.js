@@ -4,6 +4,30 @@ function initNavbarSearch() {
 
   if (!input || !box) return;
 
+
+  function normalize(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+  
+function tokenMatch(text, qTokens) {
+  return qTokens.every(t => text.includes(t));
+}
+
+function subsequenceMatch(text, pattern) {
+  let i = 0;
+  for (let c of text) {
+    if (c === pattern[i]) i++;
+    if (i === pattern.length) return true;
+  }
+  return pattern.length > 0;
+}
+
+  
+
   fetch("/intermediate-microeconomics-project/assets/search-index.json")
     .then(res => res.json())
     .then(index => {
