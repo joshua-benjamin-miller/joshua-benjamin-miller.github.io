@@ -360,3 +360,10 @@ body {
   color: #666;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
