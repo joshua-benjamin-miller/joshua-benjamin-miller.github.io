@@ -78,12 +78,25 @@ document.addEventListener("DOMContentLoaded", loadNavbar);
 
 
 
-const weekMatch = item.url.match(/week(\d+)/);
-const week = weekMatch ? `Week ${weekMatch[1]}` : "";
 
-div.innerHTML = `
-  <div class="nav-search-title">${item.title}</div>
-  <div class="nav-search-meta">${week}</div>
-`;
+matches.forEach(item => {
+  const div = document.createElement("div");
+  div.className = "nav-search-item";
+
+  const weekMatch = item.url.match(/week(\d+)/);
+  const week = weekMatch ? `Week ${weekMatch[1]}` : "";
+
+  div.innerHTML = `
+    <div class="nav-search-title">${item.title}</div>
+    <div class="nav-search-meta">${week}</div>
+  `;
+
+  div.onclick = () => {
+    window.location.href = item.url;
+  };
+
+  box.appendChild(div);
+});
+
 
 
