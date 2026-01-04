@@ -1,5 +1,4 @@
 [
-  /* ================= Week 1 ================= */
   { "title": "4-axis Cost Benefit", "url": "/intermediate-microeconomics-project/week1/4-axis-Cost-Benefit.html" },
   { "title": "Elasticity", "url": "/intermediate-microeconomics-project/week1/Elasticity.html" },
   { "title": "Elasticity Flexible Demand", "url": "/intermediate-microeconomics-project/week1/Elasticity-Flexible-Demand.html" },
@@ -9,13 +8,13 @@
   { "title": "Max", "url": "/intermediate-microeconomics-project/week1/Max.html" },
   { "title": "Quiz", "url": "/intermediate-microeconomics-project/week1/Quiz.html" },
 
-  /* ================= Week 2 ================= */
+  
   { "title": "Consumers Problem", "url": "/intermediate-microeconomics-project/week2/Consumers-Problem.html" },
   { "title": "Discrete Demand Supply", "url": "/intermediate-microeconomics-project/week2/Discrete-Demand-Supply.html" },
   { "title": "Indifference Curve", "url": "/intermediate-microeconomics-project/week2/Indifference-curve.html" },
   { "title": "Utility Max", "url": "/intermediate-microeconomics-project/week2/Utility-Max.html" },
 
-  /* ================= Week 3 ================= */
+  
   { "title": "Budget Line With Complex Pricing", "url": "/intermediate-microeconomics-project/week3/Budget-Line-With-Complex-Pricing.html" },
   { "title": "Consumers Problem Lecture Example", "url": "/intermediate-microeconomics-project/week3/Consumers-Problem-Lecture-Example.html" },
   { "title": "Inferior Good", "url": "/intermediate-microeconomics-project/week3/Inferior-Good.html" },
@@ -25,7 +24,7 @@
   { "title": "Sales vs Income Tax", "url": "/intermediate-microeconomics-project/week3/Sales-vs-Income-Tax.html" },
   { "title": "Utility Max CES", "url": "/intermediate-microeconomics-project/week3/Utility-Max-CES.html" },
 
-  /* ================= Week 4 ================= */
+
   { "title": "Aggregate Demand", "url": "/intermediate-microeconomics-project/week4/Aggregate-Demand.html" },
   { "title": "Consumer Optimization", "url": "/intermediate-microeconomics-project/week4/Consumer-Optimization.html" },
   { "title": "Consumers Problem HW", "url": "/intermediate-microeconomics-project/week4/Consumers-Problem-HW.html" },
@@ -37,7 +36,7 @@
   { "title": "Intertemporal Consumption", "url": "/intermediate-microeconomics-project/week4/Intertemporal-consumption.html" },
   { "title": "Time IE SE", "url": "/intermediate-microeconomics-project/week4/Time-IE-SE.html" },
 
-  /* ================= Week 5 ================= */
+
   { "title": "Contract Curve", "url": "/intermediate-microeconomics-project/week5/Contract-Curve.html" },
   { "title": "Contract Curve Complements", "url": "/intermediate-microeconomics-project/week5/Contract-Curve-Complements.html" },
   { "title": "Edgeworth Box", "url": "/intermediate-microeconomics-project/week5/Edgeworth-Box.html" },
@@ -45,22 +44,22 @@
   { "title": "Supply Demand From Edgeworth", "url": "/intermediate-microeconomics-project/week5/Supply-Demand-From-Edgeworth.html" },
   { "title": "Weird Edgeworth Box", "url": "/intermediate-microeconomics-project/week5/Weird-Edgeworth-Box.html" },
 
-  /* ================= Week 6 ================= */
+ 
   { "title": "Bomb Risk", "url": "/intermediate-microeconomics-project/week6/BombRisk.html" },
   { "title": "CRRA Peter Wakker", "url": "/intermediate-microeconomics-project/week6/CRRA-Peter-Wakker.html" },
   { "title": "Eckel Grossman", "url": "/intermediate-microeconomics-project/week6/Eckel-Grossman.html" },
   { "title": "Risk Averse Seeking Neutral", "url": "/intermediate-microeconomics-project/week6/Risk-Averse-Seeking-Neutral.html" },
   { "title": "St Petersburg Paradox", "url": "/intermediate-microeconomics-project/week6/St-Petersburg-Paradox.html" },
 
-  /* ================= Week 7 ================= */
+
   { "title": "Production Returns to Scale", "url": "/intermediate-microeconomics-project/week7/Production-returns-to-scale.html" },
 
-  /* ================= Week 8 ================= */
+
   { "title": "Costs in Short and Long Run", "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run.html" },
   { "title": "Costs in Short and Long Run 4th Panel", "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run-4th-panel.html" },
   { "title": "Profit Maximization Supply Demand", "url": "/intermediate-microeconomics-project/week8/Profit-maximization+suppy-demand.html" },
 
-  /* ================= Week 9 ================= */
+ 
   { "title": "Cost Revenue Illustration", "url": "/intermediate-microeconomics-project/week9/Cost-Revenue-illustration.html" },
   { "title": "Production Profit Cobb Douglas", "url": "/intermediate-microeconomics-project/week9/Production-Profit-CobbDouglas.html" }
 ]
