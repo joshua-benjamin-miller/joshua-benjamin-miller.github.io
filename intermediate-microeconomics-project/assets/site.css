@@ -373,7 +373,7 @@ body {
 
 
 .navbar {
-  padding-left: clamp(14px, 4vw, 32px);
-  padding-right: clamp(14px, 4vw, 32px);
+  padding-left: clamp(14px, 7vw, 32px);
+  padding-right: clamp(14px, 7vw, 32px);
 }
 
