@@ -220,3 +220,13 @@ h1 {
       font-size: 1.05rem;
       font-weight: 600;
     }
+
+
+
+
+.navbar {
+  padding-left: clamp(14px, 4vw, 32px);
+  padding-right: clamp(14px, 4vw, 32px);
+}
+
+
