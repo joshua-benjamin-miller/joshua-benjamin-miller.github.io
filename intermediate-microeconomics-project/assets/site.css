@@ -371,14 +371,9 @@ body {
 
 
 
+
 .navbar {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: clamp(14px, 4vw, 32px);
+  padding-right: clamp(14px, 4vw, 32px);
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-}
