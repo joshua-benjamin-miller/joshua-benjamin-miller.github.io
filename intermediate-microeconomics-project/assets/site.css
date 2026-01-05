@@ -367,3 +367,18 @@ body {
   font-size: 1.05rem;
   font-weight: 600;
 }
+
+
+
+
+.navbar {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
