@@ -1,5 +1,7 @@
 const NAVBAR_HTML=`
 <nav class="navbar">
+ <!--adding navbar inner-->
+   <div class="navbar-inner"> 
   <div class="nav-left">
     <a href="/intermediate-microeconomics-project/index.html">Home</a>
      <!--Search bar-->
