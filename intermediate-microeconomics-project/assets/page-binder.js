@@ -13,16 +13,28 @@
 //   video.js (defines VIDEOS)
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.querySelector(".container[data-graph-id]");
+  const root = document.querySelector(".container");
   if (!root) {
-    console.warn("page-binder.js: Missing .container[data-graph-id] on this page.");
+    console.warn("page-binder.js: Missing .container on this page.");
     return;
   }
 
-  const id = root.dataset.graphId;
-  const title = root.dataset.graphTitle || id.replace(/-/g, " ");
-  document.title = `${title} | MicroEconGraphs`;
+  // --- Determine graph id ---
+  // Prefer explicit data-graph-id, else infer from filename
+  let id = root.dataset.graphId;
+  if (!id) {
+    const file = location.pathname.split("/").pop() || "";
+    id = file.replace(/\.html$/i, "");
+    root.dataset.graphId = id;
+  }
 
+  // --- Determine display title ---
+  // Prefer explicit data-graph-title, else derive from id
+  const title = root.dataset.graphTitle || id.replace(/-/g, " ");
+  root.dataset.graphTitle = title;
+
+  // Browser tab title
+  document.title = `${title} | MicroEconGraphs`;
 
   // Safely access globals whether they were defined with const/let or var
   const EXPL = (typeof EXPLANATIONS !== "undefined") ? EXPLANATIONS : null;
