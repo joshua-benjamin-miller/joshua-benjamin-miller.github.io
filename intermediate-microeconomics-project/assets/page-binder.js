@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const id = root.dataset.graphId;
-  const title = root.dataset.graphTitle || id;
+ onst title = root.dataset.graphTitle || id.replace(/-/g, " ");
+  document.title = `${title} | MicroEconGraphs`;
+
 
   // Safely access globals whether they were defined with const/let or var
   const EXPL = (typeof EXPLANATIONS !== "undefined") ? EXPLANATIONS : null;
