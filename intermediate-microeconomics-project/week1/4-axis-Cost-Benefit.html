@@ -84,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const id = root.dataset.graphId;
   const title = root.dataset.graphTitle || id;
 
+  // Grab globals safely even if they were defined with const/let
+  const EXPL = (typeof EXPLANATIONS !== "undefined") ? EXPLANATIONS : null;
+  const LINKS = (typeof DESMOS_LINKS !== "undefined") ? DESMOS_LINKS : null;
+  const VIDS  = (typeof VIDEOS !== "undefined") ? VIDEOS : null;
+
   // Title + subtitle
   const titleEl = root.querySelector('[data-fill="title"]');
   if (titleEl) titleEl.textContent = title;
@@ -95,33 +100,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const introEl = root.querySelector('[data-fill="intro"]');
   if (introEl) {
     const introKey = `${id}-header`;
-    if (window.EXPLANATIONS?.[introKey]) introEl.innerHTML = EXPLANATIONS[introKey];
-    else console.warn("Missing explanation for id:", introKey);
+    if (EXPL && EXPL[introKey]) introEl.innerHTML = EXPL[introKey];
+    else console.warn("Missing explanation for id:", introKey, "EXPL loaded?", !!EXPL);
   }
 
   const fullEl = root.querySelector('[data-fill="full"]');
   if (fullEl) {
-    if (window.EXPLANATIONS?.[id]) fullEl.innerHTML = EXPLANATIONS[id];
-    else console.warn("Missing explanation for id:", id);
+    if (EXPL && EXPL[id]) fullEl.innerHTML = EXPL[id];
+    else console.warn("Missing explanation for id:", id, "EXPL loaded?", !!EXPL);
   }
 
   // Desmos link
   const desmosA = root.querySelector('[data-fill="desmos-link"]');
   if (desmosA) {
-    const entry = window.DESMOS_LINKS?.[id];
-    if (entry?.url) {
+    const entry = LINKS && LINKS[id];
+    if (entry && entry.url) {
       desmosA.href = entry.url;
       desmosA.textContent = entry.title || "Open in Desmos";
     } else {
-      console.warn("Missing Desmos link for:", id);
+      console.warn("Missing Desmos link for:", id, "LINKS loaded?", !!LINKS);
     }
   }
 
   // Video
   const videoEl = root.querySelector('[data-fill="video"]');
   if (videoEl) {
-    const v = window.VIDEOS?.[id];
-    if (v?.src) {
+    const v = VIDS && VIDS[id];
+    if (v && v.src) {
       videoEl.innerHTML = `
         <iframe
           src="${v.src}"
@@ -130,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ></iframe>
       `;
     } else {
-      console.warn("Missing video for:", id);
+      console.warn("Missing video for:", id, "VIDS loaded?", !!VIDS);
     }
   }
 });
