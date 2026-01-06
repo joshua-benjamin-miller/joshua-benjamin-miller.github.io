@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const id = root.dataset.graphId;
- onst title = root.dataset.graphTitle || id.replace(/-/g, " ");
+  const title = root.dataset.graphTitle || id.replace(/-/g, " ");
   document.title = `${title} | MicroEconGraphs`;
 
 
