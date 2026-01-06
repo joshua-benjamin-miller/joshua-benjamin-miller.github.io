@@ -22,7 +22,7 @@
   background: #111827; 
   color:#fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  padding: 0 24px;
+  padding: 0; * <-- change from 0 24px to 0 */
   height: 56px;
   display: flex;
   align-items: center;
@@ -32,6 +32,19 @@
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro",
     "Segoe UI", Roboto, sans-serif;
 }
+
+.navbar-inner {
+  max-width: 1100px;    /* match your content width */
+  margin: 0 auto;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;      /* the padding moved here */
+}
+
 
 .nav-left {
   font-size: 1.05rem;
@@ -372,8 +385,4 @@ body {
 
 
 
-.navbar {
-  padding-left: clamp(14px, 7vw, 32px);
-  padding-right: clamp(14px, 7vw, 32px);
-}
 
