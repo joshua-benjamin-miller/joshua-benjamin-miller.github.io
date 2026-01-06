@@ -76,70 +76,7 @@
     <!--Import Video link-->
 <script defer src="/intermediate-microeconomics-project/video.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.querySelector(".container[data-graph-id]");
-  if (!root) return;
-
-  const id = root.dataset.graphId;
-  const title = root.dataset.graphTitle || id;
-
-  // Grab globals safely even if they were defined with const/let
-  const EXPL = (typeof EXPLANATIONS !== "undefined") ? EXPLANATIONS : null;
-  const LINKS = (typeof DESMOS_LINKS !== "undefined") ? DESMOS_LINKS : null;
-  const VIDS  = (typeof VIDEOS !== "undefined") ? VIDEOS : null;
-
-  // Title + subtitle
-  const titleEl = root.querySelector('[data-fill="title"]');
-  if (titleEl) titleEl.textContent = title;
-
-  const subtitleEl = root.querySelector('[data-fill="subtitle"]');
-  if (subtitleEl) subtitleEl.textContent = `📘 ${title}`;
-
-  // Explanations
-  const introEl = root.querySelector('[data-fill="intro"]');
-  if (introEl) {
-    const introKey = `${id}-header`;
-    if (EXPL && EXPL[introKey]) introEl.innerHTML = EXPL[introKey];
-    else console.warn("Missing explanation for id:", introKey, "EXPL loaded?", !!EXPL);
-  }
-
-  const fullEl = root.querySelector('[data-fill="full"]');
-  if (fullEl) {
-    if (EXPL && EXPL[id]) fullEl.innerHTML = EXPL[id];
-    else console.warn("Missing explanation for id:", id, "EXPL loaded?", !!EXPL);
-  }
-
-  // Desmos link
-  const desmosA = root.querySelector('[data-fill="desmos-link"]');
-  if (desmosA) {
-    const entry = LINKS && LINKS[id];
-    if (entry && entry.url) {
-      desmosA.href = entry.url;
-      desmosA.textContent = entry.title || "Open in Desmos";
-    } else {
-      console.warn("Missing Desmos link for:", id, "LINKS loaded?", !!LINKS);
-    }
-  }
-
-  // Video
-  const videoEl = root.querySelector('[data-fill="video"]');
-  if (videoEl) {
-    const v = VIDS && VIDS[id];
-    if (v && v.src) {
-      videoEl.innerHTML = `
-        <iframe
-          src="${v.src}"
-          title="${v.title || ""}"
-          allowfullscreen
-        ></iframe>
-      `;
-    } else {
-      console.warn("Missing video for:", id, "VIDS loaded?", !!VIDS);
-    }
-  }
-});
-</script>
+<script defer src="../assets/page-binder.js?v=1"></script>
 
 
   
