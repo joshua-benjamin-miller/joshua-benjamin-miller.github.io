@@ -24,7 +24,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   padding: 0; * <-- change from 0 24px to 0 */
   height: 56px;
-  display: flex;
+  display: block; /* switched from flex */
   align-items: center;
   position: sticky;
   top: 0;
@@ -37,12 +37,13 @@
   max-width: 1100px;    /* match your content width */
   margin: 0 auto;
   height: 56px;
-
+   /* IMPORTANT: prevents shrink-wrap so space-between works */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 24px;      /* the padding moved here */
+  padding: 0 18px;      /* the padding moved here */
 }
 
 
@@ -108,9 +109,12 @@
   padding: 32px 40px 60px;
 }
 
+
 @media (max-width: 600px) {
   .container { padding-inline: 14px; }
+  .navbar-inner { padding-inline: 14px; }  /* update for inner*/
 }
+
 
     /* page body */
 
