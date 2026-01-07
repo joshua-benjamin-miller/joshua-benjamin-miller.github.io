@@ -18,22 +18,68 @@
 //   }
 // }
 
-(function loadMathJax() {
-  if (window.mathjaxLoaded) return;
-  window.mathjaxLoaded = true;
+// Configure BEFORE MathJax loads (keep this if you use $...$)
+window.MathJax = window.MathJax || {
+  tex: {
+    inlineMath: [["$", "$"], ["\\(", "\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+  },
+  startup: {
+    typeset: false, // don't auto-typeset; we'll do it after injection
+  },
+};
 
-  const mj = document.createElement("script");
-  mj.id = "MathJax-script";
-  mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-  mj.async = true;
+function ensureMathJaxReady() {
+  // If already initialized, reuse it
+  if (window.MathJax?.startup?.promise) return window.MathJax.startup.promise;
+  if (window._mathJaxReadyPromise) return window._mathJaxReadyPromise;
 
-  mj.onerror = () => {
-    console.error("MathJax failed to load — retrying...");
-    setTimeout(loadMathJax, 1000);
-  };
+  window._mathJaxReadyPromise = new Promise((resolve, reject) => {
+    // If script tag already exists, just wait for startup
+    let script = document.getElementById("MathJax-script");
 
-  document.head.appendChild(mj);
-})();
+    const waitForStartup = () => {
+      let tries = 0;
+      const timer = setInterval(() => {
+        tries++;
+        if (window.MathJax?.startup?.promise) {
+          clearInterval(timer);
+          window.MathJax.startup.promise.then(resolve).catch(reject);
+        } else if (tries > 300) { // ~15s
+          clearInterval(timer);
+          reject(new Error("MathJax init timeout"));
+        }
+      }, 50);
+    };
+
+    if (!script) {
+      script = document.createElement("script");
+      script.id = "MathJax-script";
+      script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+      script.async = true;
+      script.onload = waitForStartup;
+      script.onerror = () => reject(new Error("MathJax script failed to load"));
+      document.head.appendChild(script);
+    } else {
+      waitForStartup();
+    }
+  });
+
+  return window._mathJaxReadyPromise;
+}
+
+async function typesetMathIn(rootEl) {
+  try {
+    await ensureMathJaxReady();
+
+    // Clear previous typesetting in this area and re-typeset
+    if (window.MathJax?.typesetClear) window.MathJax.typesetClear([rootEl]);
+    if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([rootEl]);
+  } catch (e) {
+    console.warn("MathJax typeset failed:", e);
+  }
+}
+
 
 
 async function bindPage() {
@@ -104,7 +150,8 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
-  if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise();
+ // ✅ wait for MathJax, then typeset the injected content
+  await typesetMathIn(root);
 
 
 
