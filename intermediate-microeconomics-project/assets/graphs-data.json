@@ -16,5 +16,299 @@
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 2</p>",
     "full_html": "<p>This graph shows a staircase (step) demand curve, where quantity changes only at discrete price levels. Because the curve is piecewise vertical and \n    horizontal, elasticity behaves very differently from smooth demand curves.\n  </p>\n\n  <p><b>Vertical segments:</b></p>\n  <p>When the curve is vertical except at \\(Q = 0\\), quantity does not react to price changes, thus, the elasticity of demand is 0.</p>\n\n  <p><b>Horizontal segments:</b></p>\n  <p>On horizontal steps, price does not change (\\( dP = 0 \\)), the percentage change in price is zero, so demand elasticity is undefined.</p>"
+  },
+  "Market-interventions-revised": {
+    "desmos_url": "https://www.desmos.com/calculator/um1lwgnlr4",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Lectorial": {
+    "desmos_url": "https://www.desmos.com/calculator/dectbpszrh",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Max": {
+    "desmos_url": "https://www.desmos.com/calculator/ywpebw6bbx",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "W1Quiz": {
+    "desmos_url": "https://www.desmos.com/calculator/emkib4vlr5",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Elasticity": {
+    "desmos_url": "https://www.desmos.com/calculator/ocyvg58abx",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Consumers-Problem": {
+    "desmos_url": "https://www.desmos.com/calculator/xhaabarvyt",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Indifference-curve": {
+    "desmos_url": "https://www.desmos.com/calculator/0fj5hq6wag",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Utility-Max": {
+    "desmos_url": "https://www.desmos.com/3d/nd6bsbsrqv",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Discrete-Demand-Supply": {
+    "desmos_url": "https://www.desmos.com/calculator/7vql5cyvmj",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Budget-Line-With-Complex-Pricing": {
+    "desmos_url": "https://www.desmos.com/calculator/zsctmwgzfv",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Consumers-Problem-Lecture-Example": {
+    "desmos_url": "https://www.desmos.com/calculator/pcxkakirky",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Inferior-Good": {
+    "desmos_url": "https://www.desmos.com/calculator/eolgl44jrr",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Perfect-Complements": {
+    "desmos_url": "https://www.desmos.com/calculator/45frf38tu8",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Quasi-Linear-Optimization": {
+    "desmos_url": "https://www.desmos.com/calculator/dturs5b620",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Revealed-Preference": {
+    "desmos_url": "https://www.desmos.com/calculator/s7ikgw8ezp",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Utility-Max-CES": {
+    "desmos_url": "https://www.desmos.com/calculator/bo8srlp0ud",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Sales-vs-Income-Tax": {
+    "desmos_url": "https://www.desmos.com/calculator/9i6tmkqgod",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Aggregate-Demand": {
+    "desmos_url": "https://www.desmos.com/calculator/5i9rwqxqd6",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Consumers-Problem-HW": {
+    "desmos_url": "https://www.desmos.com/calculator/bj4hn7g1f1",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Curves&Demand": {
+    "desmos_url": "https://www.desmos.com/calculator/pmw2uq5wtv",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Curves-Expansion-Demand": {
+    "desmos_url": "https://www.desmos.com/calculator/ecgx3owuay",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Ex-2023-Q3": {
+    "desmos_url": "https://www.desmos.com/calculator/d6bano3ftx",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "IE-SE-CobbDouglas": {
+    "desmos_url": "https://www.desmos.com/calculator/9pbvyzswbh",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "IE-SE-Quasilinear": {
+    "desmos_url": "https://www.desmos.com/calculator/v1t3cidvxl",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Intertemporal-consumption": {
+    "desmos_url": "https://www.desmos.com/calculator/s3dkj1eham",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Time-IE-SE": {
+    "desmos_url": "https://www.desmos.com/calculator/3y5rzvqfei",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Consumer-Optimization": {
+    "desmos_url": "https://www.desmos.com/calculator/hyyyp1mzl0",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Edgeworth-Box": {
+    "desmos_url": "https://www.desmos.com/calculator/inapvepqd1",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Edgeworth-Box-3D": {
+    "desmos_url": "https://www.desmos.com/3d/ttjjrfhziv",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Contract-Curve": {
+    "desmos_url": "https://www.desmos.com/calculator/deqx4tid5r",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Contract-Curve-Complements": {
+    "desmos_url": "https://www.desmos.com/calculator/tgvdynxw0x",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Weird-Edgeworth-Box": {
+    "desmos_url": "https://www.desmos.com/calculator/catzvjkfxi",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Supply-Demand-From-Edgeworth": {
+    "desmos_url": "https://www.desmos.com/calculator/elmrejwslv",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Eckel-Grossman": {
+    "desmos_url": "https://www.desmos.com/calculator/e72ijlqhvi",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Risk-Averse-Seeking-Neutral": {
+    "desmos_url": "https://www.desmos.com/calculator/myukutt7xy",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "BombRisk": {
+    "desmos_url": "https://www.desmos.com/calculator/ydwaeiwcxl",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "CRRA-Peter-Wakker": {
+    "desmos_url": "https://www.desmos.com/calculator/wlfbnrprlo",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "St-Petersburg-Paradox": {
+    "desmos_url": "https://www.desmos.com/calculator/uchvlldzc8",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Production-returns-to-scale": {
+    "desmos_url": "https://www.desmos.com/calculator/388a42942f",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Costs-in-short-and-long-run": {
+    "desmos_url": "https://www.desmos.com/calculator/cvlekdxlxu",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Costs-in-short-and-long-run-4th-panel": {
+    "desmos_url": "https://www.desmos.com/calculator/wpzeuxuhtq",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Profit-maximization+supply-demand": {
+    "desmos_url": "https://www.desmos.com/calculator/phkheluq4t",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Cost-Revenue-illustration": {
+    "desmos_url": "https://www.desmos.com/calculator/ggdpkf2ldm",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Production-Profit-CobbDouglas": {
+    "desmos_url": "https://www.desmos.com/calculator/uelfsabz1m",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Monopoly": {
+    "desmos_url": "https://www.desmos.com/calculator/uelfsabz1m",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Monopoly-Revised": {
+    "desmos_url": "https://www.desmos.com/calculator/5e1404f100",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Price-Discrimination": {
+    "desmos_url": "https://www.desmos.com/calculator/fdc8fef001",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Cournot-with-Residual-Demand": {
+    "desmos_url": "https://www.desmos.com/calculator/7c6e565db3",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
+  },
+  "Diff-Bertrand": {
+    "desmos_url": "https://www.desmos.com/calculator/7851ef600a",
+    "video_src": "",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p></p>"
   }
 }
