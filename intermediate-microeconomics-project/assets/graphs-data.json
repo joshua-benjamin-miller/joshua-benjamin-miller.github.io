@@ -9,7 +9,7 @@
     "desmos_url": "https://www.desmos.com/calculator/cgu6yyp5gn",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 2</p>",
-    "full_html": "<p>Elasticity of demand is computed using the point elasticity formula:\\[E_d = \\frac{dQ}{dP} \\\\cdot \\frac{P}{Q}\\]</p>\n  <p>\n    Notice that elasticity of demand remains <b>constant</b> at all price level, it is because the Demand curve is a power function. \n    In the example, \\(E_d = -2\\), meaning quantity demanded changes by 2% for every 1% increase in price.</p>"
+    "full_html": "<p>Elasticity of demand is computed using the point elasticity formula:\\[E_d = \\frac{dQ}{dP} \\cdot \\frac{P}{Q}\\]</p>\n  <p>\n    Notice that elasticity of demand remains <b>constant</b> at all price level, it is because the Demand curve is a power function. \n    In the example, \\(E_d = -2\\), meaning quantity demanded changes by 2% for every 1% increase in price.</p>"
   },
   "Elasticity-Staircase-Demand": {
     "desmos_url": "https://www.desmos.com/calculator/seuznqczmk",
