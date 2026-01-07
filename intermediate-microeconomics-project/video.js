@@ -234,6 +234,21 @@ const VIDEOS = {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 
+   //Week10 Monopoly
+  "Monopoly": {
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+
+   //Week10 Monopoly-Revised
+  "Monopoly-Revised": {
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+
+  //Week10 Price-Discrimination
+  "Price-Discrimination": {
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
+
       //Week11  Cournot-with-Residual-Demand
   "Cournot-with-Residual-Demand": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
