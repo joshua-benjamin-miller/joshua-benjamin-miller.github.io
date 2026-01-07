@@ -5,38 +5,42 @@
   <title>Mini EconGraphs Demo</title>
   
  <!-- Import Desmos API -->
-  <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
+<script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
    <!-- ================= NAVIGATION BAR ================= -->
   <link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="../assets/graph.css?v=1">
   
 </head>
+  
 <body class="graph-page">
   
   <div id="navbar-container"></div>
   <script src="../assets/navbarG-loader.js"></script>
 <!-- =================================================== -->
+ <div class="container"
+     data-graph-id="Eckel-Grossman"
+     data-graph-title="Eckel Grossman">
 
-  <div class="container">
     <!-- Page title -->
-    <h1>Eckel Grossman</h1> <!--Change the title here-->
+     <h1 data-fill="title"></h1>
 
-    <!-- 1. Desmos section -->
+        <!-- 3. Textbox section -->
     <section class="section">
+      <h2>📘 Introduction!</h2>
+      <div class="textbox" data-fill="intro"></div>
+</section>
+    
+    <!-- 1. Desmos section -->
+   <section class="section">
   <div class="section-header">
     <h2>📈 Interactive Graph</h2>
 
-    <a
-      class="desmos-btn"
-      data-desmos-id="Eckel-Grossman"
-      target="_blank"
-      rel="noopener"
-    >
+    <a class="desmos-btn" data-fill="desmos-link" target="_blank" rel="noopener">
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
 
-  <div class="graph-scroll">
+   <div class="graph-scroll">
   <div class="graph-resizable" id="graphBox">
     <div class="graph-wrapper">
       <div id="calculator"></div>
@@ -44,86 +48,42 @@
     <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
   </div>
 </div>
+
    </section>
 
     <!-- 2. Video section -->
-    <section class="section">
-      <h2>🎥 Video</h2><!--Change the title here-->
-    <div class="video-frame" data-video-id="Eckel-Grossman"></div>
-    </section>
+   <section class="section">
+  <h2>🎥 Video</h2>
+ <div class="video-frame" data-fill="video"></div>
+</section>
 
     <!-- 3. Textbox section -->
     <section class="section">
-      <h2>📘 Eckel Grossman</h2> <!--Change the explanation title-->
-<div class="textbox" data-explain-id="Eckel-Grossman"></div> <!--ID must match with the id in "explanations.js"-->
-    </section>
-    </section>
+    <h2 data-fill="subtitle"></h2>
+    <div class="textbox" data-fill="full"></div>
+</section>
+
   </div>
 
 <!--Desmos-->
-<script src="../assets/desmos-loader.js"></script>
+<script defer src="../assets/desmos-loader.js"></script>
     <!--Export Desmos-->
-<script src="../assets/export-desmos.js?v=1"></script>
-    <!-- Import text-->
-<script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
-    <!--Import Desmos link-->
-<script src="/intermediate-microeconomics-project/desmos-links.js"></script>
-    <!--Import Video link-->
-<script src="/intermediate-microeconomics-project/video.js"></script>
-
-<!-- Automatically fill in texts -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
+<script defer src="../assets/export-desmos.js?v=1"></script>
   
-<!--Automatically fill in text-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btns = document.querySelectorAll("[data-desmos-id]");
+    <!-- Import text-->
+  <!--<script defer src="/intermediate-microeconomics-project/explanations.js?v=5"></script>-->
+    <!--Import Desmos link-->
+  <!--<script defer src="/intermediate-microeconomics-project/desmos-links.js"></script>-->
+    <!--Import Video link-->
+  <!--<script defer src="/intermediate-microeconomics-project/video.js"></script>-->
+  
+<!-- the following script 
+  1. Reads the page’s graph id + title from the container <div> up top
+  2. Fills in heading text
+  4. injects the explanation HTML, the video, the links-->
+<script defer src="../assets/page-binder.js?v=13"></script>
 
-  btns.forEach(btn => {
-    const id = btn.dataset.desmosId;
-    if (DESMOS_LINKS[id]) {
-      btn.href = DESMOS_LINKS[id].url;
-      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
-    } else {
-      console.warn("Missing Desmos link for:", id);
-    }
-  });
-});
-</script>
 
-  <!--Automatically fill in video link-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll("[data-video-id]");
-
-  containers.forEach(container => {
-    const id = container.dataset.videoId;
-    if (VIDEOS[id]) {
-      container.innerHTML = `
-        <iframe
-          src="${VIDEOS[id].src}"
-          title="${VIDEOS[id].title || ""}"
-          allowfullscreen
-        ></iframe>
-      `;
-    } else {
-      console.warn("Missing video for:", id);
-    }
-  });
-});
-</script>
+  
 </body>
 </html>
