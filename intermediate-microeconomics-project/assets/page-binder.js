@@ -18,7 +18,6 @@
 //   }
 // }
 
-// --- Load MathJax once (simple + reliable) ---
 (function loadMathJax() {
   if (window.mathjaxLoaded) return;
   window.mathjaxLoaded = true;
@@ -30,40 +29,11 @@
 
   mj.onerror = () => {
     console.error("MathJax failed to load — retrying...");
-    window.mathjaxLoaded = false; // allow retry
     setTimeout(loadMathJax, 1000);
   };
 
   document.head.appendChild(mj);
 })();
-
-function typesetWhenReady(rootEl) {
-  const MAX_TRIES = 100; // 100 * 100ms = 10 seconds
-  let tries = 0;
-
-  function attempt() {
-    const mj = window.MathJax;
-
-    // Not loaded yet? try again soon.
-    if (!mj || !mj.typesetPromise) {
-      tries++;
-      if (tries > MAX_TRIES) {
-        console.warn("MathJax not ready after waiting; skipping typeset.");
-        return;
-      }
-      setTimeout(attempt, 100);
-      return;
-    }
-
-    // Wait for startup (v3), then typeset only within rootEl
-    const startup = mj.startup?.promise ? mj.startup.promise : Promise.resolve();
-    startup
-      .then(() => mj.typesetPromise([rootEl]))
-      .catch((e) => console.warn("MathJax typeset failed:", e));
-  }
-
-  attempt();
-}
 
 
 async function bindPage() {
@@ -134,7 +104,8 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
-  typesetWhenReady(root);
+  if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise();
+
 
 
   // -----------------------
