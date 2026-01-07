@@ -299,8 +299,8 @@ const DESMOS_LINKS = {
     title: "Open in Desmos"
   },
   
-   //Week11  PCournot-with-Residual-Demand
-  "PCournot-with-Residual-Demand": {
+   //Week11  Cournot-with-Residual-Demand
+  "Cournot-with-Residual-Demand": {
     url: "https://www.desmos.com/calculator/7c6e565db3",
     title: "Open in Desmos"
   },
