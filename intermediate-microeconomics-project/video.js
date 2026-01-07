@@ -253,4 +253,9 @@ const VIDEOS = {
   "Cournot-with-Residual-Demand": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
+
+   //Week11  Cournot-with-Residual-Demand
+  "Diff-Bertrand": {
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
 };
