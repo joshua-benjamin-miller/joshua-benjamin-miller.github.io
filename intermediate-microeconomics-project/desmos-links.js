@@ -304,4 +304,10 @@ const DESMOS_LINKS = {
     url: "https://www.desmos.com/calculator/7c6e565db3",
     title: "Open in Desmos"
   },
+
+   //Week11  Diff-Bertrand
+  "Diff-Bertrand": {
+    url: "https://www.desmos.com/calculator/7c6e565db3",
+    title: "Open in Desmos"
+  },
 };
