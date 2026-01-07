@@ -18,74 +18,52 @@
 //   }
 // }
 
-function loadMathJaxOnce() {
-  // If already loaded + ready, resolve immediately
-  if (window.MathJax?.startup?.promise) {
-    return window.MathJax.startup.promise;
-  }
+// --- Load MathJax once (simple + reliable) ---
+(function loadMathJax() {
+  if (window.mathjaxLoaded) return;
+  window.mathjaxLoaded = true;
 
-  // If we're already in the process of loading, return the same promise
-  if (window._mathJaxReadyPromise) return window._mathJaxReadyPromise;
+  const mj = document.createElement("script");
+  mj.id = "MathJax-script";
+  mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+  mj.async = true;
 
-  window._mathJaxReadyPromise = new Promise((resolve, reject) => {
-    const existing = document.getElementById("MathJax-script");
-    if (existing) {
-      // Script tag exists; wait for MathJax to become available
-      const timer = setInterval(() => {
-        if (window.MathJax?.startup?.promise) {
-          clearInterval(timer);
-          window.MathJax.startup.promise.then(resolve).catch(reject);
-        }
-      }, 50);
-      setTimeout(() => {
-        clearInterval(timer);
-        reject(new Error("MathJax did not initialize in time."));
-      }, 15000);
+  mj.onerror = () => {
+    console.error("MathJax failed to load — retrying...");
+    window.mathjaxLoaded = false; // allow retry
+    setTimeout(loadMathJax, 1000);
+  };
+
+  document.head.appendChild(mj);
+})();
+
+function typesetWhenReady(rootEl) {
+  const MAX_TRIES = 100; // 100 * 100ms = 10 seconds
+  let tries = 0;
+
+  function attempt() {
+    const mj = window.MathJax;
+
+    // Not loaded yet? try again soon.
+    if (!mj || !mj.typesetPromise) {
+      tries++;
+      if (tries > MAX_TRIES) {
+        console.warn("MathJax not ready after waiting; skipping typeset.");
+        return;
+      }
+      setTimeout(attempt, 100);
       return;
     }
 
-    const mj = document.createElement("script");
-    mj.id = "MathJax-script";
-    mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-    mj.async = true;
-
-    mj.onload = () => {
-      // Wait for MathJax startup
-      const timer = setInterval(() => {
-        if (window.MathJax?.startup?.promise) {
-          clearInterval(timer);
-          window.MathJax.startup.promise.then(resolve).catch(reject);
-        }
-      }, 50);
-      setTimeout(() => {
-        clearInterval(timer);
-        reject(new Error("MathJax did not initialize in time."));
-      }, 15000);
-    };
-
-    mj.onerror = () => reject(new Error("MathJax script failed to load."));
-    document.head.appendChild(mj);
-  });
-
-  return window._mathJaxReadyPromise;
-}
-
-async function typesetMath(rootEl) {
-  if (!rootEl) return;
-
-  try {
-    await loadMathJaxOnce();
-
-    if (typeof window.MathJax?.typesetPromise === "function") {
-      await window.MathJax.typesetPromise([rootEl]);
-    } else if (typeof window.MathJax?.typeset === "function") {
-      window.MathJax.typeset([rootEl]);
-    }
-  } catch (e) {
-    console.warn("MathJax typeset failed:", e);
+    // Wait for startup (v3), then typeset only within rootEl
+    const startup = mj.startup?.promise ? mj.startup.promise : Promise.resolve();
+    startup
+      .then(() => mj.typesetPromise([rootEl]))
+      .catch((e) => console.warn("MathJax typeset failed:", e));
   }
-}
 
+  attempt();
+}
 
 
 async function bindPage() {
@@ -155,10 +133,8 @@ async function bindPage() {
   const fullEl = root.querySelector('[data-fill="full"]');
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
-  console.log("MathJax present?", !!window.MathJax);
-  // Re-render math after dynamic insertion
-  // (Give MathJax a moment to load if it was just injected)
-   await typesetMath(root);
+ 
+  typesetWhenReady(root);
 
 
   // -----------------------
