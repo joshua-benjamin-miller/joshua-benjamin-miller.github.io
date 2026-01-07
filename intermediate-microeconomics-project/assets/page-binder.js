@@ -18,6 +18,40 @@
 //   }
 // }
 
+function loadMathJaxOnce() {
+  if (window.mathjaxLoaded) return;
+  window.mathjaxLoaded = true;
+
+  const mj = document.createElement("script");
+  mj.id = "MathJax-script";
+  mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+  mj.async = true;
+
+  mj.onerror = () => {
+    console.error("MathJax failed to load — retrying...");
+    setTimeout(loadMathJaxOnce, 1000);
+  };
+
+  document.head.appendChild(mj);
+}
+
+async function typesetMath(rootEl) {
+  // Wait briefly for MathJax to be ready, then typeset inserted content
+  if (!window.MathJax) return;
+
+  try {
+    // Prefer v3 API
+    if (typeof window.MathJax.typesetPromise === "function") {
+      await window.MathJax.typesetPromise([rootEl]);
+    } else if (typeof window.MathJax.typeset === "function") {
+      window.MathJax.typeset([rootEl]);
+    }
+  } catch (e) {
+    console.warn("MathJax typeset failed:", e);
+  }
+}
+
+
 async function bindPage() {
   const root = document.querySelector(".container");
   if (!root) {
@@ -42,6 +76,7 @@ async function bindPage() {
   // Set browser tab title
   document.title = `${title} | MicroEconGraphs`;
 
+  loadMathJaxOnce();
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
@@ -84,6 +119,10 @@ async function bindPage() {
 
   const fullEl = root.querySelector('[data-fill="full"]');
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
+
+  // Re-render math after dynamic insertion
+  // (Give MathJax a moment to load if it was just injected)
+  setTimeout(() => { typesetMath(root); }, 0);
 
   // -----------------------
   // Desmos link
