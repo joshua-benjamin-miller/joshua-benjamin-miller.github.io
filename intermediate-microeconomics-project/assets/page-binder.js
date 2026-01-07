@@ -18,7 +18,79 @@
 //   }
 // }
 
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+// ---- MathJax loader (JS only) + ready promise ----
+function ensureMathJax() {
+  // If already initialized, return the startup promise
+  if (window.MathJax?.startup?.promise) return window.MathJax.startup.promise;
+
+  // Reuse a single promise so multiple pages/components don't double-load
+  if (window._mathJaxReadyPromise) return window._mathJaxReadyPromise;
+
+  window._mathJaxReadyPromise = new Promise((resolve, reject) => {
+    // If script tag already exists, just wait for MathJax to show up
+    const existing = document.getElementById("MathJax-script");
+    if (existing) {
+      waitForMathJax(resolve, reject);
+      return;
+    }
+
+    // Try primary CDN first, fallback to another if it errors
+    const cdn1 = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+    const cdn2 = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js";
+
+    const mj = document.createElement("script");
+    mj.id = "MathJax-script";
+    mj.async = true;
+    mj.src = cdn1;
+
+    mj.onerror = () => {
+      console.warn("MathJax failed to load from jsDelivr; trying Cloudflare...");
+      const mj2 = document.createElement("script");
+      mj2.id = "MathJax-script-fallback";
+      mj2.async = true;
+      mj2.src = cdn2;
+      mj2.onerror = () => reject(new Error("MathJax failed to load from both CDNs."));
+      document.head.appendChild(mj2);
+      waitForMathJax(resolve, reject);
+    };
+
+    document.head.appendChild(mj);
+    waitForMathJax(resolve, reject);
+  });
+
+  return window._mathJaxReadyPromise;
+}
+
+function waitForMathJax(resolve, reject) {
+  let tries = 0;
+  const maxTries = 200; // 200 * 50ms = 10 seconds
+  const timer = setInterval(() => {
+    tries++;
+
+    if (window.MathJax?.startup?.promise) {
+      clearInterval(timer);
+      window.MathJax.startup.promise.then(resolve).catch(reject);
+      return;
+    }
+
+    if (tries >= maxTries) {
+      clearInterval(timer);
+      reject(new Error("MathJax did not initialize in time."));
+    }
+  }, 50);
+}
+
+async function typesetMath(rootEl) {
+  try {
+    await ensureMathJax();
+    if (window.MathJax?.typesetClear) window.MathJax.typesetClear([rootEl]);
+    if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([rootEl]);
+  } catch (e) {
+    console.warn("MathJax typeset failed:", e);
+  }
+}
+
+
 
 
 
@@ -49,7 +121,7 @@ async function bindPage() {
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=7";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=8";
 
 
   let registry;
@@ -90,15 +162,8 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
-  // Re-typeset math after injecting HTML
-  if (window.MathJax?.startup?.promise && window.MathJax?.typesetPromise) {
-    window.MathJax.startup.promise
-      .then(() => {
-        if (window.MathJax.typesetClear) window.MathJax.typesetClear([root]);
-        return window.MathJax.typesetPromise([root]);
-      })
-      .catch(e => console.warn("MathJax typeset failed:", e));
-  }
+ // ✅ Now typeset the newly injected math
+  await typesetMath(root);
 
 
 
