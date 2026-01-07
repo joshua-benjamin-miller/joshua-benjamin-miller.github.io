@@ -18,68 +18,12 @@
 //   }
 // }
 
-// Configure BEFORE MathJax loads (keep this if you use $...$)
-window.MathJax = window.MathJax || {
-  tex: {
-    inlineMath: [["$", "$"], ["\\(", "\\)"]],
-    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
-  },
-  startup: {
-    typeset: false, // don't auto-typeset; we'll do it after injection
-  },
-};
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-function ensureMathJaxReady() {
-  // If already initialized, reuse it
-  if (window.MathJax?.startup?.promise) return window.MathJax.startup.promise;
-  if (window._mathJaxReadyPromise) return window._mathJaxReadyPromise;
-
-  window._mathJaxReadyPromise = new Promise((resolve, reject) => {
-    // If script tag already exists, just wait for startup
-    let script = document.getElementById("MathJax-script");
-
-    const waitForStartup = () => {
-      let tries = 0;
-      const timer = setInterval(() => {
-        tries++;
-        if (window.MathJax?.startup?.promise) {
-          clearInterval(timer);
-          window.MathJax.startup.promise.then(resolve).catch(reject);
-        } else if (tries > 300) { // ~15s
-          clearInterval(timer);
-          reject(new Error("MathJax init timeout"));
-        }
-      }, 50);
-    };
-
-    if (!script) {
-      script = document.createElement("script");
-      script.id = "MathJax-script";
-      script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-      script.async = true;
-      script.onload = waitForStartup;
-      script.onerror = () => reject(new Error("MathJax script failed to load"));
-      document.head.appendChild(script);
-    } else {
-      waitForStartup();
-    }
-  });
-
-  return window._mathJaxReadyPromise;
+function unescapeBackslashes(s) {
+  // turn \\ into \ (handles old JS-escaped TeX that ended up in Excel/JSON)
+  return (s || "").replace(/\\\\/g, "\\");
 }
-
-async function typesetMathIn(rootEl) {
-  try {
-    await ensureMathJaxReady();
-
-    // Clear previous typesetting in this area and re-typeset
-    if (window.MathJax?.typesetClear) window.MathJax.typesetClear([rootEl]);
-    if (window.MathJax?.typesetPromise) await window.MathJax.typesetPromise([rootEl]);
-  } catch (e) {
-    console.warn("MathJax typeset failed:", e);
-  }
-}
-
 
 
 async function bindPage() {
@@ -150,15 +94,14 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
-  // ✅ Force MathJax to rescan the injected content
-  if (window.MathJax?.typesetClear) window.MathJax.typesetClear([root]);
-  
-  if (window.MathJax?.typesetPromise) {
-    window.MathJax.typesetPromise([root]).catch(err =>
-      console.warn("MathJax typesetPromise failed:", err)
-    );
-  } else if (window.MathJax?.typeset) {
-    window.MathJax.typeset([root]);
+  // ✅ Wait for MathJax startup, then typeset the injected content
+  if (window.MathJax?.startup?.promise && window.MathJax?.typesetPromise) {
+  window.MathJax.startup.promise
+    .then(() => {
+      if (window.MathJax.typesetClear) window.MathJax.typesetClear([root]);
+      return window.MathJax.typesetPromise([root]);
+    })
+    .catch(e => console.warn("MathJax typeset failed:", e));
   }
 
 
