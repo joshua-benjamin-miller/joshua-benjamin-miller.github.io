@@ -21,11 +21,6 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
-function unescapeBackslashes(s) {
-  // turn \\ into \ (handles old JS-escaped TeX that ended up in Excel/JSON)
-  return (s || "").replace(/\\\\/g, "\\");
-}
-
 
 async function bindPage() {
   const root = document.querySelector(".container");
@@ -54,7 +49,7 @@ async function bindPage() {
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=6";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=7";
 
 
   let registry;
