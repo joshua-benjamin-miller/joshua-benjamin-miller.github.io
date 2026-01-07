@@ -19,37 +19,73 @@
 // }
 
 function loadMathJaxOnce() {
-  if (window.mathjaxLoaded) return;
-  window.mathjaxLoaded = true;
+  // If already loaded + ready, resolve immediately
+  if (window.MathJax?.startup?.promise) {
+    return window.MathJax.startup.promise;
+  }
 
-  const mj = document.createElement("script");
-  mj.id = "MathJax-script";
-  mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
-  mj.async = true;
+  // If we're already in the process of loading, return the same promise
+  if (window._mathJaxReadyPromise) return window._mathJaxReadyPromise;
 
-  mj.onerror = () => {
-    console.error("MathJax failed to load — retrying...");
-    setTimeout(loadMathJaxOnce, 1000);
-  };
+  window._mathJaxReadyPromise = new Promise((resolve, reject) => {
+    const existing = document.getElementById("MathJax-script");
+    if (existing) {
+      // Script tag exists; wait for MathJax to become available
+      const timer = setInterval(() => {
+        if (window.MathJax?.startup?.promise) {
+          clearInterval(timer);
+          window.MathJax.startup.promise.then(resolve).catch(reject);
+        }
+      }, 50);
+      setTimeout(() => {
+        clearInterval(timer);
+        reject(new Error("MathJax did not initialize in time."));
+      }, 15000);
+      return;
+    }
 
-  document.head.appendChild(mj);
+    const mj = document.createElement("script");
+    mj.id = "MathJax-script";
+    mj.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+    mj.async = true;
+
+    mj.onload = () => {
+      // Wait for MathJax startup
+      const timer = setInterval(() => {
+        if (window.MathJax?.startup?.promise) {
+          clearInterval(timer);
+          window.MathJax.startup.promise.then(resolve).catch(reject);
+        }
+      }, 50);
+      setTimeout(() => {
+        clearInterval(timer);
+        reject(new Error("MathJax did not initialize in time."));
+      }, 15000);
+    };
+
+    mj.onerror = () => reject(new Error("MathJax script failed to load."));
+    document.head.appendChild(mj);
+  });
+
+  return window._mathJaxReadyPromise;
 }
 
 async function typesetMath(rootEl) {
-  // Wait briefly for MathJax to be ready, then typeset inserted content
-  if (!window.MathJax) return;
+  if (!rootEl) return;
 
   try {
-    // Prefer v3 API
-    if (typeof window.MathJax.typesetPromise === "function") {
+    await loadMathJaxOnce();
+
+    if (typeof window.MathJax?.typesetPromise === "function") {
       await window.MathJax.typesetPromise([rootEl]);
-    } else if (typeof window.MathJax.typeset === "function") {
+    } else if (typeof window.MathJax?.typeset === "function") {
       window.MathJax.typeset([rootEl]);
     }
   } catch (e) {
     console.warn("MathJax typeset failed:", e);
   }
 }
+
 
 
 async function bindPage() {
@@ -76,7 +112,6 @@ async function bindPage() {
   // Set browser tab title
   document.title = `${title} | MicroEconGraphs`;
 
-  loadMathJaxOnce();
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
@@ -120,9 +155,11 @@ async function bindPage() {
   const fullEl = root.querySelector('[data-fill="full"]');
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
+  console.log("MathJax present?", !!window.MathJax);
   // Re-render math after dynamic insertion
   // (Give MathJax a moment to load if it was just injected)
-  setTimeout(() => { typesetMath(root); }, 0);
+   await typesetMath(root);
+
 
   // -----------------------
   // Desmos link
