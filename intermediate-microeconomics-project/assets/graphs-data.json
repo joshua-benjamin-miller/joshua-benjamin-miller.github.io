@@ -1,0 +1,14 @@
+{
+  "4-axis-Cost-Benefit": {
+    "desmos_url": "https://www.desmos.com/calculator/gaqik8ya09",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 1</p>",
+    "full_html": "<p>bottom 1</p>"
+  },
+  "Elasticity-Flexible-Demand": {
+    "desmos_url": "https://www.desmos.com/calculator/cgu6yyp5gn",
+    "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "intro_html": "<p>intro 2</p>",
+    "full_html": "<p>bottom 2</p>"
+  }
+}
