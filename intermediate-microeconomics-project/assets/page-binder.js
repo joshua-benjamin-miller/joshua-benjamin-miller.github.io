@@ -53,7 +53,7 @@ async function bindPage() {
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=4";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=5";
 
 
   let registry;
