@@ -44,7 +44,7 @@ async function bindPage() {
 
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=1";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=2";
 
 
   let registry;
@@ -69,8 +69,11 @@ async function bindPage() {
   // -----------------------
   // Title + subtitle
   // -----------------------
-  root.querySelector('[data-fill="title"]')?.textContent = title;
-  root.querySelector('[data-fill="subtitle"]')?.textContent = `📘 ${title}`;
+  const titleEl = root.querySelector('[data-fill="title"]');
+  if (titleEl) titleEl.textContent = title;
+
+  const subtitleEl = root.querySelector('[data-fill="subtitle"]');
+  if (subtitleEl) subtitleEl.textContent = `📘 ${title}`;
 
   // -----------------------
   // Explanations (HTML from JSON)
