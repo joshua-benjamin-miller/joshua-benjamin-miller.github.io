@@ -280,7 +280,26 @@ const DESMOS_LINKS = {
     url: "https://www.desmos.com/calculator/uelfsabz1m",
     title: "Open in Desmos"
   },
-   //Week10  PCournot-with-Residual-Demand
+
+   //Week10  Monopoly
+  "Monopoly": {
+    url: "https://www.desmos.com/calculator/uelfsabz1m",
+    title: "Open in Desmos"
+  },
+
+   //Week10  Monopoly Revised
+  "Monopoly-Revised": {
+    url: "https://www.desmos.com/calculator/uelfsabz1m",
+    title: "Open in Desmos"
+  },
+
+   //Week10  Price-Discrimination
+  "Price-Discrimination": {
+    url: "https://www.desmos.com/calculator/uelfsabz1m",
+    title: "Open in Desmos"
+  },
+  
+   //Week11  PCournot-with-Residual-Demand
   "PCournot-with-Residual-Demand": {
     url: "https://www.desmos.com/calculator/7c6e565db3",
     title: "Open in Desmos"
