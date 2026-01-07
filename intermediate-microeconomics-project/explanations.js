@@ -515,11 +515,54 @@ const EXPLANATIONS = {
     <p>2. Exp 1.</p>
     <p>3. AExp 1.</p>
   `,
-   //Week10 Cournot-with-Residual-Demand
+
+   //Week10  Monopoly
+  "Monopoly-header": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
+    //Week10  Monopoly
+  "Monopoly": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+
+   //Week10  Monopoly-Revised
+  "Monopoly-Revised-header": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
+    //Week10  Monopoly-Revised
+  "Monopoly-Revised": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
+     //Week10  Price-Discrimination
+  "Price-Discrimination-header": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
+    //Week10  Price-Discrimination
+  "Price-Discrimination": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
+  
+   //Week11 Cournot-with-Residual-Demand
   "Cournot-with-Residual-Demand-header": ` 
   <p>intro</p>
 `,
-    //Week10  Cournot-with-Residual-Demand
+    //Week11  Cournot-with-Residual-Demand
   "Cournot-with-Residual-Demand": `
    <p>1. Exp 1.</p>
     <p>2. Exp 1.</p>
