@@ -150,8 +150,17 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
- // ✅ wait for MathJax, then typeset the injected content
-  await typesetMathIn(root);
+  // ✅ Force MathJax to rescan the injected content
+  if (window.MathJax?.typesetClear) window.MathJax.typesetClear([root]);
+  
+  if (window.MathJax?.typesetPromise) {
+    window.MathJax.typesetPromise([root]).catch(err =>
+      console.warn("MathJax typesetPromise failed:", err)
+    );
+  } else if (window.MathJax?.typeset) {
+    window.MathJax.typeset([root]);
+  }
+
 
 
 
