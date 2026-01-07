@@ -280,4 +280,9 @@ const DESMOS_LINKS = {
     url: "https://www.desmos.com/calculator/uelfsabz1m",
     title: "Open in Desmos"
   },
+   //Week10  PCournot-with-Residual-Demand
+  "PCournot-with-Residual-Demand": {
+    url: "https://www.desmos.com/calculator/7c6e565db3",
+    title: "Open in Desmos"
+  },
 };
