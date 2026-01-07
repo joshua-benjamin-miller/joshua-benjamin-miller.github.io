@@ -515,6 +515,16 @@ const EXPLANATIONS = {
     <p>2. Exp 1.</p>
     <p>3. AExp 1.</p>
   `,
+   //Week10 Cournot-with-Residual-Demand
+  "Cournot-with-Residual-Demand-header": ` 
+  <p>intro</p>
+`,
+    //Week10  Cournot-with-Residual-Demand
+  "Cournot-with-Residual-Demand": `
+   <p>1. Exp 1.</p>
+    <p>2. Exp 1.</p>
+    <p>3. AExp 1.</p>
+  `,
 
 };
 
