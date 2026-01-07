@@ -20,6 +20,7 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
 function unescapeBackslashes(s) {
   // turn \\ into \ (handles old JS-escaped TeX that ended up in Excel/JSON)
   return (s || "").replace(/\\\\/g, "\\");
@@ -94,15 +95,16 @@ async function bindPage() {
   if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
  
-  // ✅ Wait for MathJax startup, then typeset the injected content
+  // Re-typeset math after injecting HTML
   if (window.MathJax?.startup?.promise && window.MathJax?.typesetPromise) {
-  window.MathJax.startup.promise
-    .then(() => {
-      if (window.MathJax.typesetClear) window.MathJax.typesetClear([root]);
-      return window.MathJax.typesetPromise([root]);
-    })
-    .catch(e => console.warn("MathJax typeset failed:", e));
+    window.MathJax.startup.promise
+      .then(() => {
+        if (window.MathJax.typesetClear) window.MathJax.typesetClear([root]);
+        return window.MathJax.typesetPromise([root]);
+      })
+      .catch(e => console.warn("MathJax typeset failed:", e));
   }
+
 
 
 
