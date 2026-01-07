@@ -1,18 +1,24 @@
 // page-binder.js
-// Fills title/subtitle, explanation textboxes, Desmos link, and video iframe
-// based on the page's .container[data-graph-id] attributes.
+// Populates title/subtitle, intro/full explanations, Desmos link, and video iframe
+// from a single JSON registry (graphs-data.json).
 //
-// Requirements:
-// - Your HTML has: .container data-graph-id="..." (and optional data-graph-title="...")
-// - Your HTML contains elements with:
+// HTML requirements:
+// - A .container element (optionally with data-graph-id and data-graph-title)
+// - Elements with:
 //   [data-fill="title"], [data-fill="subtitle"], [data-fill="intro"], [data-fill="full"],
 //   [data-fill="desmos-link"], [data-fill="video"]
-// - These scripts load BEFORE this file (recommended with defer, and in this order):
-//   explanations.js (defines EXPLANATIONS)
-//   desmos-links.js (defines DESMOS_LINKS)
-//   video.js (defines VIDEOS)
+//
+// Data file expected (JSON):
+// {
+//   "<graph-id>": {
+//     "desmos_url": "...",
+//     "video_src": "...",
+//     "intro_html": "...",
+//     "full_html": "..."
+//   }
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
+async function bindPage() {
   const root = document.querySelector(".container");
   if (!root) {
     console.warn("page-binder.js: Missing .container on this page.");
@@ -33,60 +39,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const title = root.dataset.graphTitle || id.replace(/-/g, " ");
   root.dataset.graphTitle = title;
 
-  // Browser tab title
+  // Set browser tab title
   document.title = `${title} | MicroEconGraphs`;
 
-  // Safely access globals whether they were defined with const/let or var
-  const EXPL = (typeof EXPLANATIONS !== "undefined") ? EXPLANATIONS : null;
-  const LINKS = (typeof DESMOS_LINKS !== "undefined") ? DESMOS_LINKS : null;
-  const VIDS = (typeof VIDEOS !== "undefined") ? VIDEOS : null;
+  // ---- Load registry JSON ----
+  // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
+  const DATA_URL = "../assets/graphs-data.json?v=1";
 
-  if (!EXPL) console.warn("page-binder.js: EXPLANATIONS not loaded (check script src/path).");
-  if (!LINKS) console.warn("page-binder.js: DESMOS_LINKS not loaded (check script src/path).");
-  if (!VIDS) console.warn("page-binder.js: VIDEOS not loaded (check script src/path).");
+  let registry;
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) {
+      console.warn("page-binder.js: Failed to load graphs-data.json:", res.status, res.statusText);
+      return;
+    }
+    registry = await res.json();
+  } catch (err) {
+    console.warn("page-binder.js: Error fetching graphs-data.json:", err);
+    return;
+  }
+
+  const entry = registry[id];
+  if (!entry) {
+    console.warn("page-binder.js: No entry for graph-id in graphs-data.json:", id);
+    return;
+  }
 
   // -----------------------
   // Title + subtitle
   // -----------------------
-  const titleEl = root.querySelector('[data-fill="title"]');
-  if (titleEl) titleEl.textContent = title;
-
-  const subtitleEl = root.querySelector('[data-fill="subtitle"]');
-  if (subtitleEl) subtitleEl.textContent = `📘 ${title}`;
+  root.querySelector('[data-fill="title"]')?.textContent = title;
+  root.querySelector('[data-fill="subtitle"]')?.textContent = `📘 ${title}`;
 
   // -----------------------
-  // Explanations
+  // Explanations (HTML from JSON)
   // -----------------------
   const introEl = root.querySelector('[data-fill="intro"]');
-  if (introEl) {
-    const introKey = `${id}-header`;
-    if (EXPL && EXPL[introKey]) {
-      introEl.innerHTML = EXPL[introKey];
-    } else {
-      console.warn("page-binder.js: Missing explanation for id:", introKey);
-    }
-  }
+  if (introEl) introEl.innerHTML = entry.intro_html || "";
 
   const fullEl = root.querySelector('[data-fill="full"]');
-  if (fullEl) {
-    if (EXPL && EXPL[id]) {
-      fullEl.innerHTML = EXPL[id];
-    } else {
-      console.warn("page-binder.js: Missing explanation for id:", id);
-    }
-  }
+  if (fullEl) fullEl.innerHTML = entry.full_html || "";
 
   // -----------------------
   // Desmos link
   // -----------------------
   const desmosA = root.querySelector('[data-fill="desmos-link"]');
   if (desmosA) {
-    const entry = LINKS ? LINKS[id] : null;
-    if (entry && entry.url) {
-      desmosA.href = entry.url;
-      desmosA.textContent = entry.title || "Open in Desmos";
+    if (entry.desmos_url) {
+      desmosA.href = entry.desmos_url;
+      desmosA.textContent = "Open in Desmos";
     } else {
-      console.warn("page-binder.js: Missing Desmos link for:", id);
+      console.warn("page-binder.js: Missing desmos_url for:", id);
     }
   }
 
@@ -95,19 +98,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------
   const videoEl = root.querySelector('[data-fill="video"]');
   if (videoEl) {
-    const v = VIDS ? VIDS[id] : null;
-    if (v && v.src) {
-      // Optional: you can add loading="lazy" for performance
+    if (entry.video_src) {
       videoEl.innerHTML = `
         <iframe
-          src="${v.src}"
-          title="${v.title || ""}"
+          src="${entry.video_src}"
+          title=""
           allowfullscreen
           loading="lazy"
         ></iframe>
       `;
     } else {
-      console.warn("page-binder.js: Missing video for:", id);
+      console.warn("page-binder.js: Missing video_src for:", id);
     }
   }
-});
+}
+
+// Run whether the script loads before or after DOMContentLoaded
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => void bindPage());
+} else {
+  void bindPage();
+}
