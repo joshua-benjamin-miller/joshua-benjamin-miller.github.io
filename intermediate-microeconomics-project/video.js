@@ -233,4 +233,9 @@ const VIDEOS = {
   "Production-Profit-CobbDouglas": {
     src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
+
+      //Week10  Cournot-with-Residual-Demand
+  "Production-Profit-CobbDouglas": {
+    src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  },
 };
