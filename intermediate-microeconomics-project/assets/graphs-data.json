@@ -34,7 +34,7 @@
     "desmos_url": "https://www.desmos.com/calculator/ywpebw6bbx",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
-    "full_html": "<p>The financial harm caused by evasion: \\(H(I)=\\frac{32}{(I+1)}\\), Cost of Inspections: \\(C(I)=2I\\)</p>\n    <p>I refers to the number of inspections per route per day</p>\n    <p>Define the total loss to PTV from fare evasion as \\(L(I)=H(I)+C(I)\\).</p>\n    <p>Solve for the optimal number of inspections \\(I^\\*\\) per route per day. Show \\(MB(I^\\*)=MC(I^\\*)\\)</p>",
+    "full_html": "<p>The financial harm caused by evasion: \\(H(I)=\\frac{32}{(I+1)}\\), Cost of Inspections: \\(C(I)=2I\\)</p>\n    <p>I refers to the number of inspections per route per day</p>\n    <p>Define the total loss to PTV from fare evasion as \\(L(I)=H(I)+C(I)\\).</p>\n    <p>Solve for the optimal number of inspections \\(I^*\\) per route per day. Show \\(MB(I^*)=MC(I^*)\\)</p>",
     "answer_html": "<p>Differentiate L(I): \\(\\frac{dL}{dI} =\\frac{-32}{(I+1)^2}+ 2\\)</p>\n  <p>Set the derivative equal to zero:\\(\\frac{-32}{(I+1)^2} + 2 = 0\\;\\Longrightarrow\\; (I+1)^2 = 16 \\;\\Longrightarrow\\; I = 3\\)</p>\n  <p>Thus the optimal number of inspections is \\(I^* = 3\\) per route per day.</p>\n  <p>At this point \\(MB(I^*) = MC(I^*) = 2\\) </p>"
   },
   "W1Quiz": {
@@ -318,4 +318,5 @@
     "intro_html": "<p>intro 1</p>",
     "full_html": "<p></p>"
   }
+
 }
