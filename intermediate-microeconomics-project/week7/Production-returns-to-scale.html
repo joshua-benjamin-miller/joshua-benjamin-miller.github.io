@@ -25,11 +25,11 @@
       <div class="textbox" data-fill="intro"></div>
 </section>
    
-    <!-- 1. Desmos section -->
+
     <section class="section">
   <div class="section-header">
     <h2>📈 Interactive Graph</h2>
-
+    <!-- 1. Desmos section -->
     <a class="desmos-btn" data-fill="desmos-link" target="_blank" rel="noopener">
       Open in Desmos <!--Change desmos link above-->
     </a>
@@ -47,6 +47,7 @@
           <div class="resize-handle" aria-hidden="true" title="Drag to resize"></div>
         </div>
       </div>
+    </section>
 
 
 
@@ -63,45 +64,38 @@
 </section>
   </div>
 
-<script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
-<script>
+  <script>
+    document.addEventListener("pointerdown", (e) => {
+      const handle = e.target.closest(".resize-handle");
+      if (!handle) return;
 
-// Setup Resize Logic HERE (Ensures it sees window.calc3d)
-document.addEventListener("pointerdown", (e) => {
-  // Check if we clicked the handle
-  const handle = e.target.closest('.resize-handle');
-  if (!handle) return;
+      e.preventDefault();
 
-  e.preventDefault();
-  
-  const graphBox = document.getElementById("graphBox");
-  const container = document.querySelector(".container");
-  
-  let startX = e.clientX;
-  let startY = e.clientY;
-  let startW = container.offsetWidth;
-  let startH = graphBox.offsetHeight;
+      const graphBox = document.getElementById("graphBox");
+      const container = document.querySelector(".container");
 
-  function onMove(moveEvent) {
-    const newW = startW + (moveEvent.clientX - startX);
-    const newH = startH + (moveEvent.clientY - startY);
-    
-    container.style.width = Math.max(600, newW) + "px";
-    container.style.maxWidth = "none";
-    graphBox.style.height = Math.max(400, newH) + "px";
-    
-    // Force Desmos to update
-    if (window.calc3d) window.calc3d.resize();
-  }
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const startW = container.offsetWidth;
+      const startH = graphBox.offsetHeight;
 
-  function onUp() {
-    window.removeEventListener("pointermove", onMove);
-    window.removeEventListener("pointerup", onUp);
-  }
+      function onMove(ev) {
+        const newW = startW + (ev.clientX - startX);
+        const newH = startH + (ev.clientY - startY);
 
-  window.addEventListener("pointermove", onMove);
-  window.addEventListener("pointerup", onUp);
-});
+        container.style.width = Math.max(600, newW) + "px";
+        container.style.maxWidth = "none";
+        graphBox.style.height = Math.max(400, newH) + "px";
+      }
+
+      function onUp() {
+        window.removeEventListener("pointermove", onMove);
+        window.removeEventListener("pointerup", onUp);
+      }
+
+      window.addEventListener("pointermove", onMove);
+      window.addEventListener("pointerup", onUp);
+    });
   </script>
 
       <!--Import Desmos link-->
