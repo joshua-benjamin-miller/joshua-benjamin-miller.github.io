@@ -27,8 +27,8 @@
     "desmos_url": "https://www.desmos.com/calculator/dectbpszrh",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
-    "full_html": "<p></p>",
-    "answer_html": "<p></p>"
+    "full_html": "<p>1</p>",
+    "answer_html": "<p>1</p>"
   },
   "Max": {
     "desmos_url": "https://www.desmos.com/calculator/ywpebw6bbx",
@@ -319,3 +319,4 @@
     "full_html": "<p></p>"
   }
 }
+
