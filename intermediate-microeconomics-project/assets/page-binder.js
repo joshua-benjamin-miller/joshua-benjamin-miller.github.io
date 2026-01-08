@@ -15,6 +15,7 @@
 //     "video_src": "...",
 //     "intro_html": "...",
 //     "full_html": "..."
+//     "answer_html": "..."   // optional (exercise)
 //   }
 // }
 
@@ -121,7 +122,7 @@ async function bindPage() {
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=10";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=11";
 
 
   let registry;
