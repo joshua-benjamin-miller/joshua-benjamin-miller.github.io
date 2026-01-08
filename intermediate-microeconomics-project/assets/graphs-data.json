@@ -65,7 +65,7 @@
   "Utility-Max": {
     "desmos_url": "https://www.desmos.com/3d/nd6bsbsrqv",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "intro_html": "<p>intro 1</p>",
+    "intro_html": "<p>This is a 3D graph of the utility function</p>",
     "full_html": "<p></p>"
   },
   "Discrete-Demand-Supply": {
@@ -319,3 +319,4 @@
     "full_html": "<p></p>"
   }
 }
+
