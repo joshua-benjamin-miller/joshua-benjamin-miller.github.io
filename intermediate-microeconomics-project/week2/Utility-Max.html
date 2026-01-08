@@ -12,22 +12,6 @@
   <!--Import Text-->
 <script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
   
-  <!-- Automatically fill in texts-->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
 <!-- =================================================== -->
  <div class="container"
      data-graph-id="Utility-Max"
