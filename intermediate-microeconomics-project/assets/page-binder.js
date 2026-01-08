@@ -155,11 +155,16 @@ async function bindPage() {
   // -----------------------
   // Explanations (HTML from JSON)
   // -----------------------
-  const introEl = root.querySelector('[data-fill="intro"]');
-  if (introEl) introEl.innerHTML = entry.intro_html || "";
+ const introEl  = root.querySelector('[data-fill="intro"]');
+const fullEl   = root.querySelector('[data-fill="full"]');
+const promptEl = root.querySelector('[data-fill="prompt"]'); 
+const answerEl = root.querySelector('[data-fill="answer"]'); // exercise Answer
 
-  const fullEl = root.querySelector('[data-fill="full"]');
-  if (fullEl) fullEl.innerHTML = entry.full_html || "";
+if (introEl)  introEl.innerHTML  = entry.intro_html  || "";
+if (fullEl)   fullEl.innerHTML   = entry.full_html   || "";
+
+if (promptEl) promptEl.innerHTML = entry.prompt_html || "";
+if (answerEl) answerEl.innerHTML = entry.answer_html || "";
 
  
  // ✅ Now typeset the newly injected math
