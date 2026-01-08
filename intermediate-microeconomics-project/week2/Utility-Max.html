@@ -148,60 +148,7 @@ document.addEventListener("pointerdown", (e) => {
     <!--Import Video link-->
 <script src="/intermediate-microeconomics-project/video.js"></script>
 
-<!-- Automatically fill in texts -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
-  
-<!--Automatically fill in text-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btns = document.querySelectorAll("[data-desmos-id]");
-
-  btns.forEach(btn => {
-    const id = btn.dataset.desmosId;
-    if (DESMOS_LINKS[id]) {
-      btn.href = DESMOS_LINKS[id].url;
-      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
-    } else {
-      console.warn("Missing Desmos link for:", id);
-    }
-  });
-});
-</script>
-
-  <!--Automatically fill in video link-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll("[data-video-id]");
-
-  containers.forEach(container => {
-    const id = container.dataset.videoId;
-    if (VIDEOS[id]) {
-      container.innerHTML = `
-        <iframe
-          src="${VIDEOS[id].src}"
-          title="${VIDEOS[id].title || ""}"
-          allowfullscreen
-        ></iframe>
-      `;
-    } else {
-      console.warn("Missing video for:", id);
-    }
-  });
-});
-</script>
+<script defer src="../assets/page-binder.js?v=13"></script>
   
 </body>
 </html>
