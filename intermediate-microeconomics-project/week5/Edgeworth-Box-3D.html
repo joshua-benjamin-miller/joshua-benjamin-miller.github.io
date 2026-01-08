@@ -12,39 +12,25 @@
   <!--Import Text-->
 <script src="/intermediate-microeconomics-project/explanations.js?v=5"></script>
   
-  <!-- Automatically fill in texts-->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
 <!-- =================================================== -->
-
-  <div class="container">
+ <div class="container"
+     data-graph-id="Edgeworth-Box-3D"
+     data-graph-title="3D Edgeworth Box">
     <!-- Page title -->
-    <h1>3D Edgeworth Box</h1>
+    <h1 data-fill="title"></h1>
 
+   <!-- 3. Textbox section -->
+    <section class="section">
+      <h2>📘 Introduction!</h2>
+      <div class="textbox" data-fill="intro"></div>
+</section>
+   
     <!-- 1. Desmos section -->
     <section class="section">
   <div class="section-header">
     <h2>📈 Interactive Graph</h2>
 
-    <a
-      class="desmos-btn"
-      data-desmos-id="Edgeworth-Box-3D"
-      target="_blank"
-      rel="noopener"
-    >
+    <a class="desmos-btn" data-fill="desmos-link" target="_blank" rel="noopener">
       Open in Desmos <!--Change desmos link above-->
     </a>
   </div>
@@ -62,14 +48,14 @@
     <!-- 2. Video section -->
     <section class="section">
       <h2>🎥 Video</h2>
-       <div class="video-frame" data-video-id="Edgeworth-Box-3D"></div>
+       <div class="video-frame" data-fill="video"></div>
     </section>
 
     <!-- 3. Textbox section -->
     <section class="section">
-      <h2>📘 3D Edgeworth Box</h2>
-      <div class="textbox" data-explain-id="Edgeworth-Box-3D"></div>
-    </section>
+    <h2 data-fill="subtitle"></h2>
+    <div class="textbox" data-fill="full"></div>
+</section>
   </div>
 
 <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=cc9b5d3cc1c2436aa4d9d33cf55073ca"></script>
@@ -86,13 +72,22 @@ window.calc3d = Desmos.Calculator3D(elt, {
 });
 
 // 2. Load the state
-fetch('Edgeworth-Box-3D.json')  
-  .then(r => r.json())
+const jsonFile = window.location.pathname
+  .split("/")
+  .pop()
+  .replace(/\.html?$/i, ".json");
+// 2. Load the state
+fetch(jsonFile)
+  .then(r => {
+    if (!r.ok) throw new Error(`Failed to load ${jsonFile}`);
+    return r.json();
+  })
   .then(state => {
     window.calc3d.setState(state);
     window.calc3d.setDefaultState(state);
   })
   .catch(e => console.error("JSON Load Error:", e));
+
 
 // 3. Setup Resize Logic HERE (Ensures it sees window.calc3d)
 document.addEventListener("pointerdown", (e) => {
@@ -137,60 +132,7 @@ document.addEventListener("pointerdown", (e) => {
     <!--Import Video link-->
 <script src="/intermediate-microeconomics-project/video.js"></script>
 
-<!-- Automatically fill in texts -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll("[data-explain-id]");
-
-    boxes.forEach(function (box) {
-      const id = box.dataset.explainId;
-      if (typeof EXPLANATIONS !== "undefined" && EXPLANATIONS[id]) {
-    box.innerHTML = EXPLANATIONS[id];
-  } else {
-    console.warn("Missing explanation for id:", id);
-  }
-    });
-  });
-</script>
-  
-<!--Automatically fill in text-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btns = document.querySelectorAll("[data-desmos-id]");
-
-  btns.forEach(btn => {
-    const id = btn.dataset.desmosId;
-    if (DESMOS_LINKS[id]) {
-      btn.href = DESMOS_LINKS[id].url;
-      btn.textContent = DESMOS_LINKS[id].title || "Open in Desmos";
-    } else {
-      console.warn("Missing Desmos link for:", id);
-    }
-  });
-});
-</script>
-
-  <!--Automatically fill in video link-->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll("[data-video-id]");
-
-  containers.forEach(container => {
-    const id = container.dataset.videoId;
-    if (VIDEOS[id]) {
-      container.innerHTML = `
-        <iframe
-          src="${VIDEOS[id].src}"
-          title="${VIDEOS[id].title || ""}"
-          allowfullscreen
-        ></iframe>
-      `;
-    } else {
-      console.warn("Missing video for:", id);
-    }
-  });
-});
-</script>
+<script defer src="../assets/page-binder.js?v=13"></script>
   
 </body>
 </html>
