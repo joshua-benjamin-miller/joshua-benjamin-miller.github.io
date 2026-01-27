@@ -4,15 +4,15 @@
   "graph": {
     "viewport": {
       "xmin": -1.2888940133346845,
-      "ymin": -0.8715594238725419,
+      "ymin": -0.5432376610676444,
       "xmax": 7.805081746981778,
-      "ymax": 3.021146040640188
+      "ymax": 2.6928242778352907
     },
     "__v12ViewportLatexStash": {
       "xmin": "-1.2888940133346845",
       "xmax": "7.805081746981778",
-      "ymin": "-0.8715594238725419",
-      "ymax": "3.021146040640188"
+      "ymin": "-0.5432376610676444",
+      "ymax": "2.6928242778352907"
     }
   },
   "expressions": {
@@ -73,7 +73,7 @@
         "type": "expression",
         "id": "2",
         "color": "#2d70b3",
-        "latex": "p_{1}=1",
+        "latex": "p_{1}=0.8",
         "hidden": true
       },
       {
@@ -480,8 +480,7 @@
       {
         "type": "folder",
         "id": "140",
-        "title": "button",
-        "collapsed": true
+        "title": "button"
       },
       {
         "type": "expression",
@@ -506,7 +505,7 @@
         "color": "#fa7e19",
         "latex": "\\left(x_{button},y_{button}\\right)\\left\\{U_{C}<U_{I}\\right\\}\\left\\{D>0\\right\\}",
         "showLabel": true,
-        "label": "Good y is treated as inferior"
+        "label": "Good x is treated as inferior"
       },
       {
         "type": "expression",
