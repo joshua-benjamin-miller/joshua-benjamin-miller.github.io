@@ -60,7 +60,7 @@
     "desmos_url": "https://www.desmos.com/calculator/0fj5hq6wag",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
-    "full_html": "<p><b>Marginal Rate of Substitution</b></p>\n    <p>MRS measures the rate at which the consumer is willing to trade a good (on the x-axis) for another good (on y-axis) while holding utility constant.</p>\n    <p>MRS can be approximated by the slope between any two points on the indifference curve</p>\n    <p>The slope of an indifference at any point is MRS.</p>\n    <p></p>\n <p><b>Normal Good (Cobb Douglas)</b></p>\n    <p>Each indifference curve represents combinations of pizza and soda that generates same level of utility.</p>\n    <p>The more the better, higher curves represents higher utility</p>\n    <p></p>\n <p><b>Inferior Good (Soda)</b></p>\n    <p>A good is inferior if its optimal quantity demanded decreases as income increases. The income effect is negative.</p>\n    <p>Inferior good may only become apparent after consuming a sufficient amount of goods (Soda).</p>\n    <p>At low quantities, the good may sill be valued and appear as a normal good, the upper part of the indifference curve convexes, behaves like a normal good. </p>\n    <p>As \\\\(Q_{Soda}\\\\)  accumulates, \\\\(MU_{Soda}\\\\) approaches to zero, which implies consumer wants to avoid more soda.</p>\n    <p>Different to normal good, \\\\(MRS\\\\) grows faster when \\\\(Q_{Soda}\\\\) is high. Indicating that indifference curve concaves.</p> \n    <p>When consumer has 0 unit of pizza, he/she wants to give up infinite amount of Soda for a pizza \\\\(MRS=\\\\infty\\\\).</p>"
+    "full_html": "<p><b>Marginal Rate of Substitution</b></p>\n    <p>MRS measures the rate at which the consumer is willing to trade a good (on the x-axis) for another good (on y-axis) while holding utility constant.</p>\n    <p>MRS can be approximated by the slope between any two points on the indifference curve</p>\n    <p>The slope of an indifference at any point is MRS.</p>\n    <p></p>\n <p><b>Normal Good (Cobb Douglas)</b></p>\n    <p>Each indifference curve represents combinations of pizza and soda that generates same level of utility.</p>\n    <p>The more the better, higher curves represents higher utility</p>\n    <p></p>\n <p><b>Inferior Good (Soda)</b></p>\n    <p>A good is inferior if its optimal quantity demanded decreases as income increases. The income effect is negative.</p>"
   },
   "Utility-Max": {
     "desmos_url": "https://www.desmos.com/3d/nd6bsbsrqv",
@@ -320,3 +320,4 @@
   }
 
 }
+
