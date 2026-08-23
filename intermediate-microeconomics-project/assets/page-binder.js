@@ -111,13 +111,12 @@ async function bindPage() {
     root.dataset.graphId = id;
   }
 
-  // Set browser tab title
-  document.title = `${title} | MicroEconGraphs`;
+
 
   // ---- Load registry JSON ----
   // NOTE: adjust this path if your HTML files are not exactly one folder below /assets/
   // NOTE 2: iterate to a new version if json updates
-  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=15";
+  const DATA_URL = "/intermediate-microeconomics-project/assets/graphs-data.json?v=16";
 
 
   let registry;
@@ -147,6 +146,8 @@ async function bindPage() {
   id.replace(/-/g, " ");
   root.dataset.graphTitle = title;
 
+  root.dataset.graphTitle = title;
+document.title = `${title} | MicroEconGraphs`;
   // -----------------------
   // Title + subtitle
   // -----------------------
