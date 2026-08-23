@@ -150,3 +150,16 @@ h1 {
       font-weight: 600;
     }
 
+.graph-prompt {
+  margin: 0;
+}
+
+.graph-prompt strong {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 3px;
+}
+
+<div class="graph-thumb">
+  <img src="..." alt="" />
+</div>
