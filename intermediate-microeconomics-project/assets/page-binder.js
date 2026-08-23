@@ -111,11 +111,6 @@ async function bindPage() {
     root.dataset.graphId = id;
   }
 
-  // --- Determine display title ---
-  // Prefer explicit data-graph-title, else derive from id
-  const title = root.dataset.graphTitle || id.replace(/-/g, " ");
-  root.dataset.graphTitle = title;
-
   // Set browser tab title
   document.title = `${title} | MicroEconGraphs`;
 
@@ -143,6 +138,14 @@ async function bindPage() {
     console.warn("page-binder.js: No entry for graph-id in graphs-data.json:", id);
     return;
   }
+
+   // --- Determine display title ---
+  // Prefer explicit data-graph-title, else derive from id
+ const title =
+  entry.display_title ||
+  root.dataset.graphTitle ||
+  id.replace(/-/g, " ");
+  root.dataset.graphTitle = title;
 
   // -----------------------
   // Title + subtitle
