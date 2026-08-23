@@ -11,6 +11,10 @@
 <body>
   <div id="navbar-container"></div>
   <script src="../assets/navbar-loader.js"></script>
+  <script
+  defer
+  src="../assets/cards-binder.js?v=1"
+></script>
 <!-- =================================================== -->
 <main class="container">
     <h1 class="page-title">Week 1 – Exercise</h1>
@@ -31,109 +35,121 @@
 
     <section class="grid">
 
-      <!-- Exercise block 1：Lectorial -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="Lectorial"
-        />
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-              Lectorial
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+     <!-- Exercise block 1: Lectorial -->
+<article
+  class="graph-card"
+  data-graph-id="Lectorial"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week1.png"
+      alt=""
+    />
+  </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Understand how to maximize net benefit
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Lectorial.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
 
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
 
-     <!-- Exercise block 2：Max -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="Max"
-        />
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-             Max
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Optimization condition: MB=MC
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Max.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Lectorial.html"
+      ></a>
+    </div>
+  </div>
+</article>
 
 
-      <!-- Exercise block 3：Quiz -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="Quiz"
-        />
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-             Quiz
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+<!-- Exercise block 2: Maximisation -->
+<article
+  class="graph-card"
+  data-graph-id="Max"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week1.png"
+      alt=""
+    />
+  </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Derivative practice
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Quiz.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
+
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
+
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
+
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Max.html"
+      ></a>
+    </div>
+  </div>
+</article>
+
+
+<!-- Exercise block 3: Week 1 Quiz -->
+<article
+  class="graph-card"
+  data-graph-id="W1Quiz"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week1.png"
+      alt=""
+    />
+  </div>
+
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
+
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
+
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
+
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Quiz.html"
+      ></a>
+    </div>
+  </div>
+</article>
 
   
 
