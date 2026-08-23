@@ -1,6 +1,6 @@
 {
   "4-axis-Cost-Benefit": {
-    "display_title": "Four-Axis Cost–Benefit Analysis",
+    "display_title": "4 Axis Cost & Benefit Analysis",
     "desmos_url": "https://www.desmos.com/calculator/gaqik8ya09",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -52,7 +52,7 @@
     "answer_html": "<p></p>"
   },
   "Elasticity": {
-    "display_title": "Understanding Elasticity",
+    "display_title": "Elasticity",
     "desmos_url": "https://www.desmos.com/calculator/ocyvg58abx",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -73,7 +73,7 @@
     "full_html": "<p></p>"
   },
   "Utility-Max": {
-    "display_title": "Utility Maximisation in 3D",
+    "display_title": "Utility Maximisation 3D",
     "desmos_url": "https://www.desmos.com/3d/nd6bsbsrqv",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -137,7 +137,7 @@
     "full_html": "<p></p>"
   },
   "Sales-vs-Income-Tax": {
-    "display_title": "Sales Tax versus Income Tax",
+    "display_title": "Sales Tax vs. Income Tax",
     "desmos_url": "https://www.desmos.com/calculator/9i6tmkqgod",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -159,14 +159,14 @@
     "answer_html": "<p></p>"
   },
   "Curves&Demand": {
-    "display_title": "Curves and Demand",
+    "display_title": "Curves & Demand",
     "desmos_url": "https://www.desmos.com/calculator/pmw2uq5wtv",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
     "full_html": "<p></p>"
   },
   "Curves-Expansion-Demand": {
-    "display_title": "Curves, Expansion Paths and Demand",
+    "display_title": "Curves, Expansion Paths, Demand",
     "desmos_url": "https://www.desmos.com/calculator/ecgx3owuay",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -223,7 +223,7 @@
     "full_html": "<p></p>"
   },
   "Edgeworth-Box-3D": {
-    "display_title": "The Edgeworth Box in 3D",
+    "display_title": "The Edgeworth Box 3D",
     "desmos_url": "https://www.desmos.com/3d/ttjjrfhziv",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -244,14 +244,14 @@
     "full_html": "<p></p>"
   },
   "Weird-Edgeworth-Box": {
-    "display_title": "An Unusual Edgeworth Box",
+    "display_title": "Unusual Edgeworth Box",
     "desmos_url": "https://www.desmos.com/calculator/catzvjkfxi",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
     "full_html": "<p></p>"
   },
   "Supply-Demand-From-Edgeworth": {
-    "display_title": "Supply and Demand from the Edgeworth Box",
+    "display_title": "Edgeworth Box: Supply & Demand",
     "desmos_url": "https://www.desmos.com/calculator/elmrejwslv",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
@@ -265,7 +265,7 @@
     "full_html": "<p></p>"
   },
   "Risk-Averse-Seeking-Neutral": {
-    "display_title": "Risk Aversion, Risk Seeking and Risk Neutrality",
+    "display_title": "Risk Aversion, Risk Seeking, Risk Neutrality",
     "desmos_url": "https://www.desmos.com/calculator/myukutt7xy",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "intro_html": "<p>intro 1</p>",
