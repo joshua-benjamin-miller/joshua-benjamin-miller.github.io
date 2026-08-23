@@ -11,7 +11,10 @@
 <body>
   <div id="navbar-container"></div>
   <script src="../assets/navbar-loader.js"></script>
-
+<script
+  defer
+  src="../assets/cards-binder.js?v=3"
+></script>
 <!-- =================================================== -->
 <main class="container">
     <h1 class="page-title">Week 2 – Concept graphs</h1>
@@ -31,147 +34,157 @@
 
     <section class="grid">
 
-      <!-- Graph block 1：Discrete-Demand-Supply -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week2.png"
-          alt="Discrete Supply & Demand thumbnail"
-        />
+<!-- Graph block 1：Discrete-Demand-Supply -->
+<article
+  class="graph-card"
+  data-graph-id="Discrete-Demand-Supply"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week2.png"
+      alt=""
+    />
+  </div>
 
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-              Discrete Supply & Demand
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Maps ranked bids and asks into step-shaped demand and supply
-            curves. A more realistic representation of how prices and quantities emerge in actual markets.
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Discrete-Demand-Supply.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
 
-        <!-- Graph block 2：Indifference Curve -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week2.png"
-          alt="Discrete Supply & Demand thumbnail"
-        />
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
 
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-             Indifference Curve
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Discrete-Demand-Supply.html"
+      ></a>
+    </div>
+  </div>
+</article>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Indifference curves of Normal and Inferior Goods.
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Indifference-curve.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+<!-- Graph block 2：Indifference Curve -->
+<article
+  class="graph-card"
+  data-graph-id="Indifference-Curve"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week2.png"
+      alt=""
+    />
+  </div>
 
-      <!-- Graph block 3：Consumer's Problem -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week2.png"
-          alt="Discrete Supply & Demand thumbnail"
-        />
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
 
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-             Consumer's Problem
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-              Indifference curves of Cobb-Douglas, Quasilinear, Power, CES, Perfect Complements and Perfect Substitutes.
-              How consumers make decision under each type of utility functions.
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Consumers-Problem.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
 
-       <!-- Graph block 4：Utility Max -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week2.png"
-          alt="Discrete Supply & Demand thumbnail"
-        />
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Indifference-curve.html"
+      ></a>
+    </div>
+  </div>
+</article>
 
-        <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-             Utility max
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
-          </div>
+<!-- Graph block 3：Consumer's Problem -->
+<article
+  class="graph-card"
+  data-graph-id="Consumers-Problem"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week2.png"
+      alt=""
+    />
+  </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-           The intuitive view of inifference curves, where they come from,how to reach maximization.
-          </p>
-          <!--change graph links here-->
-          <div class="graph-actions">
-            <a
-              class="btn btn-primary"
-              href="Utility-Max.html"
-            >
-              Open graph
-            </a>
-          </div>
-        </div>
-      </article>
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
+
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
+
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
+
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Consumers-Problem.html"
+      ></a>
+    </div>
+  </div>
+</article>
+
+<!-- Graph block 4：Utility Max -->
+<article
+  class="graph-card"
+  data-graph-id="Utility-Max"
+>
+  <div class="graph-thumb">
+    <img
+      src="../assets/week2.png"
+      alt=""
+    />
+  </div>
+
+  <div class="graph-content">
+    <h3
+      class="graph-title"
+      data-fill="card-title"
+    ></h3>
+
+    <p
+      class="graph-desc"
+      data-fill="card-intro"
+    ></p>
+
+    <div class="graph-meta graph-prompt">
+      <strong data-fill="prompt-label"></strong>
+      <span data-fill="card-prompt"></span>
+    </div>
+
+    <div class="graph-actions">
+      <a
+        class="btn btn-primary"
+        data-fill="card-link"
+        href="Utility-Max.html"
+      ></a>
+    </div>
+  </div>
+</article>
 
     </section>
   </div>
