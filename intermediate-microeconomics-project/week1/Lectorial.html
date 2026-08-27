@@ -23,22 +23,20 @@
     <!-- Title -->
     <h1 data-fill="title"></h1>
 
-    <!-- Intro -->
-    <section class="section">
-      <h2>📘 Introduction</h2>
-      <div class="textbox" data-fill="intro"></div>
-    </section>
+<!-- Introduction -->
+<section class="section">
+  <h2>📘 Introduction</h2>
 
-    <!-- Question Description (uses full_html) -->
-    <section class="section">
-      <h2 data-fill="subtitle"></h2>
-      <div class="textbox" data-fill="full"></div>
+  <div class="textbox" data-fill="intro"></div>
 
-      <!-- hide all answers -->
-      <button id="toggle-all-btn" class="toggle-section-btn" onclick="toggleAll()">
-        Answers
-      </button>
-    </section>
+  <button
+    id="toggle-all-btn"
+    class="toggle-section-btn"
+    onclick="toggleAll()"
+  >
+    Hide Answers
+  </button>
+</section>
 
     <!-- Graph -->
     <div class="fold-target" id="graph-section">
