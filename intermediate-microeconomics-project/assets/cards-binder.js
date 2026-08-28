@@ -17,7 +17,7 @@ async function bindGraphCards() {
 
   try {
     const response = await fetch(DATA_URL, {
-      cache: "no-store",
+      cache: "no-store"
     });
 
     if (!response.ok) {
@@ -40,6 +40,35 @@ async function bindGraphCards() {
 
   cards.forEach((card) => {
     const id = card.dataset.graphId;
+
+    if (!id) {
+      console.warn(
+        "cards-binder.js: Card is missing data-graph-id:",
+        card
+      );
+      return;
+    }
+
+    // Generate the thumbnail path from the graph ID.
+    const image = card.querySelector(
+      ".graph-thumb img"
+    );
+
+    if (image) {
+      image.src =
+        `../assets/pictures/${id}.png`;
+    }
+
+    // Generate the graph-page link from the graph ID.
+    const linkElement = card.querySelector(
+      '[data-fill="card-link"]'
+    );
+
+    if (linkElement) {
+      linkElement.href = `${id}.html`;
+    }
+
+    // Find the corresponding registry entry.
     const entry = registry[id];
 
     if (!entry) {
@@ -98,15 +127,15 @@ async function bindGraphCards() {
         promptElement.textContent =
           entry.card_prompt;
       }
+
+      if (promptRow) {
+        promptRow.hidden = false;
+      }
     } else if (promptRow) {
       promptRow.hidden = true;
     }
 
-    // Button
-    const linkElement = card.querySelector(
-      '[data-fill="card-link"]'
-    );
-
+    // Button text
     if (linkElement) {
       linkElement.textContent =
         entry.page_type === "exercise"
@@ -115,12 +144,8 @@ async function bindGraphCards() {
     }
 
     // Image alternative text
-    const image = card.querySelector(
-      ".graph-thumb"
-    );
-
     if (image) {
-      image.alt = title;
+      image.alt = `${title} graph`;
     }
   });
 }
@@ -132,25 +157,4 @@ if (document.readyState === "loading") {
   );
 } else {
   void bindGraphCards();
-}
-
-const graphId = card.dataset.graphId;
-
-if (!graphId) {
-  console.warn("Graph card is missing data-graph-id:", card);
-  return;
-}
-
-// Generate thumbnail path
-const image = card.querySelector(".graph-thumb img");
-
-if (image) {
-  image.src = `../assets/pictures/${graphId}.png`;
-}
-
-// Generate graph-page link
-const link = card.querySelector('[data-fill="card-link"]');
-
-if (link) {
-  link.href = `${graphId}.html`;
 }
