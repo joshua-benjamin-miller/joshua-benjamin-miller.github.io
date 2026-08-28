@@ -133,3 +133,24 @@ if (document.readyState === "loading") {
 } else {
   void bindGraphCards();
 }
+
+const graphId = card.dataset.graphId;
+
+if (!graphId) {
+  console.warn("Graph card is missing data-graph-id:", card);
+  return;
+}
+
+// Generate thumbnail path
+const image = card.querySelector(".graph-thumb img");
+
+if (image) {
+  image.src = `../assets/pictures/${graphId}.png`;
+}
+
+// Generate graph-page link
+const link = card.querySelector('[data-fill="card-link"]');
+
+if (link) {
+  link.href = `${graphId}.html`;
+}
