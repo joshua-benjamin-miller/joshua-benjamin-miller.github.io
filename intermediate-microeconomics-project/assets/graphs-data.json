@@ -83,7 +83,7 @@
     "display_title": "Elasticity",
     "page_type": "concept",
     "week": "1",
-    "card_intro": "test",
+    "card_intro": "test b",
     "card_prompt": "test8",
     "desmos_url": "https://www.desmos.com/calculator/ocyvg58abx",
     "video_src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -327,7 +327,7 @@
   "Consumer-Optimization": {
     "display_title": "Consumer Optimisation",
     "page_type": "concept",
-    "week": "5",
+    "week": "4",
     "card_intro": "test",
     "card_prompt": "test30",
     "desmos_url": "https://www.desmos.com/calculator/hyyyp1mzl0",
