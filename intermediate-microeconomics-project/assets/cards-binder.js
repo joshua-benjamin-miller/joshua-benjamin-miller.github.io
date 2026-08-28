@@ -1,5 +1,6 @@
 // cards-binder.js
-// Populates concept and exercise cards from graphs-data.json.
+// Populates concept, exercise, and instructor-page graph cards
+// from graphs-data.json.
 
 async function bindGraphCards() {
   const cards = document.querySelectorAll(
@@ -10,8 +11,11 @@ async function bindGraphCards() {
     return;
   }
 
+  const SITE_ROOT =
+    "https://joshua-benjamin-miller.github.io/intermediate-microeconomics-project";
+
   const DATA_URL =
-    "/intermediate-microeconomics-project/assets/graphs-data.json?v=16";
+    `${SITE_ROOT}/assets/graphs-data.json?v=16`;
 
   let registry;
 
@@ -49,26 +53,6 @@ async function bindGraphCards() {
       return;
     }
 
-    // Generate the thumbnail path from the graph ID.
-    const image = card.querySelector(
-      ".graph-thumb img"
-    );
-
-    if (image) {
-      image.src =
-        `../assets/pictures/${id}.png`;
-    }
-
-    // Generate the graph-page link from the graph ID.
-    const linkElement = card.querySelector(
-      '[data-fill="card-link"]'
-    );
-
-    if (linkElement) {
-      linkElement.href = `${id}.html`;
-    }
-
-    // Find the corresponding registry entry.
     const entry = registry[id];
 
     if (!entry) {
@@ -82,6 +66,18 @@ async function bindGraphCards() {
     const title =
       entry.display_title ||
       id.replace(/-/g, " ");
+
+    // Thumbnail
+    const image = card.querySelector(
+      ".graph-thumb img"
+    );
+
+    if (image) {
+      image.src =
+        `${SITE_ROOT}/assets/pictures/${id}.png`;
+
+      image.alt = `${title} graph`;
+    }
 
     // Title
     const titleElement = card.querySelector(
@@ -135,17 +131,26 @@ async function bindGraphCards() {
       promptRow.hidden = true;
     }
 
-    // Button text
+    // Button
+    const linkElement = card.querySelector(
+      '[data-fill="card-link"]'
+    );
+
     if (linkElement) {
       linkElement.textContent =
         entry.page_type === "exercise"
           ? "Open exercise"
           : "Open graph";
-    }
 
-    // Image alternative text
-    if (image) {
-      image.alt = `${title} graph`;
+      if (entry.week) {
+        linkElement.href =
+          `${SITE_ROOT}/week${entry.week}/${id}.html`;
+      } else {
+        console.warn(
+          "cards-binder.js: Graph has no assigned week:",
+          id
+        );
+      }
     }
   });
 }

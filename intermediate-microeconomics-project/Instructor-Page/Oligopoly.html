@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Foundations of Consumer Behaviour</title> 
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
+  <title>Oligopoly</title>
+
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/concepts.css">
+
+  <script defer src="../assets/navbar-loader.js"></script>
+  <script defer src="../assets/cards-binder.js?v=5"></script>
 </head>
-<link rel="stylesheet" href="../assets/site.css">
-<link rel="stylesheet" href="../assets/concepts.css">
 
 <body>
   <div id="navbar-container"></div>
-  <script src="../assets/navbar-loader.js"></script>
-<!-- =================================================== -->
 
-   <main class="container">
-    <h1 class="page-title">Oligopoly</h1> <!--Change title name-->
+  <!-- =================================================== -->
+
+  <main class="container">
+    <h1 class="page-title">Oligopoly</h1>
+
     <p class="subtitle">
-     Subtitle<!--Change subtitle-->
+      Subtitle
     </p>
 
-    <!-- General intro for Week 2 concepts -->
     <section class="intro-box">
-      <h2>General intro</h2> <!---Change section name-->
+      <h2>General intro</h2>
+
       <p>
-       Graphs about Oligopoly.
-      </p> <!--Change description-->
+        Graphs about Oligopoly.
+      </p>
     </section>
 
     <h2 class="grid-title">Graphs</h2>
 
     <section class="grid">
 
+      <!-- Budget Line with Complex Pricing -->
+      <article
+        class="graph-card"
+        data-graph-id="Budget-Line-With-Complex-Pricing"
+      >
+        <div class="graph-thumb">
+          <img alt="">
+        </div>
 
-       <!-- Graph block 5-->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="Budget-Line-With-Complex_Pricing"
-        />
         <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-            Budget Line with Complex Pricing <!--Change block title-->
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
+          <h3
+            class="graph-title"
+            data-fill="card-title"
+          ></h3>
+
+          <p
+            class="graph-desc"
+            data-fill="card-intro"
+          ></p>
+
+          <div class="graph-meta graph-prompt">
+            <strong data-fill="prompt-label"></strong>
+            <span data-fill="card-prompt"></span>
           </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Explanations <!--Add explanations here-->
-          </p>
-          <!--change graph links here-->
           <div class="graph-actions">
             <a
               class="btn btn-primary"
-              href="../week3/Budget-Line-With-Complex-Pricing.html"
-            >
-              Open graph
-            </a>
+              data-fill="card-link"
+            ></a>
           </div>
         </div>
       </article>
 
-     
     </section>
-  </div>
-   </main>
+  </main>
 </body>
 </html>

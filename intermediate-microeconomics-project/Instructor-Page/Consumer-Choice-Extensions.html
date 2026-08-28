@@ -1,107 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Consumer Choice Extensions</title> 
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
+  <title>Consumer Choice Extensions</title>
+
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../assets/concepts.css">
+
+  <script defer src="../assets/navbar-loader.js"></script>
+  <script defer src="../assets/cards-binder.js?v=5"></script>
 </head>
-<link rel="stylesheet" href="../assets/site.css">
-<link rel="stylesheet" href="../assets/concepts.css">
 
 <body>
   <div id="navbar-container"></div>
-  <script src="../assets/navbar-loader.js"></script>
-<!-- =================================================== -->
-<main class="container">
-    <h1 class="page-title">Consumer Choice Extensions</h1> <!--Change title name-->
+
+  <!-- =================================================== -->
+
+  <main class="container">
+    <h1 class="page-title">
+      Consumer Choice Extensions
+    </h1>
+
     <p class="subtitle">
-     Subtitle<!--Change subtitle-->
+      Subtitle
     </p>
 
-    <!-- General intro for Week 2 concepts -->
+    <!-- General introduction -->
     <section class="intro-box">
-      <h2>General intro</h2> <!---Change section name-->
+      <h2>General intro</h2>
+
       <p>
-       Graphs about Uncertainty and Risk, Two Period Model
-      </p> <!--Change description-->
+        Graphs about Uncertainty and Risk, Two Period Model
+      </p>
     </section>
 
     <h2 class="grid-title">Graphs</h2>
 
     <section class="grid">
 
- 
+      <!-- Graph block 1 -->
+      <article
+        class="graph-card"
+        data-graph-id="Intertemporal-consumption"
+      >
+        <div class="graph-thumb">
+          <img alt="">
+        </div>
 
-        <!-- Graph block  -->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="intertemporal-consumption"
-        />
         <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-            Intertemporal-consumption<!--Change block title-->
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
+          <h3
+            class="graph-title"
+            data-fill="card-title"
+          ></h3>
+
+          <p
+            class="graph-desc"
+            data-fill="card-intro"
+          ></p>
+
+          <div class="graph-meta graph-prompt">
+            <strong data-fill="prompt-label"></strong>
+            <span data-fill="card-prompt"></span>
           </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Explanations <!--Add explanations here-->
-          </p>
-          <!--change graph links here-->
           <div class="graph-actions">
             <a
               class="btn btn-primary"
-              href="../week4/Intertemporal-consumption.html"
-            >
-              Open graph
-            </a>
+              data-fill="card-link"
+            ></a>
           </div>
         </div>
       </article>
 
-       <!-- Graph block 5-->
-      <article class="graph-card">
-        <img
-          class="graph-thumb"
-          src="../assets/week1.png"
-          alt="Time_IE-SE"
-        />
+      <!-- Graph block 2 -->
+      <article
+        class="graph-card"
+        data-graph-id="Time-IE-SE"
+      >
+        <div class="graph-thumb">
+          <img alt="">
+        </div>
+
         <div class="graph-content">
-          <div>
-            <h3 class="graph-title">
-            Time, IE, SE <!--Change block title-->
-            </h3>
-            <div class="graph-meta">
-              Concept · Desmos · interactive
-            </div>
+          <h3
+            class="graph-title"
+            data-fill="card-title"
+          ></h3>
+
+          <p
+            class="graph-desc"
+            data-fill="card-intro"
+          ></p>
+
+          <div class="graph-meta graph-prompt">
+            <strong data-fill="prompt-label"></strong>
+            <span data-fill="card-prompt"></span>
           </div>
 
-          <!--brief intro-->
-          
-          <p class="graph-desc">
-            Explanations <!--Add explanations here-->
-          </p>
-          <!--change graph links here-->
           <div class="graph-actions">
             <a
               class="btn btn-primary"
-              href="../week4/Time-IE-SE.html"
-            >
-              Open graph
-            </a>
+              data-fill="card-link"
+            ></a>
           </div>
         </div>
       </article>
 
     </section>
-  </div>
   </main>
 </body>
 </html>
