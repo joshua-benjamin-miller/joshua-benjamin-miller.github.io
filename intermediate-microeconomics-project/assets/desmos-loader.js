@@ -1,37 +1,90 @@
-JS:document.addEventListener("DOMContentLoaded", function () {
-  // 1. get the json file name
-  let filename = window.location.pathname.split("/").pop() || "";
-  filename = filename.replace(/\.html$/i, "");
-  const jsonPath = `${filename}.json`;
-
-  // 2.get calculator
+document.addEventListener("DOMContentLoaded", async function () {
   const elt = document.getElementById("calculator");
+
   if (!elt) {
     console.warn("No #calculator element found. Skipping Desmos init.");
     return;
   }
 
-  // 3. create Desmos calculator
+  // Keep window.Calc so export-desmos.js can access it.
   window.Calc = Desmos.GraphingCalculator(elt, {
     expressionsCollapsed: true,
-    keypad:false
+    keypad: false
   });
 
-  // 4. load json state
-  fetch(jsonPath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load JSON: ${jsonPath}`);
+  try {
+    // page-binder.js fills this link from graphs-data.json.
+    const link = document.querySelector('[data-fill="desmos-link"]');
+
+    if (!link) {
+      throw new Error("Desmos link element not found.");
+    }
+
+    const desmosUrl = await waitForDesmosLink(link);
+
+    const response = await fetch(desmosUrl, {
+      headers: {
+        Accept: "application/json"
       }
-      return response.json();
-    })
-    .then(state => {
-      Calc.setState(state);
-    })
-    .catch(err => {
-      console.error("Error loading Desmos JSON:", err);
     });
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to load Desmos graph: ${response.status}`
+      );
+    }
+
+    const graphData = await response.json();
+
+    if (!graphData.state) {
+      throw new Error("Desmos response does not contain graph state.");
+    }
+
+    const state =
+      typeof graphData.state === "string"
+        ? JSON.parse(graphData.state)
+        : graphData.state;
+
+    window.Calc.setState(state);
+
+    console.log("[DESMOS] Graph loaded from:", desmosUrl);
+  } catch (error) {
+    console.error("[DESMOS] Error loading graph:", error);
+  }
 });
+
+
+function waitForDesmosLink(link, timeout = 10000) {
+  const existingUrl = link.getAttribute("href");
+
+  if (existingUrl) {
+    return Promise.resolve(existingUrl);
+  }
+
+  return new Promise((resolve, reject) => {
+    const observer = new MutationObserver(() => {
+      const url = link.getAttribute("href");
+
+      if (url) {
+        observer.disconnect();
+        clearTimeout(timer);
+        resolve(url);
+      }
+    });
+
+    observer.observe(link, {
+      attributes: true,
+      attributeFilter: ["href"]
+    });
+
+    const timer = setTimeout(() => {
+      observer.disconnect();
+      reject(
+        new Error("Timed out waiting for page-binder.js to provide the Desmos URL.")
+      );
+    }, timeout);
+  });
+}
 
 
 
