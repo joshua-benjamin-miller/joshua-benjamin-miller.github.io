@@ -1,4 +1,24 @@
-[
+   <!-- Week 12 -->
+      <article class="week-card">
+          <!-- Week image -->
+  <img class="week-thumb" src="assets/week12.png" alt="Week 12 preview" />
+
+  <!-- Text content -->
+  <div class="week-content">
+        <div>
+          <div class="week-header">
+            <div class="week-label">Week</div>
+            <div class="week-number">12</div>
+          </div>
+          <div class="week-title">
+          Week12: Revision
+          </div>
+        </div>
+        <div class="week-actions">
+          <a class="btn btn-outline" href="week12/concepts.html">Concepts</a>
+             <a class="btn btn-solid" href="week12/exercises.html">Exercises</a>
+        </div>
+      </article>[
   { "title": "4-axis Cost Benefit", "url": "/intermediate-microeconomics-project/week1/4-axis-Cost-Benefit.html" },
   { "title": "Elasticity", "url": "/intermediate-microeconomics-project/week1/Elasticity.html" },
   { "title": "Elasticity Flexible Demand", "url": "/intermediate-microeconomics-project/week1/Elasticity-Flexible-Demand.html" },
