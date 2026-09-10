@@ -188,37 +188,8 @@ if (answerEl) answerEl.innerHTML = entry.answer_html || "";
       desmosA.href = entry.desmos_url;
       desmosA.textContent = "Open in Desmos";
     } else {
-  videoEl.innerHTML = `
-    <a
-      href="${entry.desmos_url}"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Open the interactive Desmos graph"
-      style="
-        display: flex;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        background: #f5f5f5;
-        border-radius: 12px;
-        overflow: hidden;
-      "
-    >
-      <img
-        src="../assets/pictures/desmos-logo.png"
-        alt="Open the interactive Desmos graph"
-        style="
-          display: block;
-          width: 45%;
-          max-width: 360px;
-          height: auto;
-        "
-      >
-    </a>
-  `;
-}
+      console.warn("page-binder.js: Missing desmos_url for:", id);
+    }
   }
 
   // -----------------------
