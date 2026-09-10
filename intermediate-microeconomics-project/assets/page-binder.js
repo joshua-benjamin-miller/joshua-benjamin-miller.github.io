@@ -244,8 +244,6 @@ if (videoEl) {
   }
 }
     }
-} // closes if (videoEl)
-} // closes async function bindPage()
 
 // Run whether the script loads before or after DOMContentLoaded
 if (document.readyState === "loading") {
