@@ -316,22 +316,3 @@ html, body{
   background: #111827; /* Make it solid so it's easy to grab */
   pointer-events: auto !important;
 }
-
-
-.desmos-cover {
-  display: flex;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background: #f5f5f5;
-  border-radius: 12px;
-}
-
-.desmos-cover img {
-  width: 45%;
-  max-width: 360px;
-  height: auto;
-}
-
