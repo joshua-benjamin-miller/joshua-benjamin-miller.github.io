@@ -195,23 +195,54 @@ if (answerEl) answerEl.innerHTML = entry.answer_html || "";
   // -----------------------
   // Video
   // -----------------------
-  const videoEl = root.querySelector('[data-fill="video"]');
-  if (videoEl) {
-    if (entry.video_src) {
-      videoEl.innerHTML = `
-        <iframe
-          src="${entry.video_src}"
-          title=""
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      `;
-    } else {
-      console.warn("page-binder.js: Missing video_src for:", id);
-    }
+ // -----------------------
+// Video
+// -----------------------
+const videoEl = root.querySelector('[data-fill="video"]');
+
+if (videoEl) {
+  if (entry.video_src) {
+    videoEl.innerHTML = `
+      <iframe
+        src="${entry.video_src}"
+        title=""
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    `;
+  } else {
+    videoEl.innerHTML = `
+      <a
+        href="${entry.desmos_url || "#"}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Open this graph in Desmos"
+        style="
+          display: flex;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          overflow: hidden;
+          background: #f5f5f5;
+        "
+      >
+        <img
+          src="../assets/pictures/desmos-logo.png"
+          alt="Open this graph in Desmos"
+          style="
+            display: block;
+            width: 45%;
+            max-width: 360px;
+            height: auto;
+            object-fit: contain;
+          "
+        >
+      </a>
+    `;
   }
 }
-
 // Run whether the script loads before or after DOMContentLoaded
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => void bindPage());
