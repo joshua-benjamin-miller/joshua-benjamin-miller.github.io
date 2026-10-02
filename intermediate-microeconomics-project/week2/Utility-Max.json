@@ -3,40 +3,39 @@
   "randomSeed": "5e9f8e3b8cffb7966146a7b8c995b94e",
   "graph": {
     "viewport": {
-      "xmin": -28.959080679859323,
-      "ymin": -28.959080679859323,
-      "zmin": -31.234083252793024,
-      "xmax": 28.959080679859323,
-      "ymax": 28.959080679859323,
-      "zmax": 31.234083252793024
+      "xmin": -4.511273028045656,
+      "ymin": -3.6208957085140225,
+      "zmin": -4.642405012391227,
+      "xmax": 5.488726971954328,
+      "ymax": 6.3791042914859615,
+      "zmax": 6.143187112608751
     },
-    "threeDMode": true,
     "worldRotation3D": [
-      -0.5808381056140565,
-      0.7405960278812943,
-      -0.33785295404033533,
-      -0.6401756833321106,
-      -0.6719505364884432,
-      -0.37236752138686513,
-      -0.5027943809724816,
-      3.993919723058441e-12,
-      0.8644060449019574
+      -0.7844510450322479,
+      0.06773828523593949,
+      -0.6164803992519122,
+      -0.053259699541356696,
+      -0.9977031245385499,
+      -0.04185546190724346,
+      -0.6178996377674736,
+      3.848210367505222e-12,
+      0.7862569793950207
     ],
     "axis3D": [
-      0,
-      0,
-      -0.9999999999997095
+      -0.0677382852381219,
+      0.9977031245432781,
+      -1.0856503681504525e-12
     ],
-    "speed3D": 1.90717417124948,
     "squareAxes": false,
     "product": "graphing-3d",
+    "threeDMode": true,
     "__v12ViewportLatexStash": {
-      "xmin": "-28.959080679859323",
-      "xmax": "28.959080679859323",
-      "ymin": "-28.959080679859323",
-      "ymax": "28.959080679859323",
-      "zmin": "-31.234083252793024",
-      "zmax": "31.234083252793024"
+      "xmin": "-4.511273028045656",
+      "xmax": "5.488726971954328",
+      "ymin": "-3.6208957085140225",
+      "ymax": "6.3791042914859615",
+      "zmin": "-4.642405012391227",
+      "zmax": "6.143187112608751"
     }
   },
   "expressions": {
@@ -478,7 +477,6 @@
         "type": "folder",
         "id": "89",
         "title": "3b. Multiple indifference curves",
-        "hidden": true,
         "collapsed": true
       },
       {
@@ -609,7 +607,8 @@
       {
         "type": "folder",
         "id": "48",
-        "title": "4. Budget Line"
+        "title": "4. Budget Line",
+        "collapsed": true
       },
       {
         "type": "expression",
@@ -675,7 +674,6 @@
         "type": "folder",
         "id": "39",
         "title": "5. Along the Budget Line: Level",
-        "hidden": true,
         "collapsed": true
       },
       {
@@ -740,7 +738,6 @@
         "type": "folder",
         "id": "51",
         "title": "6. Along the Budget Line: IC",
-        "hidden": true,
         "collapsed": true
       },
       {
@@ -834,5 +831,6 @@
   },
   "includeFunctionParametersInRandomSeed": true,
   "doNotMigrate3dLineWidthZero": true,
-  "doNotMigrateMovablePointStyle": true
+  "doNotMigrateMovablePointStyle": true,
+  "backmigrated": 14
 }
