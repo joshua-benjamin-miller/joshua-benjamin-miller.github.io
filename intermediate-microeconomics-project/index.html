@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Intermediate Microeconomics – Interactive Graphs</title> <!--Change title here-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intermediate Microeconomics – Interactive Graphs</title>
 
  <link rel="stylesheet" href="assets/site.css">
 <style>
@@ -109,6 +110,37 @@
   object-position: center;     
 }
 
+  /* =========================
+   Main / default layout
+   ========================= */
+
+.weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* other main styles... */
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+  .weeks-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .week-card {
+    padding: 10px 10px 12px;
+  }
+
+  .week-thumb {
+    height: 110px;
+  }
+}
 </style>
 
 </head>
