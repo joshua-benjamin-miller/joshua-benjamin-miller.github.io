@@ -1,4 +1,4 @@
-{
+e{
   "4-axis-Cost-Benefit": {
     "display_title": "4 Axis Cost & Benefit Analysis",
     "page_type": "concept",
@@ -27,7 +27,7 @@
     "week": "1",
     "card_intro": "Explore elasticity when quantity changes in discrete jumps rather than along a smooth demand curve.",
     "card_prompt": "Move price across a threshold and decide whether point or midpoint elasticity is the meaningful measure.",
-    "desmos_url": "https://www.desmos.com/calculator/seuznqczmk",
+    "desmos_url": "https://www.desmos.com/calculator/dduf664ucg",
     "video_src": "",
     "intro_html": "<p>This graph uses a staircase demand schedule. Quantity can remain unchanged over an interval of prices and then jump when a reservation-price threshold is crossed. It shows exactly where a derivative-based elasticity is informative—and where it is not.</p>",
     "full_html": "<h2>Local responses and jumps</h2>\n<p>For a differentiable demand curve, point elasticity is <span class=\"math\">\\(E_D(p)=Q_D'(p)p/Q_D(p)\\)</span>. On a flat step, quantity is locally constant, so the local price response is zero. At a jump price the derivative does not exist, so point elasticity is not defined.</p>\n<p>This does not make the jump economically unimportant. It means that a local derivative is the wrong summary for a finite change across the threshold.</p>\n\n<h2>Use midpoint elasticity for a finite movement</h2>\n<p>For a movement from <span class=\"math\">\\((p_1,Q_1)\\)</span> to <span class=\"math\">\\((p_2,Q_2)\\)</span>, use</p>\n<p class=\"display-math\">\\[E_D^{mid}=\\frac{(Q_2-Q_1)/[(Q_1+Q_2)/2]}{(p_2-p_1)/[(p_1+p_2)/2]}.\\]</p>\n<p>The midpoint denominators make the reported percentage change independent of which observation is called the starting point.</p>\n\n<h2>How to use the graph</h2>\n<p>First place the price marker within one step and make a very small price change. Then move the marker across a threshold and compare the finite change in quantity. State which experiment you are describing before quoting an elasticity.</p>\n\n<h2>Check your model</h2>\n<p>“Elasticity is zero” is correct only for a local movement inside a step. It is not a description of a movement that crosses a jump. Also, “undefined at the threshold” does not mean “no response”; it means the point-elasticity formula has no derivative to use.</p>\n\n<details>\n  <summary>Explore further: why staircase demand becomes smoother in large markets</summary>\n  <p>Each individual buyer can create a discrete jump. When many buyers with different reservation prices are horizontally aggregated, the jumps become smaller relative to total market quantity. A smooth demand curve is often an approximation to this finely stepped market schedule.</p>\n</details>"
