@@ -1,72 +1,262 @@
 [
-  { "title": "4-axis Cost Benefit", "url": "/intermediate-microeconomics-project/week1/4-axis-Cost-Benefit.html" },
-  { "title": "Elasticity", "url": "/intermediate-microeconomics-project/week1/Elasticity.html" },
-  { "title": "Elasticity Flexible Demand", "url": "/intermediate-microeconomics-project/week1/Elasticity-Flexible-Demand.html" },
-  { "title": "Elasticity Staircase Demand", "url": "/intermediate-microeconomics-project/week1/Elasticity-Staircase-Demand.html" },
-  { "title": "Lectorial", "url": "/intermediate-microeconomics-project/week1/Lectorial.html" },
-  { "title": "Market Interventions Revised", "url": "/intermediate-microeconomics-project/week1/Market-interventions-revised.html" },
-  { "title": "Max", "url": "/intermediate-microeconomics-project/week1/Max.html" },
-  { "title": "Quiz", "url": "/intermediate-microeconomics-project/week1/Quiz.html" },
-
-  
-  { "title": "Consumers Problem", "url": "/intermediate-microeconomics-project/week2/Consumers-Problem.html" },
-  { "title": "Discrete Demand Supply", "url": "/intermediate-microeconomics-project/week2/Discrete-Demand-Supply.html" },
-  { "title": "Indifference Curve", "url": "/intermediate-microeconomics-project/week2/Indifference-curve.html" },
-  { "title": "Utility Max", "url": "/intermediate-microeconomics-project/week2/Utility-Max.html" },
-
-  
-  { "title": "Budget Line With Complex Pricing", "url": "/intermediate-microeconomics-project/week3/Budget-Line-With-Complex-Pricing.html" },
-  { "title": "Consumers Problem Lecture Example", "url": "/intermediate-microeconomics-project/week3/Consumers-Problem-Lecture-Example.html" },
-  { "title": "Inferior Good", "url": "/intermediate-microeconomics-project/week3/Inferior-Good.html" },
-  { "title": "Perfect Complements", "url": "/intermediate-microeconomics-project/week3/Perfect-Complements.html" },
-  { "title": "Quasi Linear Optimization", "url": "/intermediate-microeconomics-project/week3/Quasi-Linear-Optimization.html" },
-  { "title": "Revealed Preference", "url": "/intermediate-microeconomics-project/week3/Revealed-Preference.html" },
-  { "title": "Sales vs Income Tax", "url": "/intermediate-microeconomics-project/week3/Sales-vs-Income-Tax.html" },
-  { "title": "Utility Max CES", "url": "/intermediate-microeconomics-project/week3/Utility-Max-CES.html" },
-
-
-  { "title": "Aggregate Demand", "url": "/intermediate-microeconomics-project/week4/Aggregate-Demand.html" },
-  { "title": "Consumer Optimization", "url": "/intermediate-microeconomics-project/week4/Consumer-Optimization.html" },
-  { "title": "Consumers Problem HW", "url": "/intermediate-microeconomics-project/week4/Consumers-Problem-HW.html" },
-  { "title": "Curves and Demand", "url": "/intermediate-microeconomics-project/week4/Curves&Demand.html" },
-  { "title": "Curves Expansion Demand", "url": "/intermediate-microeconomics-project/week4/Curves-Expansion-Demand.html" },
-  { "title": "Exam 2023 Q3", "url": "/intermediate-microeconomics-project/week4/Ex-2023-Q3.html" },
-  { "title": "IE SE Cobb Douglas", "url": "/intermediate-microeconomics-project/week4/IE-SE-CobbDouglas.html" },
-  { "title": "IE SE Quasilinear", "url": "/intermediate-microeconomics-project/week4/IE-SE-Quasilinear.html" },
-  { "title": "Intertemporal Consumption", "url": "/intermediate-microeconomics-project/week4/Intertemporal-consumption.html" },
-  { "title": "Time IE SE", "url": "/intermediate-microeconomics-project/week4/Time-IE-SE.html" },
-
-
-  { "title": "Contract Curve", "url": "/intermediate-microeconomics-project/week5/Contract-Curve.html" },
-  { "title": "Contract Curve Complements", "url": "/intermediate-microeconomics-project/week5/Contract-Curve-Complements.html" },
-  { "title": "Edgeworth Box", "url": "/intermediate-microeconomics-project/week5/Edgeworth-Box.html" },
-  { "title": "Edgeworth Box 3D", "url": "/intermediate-microeconomics-project/week5/Edgeworth-Box-3D.html" },
-  { "title": "Supply Demand From Edgeworth", "url": "/intermediate-microeconomics-project/week5/Supply-Demand-From-Edgeworth.html" },
-  { "title": "Weird Edgeworth Box", "url": "/intermediate-microeconomics-project/week5/Weird-Edgeworth-Box.html" },
-
- 
-  { "title": "Bomb Risk", "url": "/intermediate-microeconomics-project/week6/BombRisk.html" },
-  { "title": "CRRA Peter Wakker", "url": "/intermediate-microeconomics-project/week6/CRRA-Peter-Wakker.html" },
-  { "title": "Eckel Grossman", "url": "/intermediate-microeconomics-project/week6/Eckel-Grossman.html" },
-  { "title": "Risk Averse Seeking Neutral", "url": "/intermediate-microeconomics-project/week6/Risk-Averse-Seeking-Neutral.html" },
-  { "title": "St Petersburg Paradox", "url": "/intermediate-microeconomics-project/week6/St-Petersburg-Paradox.html" },
-
-
-  { "title": "Production Returns to Scale", "url": "/intermediate-microeconomics-project/week7/Production-returns-to-scale.html" },
-
-
-  { "title": "Costs in Short and Long Run", "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run.html" },
-  { "title": "Costs in Short and Long Run 4th Panel", "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run-4th-panel.html" },
-  { "title": "Profit Maximization Supply Demand", "url": "/intermediate-microeconomics-project/week8/Profit-maximization+supply-demand.html" },
-
- 
-  { "title": "Cost Revenue Illustration", "url": "/intermediate-microeconomics-project/week9/Cost-Revenue-illustration.html" },
-  { "title": "Production Profit Cobb Douglas", "url": "/intermediate-microeconomics-project/week9/Production-Profit-CobbDouglas.html" },
-
-  { "title": "Monopoly", "url": "/intermediate-microeconomics-project/week10/Monopoly.html" },
-  { "title": "Monopoly-Revised", "url": "/intermediate-microeconomics-project/week10/Monopoly-Revised.html" },
-  { "title": "Price-Discrimination", "url": "/intermediate-microeconomics-project/week10/Price-Discrimination.html" },
-
-  { "title": "Diff-Bertrand", "url": "/intermediate-microeconomics-project/week11/Diff-Bertrand.html" },
-  { "title": "Cournot-with-Residual-Demand", "url": "/intermediate-microeconomics-project/week11/Cournot-with-Residual-Demand.html" }
+  {
+    "title": "4-axis Cost Benefit",
+    "url": "/intermediate-microeconomics-project/week1/4-axis-Cost-Benefit.html",
+    "keywords": ["cost benefit", "marginal cost", "marginal benefit", "total cost", "total benefit", "net benefit"]
+  },
+  {
+    "title": "Elasticity",
+    "url": "/intermediate-microeconomics-project/week1/Elasticity.html",
+    "keywords": ["price elasticity", "demand", "elastic", "inelastic", "unit elastic", "responsiveness", "percentage change"]
+  },
+  {
+    "title": "Elasticity Flexible Demand",
+    "url": "/intermediate-microeconomics-project/week1/Elasticity-Flexible-Demand.html",
+    "keywords": ["price elasticity", "elastic", "inelastic", "demand curve", "slope", "responsiveness"]
+  },
+  {
+    "title": "Elasticity Staircase Demand",
+    "url": "/intermediate-microeconomics-project/week1/Elasticity-Staircase-Demand.html",
+    "keywords": ["price elasticity", "discrete demand", "step demand", "staircase", "willingness to pay"]
+  },
+  {
+    "title": "Lectorial",
+    "url": "/intermediate-microeconomics-project/week1/Lectorial.html",
+    "keywords": ["week 1", "lecture", "practice", "exercise", "tutorial"]
+  },
+  {
+    "title": "Market Interventions Revised",
+    "url": "/intermediate-microeconomics-project/week1/Market-interventions-revised.html",
+    "keywords": ["government intervention", "market intervention", "supply", "demand", "market equilibrium", "welfare"]
+  },
+  {
+    "title": "Max",
+    "url": "/intermediate-microeconomics-project/week1/Max.html",
+    "keywords": ["maximisation", "maximization", "optimisation", "optimization", "week 1"]
+  },
+  {
+    "title": "Quiz",
+    "url": "/intermediate-microeconomics-project/week1/Quiz.html",
+    "keywords": ["week 1", "practice", "revision", "questions", "exercise"]
+  },
+  {
+    "title": "Consumers Problem",
+    "url": "/intermediate-microeconomics-project/week2/Consumers-Problem.html",
+    "keywords": ["consumer choice", "consumer's problem", "utility maximisation", "utility maximization", "budget constraint", "optimal bundle"]
+  },
+  {
+    "title": "Discrete Demand Supply",
+    "url": "/intermediate-microeconomics-project/week2/Discrete-Demand-Supply.html",
+    "keywords": ["market equilibrium", "discrete goods", "step demand", "step supply", "buyers", "sellers", "willingness to pay"]
+  },
+  {
+    "title": "Indifference Curve",
+    "url": "/intermediate-microeconomics-project/week2/Indifference-curve.html",
+    "keywords": ["preferences", "utility", "consumer choice", "marginal rate of substitution", "MRS", "bundles"]
+  },
+  {
+    "title": "Utility Max",
+    "url": "/intermediate-microeconomics-project/week2/Utility-Max.html",
+    "keywords": ["utility maximisation", "utility maximization", "consumer choice", "budget constraint", "indifference curve", "optimal bundle", "MRS"]
+  },
+  {
+    "title": "Budget Line With Complex Pricing",
+    "url": "/intermediate-microeconomics-project/week3/Budget-Line-With-Complex-Pricing.html",
+    "keywords": ["budget constraint", "budget set", "nonlinear pricing", "piecewise pricing", "kink", "consumer choice"]
+  },
+  {
+    "title": "Consumers Problem Lecture Example",
+    "url": "/intermediate-microeconomics-project/week3/Consumers-Problem-Lecture-Example.html",
+    "keywords": ["consumer choice", "consumer's problem", "utility maximisation", "utility maximization", "budget constraint", "optimal bundle", "lecture example"]
+  },
+  {
+    "title": "Inferior Good",
+    "url": "/intermediate-microeconomics-project/week3/Inferior-Good.html",
+    "keywords": ["income effect", "income change", "consumer demand", "income elasticity", "normal good"]
+  },
+  {
+    "title": "Perfect Complements",
+    "url": "/intermediate-microeconomics-project/week3/Perfect-Complements.html",
+    "keywords": ["Leontief", "fixed proportions", "L shaped", "indifference curve", "utility", "consumer choice"]
+  },
+  {
+    "title": "Quasi Linear Optimization",
+    "url": "/intermediate-microeconomics-project/week3/Quasi-Linear-Optimization.html",
+    "keywords": ["quasilinear", "quasi-linear", "utility maximisation", "utility maximization", "optimisation", "consumer choice", "budget constraint"]
+  },
+  {
+    "title": "Revealed Preference",
+    "url": "/intermediate-microeconomics-project/week3/Revealed-Preference.html",
+    "keywords": ["consumer choice", "observed choices", "preferences", "choice consistency", "budget"]
+  },
+  {
+    "title": "Sales vs Income Tax",
+    "url": "/intermediate-microeconomics-project/week3/Sales-vs-Income-Tax.html",
+    "keywords": ["sales tax", "income tax", "taxation", "budget constraint", "consumer welfare", "consumer choice"]
+  },
+  {
+    "title": "Utility Max CES",
+    "url": "/intermediate-microeconomics-project/week3/Utility-Max-CES.html",
+    "keywords": ["constant elasticity of substitution", "CES utility", "utility maximisation", "utility maximization", "consumer choice", "substitution", "budget constraint"]
+  },
+  {
+    "title": "Aggregate Demand",
+    "url": "/intermediate-microeconomics-project/week4/Aggregate-Demand.html",
+    "keywords": ["market demand", "individual demand", "horizontal summation", "aggregation", "consumers"]
+  },
+  {
+    "title": "Consumer Optimization",
+    "url": "/intermediate-microeconomics-project/week4/Consumer-Optimization.html",
+    "keywords": ["consumer optimisation", "consumer choice", "utility maximisation", "utility maximization", "budget constraint", "optimal bundle"]
+  },
+  {
+    "title": "Consumers Problem HW",
+    "url": "/intermediate-microeconomics-project/week4/Consumers-Problem-HW.html",
+    "keywords": ["homework", "practice", "consumer's problem", "consumer choice", "utility maximisation", "utility maximization", "budget constraint"]
+  },
+  {
+    "title": "Curves and Demand",
+    "url": "/intermediate-microeconomics-project/week4/Curves&Demand.html",
+    "keywords": ["consumer demand", "indifference curves", "consumer choice", "demand curve"]
+  },
+  {
+    "title": "Curves Expansion Demand",
+    "url": "/intermediate-microeconomics-project/week4/Curves-Expansion-Demand.html",
+    "keywords": ["expansion path", "consumer demand", "consumer choice", "indifference curves", "demand curve"]
+  },
+  {
+    "title": "Exam 2023 Q3",
+    "url": "/intermediate-microeconomics-project/week4/Ex-2023-Q3.html",
+    "keywords": ["past exam", "2023 exam", "question 3", "revision", "practice", "week 4"]
+  },
+  {
+    "title": "IE SE Cobb Douglas",
+    "url": "/intermediate-microeconomics-project/week4/IE-SE-CobbDouglas.html",
+    "keywords": ["income effect", "substitution effect", "Cobb-Douglas", "price change", "consumer demand", "decomposition"]
+  },
+  {
+    "title": "IE SE Quasilinear",
+    "url": "/intermediate-microeconomics-project/week4/IE-SE-Quasilinear.html",
+    "keywords": ["income effect", "substitution effect", "quasi linear", "quasi-linear", "price change", "consumer demand", "decomposition"]
+  },
+  {
+    "title": "Intertemporal Consumption",
+    "url": "/intermediate-microeconomics-project/week4/Intertemporal-consumption.html",
+    "keywords": ["intertemporal choice", "saving", "savings", "borrowing", "interest rate", "present consumption", "future consumption", "budget constraint"]
+  },
+  {
+    "title": "Time IE SE",
+    "url": "/intermediate-microeconomics-project/week4/Time-IE-SE.html",
+    "keywords": ["intertemporal choice", "intertemporal consumption", "income effect", "substitution effect", "interest rate", "saving", "borrowing"]
+  },
+  {
+    "title": "Contract Curve",
+    "url": "/intermediate-microeconomics-project/week5/Contract-Curve.html",
+    "keywords": ["Edgeworth box", "Pareto efficiency", "Pareto optimal", "exchange economy", "allocation", "gains from trade"]
+  },
+  {
+    "title": "Contract Curve Complements",
+    "url": "/intermediate-microeconomics-project/week5/Contract-Curve-Complements.html",
+    "keywords": ["perfect complements", "Leontief", "Edgeworth box", "Pareto efficiency", "exchange economy", "allocation"]
+  },
+  {
+    "title": "Edgeworth Box",
+    "url": "/intermediate-microeconomics-project/week5/Edgeworth-Box.html",
+    "keywords": ["exchange economy", "general equilibrium", "endowment", "allocation", "trade", "Pareto efficiency"]
+  },
+  {
+    "title": "Edgeworth Box 3D",
+    "url": "/intermediate-microeconomics-project/week5/Edgeworth-Box-3D.html",
+    "keywords": ["three dimensional", "exchange economy", "utility", "allocation", "trade", "Pareto efficiency"]
+  },
+  {
+    "title": "Supply Demand From Edgeworth",
+    "url": "/intermediate-microeconomics-project/week5/Supply-Demand-From-Edgeworth.html",
+    "keywords": ["Edgeworth box", "exchange economy", "general equilibrium", "competitive equilibrium", "market clearing", "endowment", "trade"]
+  },
+  {
+    "title": "Weird Edgeworth Box",
+    "url": "/intermediate-microeconomics-project/week5/Weird-Edgeworth-Box.html",
+    "keywords": ["exchange economy", "preferences", "allocation", "trade", "Edgeworth"]
+  },
+  {
+    "title": "Bomb Risk",
+    "url": "/intermediate-microeconomics-project/week6/BombRisk.html",
+    "keywords": ["risk preferences", "uncertainty", "risk taking", "bomb risk elicitation", "experiment", "lottery"]
+  },
+  {
+    "title": "CRRA Peter Wakker",
+    "url": "/intermediate-microeconomics-project/week6/CRRA-Peter-Wakker.html",
+    "keywords": ["constant relative risk aversion", "risk preferences", "expected utility", "utility function", "uncertainty"]
+  },
+  {
+    "title": "Eckel Grossman",
+    "url": "/intermediate-microeconomics-project/week6/Eckel-Grossman.html",
+    "keywords": ["risk elicitation", "risk preferences", "risk aversion", "lottery choice", "gamble", "experiment"]
+  },
+  {
+    "title": "Risk Averse Seeking Neutral",
+    "url": "/intermediate-microeconomics-project/week6/Risk-Averse-Seeking-Neutral.html",
+    "keywords": ["risk aversion", "risk seeking", "risk neutrality", "expected utility", "expected value", "uncertainty", "utility curvature"]
+  },
+  {
+    "title": "St Petersburg Paradox",
+    "url": "/intermediate-microeconomics-project/week6/St-Petersburg-Paradox.html",
+    "keywords": ["Saint Petersburg", "lottery", "gamble", "expected value", "expected utility", "risk aversion", "coin toss"]
+  },
+  {
+    "title": "Production Returns to Scale",
+    "url": "/intermediate-microeconomics-project/week7/Production-returns-to-scale.html",
+    "keywords": ["production function", "inputs", "output", "increasing returns", "decreasing returns", "constant returns", "technology"]
+  },
+  {
+    "title": "Costs in Short and Long Run",
+    "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run.html",
+    "keywords": ["short run cost", "long run cost", "cost curves", "production costs", "firm costs"]
+  },
+  {
+    "title": "Costs in Short and Long Run 4th Panel",
+    "url": "/intermediate-microeconomics-project/week8/Costs-in-short-and-long-run-4th-panel.html",
+    "keywords": ["short run cost", "long run cost", "cost curves", "production costs", "firm costs", "fourth panel"]
+  },
+  {
+    "title": "Profit Maximization Supply Demand",
+    "url": "/intermediate-microeconomics-project/week8/Profit-maximization+supply-demand.html",
+    "keywords": ["profit maximisation", "firm supply", "market supply", "market demand", "optimal output", "marginal cost", "marginal revenue"]
+  },
+  {
+    "title": "Cost Revenue Illustration",
+    "url": "/intermediate-microeconomics-project/week9/Cost-Revenue-illustration.html",
+    "keywords": ["total cost", "total revenue", "profit", "firm", "output", "cost curves", "revenue curves"]
+  },
+  {
+    "title": "Production Profit Cobb Douglas",
+    "url": "/intermediate-microeconomics-project/week9/Production-Profit-CobbDouglas.html",
+    "keywords": ["Cobb-Douglas", "production function", "profit maximisation", "profit maximization", "inputs", "output", "firm"]
+  },
+  {
+    "title": "Monopoly",
+    "url": "/intermediate-microeconomics-project/week10/Monopoly.html",
+    "keywords": ["market power", "monopolist", "marginal revenue", "marginal cost", "profit maximisation", "profit maximization", "pricing"]
+  },
+  {
+    "title": "Monopoly-Revised",
+    "url": "/intermediate-microeconomics-project/week10/Monopoly-Revised.html",
+    "keywords": ["market power", "monopolist", "marginal revenue", "marginal cost", "profit maximisation", "profit maximization", "pricing"]
+  },
+  {
+    "title": "Price-Discrimination",
+    "url": "/intermediate-microeconomics-project/week10/Price-Discrimination.html",
+    "keywords": ["monopoly", "market power", "different prices", "willingness to pay", "consumer surplus", "pricing"]
+  },
+  {
+    "title": "Diff-Bertrand",
+    "url": "/intermediate-microeconomics-project/week11/Diff-Bertrand.html",
+    "keywords": ["differentiated Bertrand", "price competition", "product differentiation", "oligopoly", "duopoly", "Nash equilibrium", "best response"]
+  },
+  {
+    "title": "Cournot-with-Residual-Demand",
+    "url": "/intermediate-microeconomics-project/week11/Cournot-with-Residual-Demand.html",
+    "keywords": ["quantity competition", "oligopoly", "duopoly", "residual demand", "Nash equilibrium", "best response", "reaction function"]
+  }
 ]
