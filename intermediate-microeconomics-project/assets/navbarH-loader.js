@@ -28,21 +28,97 @@ function initNavbarSearch() {
     return tokens.every(token => text.includes(token));
   }
 
-  function score(item, query, tokens) {
-    if (item.titleText === query) return 0;
-    if (item.titleText.includes(query)) return 1;
-    if (allTokens(item.titleText, tokens)) return 2;
+// Count missing, extra, incorrect, or adjacent swapped letters.
+function editDistance(a, b) {
+  const d = Array.from(
+    { length: a.length + 1 },
+    () => Array(b.length + 1).fill(0)
+  );
 
-    if (allTokens(item.keywordText, tokens)) return 3;
+  for (let i = 0; i <= a.length; i++) d[i][0] = i;
+  for (let j = 0; j <= b.length; j++) d[0][j] = j;
 
-    if (item.contentText.includes(query)) return 4;
-    if (allTokens(item.contentText, tokens)) return 5;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
 
-    // Allow search words to be spread across different fields.
-    if (allTokens(item.allText, tokens)) return 6;
+      d[i][j] = Math.min(
+        d[i - 1][j] + 1,
+        d[i][j - 1] + 1,
+        d[i - 1][j - 1] + cost
+      );
 
-    return Infinity;
+      // An adjacent swap counts as one typo.
+      if (
+        i > 1 &&
+        j > 1 &&
+        a[i - 1] === b[j - 2] &&
+        a[i - 2] === b[j - 1]
+      ) {
+        d[i][j] = Math.min(
+          d[i][j],
+          d[i - 2][j - 2] + 1
+        );
+      }
+    }
   }
+
+  return d[a.length][b.length];
+}
+
+// Cache words so we don't split the same content on every keystroke.
+const searchWordCache = new Map();
+
+function fuzzyTokens(text, tokens) {
+  if (!text) return false;
+
+  let words = searchWordCache.get(text);
+
+  if (!words) {
+    words = [...new Set(text.split(" ").filter(Boolean))];
+    searchWordCache.set(text, words);
+  }
+
+  return tokens.every(token => {
+    // Preserve normal partial-word matching.
+    if (text.includes(token)) return true;
+
+    // Avoid fuzzy matching short terms and numbers.
+    if (token.length < 4 || /\d/.test(token)) return false;
+
+    const tolerance = token.length >= 8 ? 2 : 1;
+
+    return words.some(word => {
+      if (/\d/.test(word)) return false;
+      if (Math.abs(word.length - token.length) > tolerance) {
+        return false;
+      }
+
+      return editDistance(token, word) <= tolerance;
+    });
+  });
+}
+
+function score(item, query, tokens) {
+  // Normal matches always come first.
+  if (item.titleText === query) return 0;
+  if (item.titleText.includes(query)) return 1;
+  if (allTokens(item.titleText, tokens)) return 2;
+
+  if (allTokens(item.keywordText, tokens)) return 3;
+
+  if (item.contentText.includes(query)) return 4;
+  if (allTokens(item.contentText, tokens)) return 5;
+  if (allTokens(item.allText, tokens)) return 6;
+
+  // Typo matches: title, then keywords, then content.
+  if (fuzzyTokens(item.titleText, tokens)) return 7;
+  if (fuzzyTokens(item.keywordText, tokens)) return 8;
+  if (fuzzyTokens(item.contentText, tokens)) return 9;
+  if (fuzzyTokens(item.allText, tokens)) return 10;
+
+  return Infinity;
+}
 
   function closeResults() {
     box.classList.remove("active");
