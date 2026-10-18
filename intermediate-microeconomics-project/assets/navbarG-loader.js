@@ -163,7 +163,7 @@ function fuzzyTokens(text, tokens) {
     // Avoid fuzzy matching short terms and numbers.
     if (token.length < 4 || /\d/.test(token)) return false;
 
-    const tolerance = token.length >= 8 ? 2 : 1;
+    const tolerance = token.length >= 6 ? 2 : 1;
 
     return words.some(word => {
       if (/\d/.test(word)) return false;
