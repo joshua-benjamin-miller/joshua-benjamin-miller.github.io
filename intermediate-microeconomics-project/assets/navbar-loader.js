@@ -260,6 +260,7 @@ function loadNavbar() {
       document.getElementById("navbar-container").innerHTML = data;
 
       initNavbarSearch();
+      initNavbarMenu();
     })
     .catch(err => {
       console.warn("Navbar failed to load:", err);
