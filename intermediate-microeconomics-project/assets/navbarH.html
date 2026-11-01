@@ -2,7 +2,10 @@
   <div class="navbar-inner">
 
     <div class="nav-left">
-      <div class="nav-title">Intermediate Micro – Interactive Graphs</div>
+<div class="nav-title">
+  <span class="nav-title-full">Intermediate Micro – Interactive Graphs</span>
+  <span class="nav-title-short">Micro – Interactive Graphs</span>
+</div>
 
       <!--Search bar-->
       <div class="nav-search">
@@ -16,10 +19,20 @@
       </div>
     </div>
 
-  
-  <div class="nav-right">
+  <button
+  class="nav-toggle"
+  type="button"
+  aria-label="Open navigation"
+  aria-expanded="false"
+  aria-controls="nav-links"
+>
+  <span aria-hidden="true">☰</span>
+</button>
+  <div class="nav-right" id="nav-links">
     <div class="dropdown">
-      <span class="dropdown-btn">Concepts ▾</span>
+     <button class="dropdown-btn" type="button" aria-expanded="false">
+  Concepts ▾
+</button>
       <div class="dropdown-content">
         <a href="/intermediate-microeconomics-project/week1/concepts.html">Week 1</a>
         <a href="/intermediate-microeconomics-project/week2/concepts.html">Week 2</a>
@@ -37,7 +50,9 @@
     </div>
 
     <div class="dropdown">
-      <span class="dropdown-btn">Exercises ▾</span>
+<button class="dropdown-btn" type="button" aria-expanded="false">
+  Exercises ▾
+</button>
       <div class="dropdown-content">
           <a href="/intermediate-microeconomics-project/week1/exercise.html">Exercises Wk1</a>
         <a href="/intermediate-microeconomics-project/week2/exercise.html">Exercises Wk2</a>
@@ -55,7 +70,9 @@
     </div>
 
     <div class="dropdown dropdown-right">
-      <span class="dropdown-btn">Instructor Graphs ▾</span>
+<button class="dropdown-btn" type="button" aria-expanded="false">
+  Instructor Graphs ▾
+</button>
       <div class="dropdown-content">
        <a href="/intermediate-microeconomics-project/Instructor-Page/Foundations-of-Consumer-Behavior.html">Foundations of Consumer Behavior</a>
         <a href="/intermediate-microeconomics-project/Instructor-Page/Market-Equilibrium-Welfare-Supply-Demand.html">Market Equilibrium Welfare Supply & Demand</a>
