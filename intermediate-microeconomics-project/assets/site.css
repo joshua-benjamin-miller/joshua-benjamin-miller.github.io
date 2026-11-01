@@ -385,3 +385,50 @@ body {
   font-weight: 600;
 }
 
+/* Narrow viewport adjustments */
+@media (max-width: 800px) {
+  .navbar-inner {
+    padding-inline: 14px;
+  }
+
+  .nav-left {
+    min-width: 0;
+    margin-right: 12px;
+    gap: 10px;
+  }
+
+  .nav-menu {
+    gap: 10px;
+  }
+
+  .nav-search input {
+    width: clamp(100px, 20vw, 180px);
+    max-width: 100%;
+  }
+
+  .nav-search-results {
+    width: min(320px, calc(100vw - 28px));
+    max-width: calc(100vw - 28px);
+  }
+
+  .page,
+  .container {
+    padding-inline: 14px;
+  }
+
+  .weeks-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .week-card {
+    min-width: 0;
+    min-height: 0;
+    padding: 12px 14px;
+  }
+
+  .week-title {
+    overflow-wrap: anywhere;
+  }
+}
+
