@@ -22,7 +22,7 @@
   background: #111827; 
   color:#fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  padding: 0; * <-- change from 0 24px to 0 */
+  padding: 0;
   height: 56px;
   display: block; /* switched from flex */
   align-items: center;
