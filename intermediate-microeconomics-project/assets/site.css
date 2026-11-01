@@ -432,3 +432,177 @@ body {
   }
 }
 
+
+
+
+    /* adj for mobile end*/
+/* New navbar controls */
+.nav-toggle,
+.nav-title-short {
+  display: none;
+}
+
+/* Preserve the existing appearance when spans become buttons. */
+.navbar .dropdown-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+.navbar button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Keyboard and click access alongside existing desktop hover. */
+.navbar .dropdown:focus-within .dropdown-content,
+.navbar .dropdown.is-open .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .navbar {
+    height: auto;
+    display: block;
+  }
+
+  .navbar-inner {
+    height: auto;
+    min-height: 56px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 10px 14px;
+  }
+
+  /*
+   * Expose the existing title/Home link and search as grid items
+   * without moving or duplicating the search input.
+   */
+  .navbar .nav-left {
+    display: contents;
+  }
+
+  .navbar .nav-left > .nav-title,
+  .navbar .nav-left > a {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .nav-title-full {
+    display: none;
+  }
+
+  .nav-title-short {
+    display: inline;
+  }
+
+  .nav-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .navbar .nav-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .navbar .nav-search input {
+    width: 100%;
+    height: 40px;
+  }
+
+  .navbar .nav-search-results {
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: min(320px, 50dvh);
+  }
+
+  .navbar .nav-right {
+    grid-column: 1 / -1;
+    display: none;
+    min-width: 0;
+    width: 100%;
+    max-height: 60vh;
+    max-height: 60dvh;
+    overflow-y: auto;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar.is-menu-open .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .navbar .dropdown {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar .dropdown::before {
+    display: none;
+  }
+
+  .navbar .dropdown-btn {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 8px;
+  }
+
+  /* Override desktop positioning, sizing, hover and focus rules. */
+  .navbar .dropdown .dropdown-content {
+    display: none;
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 4px 0 8px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .navbar .dropdown.is-open .dropdown-content {
+    display: block;
+  }
+
+  .navbar .dropdown-content a {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+}
+
+
+
+
+
