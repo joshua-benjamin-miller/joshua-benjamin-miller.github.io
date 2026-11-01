@@ -336,7 +336,7 @@ function score(item, query, tokens) {
   container.innerHTML = NAVBAR_HTML;
 
   initNavbarSearch();
-
+   initNavbarMenu();
   document.dispatchEvent(new Event("navbar-loaded"));
 })();
 
