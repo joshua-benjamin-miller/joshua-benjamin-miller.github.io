@@ -121,7 +121,72 @@
 }
 
 /* other main styles... */
+/* Compact horizontal week cards */
+@media (max-width: 760px) {
+  .weeks-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
 
+  .week-card {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .week-thumb {
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
+    object-fit: contain;
+    background: #f3f4f6;
+  }
+
+  .week-content {
+    min-width: 0;
+  }
+
+  .week-header {
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .week-title {
+    display: block;
+    min-height: 0;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .week-actions {
+    gap: 6px;
+  }
+
+  .week-actions .btn {
+    min-height: 44px;
+    justify-content: center;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .week-card {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .week-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}
 </style>
 
 </head>
