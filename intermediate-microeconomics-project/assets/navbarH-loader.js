@@ -1,3 +1,85 @@
+function initNavbarMenu() {
+  const navbar = document.querySelector("#navbar-container .navbar");
+  if (!navbar || navbar.dataset.menuReady) return;
+
+  const toggle = navbar.querySelector(".nav-toggle");
+  const links = navbar.querySelector(".nav-right");
+
+  if (!toggle || !links) return;
+  navbar.dataset.menuReady = "true";
+
+  const compact = window.matchMedia("(max-width: 960px)");
+  const dropdowns = [...links.querySelectorAll(".dropdown")];
+
+  function closeDropdowns() {
+    for (const dropdown of dropdowns) {
+      dropdown.classList.remove("is-open");
+      dropdown.querySelector(".dropdown-btn")
+        ?.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  function setMenuOpen(open, restoreFocus = false) {
+    navbar.classList.toggle("is-menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation" : "Open navigation"
+    );
+
+    if (!open) closeDropdowns();
+    if (restoreFocus) toggle.focus();
+  }
+
+  toggle.addEventListener("click", () => {
+    setMenuOpen(!navbar.classList.contains("is-menu-open"));
+  });
+
+  dropdowns.forEach((dropdown, index) => {
+    const button = dropdown.querySelector(".dropdown-btn");
+    const content = dropdown.querySelector(".dropdown-content");
+    if (!button || !content) return;
+
+    if (!content.id) content.id = `nav-dropdown-${index + 1}`;
+    button.setAttribute("aria-controls", content.id);
+
+    button.addEventListener("click", () => {
+      const open = !dropdown.classList.contains("is-open");
+
+      closeDropdowns();
+      dropdown.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", String(open));
+    });
+  });
+
+  links.addEventListener("click", event => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("click", event => {
+    if (!navbar.contains(event.target)) setMenuOpen(false);
+  });
+
+  navbar.addEventListener("keydown", event => {
+    if (event.key !== "Escape") return;
+
+    if (compact.matches &&
+        navbar.classList.contains("is-menu-open")) {
+      setMenuOpen(false, true);
+      return;
+    }
+
+    const dropdown = event.target.closest(".dropdown");
+    closeDropdowns();
+
+    if (dropdown) {
+      dropdown.querySelector(".dropdown-btn")?.focus();
+    }
+  });
+
+  compact.addEventListener("change", () => setMenuOpen(false));
+}
+
 function initNavbarSearch() {
   const input = document.getElementById("nav-search-input");
   const box = document.getElementById("nav-search-results");
